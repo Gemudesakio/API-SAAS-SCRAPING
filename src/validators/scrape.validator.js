@@ -12,12 +12,13 @@ export const scrapeRequestSchema = z
     query: z.string().trim().min(2, 'query debe tener al menos 2 caracteres').optional(),
     url: z.string().url('Debe ser una URL válida').optional(),
     maxItems: z.coerce.number().int().min(1).max(100).default(20),
+    maxPages: z.coerce.number().int().min(1).max(10).default(3),
     headless: booleanFromAny.default(true),
   })
   .refine(
     (data) => data.query || data.url,
     {
       message: 'Debe proporcionar al menos "query" o "url"',
-      path: ['query'], // Puedes elegir cualquier campo para mostrar el error
+      path: ['query'],
     }
   );

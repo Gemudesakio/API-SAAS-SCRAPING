@@ -51,6 +51,31 @@ function resolveDecathlonTargetUrl({ query, url }) {
   );
 }
 
+async function loadDecathlonListingPage(page, targetUrl) {
+  const response = await page.goto(targetUrl, {
+    waitUntil: 'domcontentloaded',
+    timeout: 45000,
+  });
+
+  try {
+    await page.waitForSelector('os-product-list', { timeout: 12000 });
+  } catch {
+    const pageText = await page.textContent('body').catch(() => '');
+
+    if (detectChallenge(pageText || '')) {
+      throw new AppError('Bloqueo anti-bot detectado en Decathlon', 503, 'BOT_CHALLENGE');
+    }
+
+    throw new AppError(
+      'No se encontró el listado de productos en Decathlon',
+      404,
+      'NO_RESULTS'
+    );
+  }
+
+  return response;
+}
+
 async function parseProductsFromEmbeddedJson(page, maxItems) {
   const scriptLocator = page.locator('os-product-list script[type="application/json"][data-src]');
 
@@ -81,10 +106,16 @@ async function parseProductsFromEmbeddedJson(page, maxItems) {
 
     const url = absoluteUrl(DECATHLON_BASE_URL, item.cardLinkUrl || '');
     const image = String(item?.image?.url || '').trim();
-    const availabilityRaw = String(item?.stock?.availability || '');
+    const availabilityRaw = String(item?.stock?.availability || '').trim();
 
     if (title || url) {
-      products.push({ title, priceRaw, url, image, availabilityRaw });
+      products.push({
+        title,
+        priceRaw,
+        url,
+        image,
+        availabilityRaw,
+      });
     }
 
     if (products.length >= maxItems) break;
@@ -126,7 +157,37 @@ async function parseProductsFromDom(page, maxItems) {
   return products;
 }
 
-export async function scrapeDecathlon({ query, url, maxItems = 20, headless = true }) {
+async function extractDecathlonProductsFromPage(page, limit) {
+  let products = await parseProductsFromEmbeddedJson(page, limit);
+
+  if (!products.length) {
+    products = await parseProductsFromDom(page, limit);
+  }
+
+  return products;
+}
+
+function buildDecathlonPaginatedUrl(currentUrl, nextPageNumber) {
+  const url = new URL(currentUrl);
+
+  url.hash = '';
+
+  if (nextPageNumber <= 1) {
+    url.searchParams.delete('page');
+  } else {
+    url.searchParams.set('page', String(nextPageNumber));
+  }
+
+  return url.toString();
+}
+
+export async function scrapeDecathlon({
+  query,
+  url,
+  maxItems = 20,
+  maxPages = 3,
+  headless = true,
+}) {
   const targetUrl = resolveDecathlonTargetUrl({ query, url });
 
   const browser = await chromium.launch({
@@ -142,46 +203,106 @@ export async function scrapeDecathlon({ query, url, maxItems = 20, headless = tr
 
   const page = await context.newPage();
 
-  try {
-    const response = await page.goto(targetUrl, {
-      waitUntil: 'domcontentloaded',
-      timeout: 60000,
-    });
+  await page.route('**/*', async (route) => {
+    const resourceType = route.request().resourceType();
+    const blockedTypes = ['image', 'media', 'font'];
 
-    try {
-      await page.waitForLoadState('networkidle', { timeout: 20000 });
-    } catch (error) {
-      if (error?.name !== 'TimeoutError') throw error;
+    if (blockedTypes.includes(resourceType)) {
+      return route.abort();
     }
 
-    try {
-      await page.waitForSelector('os-product-list', { timeout: 20000 });
-    } catch {
-      const pageText = await page.textContent('body').catch(() => '');
-      if (detectChallenge(pageText || '')) {
-        throw new AppError('Bloqueo anti-bot detectado en Decathlon', 503, 'BOT_CHALLENGE');
+    return route.continue();
+  });
+
+  try {
+    const products = [];
+    const seen = new Set();
+    const visitedUrls = new Set();
+
+    let currentUrl = targetUrl;
+    let currentPageNumber = 1;
+    let pagesVisited = 0;
+    let firstStatus = null;
+    let canonicalBaseUrl = null;
+
+    while (
+      currentUrl &&
+      products.length < maxItems &&
+      pagesVisited < maxPages &&
+      !visitedUrls.has(currentUrl)
+    ) {
+      visitedUrls.add(currentUrl);
+
+      let response;
+
+      try {
+        response = await loadDecathlonListingPage(page, currentUrl);
+      } catch (error) {
+        if (error?.code === 'NO_RESULTS' && products.length > 0) {
+          break;
+        }
+
+        throw error;
       }
 
-      throw new AppError(
-        'No se encontró el listado de productos en Decathlon',
-        404,
-        'NO_RESULTS'
-      );
-    }
+      if (firstStatus === null) {
+        firstStatus = response?.status() ?? null;
+      }
 
-    await page.waitForTimeout(1000);
+      if (!canonicalBaseUrl) {
+        canonicalBaseUrl = page.url();
+      }
 
-    let products = await parseProductsFromEmbeddedJson(page, maxItems);
+      const remaining = maxItems - products.length;
+      const pageProducts = await extractDecathlonProductsFromPage(page, remaining);
 
-    if (!products.length) {
-      products = await parseProductsFromDom(page, maxItems);
+      if (!pageProducts.length) {
+        break;
+      }
+
+      let newItemsCount = 0;
+
+      for (const product of pageProducts) {
+        const dedupeKey = product.url || product.title;
+
+        if (!dedupeKey || seen.has(dedupeKey)) continue;
+
+        seen.add(dedupeKey);
+        products.push(product);
+        newItemsCount += 1;
+
+        if (products.length >= maxItems) break;
+      }
+
+      pagesVisited += 1;
+
+      if (products.length >= maxItems) break;
+      if (newItemsCount === 0) break;
+
+      const nextPageNumber = currentPageNumber + 1;
+      const nextUrl = buildDecathlonPaginatedUrl(canonicalBaseUrl, nextPageNumber);
+
+      if (!nextUrl || nextUrl === currentUrl || visitedUrls.has(nextUrl)) {
+        break;
+      }
+
+      currentUrl = nextUrl;
+      currentPageNumber = nextPageNumber;
+
+      await page.waitForTimeout(400);
     }
 
     return {
       products,
       meta: {
-        status: response?.status() ?? null,
+        status: firstStatus,
         finalUrl: page.url(),
+        pagesVisited,
+        pagination: {
+          requestedMaxItems: maxItems,
+          maxPages,
+          collectedItems: products.length,
+        },
       },
     };
   } finally {
