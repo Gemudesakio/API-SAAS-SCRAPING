@@ -1,10 +1,8 @@
 import 'dotenv/config';
 import app from './app.js';
 
-const PORT = process.env.PORT || 8080;
+const PORT = Number(process.env.PORT || 8080);
 
-if (process.env.NODE_ENV !== 'production') {
-  app.listen(PORT, () => {
-    console.log(`Servidor levantado en http://localhost:${PORT}`);
-  });
-}
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Servidor levantado en puerto ${PORT}`);
+});

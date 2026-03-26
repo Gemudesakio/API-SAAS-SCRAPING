@@ -191,9 +191,13 @@ export async function scrapeDecathlon({
   const targetUrl = resolveDecathlonTargetUrl({ query, url });
 
   const browser = await chromium.launch({
-    headless,
-    args: ['--disable-dev-shm-usage'],
-  });
+  headless,
+  args: [
+    '--no-sandbox',
+    '--disable-setuid-sandbox',
+    '--disable-dev-shm-usage',
+  ],
+});
 
   const context = await browser.newContext({
     locale: 'es-CO',
