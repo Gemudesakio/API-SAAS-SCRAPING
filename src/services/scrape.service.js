@@ -1,9 +1,13 @@
 import { scrapeDecathlon } from './scrapers/decathlon.scraper.js';
 import { scrapeMercadoLibre } from './scrapers/mercadolibre.scraper.js';
 import { normalizeProducts } from './normalizers/product.normalizer.js';
+import { getScraperLimiterStats, runWithScraperLimiter } from '../utils/scraper-concurrency.js';
 
 export async function runMercadoLibreSearch(input) {
-  const raw = await scrapeMercadoLibre(input);
+  const raw = await runWithScraperLimiter(
+    () => scrapeMercadoLibre(input),
+    'mercadolibre'
+  );
   const products = normalizeProducts(raw.products, 'mercadolibre');
 
   return {
@@ -11,12 +15,18 @@ export async function runMercadoLibreSearch(input) {
     site: 'mercadolibre',
     count: products.length,
     products,
-    meta: raw.meta,
+    meta: {
+      ...raw.meta,
+      limiter: getScraperLimiterStats(),
+    },
   };
 }
 
 export async function runDecathlonSearch(input) {
-  const raw = await scrapeDecathlon(input);
+  const raw = await runWithScraperLimiter(
+    () => scrapeDecathlon(input),
+    'decathlon'
+  );
   const products = normalizeProducts(raw.products, 'decathlon');
 
   return {
@@ -24,6 +34,9 @@ export async function runDecathlonSearch(input) {
     site: 'decathlon',
     count: products.length,
     products,
-    meta: raw.meta,
+    meta: {
+      ...raw.meta,
+      limiter: getScraperLimiterStats(),
+    },
   };
 }
