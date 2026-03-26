@@ -45,15 +45,38 @@ export function buildUserAgent() {
   return 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36';
 }
 
-export function detectChallenge(pageText = '') {
-  const text = pageText.toLowerCase();
+export function detectChallenge(input = '') {
+  let pageText = '';
+  let pageTitle = '';
+  let pageUrl = '';
+  let status = null;
+
+  if (typeof input === 'string') {
+    pageText = input;
+  } else if (input && typeof input === 'object') {
+    pageText = input.pageText || '';
+    pageTitle = input.title || '';
+    pageUrl = input.url || '';
+    status = input.status ?? null;
+  }
+
+  if ([403, 429, 503].includes(Number(status))) return true;
+
+  const haystack = `${pageUrl} ${pageTitle} ${pageText}`.toLowerCase();
   const challengeSignals = [
     'captcha',
     'cloudflare',
+    'challenge',
     'are you human',
-    'verifica que eres humano',
+    'verify you are human',
+    'recaptcha',
+    'hcaptcha',
     'access denied',
+    'actividad inusual',
+    'actividad sospechosa',
+    'verifica que no eres un robot',
+    'verifica que eres humano',
   ];
 
-  return challengeSignals.some((signal) => text.includes(signal));
+  return challengeSignals.some((signal) => haystack.includes(signal));
 }

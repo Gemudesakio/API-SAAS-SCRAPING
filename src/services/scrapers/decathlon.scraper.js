@@ -7,6 +7,7 @@ import {
   detectChallenge,
   textOrEmpty,
 } from '../../utils/scraper.helpers.js';
+import { collectPageDiagnostics } from '../../utils/scraper-diagnostics.js';
 
 const DECATHLON_BASE_URL = 'https://www.decathlon.com.co';
 
@@ -60,16 +61,33 @@ async function loadDecathlonListingPage(page, targetUrl) {
   try {
     await page.waitForSelector('os-product-list', { timeout: 12000 });
   } catch {
-    const pageText = await page.textContent('body').catch(() => '');
+    const diagnostics = await collectPageDiagnostics(page, {
+      site: 'decathlon',
+      status: response?.status() ?? null,
+      reason: 'selector_not_found',
+    });
 
-    if (detectChallenge(pageText || '')) {
-      throw new AppError('Bloqueo anti-bot detectado en Decathlon', 503, 'BOT_CHALLENGE');
+    if (
+      detectChallenge({
+        pageText: diagnostics.bodyPreview,
+        title: diagnostics.pageTitle,
+        url: diagnostics.pageUrl,
+        status: diagnostics.status,
+      })
+    ) {
+      throw new AppError(
+        'Bloqueo anti-bot detectado en Decathlon',
+        503,
+        'BOT_CHALLENGE',
+        diagnostics
+      );
     }
 
     throw new AppError(
       'No se encontró el listado de productos en Decathlon',
       404,
-      'NO_RESULTS'
+      'NO_RESULTS',
+      diagnostics
     );
   }
 

@@ -34,6 +34,9 @@ src/
 | `SCRAPER_MAX_CONCURRENCY` | No | `2` | Maximo de scrapers Playwright ejecutandose al mismo tiempo |
 | `SCRAPER_MAX_QUEUE` | No | `12` | Maximo de requests esperando turno cuando la concurrencia esta ocupada |
 | `SCRAPER_QUEUE_TIMEOUT_MS` | No | `15000` | Tiempo maximo en cola antes de responder `429` |
+| `SCRAPER_DEBUG` | No | `false` | Si es `true`, guarda screenshot de fallos de selector en `/tmp/scraper-debug` |
+| `SCRAPER_DEBUG_SAVE_HTML` | No | `false` | Si es `true` y `SCRAPER_DEBUG=true`, guarda HTML completo en archivo |
+| `SCRAPER_DEBUG_DIR` | No | `/tmp/scraper-debug` | Directorio donde se guardan artefactos de diagnóstico |
 
 ## Ejecucion local
 
@@ -110,6 +113,9 @@ curl http://localhost:8080/api/health
    - `SCRAPER_MAX_CONCURRENCY=2`
    - `SCRAPER_MAX_QUEUE=12`
    - `SCRAPER_QUEUE_TIMEOUT_MS=15000`
+   - `SCRAPER_DEBUG=false`
+   - `SCRAPER_DEBUG_SAVE_HTML=false`
+   - `SCRAPER_DEBUG_DIR=/tmp/scraper-debug`
 6. Internal Port: `8080`.
 7. Configura dominio y SSL en el servicio.
 8. Despliega.
@@ -148,6 +154,25 @@ curl -X POST https://TU_DOMINIO/api/scrape/decathlon/search \
   - errores de Playwright
   - reinicios del contenedor
   - errores `5xx`
+
+## Diagnostico anti-bot (temporal)
+
+Para investigar bloqueos en producción:
+
+1. Activa variables en EasyPanel:
+   - `SCRAPER_DEBUG=true`
+   - `SCRAPER_DEBUG_SAVE_HTML=true`
+2. Haz deploy.
+3. Ejecuta request fallida.
+4. Revisa en la respuesta `details`:
+   - `pageUrl`
+   - `pageTitle`
+   - `bodyPreview`
+   - `screenshotPath`
+   - `htmlPath` (si habilitaste guardado de html)
+5. Cuando termines diagnóstico, vuelve a:
+   - `SCRAPER_DEBUG=false`
+   - `SCRAPER_DEBUG_SAVE_HTML=false`
 
 ## Rollback operativo
 

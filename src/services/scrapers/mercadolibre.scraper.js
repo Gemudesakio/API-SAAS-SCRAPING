@@ -1,6 +1,7 @@
 import { chromium } from 'playwright';
 import { AppError } from '../../errors/app-error.js';
 import { attrOrEmpty, buildUserAgent, detectChallenge, textOrEmpty } from '../../utils/scraper.helpers.js';
+import { collectPageDiagnostics } from '../../utils/scraper-diagnostics.js';
 
 const ML_BASE_URL = 'https://listado.mercadolibre.com.co';
 
@@ -62,16 +63,33 @@ async function loadMercadoLibreListingPage(page, targetUrl) {
   try {
     await page.waitForSelector('li.ui-search-layout__item', { timeout: 12000 });
   } catch {
-    const pageText = await page.textContent('body').catch(() => '');
+    const diagnostics = await collectPageDiagnostics(page, {
+      site: 'mercadolibre',
+      status: response?.status() ?? null,
+      reason: 'selector_not_found',
+    });
 
-    if (detectChallenge(pageText || '')) {
-      throw new AppError('Bloqueo anti-bot detectado en Mercado Libre', 503, 'BOT_CHALLENGE');
+    if (
+      detectChallenge({
+        pageText: diagnostics.bodyPreview,
+        title: diagnostics.pageTitle,
+        url: diagnostics.pageUrl,
+        status: diagnostics.status,
+      })
+    ) {
+      throw new AppError(
+        'Bloqueo anti-bot detectado en Mercado Libre',
+        503,
+        'BOT_CHALLENGE',
+        diagnostics
+      );
     }
 
     throw new AppError(
       'No se encontraron productos en Mercado Libre para la consulta',
       404,
-      'NO_RESULTS'
+      'NO_RESULTS',
+      diagnostics
     );
   }
 
