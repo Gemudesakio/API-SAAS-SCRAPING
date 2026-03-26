@@ -60,13 +60,21 @@ export function detectChallenge(input = '') {
     status = input.status ?? null;
   }
 
-  if ([403, 429, 503].includes(Number(status))) return true;
+  if ([401, 403, 429, 503].includes(Number(status))) return true;
 
   const haystack = `${pageUrl} ${pageTitle} ${pageText}`.toLowerCase();
+  const haystackAscii = haystack
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
+
   const challengeSignals = [
+    '/gz/account-verification',
+    'account-verification',
     'captcha',
     'cloudflare',
     'challenge',
+    'security check',
+    'verificacion de seguridad',
     'are you human',
     'verify you are human',
     'recaptcha',
@@ -74,9 +82,13 @@ export function detectChallenge(input = '') {
     'access denied',
     'actividad inusual',
     'actividad sospechosa',
+    'verifica tu identidad',
     'verifica que no eres un robot',
     'verifica que eres humano',
+    'enable javascript and cookies to continue',
   ];
 
-  return challengeSignals.some((signal) => haystack.includes(signal));
+  return challengeSignals.some(
+    (signal) => haystack.includes(signal) || haystackAscii.includes(signal)
+  );
 }
