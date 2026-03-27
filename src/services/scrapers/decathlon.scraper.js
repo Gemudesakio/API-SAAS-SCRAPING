@@ -21,6 +21,26 @@ const DECATHLON_ENGINES = {
   FLARESOLVERR: 'flaresolverr',
 };
 
+async function safeClosePlaywright(page, context, browser) {
+  try {
+    await page?.close({ runBeforeUnload: false });
+  } catch {
+    // no-op: el navegador puede haberse cerrado antes
+  }
+
+  try {
+    await context?.close();
+  } catch {
+    // no-op: evitar pisar el error principal
+  }
+
+  try {
+    await browser?.close();
+  } catch {
+    // no-op: evitar pisar el error principal
+  }
+}
+
 function sleep(ms) {
   return new Promise((resolve) => {
     setTimeout(resolve, ms);
@@ -421,8 +441,7 @@ async function scrapeDecathlonWithPlaywright({ targetUrl, maxItems, maxPages, he
       },
     };
   } finally {
-    await context.close();
-    await browser.close();
+    await safeClosePlaywright(page, context, browser);
   }
 }
 

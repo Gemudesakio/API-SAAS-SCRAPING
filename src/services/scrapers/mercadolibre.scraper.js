@@ -5,6 +5,26 @@ import { collectPageDiagnostics } from '../../utils/scraper-diagnostics.js';
 
 const ML_BASE_URL = 'https://listado.mercadolibre.com.co';
 
+async function safeClosePlaywright(page, context, browser) {
+  try {
+    await page?.close({ runBeforeUnload: false });
+  } catch {
+    // no-op: el navegador puede haberse cerrado antes
+  }
+
+  try {
+    await context?.close();
+  } catch {
+    // no-op: evitar pisar el error principal
+  }
+
+  try {
+    await browser?.close();
+  } catch {
+    // no-op: evitar pisar el error principal
+  }
+}
+
 
 async function hasMercadoLibreNextPage(page) {
   const candidateSelectors = [
@@ -300,7 +320,6 @@ export async function scrapeMercadoLibre({
       },
     };
   } finally {
-    await context.close();
-    await browser.close();
+    await safeClosePlaywright(page, context, browser);
   }
 }
