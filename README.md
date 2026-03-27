@@ -39,6 +39,11 @@ src/
 | `SCRAPER_DEBUG` | No | `false` | Si es `true`, guarda screenshot de fallos de selector en `/tmp/scraper-debug` |
 | `SCRAPER_DEBUG_SAVE_HTML` | No | `false` | Si es `true` y `SCRAPER_DEBUG=true`, guarda HTML completo en archivo |
 | `SCRAPER_DEBUG_DIR` | No | `/tmp/scraper-debug` | Directorio donde se guardan artefactos de diagnóstico |
+| `ML_PROXY_ENABLED` | No | `false` | Habilita proxy saliente solo para el scraper de Mercado Libre (Playwright) |
+| `ML_PROXY_SERVER` | No | - | Servidor proxy para Mercado Libre. Ej: `http://gw.dataimpulse.com:823` |
+| `ML_PROXY_USERNAME` | No | - | Usuario del proxy para Mercado Libre |
+| `ML_PROXY_PASSWORD` | No | - | Password del proxy para Mercado Libre |
+| `ML_PROXY_BYPASS` | No | - | Hosts a excluir del proxy en Playwright. Ej: `localhost,127.0.0.1` |
 | `FLARESOLVERR_URL` | No | - | URL interna del servicio FlareSolverr. Ej: `http://proyectos-saas_flaresolverr:80/v1` |
 | `FLARESOLVERR_TIMEOUT_MS` | No | `120000` | `maxTimeout` enviado a FlareSolverr por request |
 | `FLARESOLVERR_WAIT_SECONDS` | No | `3` | Espera post-challenge antes de devolver HTML |
@@ -125,6 +130,11 @@ curl http://localhost:8080/api/health
    - `SCRAPER_DEBUG=false`
    - `SCRAPER_DEBUG_SAVE_HTML=false`
    - `SCRAPER_DEBUG_DIR=/tmp/scraper-debug`
+   - `ML_PROXY_ENABLED=true`
+   - `ML_PROXY_SERVER=http://gw.dataimpulse.com:823`
+   - `ML_PROXY_USERNAME=TU_USUARIO_PROXY`
+   - `ML_PROXY_PASSWORD=TU_PASSWORD_PROXY`
+   - `ML_PROXY_BYPASS=localhost,127.0.0.1`
    - `FLARESOLVERR_URL=http://proyectos-saas_flaresolverr:80/v1`
    - `FLARESOLVERR_USE_SESSION=true`
    - `FLARESOLVERR_DISABLE_MEDIA=true`
@@ -138,6 +148,13 @@ Health:
 
 ```bash
 curl -i https://TU_DOMINIO/api/health
+```
+
+Verifica salida del proxy desde la VPS:
+
+```bash
+curl -x "http://TU_USUARIO_PROXY:TU_PASSWORD_PROXY@gw.dataimpulse.com:823" \
+  -s https://api.ipify.org?format=json
 ```
 
 Mercado Libre:
@@ -154,6 +171,18 @@ Decathlon:
 curl -X POST https://TU_DOMINIO/api/scrape/decathlon/search \
   -H "Content-Type: application/json" \
   -d '{"query":"segway","maxItems":2,"headless":true}'
+```
+
+Si Mercado Libre responde `200`, valida en `meta` que el proxy quedó activo:
+
+```json
+"meta": {
+  "engine": "playwright",
+  "proxy": {
+    "enabled": true,
+    "server": "http://gw.dataimpulse.com:823"
+  }
+}
 ```
 
 ## Operacion y logs

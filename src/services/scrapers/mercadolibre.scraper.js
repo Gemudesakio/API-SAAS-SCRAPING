@@ -5,6 +5,38 @@ import { collectPageDiagnostics } from '../../utils/scraper-diagnostics.js';
 
 const ML_BASE_URL = 'https://listado.mercadolibre.com.co';
 
+function parseBooleanEnv(value, fallback = false) {
+  if (value === undefined || value === null || value === '') return fallback;
+  if (typeof value === 'boolean') return value;
+
+  const normalized = String(value).trim().toLowerCase();
+
+  if (['1', 'true', 'yes', 'on'].includes(normalized)) return true;
+  if (['0', 'false', 'no', 'off'].includes(normalized)) return false;
+
+  return fallback;
+}
+
+function getMercadoLibreProxyConfig() {
+  const enabled = parseBooleanEnv(process.env.ML_PROXY_ENABLED, false);
+  if (!enabled) return null;
+
+  const server = (process.env.ML_PROXY_SERVER || '').trim();
+  if (!server) return null;
+
+  const username = (process.env.ML_PROXY_USERNAME || '').trim();
+  const password = (process.env.ML_PROXY_PASSWORD || '').trim();
+  const bypass = (process.env.ML_PROXY_BYPASS || '').trim();
+
+  const proxy = { server };
+
+  if (username) proxy.username = username;
+  if (password) proxy.password = password;
+  if (bypass) proxy.bypass = bypass;
+
+  return proxy;
+}
+
 async function safeClosePlaywright(page, context, browser) {
   try {
     await page?.close({ runBeforeUnload: false });
@@ -196,15 +228,17 @@ export async function scrapeMercadoLibre({
   headless = true,
 }) {
   const targetUrl = resolveMercadoLibreTargetUrl({ query, url });
+  const proxyConfig = getMercadoLibreProxyConfig();
 
   const browser = await chromium.launch({
-  headless,
-  args: [
-    '--no-sandbox',
-    '--disable-setuid-sandbox',
-    '--disable-dev-shm-usage',
-  ],
-});
+    headless,
+    proxy: proxyConfig || undefined,
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+    ],
+  });
 
   const context = await browser.newContext({
     locale: 'es-CO',
@@ -309,9 +343,14 @@ export async function scrapeMercadoLibre({
     return {
       products,
       meta: {
+        engine: 'playwright',
         status: firstStatus,
         finalUrl: page.url(),
         pagesVisited,
+        proxy: {
+          enabled: Boolean(proxyConfig),
+          server: proxyConfig?.server || null,
+        },
         pagination: {
           requestedMaxItems: maxItems,
           maxPages,
