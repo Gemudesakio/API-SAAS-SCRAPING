@@ -37,6 +37,11 @@ src/
 | `SCRAPER_DEBUG` | No | `false` | Si es `true`, guarda screenshot de fallos de selector en `/tmp/scraper-debug` |
 | `SCRAPER_DEBUG_SAVE_HTML` | No | `false` | Si es `true` y `SCRAPER_DEBUG=true`, guarda HTML completo en archivo |
 | `SCRAPER_DEBUG_DIR` | No | `/tmp/scraper-debug` | Directorio donde se guardan artefactos de diagnóstico |
+| `DECATHLON_ENGINE` | No | `auto` | `flaresolverr` o `playwright`. En `auto`, usa FlareSolverr si `FLARESOLVERR_URL` existe |
+| `FLARESOLVERR_URL` | No | - | URL interna del servicio FlareSolverr. Ej: `http://proyectos-saas_flaresolverr:80/v1` |
+| `FLARESOLVERR_TIMEOUT_MS` | No | `120000` | `maxTimeout` enviado a FlareSolverr por request |
+| `FLARESOLVERR_WAIT_SECONDS` | No | `3` | Espera post-challenge antes de devolver HTML |
+| `FLARESOLVERR_REQUEST_TIMEOUT_MS` | No | `130000` | Timeout HTTP cliente API -> FlareSolverr |
 
 ## Ejecucion local
 
