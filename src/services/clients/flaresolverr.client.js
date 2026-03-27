@@ -1,4 +1,9 @@
 import { AppError } from '../../errors/app-error.js';
+import { randomUUID } from 'node:crypto';
+
+let cachedSessionId = null;
+let cachedSessionExpiresAt = 0;
+let createSessionPromise = null;
 
 function parseIntEnv(value, fallback, min = 0, max = Number.POSITIVE_INFINITY) {
   const parsed = Number(value);
@@ -13,12 +18,27 @@ function parseIntEnv(value, fallback, min = 0, max = Number.POSITIVE_INFINITY) {
   return normalized;
 }
 
+function parseBooleanEnv(value, fallback) {
+  if (value === undefined || value === null || value === '') return fallback;
+  if (typeof value === 'boolean') return value;
+
+  const normalized = String(value).trim().toLowerCase();
+
+  if (['1', 'true', 'yes', 'on'].includes(normalized)) return true;
+  if (['0', 'false', 'no', 'off'].includes(normalized)) return false;
+
+  return fallback;
+}
+
 function getConfig() {
   return {
     url: (process.env.FLARESOLVERR_URL || '').trim(),
     requestTimeoutMs: parseIntEnv(process.env.FLARESOLVERR_REQUEST_TIMEOUT_MS, 130000, 1000, 600000),
     maxTimeoutMs: parseIntEnv(process.env.FLARESOLVERR_TIMEOUT_MS, 120000, 1000, 600000),
     waitInSeconds: parseIntEnv(process.env.FLARESOLVERR_WAIT_SECONDS, 3, 0, 60),
+    disableMedia: parseBooleanEnv(process.env.FLARESOLVERR_DISABLE_MEDIA, true),
+    useSession: parseBooleanEnv(process.env.FLARESOLVERR_USE_SESSION, true),
+    sessionTtlMinutes: parseIntEnv(process.env.FLARESOLVERR_SESSION_TTL_MINUTES, 15, 1, 240),
   };
 }
 
@@ -107,13 +127,97 @@ async function postFlareSolverr(payload) {
   return data;
 }
 
-export async function flaresolverrGet(url) {
-  const config = getConfig();
+function isSessionExpired(config) {
+  return !cachedSessionId || Date.now() >= cachedSessionExpiresAt - 5000;
+}
 
-  return postFlareSolverr({
+function resetSessionCache() {
+  cachedSessionId = null;
+  cachedSessionExpiresAt = 0;
+}
+
+async function ensureSession(config, { forceRefresh = false } = {}) {
+  if (!config.useSession) return null;
+
+  if (forceRefresh) {
+    resetSessionCache();
+  }
+
+  if (!isSessionExpired(config)) {
+    return cachedSessionId;
+  }
+
+  if (createSessionPromise) {
+    return createSessionPromise;
+  }
+
+  createSessionPromise = (async () => {
+    const sessionId = `fs_${randomUUID()}`;
+
+    await postFlareSolverr({
+      cmd: 'sessions.create',
+      session: sessionId,
+    });
+
+    cachedSessionId = sessionId;
+    cachedSessionExpiresAt = Date.now() + (config.sessionTtlMinutes * 60 * 1000);
+
+    return cachedSessionId;
+  })().finally(() => {
+    createSessionPromise = null;
+  });
+
+  return createSessionPromise;
+}
+
+function isSessionError(error) {
+  const detailsMessage = error?.details?.upstreamMessage || '';
+  const haystack = `${error?.message || ''} ${detailsMessage}`.toLowerCase();
+
+  if (!haystack.includes('session')) return false;
+
+  return (
+    haystack.includes('not found') ||
+    haystack.includes('does not exist') ||
+    haystack.includes('invalid')
+  );
+}
+
+function buildGetPayload({ url, config, session }) {
+  const payload = {
     cmd: 'request.get',
     url,
     maxTimeout: config.maxTimeoutMs,
     waitInSeconds: config.waitInSeconds,
-  });
+    disableMedia: config.disableMedia,
+  };
+
+  if (session) {
+    payload.session = session;
+    payload.session_ttl_minutes = config.sessionTtlMinutes;
+  }
+
+  return payload;
+}
+
+export async function flaresolverrGet(url) {
+  const config = getConfig();
+
+  let session = await ensureSession(config);
+
+  try {
+    return await postFlareSolverr(
+      buildGetPayload({ url, config, session })
+    );
+  } catch (error) {
+    if (!session || !isSessionError(error)) {
+      throw error;
+    }
+
+    session = await ensureSession(config, { forceRefresh: true });
+
+    return postFlareSolverr(
+      buildGetPayload({ url, config, session })
+    );
+  }
 }

@@ -42,6 +42,9 @@ src/
 | `FLARESOLVERR_TIMEOUT_MS` | No | `120000` | `maxTimeout` enviado a FlareSolverr por request |
 | `FLARESOLVERR_WAIT_SECONDS` | No | `3` | Espera post-challenge antes de devolver HTML |
 | `FLARESOLVERR_REQUEST_TIMEOUT_MS` | No | `130000` | Timeout HTTP cliente API -> FlareSolverr |
+| `FLARESOLVERR_DISABLE_MEDIA` | No | `true` | Si es `true`, evita cargar imagen/CSS/fonts en FlareSolverr para reducir latencia |
+| `FLARESOLVERR_USE_SESSION` | No | `true` | Reutiliza sesión/cookies en FlareSolverr entre requests para evitar resolver challenge en cada llamada |
+| `FLARESOLVERR_SESSION_TTL_MINUTES` | No | `15` | Tiempo de vida de sesión reutilizada antes de rotarla |
 
 ## Ejecucion local
 
