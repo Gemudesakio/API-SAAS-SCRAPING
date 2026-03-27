@@ -1,51 +1,10 @@
 import { load as loadHtml } from 'cheerio';
-import { chromium } from 'playwright';
 import { AppError } from '../../errors/app-error.js';
-import {
-  absoluteUrl,
-  attrOrEmpty,
-  buildUserAgent,
-  detectChallenge,
-  textOrEmpty,
-} from '../../utils/scraper.helpers.js';
-import { collectPageDiagnostics } from '../../utils/scraper-diagnostics.js';
-import {
-  flaresolverrGet,
-  isFlareSolverrEnabled,
-} from '../clients/flaresolverr.client.js';
+import { absoluteUrl, detectChallenge } from '../../utils/scraper.helpers.js';
+import { flaresolverrGet, isFlareSolverrEnabled } from '../clients/flaresolverr.client.js';
 
 const DECATHLON_BASE_URL = 'https://www.decathlon.com.co';
-
-const DECATHLON_ENGINES = {
-  PLAYWRIGHT: 'playwright',
-  FLARESOLVERR: 'flaresolverr',
-};
-
-async function safeClosePlaywright(page, context, browser) {
-  try {
-    await page?.close({ runBeforeUnload: false });
-  } catch {
-    // no-op: el navegador puede haberse cerrado antes
-  }
-
-  try {
-    await context?.close();
-  } catch {
-    // no-op: evitar pisar el error principal
-  }
-
-  try {
-    await browser?.close();
-  } catch {
-    // no-op: evitar pisar el error principal
-  }
-}
-
-function sleep(ms) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, ms);
-  });
-}
+const DECATHLON_ENGINE = 'flaresolverr';
 
 function buildDecathlonUrl(query) {
   return `${DECATHLON_BASE_URL}/search/?query=${encodeURIComponent(query.trim())}`;
@@ -88,20 +47,23 @@ function resolveDecathlonTargetUrl({ query, url }) {
   );
 }
 
-function resolveDecathlonEngine() {
-  const configured = (process.env.DECATHLON_ENGINE || '').trim().toLowerCase();
+function extractImageFromNode(imageNode) {
+  const src = imageNode.attr('src');
+  if (src?.trim()) return src.trim();
 
-  if (configured === DECATHLON_ENGINES.PLAYWRIGHT) {
-    return DECATHLON_ENGINES.PLAYWRIGHT;
-  }
+  const dataSrc = imageNode.attr('data-src');
+  if (dataSrc?.trim()) return dataSrc.trim();
 
-  if (configured === DECATHLON_ENGINES.FLARESOLVERR) {
-    return DECATHLON_ENGINES.FLARESOLVERR;
-  }
+  const srcset = imageNode.attr('srcset');
+  if (!srcset?.trim()) return '';
 
-  return isFlareSolverrEnabled()
-    ? DECATHLON_ENGINES.FLARESOLVERR
-    : DECATHLON_ENGINES.PLAYWRIGHT;
+  const firstCandidate = srcset
+    .split(',')[0]
+    ?.trim()
+    ?.split(' ')[0]
+    ?.trim();
+
+  return firstCandidate || '';
 }
 
 function parseProductsFromEmbeddedData(rawJson, maxItems) {
@@ -123,7 +85,6 @@ function parseProductsFromEmbeddedData(rawJson, maxItems) {
     if (!item || typeof item !== 'object') continue;
 
     const title = String(item.title || '').trim();
-
     const amountRaw = item?.price?.amountRaw;
     const amount = item?.price?.amount;
     const priceRaw = amountRaw != null ? String(amountRaw) : String(amount || '').trim();
@@ -143,103 +104,6 @@ function parseProductsFromEmbeddedData(rawJson, maxItems) {
     }
 
     if (products.length >= maxItems) break;
-  }
-
-  return products;
-}
-
-async function loadDecathlonListingPage(page, targetUrl) {
-  const response = await page.goto(targetUrl, {
-    waitUntil: 'domcontentloaded',
-    timeout: 45000,
-  });
-
-  try {
-    await page.waitForSelector('os-product-list', { timeout: 12000 });
-  } catch {
-    const diagnostics = await collectPageDiagnostics(page, {
-      site: 'decathlon',
-      status: response?.status() ?? null,
-      reason: 'selector_not_found',
-    });
-
-    if (
-      detectChallenge({
-        pageText: diagnostics.bodyPreview,
-        title: diagnostics.pageTitle,
-        url: diagnostics.pageUrl,
-        status: diagnostics.status,
-      })
-    ) {
-      throw new AppError(
-        'Bloqueo anti-bot detectado en Decathlon',
-        503,
-        'BOT_CHALLENGE',
-        diagnostics
-      );
-    }
-
-    throw new AppError(
-      'No se encontró el listado de productos en Decathlon',
-      404,
-      'NO_RESULTS',
-      diagnostics
-    );
-  }
-
-  return response;
-}
-
-async function parseProductsFromEmbeddedJsonPage(page, maxItems) {
-  const scriptLocator = page.locator(
-    'os-product-list script[type="application/json"][data-src]'
-  );
-
-  if ((await scriptLocator.count()) === 0) return [];
-
-  const rawJson = await scriptLocator.first().textContent();
-
-  return parseProductsFromEmbeddedData(rawJson, maxItems);
-}
-
-async function parseProductsFromDomPage(page, maxItems) {
-  const cards = page.locator('li.js-product-card article.product-card');
-  const total = Math.min(await cards.count(), maxItems);
-  const products = [];
-
-  for (let i = 0; i < total; i += 1) {
-    const card = cards.nth(i);
-
-    const title = await textOrEmpty(card.locator('a.js-product-card-link h2'));
-    const href = await attrOrEmpty(card.locator('a.js-product-card-link'), ['href']);
-    const url = absoluteUrl(DECATHLON_BASE_URL, href);
-
-    const priceRaw = await textOrEmpty(card.locator('.price_amount'));
-    const image = await attrOrEmpty(card.locator('.product-card_image img'), [
-      'src',
-      'data-src',
-      'srcset',
-    ]);
-
-    if (title || url) {
-      products.push({
-        title,
-        priceRaw,
-        url,
-        image,
-        availabilityRaw: '',
-      });
-    }
-  }
-
-  return products;
-}
-
-async function extractDecathlonProductsFromPlaywrightPage(page, limit) {
-  let products = await parseProductsFromEmbeddedJsonPage(page, limit);
-
-  if (!products.length) {
-    products = await parseProductsFromDomPage(page, limit);
   }
 
   return products;
@@ -266,13 +130,7 @@ function parseProductsFromDomHtml($, maxItems) {
     const url = absoluteUrl(DECATHLON_BASE_URL, href);
 
     const priceRaw = card.find('.price_amount').first().text().trim();
-
-    const imageNode = card.find('.product-card_image img').first();
-    const image =
-      imageNode.attr('src') ||
-      imageNode.attr('data-src') ||
-      imageNode.attr('srcset') ||
-      '';
+    const image = extractImageFromNode(card.find('.product-card_image img').first());
 
     if (title || url) {
       products.push({
@@ -288,7 +146,26 @@ function parseProductsFromDomHtml($, maxItems) {
   return products;
 }
 
-function extractDecathlonProductsFromHtml(html, limit) {
+function detectHasNextPage($, currentPageNumber) {
+  const pageCountRaw = $('[data-page-count]').first().attr('data-page-count');
+  const pageCount = Number.parseInt(pageCountRaw || '', 10);
+
+  if (Number.isFinite(pageCount) && pageCount > 0) {
+    return currentPageNumber < pageCount;
+  }
+
+  const explicitNextSelectors = [
+    'a[rel="next"]',
+    'a[title*="Siguiente"]',
+    'a[aria-label*="Siguiente"]',
+    '.pagination [aria-label*="next"]',
+    '.pagination [title*="next"]',
+  ];
+
+  return explicitNextSelectors.some((selector) => $(selector).length > 0);
+}
+
+function extractDecathlonProductsFromHtml(html, limit, currentPageNumber) {
   const normalizedHtml = String(html || '');
   const $ = loadHtml(normalizedHtml);
 
@@ -302,6 +179,7 @@ function extractDecathlonProductsFromHtml(html, limit) {
     products,
     pageTitle: $('title').first().text().trim(),
     bodyPreview: normalizedHtml.slice(0, 2000),
+    hasNextPage: detectHasNextPage($, currentPageNumber),
   };
 }
 
@@ -319,133 +197,46 @@ function buildDecathlonPaginatedUrl(currentUrl, nextPageNumber) {
   return url.toString();
 }
 
-async function scrapeDecathlonWithPlaywright({ targetUrl, maxItems, maxPages, headless }) {
-  const browser = await chromium.launch({
-    headless,
-    args: [
-      '--no-sandbox',
-      '--disable-setuid-sandbox',
-      '--disable-dev-shm-usage',
-    ],
-  });
-
-  const context = await browser.newContext({
-    locale: 'es-CO',
-    viewport: { width: 1366, height: 768 },
-    userAgent: buildUserAgent(),
-  });
-
-  const page = await context.newPage();
-
-  await page.route('**/*', async (route) => {
-    const resourceType = route.request().resourceType();
-    const blockedTypes = ['image', 'media', 'font'];
-
-    if (blockedTypes.includes(resourceType)) {
-      return route.abort();
-    }
-
-    return route.continue();
-  });
-
-  try {
-    const products = [];
-    const seen = new Set();
-    const visitedUrls = new Set();
-
-    let currentUrl = targetUrl;
-    let currentPageNumber = 1;
-    let pagesVisited = 0;
-    let firstStatus = null;
-    let canonicalBaseUrl = null;
-
-    while (
-      currentUrl &&
-      products.length < maxItems &&
-      pagesVisited < maxPages &&
-      !visitedUrls.has(currentUrl)
-    ) {
-      visitedUrls.add(currentUrl);
-
-      let response;
-
-      try {
-        response = await loadDecathlonListingPage(page, currentUrl);
-      } catch (error) {
-        if (error?.code === 'NO_RESULTS' && products.length > 0) {
-          break;
-        }
-
-        throw error;
-      }
-
-      if (firstStatus === null) {
-        firstStatus = response?.status() ?? null;
-      }
-
-      if (!canonicalBaseUrl) {
-        canonicalBaseUrl = page.url();
-      }
-
-      const remaining = maxItems - products.length;
-      const pageProducts = await extractDecathlonProductsFromPlaywrightPage(page, remaining);
-
-      if (!pageProducts.length) {
-        break;
-      }
-
-      let newItemsCount = 0;
-
-      for (const product of pageProducts) {
-        const dedupeKey = product.url || product.title;
-
-        if (!dedupeKey || seen.has(dedupeKey)) continue;
-
-        seen.add(dedupeKey);
-        products.push(product);
-        newItemsCount += 1;
-
-        if (products.length >= maxItems) break;
-      }
-
-      pagesVisited += 1;
-
-      if (products.length >= maxItems) break;
-      if (newItemsCount === 0) break;
-
-      const nextPageNumber = currentPageNumber + 1;
-      const nextUrl = buildDecathlonPaginatedUrl(canonicalBaseUrl, nextPageNumber);
-
-      if (!nextUrl || nextUrl === currentUrl || visitedUrls.has(nextUrl)) {
-        break;
-      }
-
-      currentUrl = nextUrl;
-      currentPageNumber = nextPageNumber;
-
-      await page.waitForTimeout(400);
-    }
-
-    return {
-      products,
-      meta: {
-        engine: DECATHLON_ENGINES.PLAYWRIGHT,
-        status: firstStatus,
-        finalUrl: page.url(),
-        pagesVisited,
-        pagination: {
-          requestedMaxItems: maxItems,
-          maxPages,
-          collectedItems: products.length,
-        },
-      },
-    };
-  } finally {
-    await safeClosePlaywright(page, context, browser);
-  }
+function buildNoResultsDiagnostics({ status, finalUrl, pageTitle, bodyPreview }) {
+  return {
+    reason: 'selector_not_found',
+    site: 'decathlon',
+    status,
+    pageUrl: finalUrl,
+    pageTitle,
+    bodyPreview,
+    screenshotPath: null,
+    htmlPath: null,
+    debugEnabled: false,
+  };
 }
 
-async function scrapeDecathlonWithFlareSolverr({ targetUrl, maxItems, maxPages }) {
+function assertFlareSolverrReady() {
+  if (isFlareSolverrEnabled()) return;
+
+  throw new AppError(
+    'Decathlon requiere FLARESOLVERR_URL configurada',
+    503,
+    'SCRAPER_NAVIGATION_ERROR',
+    {
+      reason: 'flaresolverr_not_configured',
+    }
+  );
+}
+
+export async function scrapeDecathlon({
+  query,
+  url,
+  maxItems = 20,
+  maxPages = 3,
+  headless = true,
+}) {
+  void headless;
+
+  assertFlareSolverrReady();
+
+  const targetUrl = resolveDecathlonTargetUrl({ query, url });
+
   const products = [];
   const seen = new Set();
   const visitedUrls = new Set();
@@ -475,8 +266,6 @@ async function scrapeDecathlonWithFlareSolverr({ targetUrl, maxItems, maxPages }
     const finalUrl = String(solution.url || currentUrl);
     const html = String(solution.response || '');
 
-    lastFinalUrl = finalUrl;
-
     if (firstStatus === null) {
       firstStatus = status;
     }
@@ -485,22 +274,23 @@ async function scrapeDecathlonWithFlareSolverr({ targetUrl, maxItems, maxPages }
       canonicalBaseUrl = finalUrl;
     }
 
+    lastFinalUrl = finalUrl;
+
     const remaining = maxItems - products.length;
-    const extracted = extractDecathlonProductsFromHtml(html, remaining);
+    const extracted = extractDecathlonProductsFromHtml(
+      html,
+      remaining,
+      currentPageNumber
+    );
     const pageProducts = extracted.products;
 
     if (!pageProducts.length) {
-      const diagnostics = {
-        reason: 'selector_not_found',
-        site: 'decathlon',
+      const diagnostics = buildNoResultsDiagnostics({
         status,
-        pageUrl: finalUrl,
+        finalUrl,
         pageTitle: extracted.pageTitle,
         bodyPreview: extracted.bodyPreview,
-        screenshotPath: null,
-        htmlPath: null,
-        debugEnabled: false,
-      };
+      });
 
       if (
         detectChallenge({
@@ -518,9 +308,7 @@ async function scrapeDecathlonWithFlareSolverr({ targetUrl, maxItems, maxPages }
         );
       }
 
-      if (products.length > 0) {
-        break;
-      }
+      if (products.length > 0) break;
 
       throw new AppError(
         'No se encontró el listado de productos en Decathlon',
@@ -534,7 +322,6 @@ async function scrapeDecathlonWithFlareSolverr({ targetUrl, maxItems, maxPages }
 
     for (const product of pageProducts) {
       const dedupeKey = product.url || product.title;
-
       if (!dedupeKey || seen.has(dedupeKey)) continue;
 
       seen.add(dedupeKey);
@@ -548,6 +335,7 @@ async function scrapeDecathlonWithFlareSolverr({ targetUrl, maxItems, maxPages }
 
     if (products.length >= maxItems) break;
     if (newItemsCount === 0) break;
+    if (!extracted.hasNextPage) break;
 
     const nextPageNumber = currentPageNumber + 1;
     const nextUrl = buildDecathlonPaginatedUrl(canonicalBaseUrl, nextPageNumber);
@@ -558,14 +346,12 @@ async function scrapeDecathlonWithFlareSolverr({ targetUrl, maxItems, maxPages }
 
     currentUrl = nextUrl;
     currentPageNumber = nextPageNumber;
-
-    await sleep(400);
   }
 
   return {
     products,
     meta: {
-      engine: DECATHLON_ENGINES.FLARESOLVERR,
+      engine: DECATHLON_ENGINE,
       status: firstStatus,
       finalUrl: lastFinalUrl,
       pagesVisited,
@@ -576,30 +362,4 @@ async function scrapeDecathlonWithFlareSolverr({ targetUrl, maxItems, maxPages }
       },
     },
   };
-}
-
-export async function scrapeDecathlon({
-  query,
-  url,
-  maxItems = 20,
-  maxPages = 3,
-  headless = true,
-}) {
-  const targetUrl = resolveDecathlonTargetUrl({ query, url });
-  const engine = resolveDecathlonEngine();
-
-  if (engine === DECATHLON_ENGINES.FLARESOLVERR) {
-    return scrapeDecathlonWithFlareSolverr({
-      targetUrl,
-      maxItems,
-      maxPages,
-    });
-  }
-
-  return scrapeDecathlonWithPlaywright({
-    targetUrl,
-    maxItems,
-    maxPages,
-    headless,
-  });
 }

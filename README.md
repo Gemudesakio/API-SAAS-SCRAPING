@@ -1,12 +1,14 @@
 # API SaaS Scraping
 
-API Node.js + Express + Playwright para scraping robusto de Mercado Libre y Decathlon, con salida normalizada para integracion con n8n.
+API Node.js + Express para scraping robusto (Mercado Libre con Playwright y Decathlon con FlareSolverr), con salida normalizada para integracion con n8n.
 
 ## Stack
 
 - Node.js (ESM)
 - Express
-- Playwright (Chromium)
+- Playwright (Chromium, usado en Mercado Libre)
+- FlareSolverr (usado en Decathlon)
+- Cheerio
 - Docker (imagen oficial Playwright)
 
 ## Estructura principal
@@ -37,7 +39,6 @@ src/
 | `SCRAPER_DEBUG` | No | `false` | Si es `true`, guarda screenshot de fallos de selector en `/tmp/scraper-debug` |
 | `SCRAPER_DEBUG_SAVE_HTML` | No | `false` | Si es `true` y `SCRAPER_DEBUG=true`, guarda HTML completo en archivo |
 | `SCRAPER_DEBUG_DIR` | No | `/tmp/scraper-debug` | Directorio donde se guardan artefactos de diagnóstico |
-| `DECATHLON_ENGINE` | No | `auto` | `flaresolverr` o `playwright`. En `auto`, usa FlareSolverr si `FLARESOLVERR_URL` existe |
 | `FLARESOLVERR_URL` | No | - | URL interna del servicio FlareSolverr. Ej: `http://proyectos-saas_flaresolverr:80/v1` |
 | `FLARESOLVERR_TIMEOUT_MS` | No | `120000` | `maxTimeout` enviado a FlareSolverr por request |
 | `FLARESOLVERR_WAIT_SECONDS` | No | `3` | Espera post-challenge antes de devolver HTML |
@@ -124,6 +125,9 @@ curl http://localhost:8080/api/health
    - `SCRAPER_DEBUG=false`
    - `SCRAPER_DEBUG_SAVE_HTML=false`
    - `SCRAPER_DEBUG_DIR=/tmp/scraper-debug`
+   - `FLARESOLVERR_URL=http://proyectos-saas_flaresolverr:80/v1`
+   - `FLARESOLVERR_USE_SESSION=true`
+   - `FLARESOLVERR_DISABLE_MEDIA=true`
 6. Internal Port: `8080`.
 7. Configura dominio y SSL en el servicio.
 8. Despliega.
