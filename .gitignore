@@ -4,3 +4,12 @@ node_modules/
 .vercel/
 dist/
 coverage/
+
+# Claude Code (local agent config, not needed in production)
+.claude/
+CLAUDE.md
+CURSO_CLAUDE_CODE.md
+GUIA_INTEGRACION_N8N_MCP.md
+
+# Debug artifacts
+debug/
