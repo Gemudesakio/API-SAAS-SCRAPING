@@ -6,6 +6,18 @@ import { flaresolverrGet, isFlareSolverrEnabled } from '../clients/flaresolverr.
 const HOMECENTER_BASE_URL = 'https://www.homecenter.com.co';
 const HOMECENTER_ENGINE = 'flaresolverr';
 
+function isValidHomecenterUrl(rawUrl) {
+  try {
+    const parsed = new URL(rawUrl);
+    return (
+      parsed.hostname === 'www.homecenter.com.co' ||
+      parsed.hostname === 'homecenter.com.co'
+    );
+  } catch {
+    return false;
+  }
+}
+
 function buildHomecenterUrl(query, page = 1) {
   const params = new URLSearchParams({ Ntt: query.trim() });
   if (page > 1) params.set('No', String((page - 1) * 48));
@@ -140,6 +152,14 @@ export async function scrapeHomecenter({
 
   if (!query?.trim() && !url) {
     throw new AppError('Se requiere query o url para Homecenter', 400, 'MISSING_PARAM');
+  }
+
+  if (url && !isValidHomecenterUrl(url)) {
+    throw new AppError(
+      'URL inválida o no pertenece a Homecenter Colombia',
+      400,
+      'INVALID_URL'
+    );
   }
 
   const products = [];

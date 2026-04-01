@@ -4,11 +4,53 @@ import { buildUserAgent } from '../../utils/scraper.helpers.js';
 const FALABELLA_BASE_URL = 'https://www.falabella.com.co';
 const FALABELLA_ENGINE = 'fetch';
 
+function isValidFalabellaUrl(rawUrl) {
+  try {
+    const parsed = new URL(rawUrl);
+    return (
+      parsed.hostname === 'www.falabella.com.co' ||
+      parsed.hostname === 'falabella.com.co'
+    );
+  } catch {
+    return false;
+  }
+}
+
 function buildFalabellaUrl(query, page = 1) {
   const base = `${FALABELLA_BASE_URL}/falabella-co/search`;
   const params = new URLSearchParams({ Ntt: query.trim() });
   if (page > 1) params.set('page', String(page));
   return `${base}?${params}`;
+}
+
+function buildPaginatedUrl(baseUrl, page) {
+  if (page <= 1) return baseUrl;
+  const parsed = new URL(baseUrl);
+  parsed.searchParams.set('page', String(page));
+  return parsed.toString();
+}
+
+function resolveFalabellaTargetUrl({ query, url }) {
+  if (url) {
+    if (!isValidFalabellaUrl(url)) {
+      throw new AppError(
+        'URL inválida o no pertenece a Falabella Colombia',
+        400,
+        'INVALID_URL'
+      );
+    }
+    return url;
+  }
+
+  if (query?.trim()) {
+    return buildFalabellaUrl(query);
+  }
+
+  throw new AppError(
+    'Se requiere query o url para realizar la búsqueda',
+    400,
+    'MISSING_PARAM'
+  );
 }
 
 function extractNextData(html) {
@@ -46,12 +88,11 @@ function mapAvailability(availability = {}) {
 
 export async function scrapeFalabella({
   query,
+  url,
   maxItems = 20,
   maxPages = 3,
 }) {
-  if (!query?.trim()) {
-    throw new AppError('Se requiere query para Falabella', 400, 'MISSING_PARAM');
-  }
+  const baseTargetUrl = resolveFalabellaTargetUrl({ query, url });
 
   const products = [];
   const seen = new Set();
@@ -59,10 +100,10 @@ export async function scrapeFalabella({
   let lastUrl = '';
 
   for (let page = 1; page <= maxPages && products.length < maxItems; page++) {
-    const url = buildFalabellaUrl(query, page);
-    lastUrl = url;
+    const pageUrl = url ? buildPaginatedUrl(baseTargetUrl, page) : buildFalabellaUrl(query, page);
+    lastUrl = pageUrl;
 
-    const response = await fetch(url, {
+    const response = await fetch(pageUrl, {
       headers: {
         'User-Agent': buildUserAgent(),
         Accept: 'text/html,application/xhtml+xml',

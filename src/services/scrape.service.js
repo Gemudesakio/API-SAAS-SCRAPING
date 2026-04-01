@@ -4,6 +4,9 @@ import { scrapePepeGanga } from './scrapers/pepeganga.scraper.js';
 import { scrapeFalabella } from './scrapers/falabella.scraper.js';
 import { scrapeExito } from './scrapers/exito.scraper.js';
 import { scrapeHomecenter } from './scrapers/homecenter.scraper.js';
+import { scrapeAmazon } from './scrapers/amazon.scraper.js';
+import { scrapeEbay } from './scrapers/ebay.scraper.js';
+import { scrapeAliExpress } from './scrapers/aliexpress.scraper.js';
 import { normalizeProducts } from './normalizers/product.normalizer.js';
 import { getScraperLimiterStats, runWithScraperLimiter } from '../utils/scraper-concurrency.js';
 
@@ -49,4 +52,19 @@ export async function runExitoSearch(input) {
 export async function runHomecenterSearch(input) {
   const raw = await runWithScraperLimiter(() => scrapeHomecenter(input), 'homecenter');
   return buildResponse(raw, 'homecenter');
+}
+
+export async function runAmazonSearch(input) {
+  const raw = await runWithScraperLimiter(() => scrapeAmazon(input), 'amazon');
+  return buildResponse(raw, 'amazon');
+}
+
+export async function runEbaySearch(input) {
+  const raw = await runWithScraperLimiter(() => scrapeEbay(input), 'ebay');
+  return buildResponse(raw, 'ebay');
+}
+
+export async function runAliExpressSearch(input) {
+  const raw = await runWithScraperLimiter(() => scrapeAliExpress(input), 'aliexpress');
+  return buildResponse(raw, 'aliexpress');
 }

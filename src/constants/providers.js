@@ -5,4 +5,7 @@ export const PROVIDER_BY_SITE = {
   falabella: 'Falabella',
   exito: 'Éxito',
   homecenter: 'Homecenter',
+  amazon: 'Amazon',
+  ebay: 'eBay',
+  aliexpress: 'AliExpress',
 };

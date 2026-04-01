@@ -6,6 +6,70 @@ const IMPRESEE_URL =
 const PEPEGANGA_ENGINE = 'fetch';
 const PEPEGANGA_BASE = 'https://www.pepeganga.com';
 
+function isValidPepeGangaUrl(rawUrl) {
+  try {
+    const parsed = new URL(rawUrl);
+    return (
+      parsed.hostname === 'www.pepeganga.com' ||
+      parsed.hostname === 'pepeganga.com'
+    );
+  } catch {
+    return false;
+  }
+}
+
+function extractQueryFromPepeGangaUrl(rawUrl) {
+  try {
+    const parsed = new URL(rawUrl);
+
+    // ?_q=segway&map=ft → "segway"
+    const q = parsed.searchParams.get('_q');
+    if (q?.trim()) return q.trim();
+
+    // ?q=segway
+    const q2 = parsed.searchParams.get('q');
+    if (q2?.trim()) return q2.trim();
+
+    // /segway or /deportes/patinetas-electricas → last segment
+    const segments = parsed.pathname.replace(/^\//, '').split('/').filter(Boolean);
+    const last = segments[segments.length - 1];
+    if (last) return last.replace(/-/g, ' ').trim();
+  } catch {
+    // fall through
+  }
+  return null;
+}
+
+function resolvePepeGangaQuery({ query, url }) {
+  if (query?.trim()) return query.trim();
+
+  if (url) {
+    if (!isValidPepeGangaUrl(url)) {
+      throw new AppError(
+        'URL inválida o no pertenece a PepeGanga',
+        400,
+        'INVALID_URL'
+      );
+    }
+
+    const extracted = extractQueryFromPepeGangaUrl(url);
+    if (extracted) return extracted;
+
+    throw new AppError(
+      'No se pudo extraer el término de búsqueda de la URL de PepeGanga. Usa el parámetro "query" en su lugar.',
+      400,
+      'MISSING_PARAM',
+      { url, hint: 'La URL debe contener ?_q= o ser una página de búsqueda/categoría' }
+    );
+  }
+
+  throw new AppError(
+    'Se requiere query o url para realizar la búsqueda',
+    400,
+    'MISSING_PARAM'
+  );
+}
+
 function decodeImpreseeUrl(impreseeUrl) {
   try {
     const match = impreseeUrl.match(/\/go\/([A-Za-z0-9+/=_-]+)/);
@@ -23,12 +87,11 @@ function decodeImpreseeUrl(impreseeUrl) {
 
 export async function scrapePepeGanga({
   query,
+  url,
   maxItems = 20,
   maxPages = 3,
 }) {
-  if (!query?.trim()) {
-    throw new AppError('Se requiere query para PepeGanga', 400, 'MISSING_PARAM');
-  }
+  const resolvedQuery = resolvePepeGangaQuery({ query, url });
 
   const products = [];
   let pagesVisited = 0;
@@ -36,7 +99,7 @@ export async function scrapePepeGanga({
 
   for (let page = 0; page < maxPages && products.length < maxItems; page++) {
     const body = {
-      query_text: query.trim(),
+      query_text: resolvedQuery,
       query_id: null,
       page_size: pageSize,
       num_page: page,

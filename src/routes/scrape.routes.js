@@ -6,6 +6,9 @@ import {
   scrapeFalabellaController,
   scrapeExitoController,
   scrapeHomecenterController,
+  scrapeAmazonController,
+  scrapeEbayController,
+  scrapeAliExpressController,
 } from '../controllers/scrape.controller.js';
 import validateBody from '../middlewares/validate_body.js';
 import { scrapeRequestSchema } from '../validators/scrape.validator.js';
@@ -46,6 +49,24 @@ router.post(
   '/homecenter/search',
   validateBody(scrapeRequestSchema),
   scrapeHomecenterController
+);
+
+router.post(
+  '/amazon/search',
+  validateBody(scrapeRequestSchema),
+  scrapeAmazonController
+);
+
+router.post(
+  '/ebay/search',
+  validateBody(scrapeRequestSchema),
+  scrapeEbayController
+);
+
+router.post(
+  '/aliexpress/search',
+  validateBody(scrapeRequestSchema),
+  scrapeAliExpressController
 );
 
 export default router;
