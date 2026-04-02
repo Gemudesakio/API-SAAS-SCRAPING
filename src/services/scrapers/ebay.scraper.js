@@ -5,6 +5,7 @@ import {
   flaresolverrGet,
   isFlareSolverrEnabled,
 } from '../clients/flaresolverr.client.js';
+import { convertToCOP } from '../../utils/currency.js';
 
 const EBAY_BASE_URL = 'https://www.ebay.com';
 
@@ -202,6 +203,11 @@ export async function scrapeEbay({
     }
 
     const pageProducts = extractProductsFromHtml(result.html, maxItems - products.length);
+
+    for (const p of pageProducts) {
+      const usdAmount = parseFloat(p.priceRaw.replace(/[^0-9.]/g, '')) || 0;
+      if (usdAmount > 0) p.priceRaw = String(await convertToCOP(usdAmount));
+    }
 
     if (!pageProducts.length) {
       if (products.length > 0) break;

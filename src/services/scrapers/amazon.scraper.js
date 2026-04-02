@@ -5,6 +5,7 @@ import {
   flaresolverrGet,
   isFlareSolverrEnabled,
 } from '../clients/flaresolverr.client.js';
+import { convertToCOP } from '../../utils/currency.js';
 
 const AMAZON_BASE_URL = 'https://www.amazon.com';
 
@@ -104,6 +105,7 @@ function extractProductsFromHtml(html, maxItems) {
     if (!title) return;
 
     const priceRaw = parseAmazonPrice(card, $);
+    if (!priceRaw) return;
 
     let href = '';
     card.find('a.a-link-normal').each((_, a) => {
@@ -132,7 +134,7 @@ function extractProductsFromHtml(html, maxItems) {
       priceRaw,
       url: fullUrl.split('/ref=')[0],
       image,
-      availabilityRaw: deliveryText || 'DISPONIBLE',
+      availabilityRaw: deliveryText,
     });
   });
 
@@ -248,6 +250,11 @@ export async function scrapeAmazon({
     }
 
     const pageProducts = extractProductsFromHtml(result.html, maxItems - products.length);
+
+    for (const p of pageProducts) {
+      const usdAmount = parseFloat(p.priceRaw.replace(/[^0-9.]/g, '')) || 0;
+      if (usdAmount > 0) p.priceRaw = String(await convertToCOP(usdAmount));
+    }
 
     if (!pageProducts.length) {
       if (products.length > 0) break;

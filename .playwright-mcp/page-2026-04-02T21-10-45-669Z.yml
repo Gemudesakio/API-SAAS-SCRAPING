@@ -1,0 +1,645 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - link "Logo de AliExpress" [ref=e6] [cursor=pointer]:
+        - /url: https://es.aliexpress.com
+        - text: AliExpress
+      - button "Todas las categorías" [ref=e9]:
+        - img "Todas las categorías" [ref=e10]
+    - generic [ref=e12]:
+      - generic [ref=e14]:
+        - searchbox "Puedes escribir el nombre de un artículo o una palabra clave para buscar." [ref=e15]: segway
+        - img [ref=e20] [cursor=pointer]
+        - button "Puedes hacer clic en este botón para buscar." [ref=e21] [cursor=pointer]
+      - generic [ref=e22]:
+        - button "Puedes escanear el código QR para descargar la aplicación de AliExpress." [ref=e23] [cursor=pointer]:
+          - img [ref=e25]
+          - img [ref=e29]
+        - button "Puedes seleccionar un país, una región o un idioma para comprar en AliExpress co. El idioma actual es inglés." [ref=e33] [cursor=pointer]:
+          - img [ref=e36]
+        - button "Puedes registrarte, iniciar sesión o ver más información sobre tu cuenta." [ref=e38] [cursor=pointer]:
+          - img [ref=e40]
+          - img [ref=e43]
+        - link "0 artículos en la cesta." [ref=e46] [cursor=pointer]:
+          - /url: //www.aliexpress.com/p/shoppingcart/index.html
+          - img [ref=e48]
+          - generic [ref=e50]: "0"
+  - generic [ref=e51]:
+    - generic [ref=e53]:
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - generic [ref=e56] [cursor=pointer]:
+            - generic [ref=e57]: Ofertas y descuentos
+            - img [ref=e59]
+          - generic [ref=e62]:
+            - generic "filterCode:bigsale" [ref=e63] [cursor=pointer]:
+              - checkbox "Promo" [ref=e64]
+              - generic [ref=e65]: Promo
+            - generic "filterCode:freeshipping" [ref=e66] [cursor=pointer]:
+              - checkbox "Envío gratis" [ref=e67]
+              - generic [ref=e68]: Envío gratis
+        - generic [ref=e69]:
+          - generic [ref=e70] [cursor=pointer]:
+            - generic [ref=e71]: Entrega y servicio
+            - img [ref=e73]
+          - generic "filterCode:choice_atm" [ref=e77] [cursor=pointer]:
+            - checkbox "Choice" [ref=e78]
+            - generic [ref=e79]: Choice
+        - generic [ref=e80]:
+          - generic [ref=e81] [cursor=pointer]:
+            - generic [ref=e82]: Calidad y confianza
+            - img [ref=e84]
+          - generic [ref=e87]:
+            - generic "filterCode:4StarRating" [ref=e88] [cursor=pointer]:
+              - checkbox "y más y más" [ref=e89]
+              - generic [ref=e91]:
+                - img "y más" [ref=e92]
+                - generic [ref=e93]: y más
+            - generic "filterCode:PremiumQuality" [ref=e94] [cursor=pointer]:
+              - checkbox "Calidad superior" [ref=e95]
+              - generic [ref=e96]: Calidad superior
+        - generic [ref=e97]:
+          - generic [ref=e98] [cursor=pointer]:
+            - generic [ref=e99]: Envío desde
+            - img [ref=e101]
+          - generic [ref=e104]:
+            - generic "-1" [ref=e105] [cursor=pointer]:
+              - radio "Todos" [checked] [ref=e106]
+              - generic [ref=e107]: Todos
+            - generic "TR" [ref=e108] [cursor=pointer]:
+              - radio "Turquía" [ref=e109]
+              - generic [ref=e113]: Turquía
+            - generic "CN" [ref=e114] [cursor=pointer]:
+              - radio "China" [ref=e115]
+              - generic [ref=e119]: China
+        - generic [ref=e120]:
+          - generic [ref=e121] [cursor=pointer]:
+            - generic [ref=e122]: Precio
+            - img [ref=e124]
+          - generic [ref=e128]:
+            - generic [ref=e129]:
+              - generic [ref=e131]: COP
+              - textbox "Mín." [ref=e132]
+            - generic [ref=e133]: "-"
+            - generic [ref=e134]:
+              - generic [ref=e136]: COP
+              - textbox "Máx." [ref=e137]
+            - generic [ref=e138] [cursor=pointer]: OK
+      - generic [ref=e139]:
+        - generic [ref=e144]:
+          - generic [ref=e145]: "Ordenar por:"
+          - generic [ref=e146]:
+            - generic [ref=e148] [cursor=pointer]: Relevancia
+            - generic [ref=e150] [cursor=pointer]: Pedidos
+            - generic [ref=e151] [cursor=pointer]:
+              - generic [ref=e152]: Precio
+              - generic [ref=e153]:
+                - img [ref=e155]
+                - img [ref=e158]
+        - generic [ref=e160]:
+          - generic [ref=e161]:
+            - img [ref=e162]
+            - generic [ref=e163]:
+              - text: "Termina :"
+              - generic [ref=e164]: 7 abr., 21:59 (GMT-5)
+          - generic [ref=e165]:
+            - link "Report fraud item Espejos retrovisores originales para Segway MAX G3 ZT3 Pro F3 F3 Pro E3 E3 Pro accesorios para patinete eléctrico $72.349 4.8 1.000+ vendidos -$7.600 en $58.000 -$23.948,04 · 1er pedido" [ref=e169] [cursor=pointer]:
+              - /url: //es.aliexpress.com/item/1005009299626313.html?algo_pvid=bd254d2b-fa86-441b-8b4c-7018a07d3414&algo_exp_id=bd254d2b-fa86-441b-8b4c-7018a07d3414-3&pdp_ext_f=%7B%22order%22%3A%221166%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21COP%2196297.04%2172349.00%21%21%21178.00%21133.73%21%40210311a017751642428164140e57c0%2112000048663352726%21sea%21CO%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Ab034317e%3Bm03_new_user%3A-29895%3BpisId%3A5000000197828964&curPageLogUid=WnhExSsMWuWG&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005009299626313%7C_p_origin_prod%3A
+              - generic [ref=e170]:
+                - generic [ref=e174]:
+                  - img [ref=e175]
+                  - img [ref=e176]
+                  - img [ref=e177]
+                  - img [ref=e178]
+                  - img [ref=e179]
+                  - img [ref=e180]
+                - generic "Report fraud item" [ref=e192]
+              - generic [ref=e193]:
+                - heading "Espejos retrovisores originales para Segway MAX G3 ZT3 Pro F3 F3 Pro E3 E3 Pro accesorios para patinete eléctrico" [level=3] [ref=e194]:
+                  - img [ref=e195]
+                  - heading "Espejos retrovisores originales para Segway MAX G3 ZT3 Pro F3 F3 Pro E3 E3 Pro accesorios para patinete eléctrico" [level=3] [ref=e196]
+                - generic "$72.349" [ref=e197]:
+                  - generic [ref=e198]: $72.349
+                  - generic [ref=e199]: $96.297,04
+                  - generic [ref=e200]: "-24%"
+                - generic [ref=e201]:
+                  - generic [ref=e203]: "4.8"
+                  - generic [ref=e204]: 1.000+ vendidos
+                - generic [ref=e206]:
+                  - generic [ref=e207]:
+                    - img [ref=e208]
+                    - generic "-$7.600 en $58.000" [ref=e209]
+                  - generic [ref=e210]:
+                    - img [ref=e211]
+                    - generic "-$23.948,04 · 1er pedido" [ref=e212]
+            - link "Report fraud item Válvula de aire extendida para rueda de patinete eléctrico Segway ZT3 Pro MAX G3, piezas de accesorios de Gas sin cámara GRATIS con una compra 4.9 1.000+ vendidos" [ref=e217] [cursor=pointer]:
+              - /url: https://www.aliexpress.com/ssr/300001493/welcomegiftspmpc?spm=pm.sr&businessCode=ug&productIds=1005009472918579&pha_manifest=ssr&source_position=app_home_moretolove_wg&_immersiveMode=true&disableNav=YES&sourceName=SEARCH&skuId=12000049210323633&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005009472918579%7C_p_origin_prod%3A&pvid=bd254d2b-fa86-441b-8b4c-7018a07d3414
+              - generic [ref=e218]:
+                - generic [ref=e222]:
+                  - img [ref=e223]
+                  - img [ref=e224]
+                  - img [ref=e225]
+                  - img [ref=e226]
+                  - img [ref=e227]
+                  - img [ref=e228]
+                - generic "Report fraud item" [ref=e237]
+              - generic [ref=e238]:
+                - heading "Válvula de aire extendida para rueda de patinete eléctrico Segway ZT3 Pro MAX G3, piezas de accesorios de Gas sin cámara" [level=3] [ref=e239]:
+                  - img [ref=e240]
+                  - img [ref=e241]
+                  - heading "Válvula de aire extendida para rueda de patinete eléctrico Segway ZT3 Pro MAX G3, piezas de accesorios de Gas sin cámara" [level=3] [ref=e242]
+                - generic [ref=e243]:
+                  - generic [ref=e244]: GRATIS
+                  - generic [ref=e245]: con una compra
+                  - img [ref=e247]
+                - generic [ref=e249]:
+                  - generic [ref=e251]: "4.9"
+                  - generic [ref=e252]: 1.000+ vendidos
+            - link "Report fraud item Segway Ninebot Max G30 G30D Kit de tornillos de bloqueo para patinete eléctrico piezas de repuesto de cojinete de eje 1/3/5/10 juegos G30Lite $11.480 4.9 700+ vendidos Ahorra $19.140,23 Combo Ahorro" [ref=e258] [cursor=pointer]:
+              - /url: https://www.aliexpress.com/ssr/300000512/BundleDeals2?productIds=1005009351218084:12000048841051966&pha_manifest=ssr&_immersiveMode=true&disableNav=YES&sourceName=SEARCHProduct&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005009351218084%7C_p_origin_prod%3A1005009941489351&pvid=bd254d2b-fa86-441b-8b4c-7018a07d3414
+              - generic [ref=e259]:
+                - generic [ref=e263]:
+                  - img [ref=e264]
+                  - img [ref=e265]
+                  - img [ref=e266]
+                  - img [ref=e267]
+                  - img [ref=e268]
+                  - img [ref=e269]
+                - generic "Report fraud item" [ref=e278]
+              - generic [ref=e279]:
+                - heading "Segway Ninebot Max G30 G30D Kit de tornillos de bloqueo para patinete eléctrico piezas de repuesto de cojinete de eje 1/3/5/10 juegos G30Lite" [level=3] [ref=e280]:
+                  - img [ref=e281]
+                  - img [ref=e282]
+                  - heading "Segway Ninebot Max G30 G30D Kit de tornillos de bloqueo para patinete eléctrico piezas de repuesto de cojinete de eje 1/3/5/10 juegos G30Lite" [level=3] [ref=e283]
+                - generic "$11.480" [ref=e284]:
+                  - generic [ref=e285]: $11.480
+                - generic [ref=e286]:
+                  - generic [ref=e288]: "4.9"
+                  - generic [ref=e289]: 700+ vendidos
+                - generic [ref=e292]:
+                  - img [ref=e293]
+                  - generic "Ahorra $19.140,23" [ref=e294]
+                - generic [ref=e295]:
+                  - generic [ref=e296]: Combo Ahorro
+                  - img [ref=e298]
+            - link "Report fraud item Faro Original para patinete eléctrico Segway ZT3 Pro, piezas de repuesto de luz delantera superbrillante en forma de X de 4W $56.705 4.4 700+ vendidos -$7.600 en $58.000 -$30.875,67 · 1er pedido" [ref=e303] [cursor=pointer]:
+              - /url: //es.aliexpress.com/item/1005008042149775.html?algo_pvid=bd254d2b-fa86-441b-8b4c-7018a07d3414&algo_exp_id=bd254d2b-fa86-441b-8b4c-7018a07d3414-6&pdp_ext_f=%7B%22order%22%3A%22725%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21COP%2187580.67%2156705.00%21%21%2123.51%2115.22%21%40210311a017751642428164140e57c0%2112000043460671670%21sea%21CO%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Ab034317e%3Bm03_new_user%3A-29895%3BpisId%3A5000000197828964&curPageLogUid=2XAfyiw87i69&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005008042149775%7C_p_origin_prod%3A
+              - generic [ref=e304]:
+                - generic [ref=e308]:
+                  - img [ref=e309]
+                  - img [ref=e310]
+                  - img [ref=e311]
+                  - img [ref=e312]
+                  - img [ref=e313]
+                  - img [ref=e314]
+                - generic "Report fraud item" [ref=e326]
+              - generic [ref=e327]:
+                - heading "Faro Original para patinete eléctrico Segway ZT3 Pro, piezas de repuesto de luz delantera superbrillante en forma de X de 4W" [level=3] [ref=e328]:
+                  - img [ref=e329]
+                  - heading "Faro Original para patinete eléctrico Segway ZT3 Pro, piezas de repuesto de luz delantera superbrillante en forma de X de 4W" [level=3] [ref=e330]
+                - generic "$56.705" [ref=e331]:
+                  - generic [ref=e332]: $56.705
+                  - generic [ref=e333]: $87.580,67
+                  - generic [ref=e334]: "-35%"
+                - generic [ref=e335]:
+                  - generic [ref=e337]: "4.4"
+                  - generic [ref=e338]: 700+ vendidos
+                - generic [ref=e340]:
+                  - generic [ref=e341]:
+                    - img [ref=e342]
+                    - generic "-$7.600 en $58.000" [ref=e343]
+                  - generic [ref=e344]:
+                    - img [ref=e345]
+                    - generic "-$30.875,67 · 1er pedido" [ref=e346]
+            - link "Report fraud item Cables de límite de velocidad de liberación personalizados, 40 km/h, para Ninebot de Segway F3E/F3D/F3 ProE/F3 ProD, líneas de velocidad de desbloqueo $158.192 4.5 600+ vendidos -$15.000 en $110.000 -$3.725,66 · 1er pedido" [ref=e351] [cursor=pointer]:
+              - /url: //es.aliexpress.com/item/1005009111753256.html?algo_pvid=bd254d2b-fa86-441b-8b4c-7018a07d3414&algo_exp_id=bd254d2b-fa86-441b-8b4c-7018a07d3414-7&pdp_ext_f=%7B%22order%22%3A%22662%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21COP%21161917.66%21158192.00%21%21%2143.46%2142.46%21%40210311a017751642428164140e57c0%2112000047955585490%21sea%21CO%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Ab034317e%3Bm03_new_user%3A-29895%3BpisId%3A5000000197828964&curPageLogUid=egr8TR6QyWza&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005009111753256%7C_p_origin_prod%3A
+              - generic [ref=e352]:
+                - generic [ref=e356]:
+                  - img [ref=e357]
+                  - img [ref=e358]
+                  - img [ref=e359]
+                  - img [ref=e360]
+                  - img [ref=e361]
+                  - img [ref=e362]
+                - generic "Report fraud item" [ref=e374]
+              - generic [ref=e375]:
+                - heading "Cables de límite de velocidad de liberación personalizados, 40 km/h, para Ninebot de Segway F3E/F3D/F3 ProE/F3 ProD, líneas de velocidad de desbloqueo" [level=3] [ref=e376]:
+                  - img [ref=e377]
+                  - img [ref=e378]
+                  - heading "Cables de límite de velocidad de liberación personalizados, 40 km/h, para Ninebot de Segway F3E/F3D/F3 ProE/F3 ProD, líneas de velocidad de desbloqueo" [level=3] [ref=e379]
+                - generic "$158.192" [ref=e380]:
+                  - generic [ref=e381]: $158.192
+                  - generic [ref=e382]: $161.917,66
+                - generic [ref=e383]:
+                  - generic [ref=e385]: "4.5"
+                  - generic [ref=e386]: 600+ vendidos
+                - generic [ref=e388]:
+                  - generic [ref=e389]:
+                    - img [ref=e390]
+                    - generic "-$15.000 en $110.000" [ref=e391]
+                  - generic [ref=e392]:
+                    - img [ref=e393]
+                    - generic "-$3.725,66 · 1er pedido" [ref=e394]
+            - link "Report fraud item Kit de controlador Bluetooth para Ninebot Segway ES1/ES2/ES3/ES4 Kickscooter tablero circuitos placa freno y acelerador $101.480 4.4 600+ vendidos Ahorra $196.618,24 Envío gratis Combo Ahorro" [ref=e399] [cursor=pointer]:
+              - /url: https://www.aliexpress.com/ssr/300000512/BundleDeals2?productIds=1005007537792349:12000041202832672&pha_manifest=ssr&_immersiveMode=true&disableNav=YES&sourceName=SEARCHProduct&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005007537792349%7C_p_origin_prod%3A&pvid=bd254d2b-fa86-441b-8b4c-7018a07d3414
+              - generic [ref=e400]:
+                - generic [ref=e404]:
+                  - img [ref=e405]
+                  - img [ref=e406]
+                  - img [ref=e407]
+                  - img [ref=e408]
+                  - img [ref=e409]
+                  - img [ref=e410]
+                - generic "Report fraud item" [ref=e419]
+              - generic [ref=e420]:
+                - heading "Kit de controlador Bluetooth para Ninebot Segway ES1/ES2/ES3/ES4 Kickscooter tablero circuitos placa freno y acelerador" [level=3] [ref=e421]:
+                  - img [ref=e422]
+                  - img [ref=e423]
+                  - heading "Kit de controlador Bluetooth para Ninebot Segway ES1/ES2/ES3/ES4 Kickscooter tablero circuitos placa freno y acelerador" [level=3] [ref=e424]
+                - generic "$101.480" [ref=e425]:
+                  - generic [ref=e426]: $101.480
+                - generic [ref=e427]:
+                  - generic [ref=e429]: "4.4"
+                  - generic [ref=e430]: 600+ vendidos
+                - generic [ref=e432]:
+                  - generic [ref=e433]:
+                    - img [ref=e434]
+                    - generic "Ahorra $196.618,24" [ref=e435]
+                  - generic "Envío gratis" [ref=e437]
+                - generic [ref=e438]:
+                  - generic [ref=e439]: Combo Ahorro
+                  - img [ref=e441]
+            - link "Report fraud item Espejo retrovisor Original para patinete eléctrico Segway ZT3 G3 G2 F3 E3, espejos convexos de rotación General de 360 grados $50.707 4.8 500+ vendidos El mejor precio en ofertas similares -2% con monedas" [ref=e446] [cursor=pointer]:
+              - /url: //es.aliexpress.com/item/1005009322017217.html?algo_pvid=bd254d2b-fa86-441b-8b4c-7018a07d3414&algo_exp_id=bd254d2b-fa86-441b-8b4c-7018a07d3414-10&pdp_ext_f=%7B%22order%22%3A%22529%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21COP%2150707.00%2150707.00%21%21%2113.61%2113.61%21%40210311a017751642428164140e57c0%2112000048745274845%21sea%21CO%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Ab034317e%3Bm03_new_user%3A-29895&curPageLogUid=rx2sMxvbQ3xz&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005009322017217%7C_p_origin_prod%3A
+              - generic [ref=e447]:
+                - img [ref=e452]
+                - generic "Report fraud item" [ref=e464]
+              - generic [ref=e465]:
+                - heading "Espejo retrovisor Original para patinete eléctrico Segway ZT3 G3 G2 F3 E3, espejos convexos de rotación General de 360 grados" [level=3] [ref=e466]:
+                  - heading "Espejo retrovisor Original para patinete eléctrico Segway ZT3 G3 G2 F3 E3, espejos convexos de rotación General de 360 grados" [level=3] [ref=e467]
+                - generic "$50.707" [ref=e468]:
+                  - generic [ref=e469]: $50.707
+                - generic [ref=e470]:
+                  - generic [ref=e472]: "4.8"
+                  - generic [ref=e473]: 500+ vendidos
+                - generic [ref=e475]:
+                  - generic [ref=e476]:
+                    - img [ref=e477]
+                    - generic "El mejor precio en ofertas similares" [ref=e478]
+                  - generic "-2% con monedas" [ref=e480]
+            - link "Report fraud item Válvula de aire extendida para rueda de patinete eléctrico Segway ZT3 Pro MAX G3, piezas de accesorios sin cámara de vacío de Gas $9.764,93 4.9 487 vendidos Combo Ahorro" [ref=e484] [cursor=pointer]:
+              - /url: https://www.aliexpress.com/ssr/300000512/BundleDeals2?productIds=1005009477633140:12000049309648517&pha_manifest=ssr&_immersiveMode=true&disableNav=YES&sourceName=SEARCHProduct&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005009477633140%7C_p_origin_prod%3A&pvid=bd254d2b-fa86-441b-8b4c-7018a07d3414
+              - generic [ref=e485]:
+                - img [ref=e490]
+                - generic "Report fraud item" [ref=e499]
+              - generic [ref=e500]:
+                - heading "Válvula de aire extendida para rueda de patinete eléctrico Segway ZT3 Pro MAX G3, piezas de accesorios sin cámara de vacío de Gas" [level=3] [ref=e501]:
+                  - img [ref=e502]
+                  - heading "Válvula de aire extendida para rueda de patinete eléctrico Segway ZT3 Pro MAX G3, piezas de accesorios sin cámara de vacío de Gas" [level=3] [ref=e503]
+                - generic "$9.764,93" [ref=e504]:
+                  - generic [ref=e505]: $9.764,93
+                  - generic [ref=e506]: $10.073,66
+                - generic [ref=e507]:
+                  - generic [ref=e509]: "4.9"
+                  - generic [ref=e510]: 487 vendidos
+                - generic [ref=e512]:
+                  - generic [ref=e513]: Combo Ahorro
+                  - img [ref=e515]
+            - link "Report fraud item Pastillas de freno para patinete eléctrico Segway Max G3 GT3, pinza de freno de disco mecánica delantera y trasera, piezas de repuesto $18.823 4.9 480 vendidos -$7.600 en $58.000 -$37.451,22 · 1er pedido" [ref=e521] [cursor=pointer]:
+              - /url: //es.aliexpress.com/item/1005011718134541.html?algo_pvid=bd254d2b-fa86-441b-8b4c-7018a07d3414&algo_exp_id=bd254d2b-fa86-441b-8b4c-7018a07d3414-9&pdp_ext_f=%7B%22order%22%3A%22480%22%2C%22eval%22%3A%221%22%2C%22orig_sl_item_id%22%3A%221005011718134541%22%2C%22orig_item_id%22%3A%221005010674907248%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21COP%2156274.22%2118823.00%21%21%21104.02%2134.79%21%40210311a017751642428164140e57c0%2112000056337487866%21sea%21CO%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Ab034317e%3Bm03_new_user%3A-29895%3BpisId%3A5000000197850007&curPageLogUid=Ai63TlcIbvSm&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005011718134541%7C_p_origin_prod%3A1005010674907248
+              - generic [ref=e522]:
+                - img [ref=e527]
+                - generic "Report fraud item" [ref=e539]
+              - generic [ref=e540]:
+                - heading "Pastillas de freno para patinete eléctrico Segway Max G3 GT3, pinza de freno de disco mecánica delantera y trasera, piezas de repuesto" [level=3] [ref=e541]:
+                  - img [ref=e542]
+                  - heading "Pastillas de freno para patinete eléctrico Segway Max G3 GT3, pinza de freno de disco mecánica delantera y trasera, piezas de repuesto" [level=3] [ref=e543]
+                - generic "$18.823" [ref=e544]:
+                  - generic [ref=e545]: $18.823
+                  - generic [ref=e546]: $56.274,22
+                  - generic [ref=e547]: "-66%"
+                - generic [ref=e548]:
+                  - generic [ref=e550]: "4.9"
+                  - generic [ref=e551]: 480 vendidos
+                - generic [ref=e553]:
+                  - generic [ref=e554]:
+                    - img [ref=e555]
+                    - generic "-$7.600 en $58.000" [ref=e556]
+                  - generic [ref=e557]:
+                    - img [ref=e558]
+                    - generic "-$37.451,22 · 1er pedido" [ref=e559]
+            - link "Report fraud item Bolsa Original de 3L para Segway Ninebot ZT3/ZT3 Pro E G2 G65 G30 G30D F40 F30 E22 E25 ES2 ES3 ES4, bolsas colgantes delanteras para patinete eléctrico $77.494 4.9 458 vendidos -$7.600 en $58.000 -$57.872,1 · 1er pedido" [ref=e563] [cursor=pointer]:
+              - /url: //es.aliexpress.com/item/1005008757525683.html?algo_pvid=bd254d2b-fa86-441b-8b4c-7018a07d3414&algo_exp_id=bd254d2b-fa86-441b-8b4c-7018a07d3414-15&pdp_ext_f=%7B%22order%22%3A%22458%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21COP%21135366.10%2177494.00%21%21%2136.33%2120.80%21%40210311a017751642428164140e57c0%2112000046541935911%21sea%21CO%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Ab034317e%3Bm03_new_user%3A-29895%3BpisId%3A5000000197828964&curPageLogUid=4V0RKJoGbceM&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005008757525683%7C_p_origin_prod%3A
+              - generic [ref=e564]:
+                - img [ref=e569]
+                - generic "Report fraud item" [ref=e581]
+              - generic [ref=e582]:
+                - heading "Bolsa Original de 3L para Segway Ninebot ZT3/ZT3 Pro E G2 G65 G30 G30D F40 F30 E22 E25 ES2 ES3 ES4, bolsas colgantes delanteras para patinete eléctrico" [level=3] [ref=e583]:
+                  - img [ref=e584]
+                  - heading "Bolsa Original de 3L para Segway Ninebot ZT3/ZT3 Pro E G2 G65 G30 G30D F40 F30 E22 E25 ES2 ES3 ES4, bolsas colgantes delanteras para patinete eléctrico" [level=3] [ref=e585]
+                - generic "$77.494" [ref=e586]:
+                  - generic [ref=e587]: $77.494
+                  - generic [ref=e588]: $135.366,1
+                  - generic [ref=e589]: "-42%"
+                - generic [ref=e590]:
+                  - generic [ref=e592]: "4.9"
+                  - generic [ref=e593]: 458 vendidos
+                - generic [ref=e595]:
+                  - generic [ref=e596]:
+                    - img [ref=e597]
+                    - generic "-$7.600 en $58.000" [ref=e598]
+                  - generic [ref=e599]:
+                    - img [ref=e600]
+                    - generic "-$57.872,1 · 1er pedido" [ref=e601]
+            - link "Report fraud item Cargador Segway Original de 42V y 1,7a para Ninebot G2 G30 ES2 ES4 E22 G30LP T15 F30 F40 F2 D28 D38 para Xiaomi M365/Pro 70W $85.244 4.5 359 vendidos -$7.600 en $58.000 -$3.725,66 · 1er pedido" [ref=e605] [cursor=pointer]:
+              - /url: //es.aliexpress.com/item/1005008279366404.html?algo_pvid=bd254d2b-fa86-441b-8b4c-7018a07d3414&algo_exp_id=bd254d2b-fa86-441b-8b4c-7018a07d3414-11&pdp_ext_f=%7B%22order%22%3A%22359%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21COP%2188969.66%2185244.00%21%21%2123.88%2122.88%21%40210311a017751642428164140e57c0%2112000044462024499%21sea%21CO%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Ab034317e%3Bm03_new_user%3A-29895%3BpisId%3A5000000197828964&curPageLogUid=bgQRqzKOrtZI&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005008279366404%7C_p_origin_prod%3A
+              - generic [ref=e606]:
+                - img [ref=e611]
+                - generic "Report fraud item" [ref=e623]
+              - generic [ref=e624]:
+                - heading "Cargador Segway Original de 42V y 1,7a para Ninebot G2 G30 ES2 ES4 E22 G30LP T15 F30 F40 F2 D28 D38 para Xiaomi M365/Pro 70W" [level=3] [ref=e625]:
+                  - img [ref=e626]
+                  - img [ref=e627]
+                  - heading "Cargador Segway Original de 42V y 1,7a para Ninebot G2 G30 ES2 ES4 E22 G30LP T15 F30 F40 F2 D28 D38 para Xiaomi M365/Pro 70W" [level=3] [ref=e628]
+                - generic "$85.244" [ref=e629]:
+                  - generic [ref=e630]: $85.244
+                  - generic [ref=e631]: $88.969,66
+                - generic [ref=e632]:
+                  - generic [ref=e634]: "4.5"
+                  - generic [ref=e635]: 359 vendidos
+                - generic [ref=e637]:
+                  - generic [ref=e638]:
+                    - img [ref=e639]
+                    - generic "-$7.600 en $58.000" [ref=e640]
+                  - generic [ref=e641]:
+                    - img [ref=e642]
+                    - generic "-$3.725,66 · 1er pedido" [ref=e643]
+            - link "Report fraud item Controlador de 32 km/h para Ninebot de Segway E3,E3E,E3D,E3 PRO,E3 PROE,E3 PROD Scooter 32 km/h controlador de velocidad de desbloqueo personalizado $147.127 4.6 359 vendidos -$15.000 en $110.000 -$10.804,45 · 1er pedido" [ref=e647] [cursor=pointer]:
+              - /url: //es.aliexpress.com/item/1005010122232712.html?algo_pvid=bd254d2b-fa86-441b-8b4c-7018a07d3414&algo_exp_id=bd254d2b-fa86-441b-8b4c-7018a07d3414-12&pdp_ext_f=%7B%22order%22%3A%22359%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21COP%21157931.45%21147127.00%21%21%2142.39%2139.49%21%40210311a017751642428164140e57c0%2112000051218028119%21sea%21CO%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Ab034317e%3Bm03_new_user%3A-29895%3BpisId%3A5000000197828984&curPageLogUid=NTknjM1ZXLJc&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005010122232712%7C_p_origin_prod%3A
+              - generic [ref=e648]:
+                - img [ref=e653]
+                - generic "Report fraud item" [ref=e665]
+              - generic [ref=e666]:
+                - heading "Controlador de 32 km/h para Ninebot de Segway E3,E3E,E3D,E3 PRO,E3 PROE,E3 PROD Scooter 32 km/h controlador de velocidad de desbloqueo personalizado" [level=3] [ref=e667]:
+                  - img [ref=e668]
+                  - img [ref=e669]
+                  - heading "Controlador de 32 km/h para Ninebot de Segway E3,E3E,E3D,E3 PRO,E3 PROE,E3 PROD Scooter 32 km/h controlador de velocidad de desbloqueo personalizado" [level=3] [ref=e670]
+                - generic "$147.127" [ref=e671]:
+                  - generic [ref=e672]: $147.127
+                  - generic [ref=e673]: $157.931,45
+                  - generic [ref=e674]: "-6%"
+                - generic [ref=e675]:
+                  - generic [ref=e677]: "4.6"
+                  - generic [ref=e678]: 359 vendidos
+                - generic [ref=e680]:
+                  - generic [ref=e681]:
+                    - img [ref=e682]
+                    - generic "-$15.000 en $110.000" [ref=e683]
+                  - generic [ref=e684]:
+                    - img [ref=e685]
+                    - generic "-$10.804,45 · 1er pedido" [ref=e686]
+        - generic [ref=e736]:
+          - generic [ref=e737]:
+            - heading "Búsquedas relacionadas" [level=2] [ref=e738]
+            - generic [ref=e739]:
+              - link "sterway" [ref=e742] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/item/1005001325995823.html
+              - link "senewave" [ref=e745] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/item/1005006908708881.html
+          - generic [ref=e746]:
+            - heading "Palabras clave de clasificación" [level=2] [ref=e747]
+            - generic [ref=e748]:
+              - link "segway quad" [ref=e750] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-segway-quad.html
+              - link "keyway" [ref=e752] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-keyway.html
+              - link "segi" [ref=e754] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-segi.html
+              - link "speedways" [ref=e756] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-speedways.html
+              - link "segovia" [ref=e758] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-segovia.html
+              - link "segway max g2" [ref=e760] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-segway-max-g2.html
+              - link "onway" [ref=e762] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-onway.html
+              - link "segway ninebot g30" [ref=e764] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-segway-ninebot-g30.html
+              - link "superway" [ref=e766] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-superway.html
+              - link "sewol" [ref=e768] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-sewol.html
+              - link "segway hoverboard" [ref=e770] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-segway-hoverboard.html
+              - link "segway drift w1" [ref=e772] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-segway-drift-w1.html
+        - generic [ref=e774]:
+          - generic [ref=e776]:
+            - heading "Resultados para segway" [level=1] [ref=e779]
+            - generic [ref=e781]:
+              - img [ref=e783] [cursor=pointer]
+              - generic [ref=e785]: Si todavía estás buscando accesorios para un patinete eléctrico, no debes perderte los productos que hemos preparado para ti. También puede filtrar para encontrar el producto que desea. Por ejemplo, puede filtrar para encontrar envío gratuito o productos con las ventas más altas, lo que puede brindarle una experiencia de compra perfecta.
+          - generic [ref=e787]:
+            - heading "Accesorios para patinetes eléctricos para comprar en AliExpress" [level=2] [ref=e788]
+            - generic [ref=e790]:
+              - img [ref=e792] [cursor=pointer]
+              - generic [ref=e795]:
+                - generic [ref=e796]: "Introducción de scooter eléctrico:"
+                - generic [ref=e797]: Los monopatines eléctricos se basan en monopatines tradicionales impulsados por humanos y funcionan con kits eléctricos. El método de control del scooter eléctrico es el mismo que el de la bicicleta eléctrica tradicional, que es fácil de aprender por parte del conductor. Está equipado con un asiento desmontable y plegable. En comparación con la bicicleta eléctrica tradicional, la estructura es más simple, la rueda es más pequeña, más ligera y más sencilla, y puede ahorrar muchos recursos sociales. En los últimos años, el rápido desarrollo de los patinetes eléctricos con baterías de litio ha generado nuevas demandas y tendencias.
+                - generic [ref=e799]: "Nuestros productos para usted:"
+                - generic [ref=e800]: Con el fin de satisfacer las necesidades de los diferentes grupos de consumidores, hemos preparado scooters eléctricos y accesorios para usted, y los productos que le ofrecemos son de alta calidad. Al mismo tiempo, también puede encontrar todos los productos relacionados que necesita en nuestra plataforma, y puede seguir nuestra plataforma para obtener más información sobre productos.
+                - generic [ref=e802]: ¿Cómo obtener más información sobre el producto?
+                - generic [ref=e803]: Si desea conocer más información del producto, puede ir a la página para navegar por nuestros parámetros del producto y la experiencia del usuario. Esta es la evaluación más auténtica de los productos que ofrecemos por parte de muchos compradores, lo que puede brindarle la comprensión más intuitiva de nuestros productos. Antes de completar su pedido, tómese un momento para verificar el cupón para que pueda obtener una mejor oferta. Desde cupones de nuevos usuarios hasta cupones de tiendas, puede encontrar muchos descuentos si lee y observa detenidamente.
+                - text: Al mismo tiempo, puede pagar su pedido a través de la aplicación móvil. Además de las transacciones con tarjeta de crédito y débito (CMV), también puedes usar Boleto, iDeal y AliExpress Pocket. Nuestras transacciones son simples y rápidas para su máxima comodidad.
+    - generic [ref=e806]:
+      - generic [ref=e807]:
+        - link "facebook" [ref=e809] [cursor=pointer]:
+          - /url: https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fes.aliexpress.com%2Fw%2Fwholesale-segway.html%3Fchannel%3Dfacebook
+        - link "twitter" [ref=e811] [cursor=pointer]:
+          - /url: https://twitter.com/intent/tweet?url=https%3A%2F%2Fes.aliexpress.com%2Fw%2Fwholesale-segway.html%3Fchannel%3Dtwinner&text=segway
+        - link "pinterest" [ref=e813] [cursor=pointer]:
+          - /url: https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fes.aliexpress.com%2Fw%2Fwholesale-segway.html%3Fchannel%3Dpinterest&media=https%3A&description=Compra%20accesorios%20para%20patinetes%20el%C3%A9ctricos%20online%20en%20AliExpress%2C%20entrega%20r%C3%A1pida%20de%20productos%20de%20gran%20calidad%20a%20precios%20bajos%20y%20te%20ofrecemos%20env%C3%ADo%20gratis.%20Adem%C3%A1s%2C%20siempre%20puede%20aprovechar%20grandes%20ofertas%20y%20promociones%20como%20la%20oferta%20de%20aniversario%20o%20la%20oferta%20de%20verano%20para%20obtener%20un%20gran%20valor%20a%20un%20precio%20m%C3%A1s%20bajo.
+      - link "feedback" [ref=e816] [cursor=pointer]:
+        - /url: javascript:void(0);
+  - contentinfo [ref=e819]:
+    - generic [ref=e821]:
+      - generic [ref=e822]:
+        - generic [ref=e824]:
+          - term [ref=e825]:
+            - heading "Ayuda" [level=5] [ref=e826]
+          - definition [ref=e827]:
+            - link "Atención al cliente" [ref=e828] [cursor=pointer]:
+              - /url: //so.aliexpress.com/s/ByrCmn?language=es_ES
+            - text: ","
+            - link "Litigios e informes" [ref=e829] [cursor=pointer]:
+              - /url: //report.aliexpress.com
+            - text: ","
+            - link "Política de devoluciones y reembolsos" [ref=e830] [cursor=pointer]:
+              - /url: https://www.aliexpress.com/ssr/300000437/PinKTaDpEb?disableNav=YES&pha_manifest=ssr&_immersiveMode=true
+            - text: ","
+            - link "Informar de una infracción DPI" [ref=e831] [cursor=pointer]:
+              - /url: https://ipp.aidcgroup.net/#/ippHome
+            - text: ","
+            - link "Información DSA/OSA" [ref=e832] [cursor=pointer]:
+              - /url: https://www.aliexpress.com/p/transparencycenter/dsa.html
+            - text: ","
+            - link "Cumplimiento de la integridad" [ref=e833] [cursor=pointer]:
+              - /url: https://aidc.jubao.alibaba.com
+            - text: ","
+            - link "Centro de Transparencia" [ref=e834] [cursor=pointer]:
+              - /url: https://www.aliexpress.com/p/transparencycenter/index.html
+            - text: ","
+            - link "Entrada de quejas sin iniciar sesión" [ref=e835] [cursor=pointer]:
+              - /url: https://m.aliexpress.com/p/complaint-center/index.html#/complaint/report
+            - text: ","
+            - link "Política de devoluciones" [ref=e836] [cursor=pointer]:
+              - /url: https://www.aliexpress.com/ssr/300000437/G7ZED4yXte?disableNav=YES&pha_manifest=ssr&_immersiveMode=true
+        - generic [ref=e838]:
+          - term [ref=e839]:
+            - heading "Páginas multilingües de AliExpress" [level=5] [ref=e840]
+          - definition [ref=e841]:
+            - link "Pусский" [ref=e842] [cursor=pointer]:
+              - /url: //ru.aliexpress.com
+            - text: ","
+            - link "Português" [ref=e843] [cursor=pointer]:
+              - /url: //pt.aliexpress.com
+            - text: ","
+            - link "Español" [ref=e844] [cursor=pointer]:
+              - /url: //es.aliexpress.com
+            - text: ","
+            - link "Français" [ref=e845] [cursor=pointer]:
+              - /url: //fr.aliexpress.com
+            - text: ","
+            - link "Deutsch" [ref=e846] [cursor=pointer]:
+              - /url: //de.aliexpress.com
+            - text: ","
+            - link "Italiano" [ref=e847] [cursor=pointer]:
+              - /url: //it.aliexpress.com
+            - text: ","
+            - link "Nederlands" [ref=e848] [cursor=pointer]:
+              - /url: //nl.aliexpress.com
+            - text: ","
+            - link "Türk" [ref=e849] [cursor=pointer]:
+              - /url: //tr.aliexpress.com
+            - text: ","
+            - link "日本語" [ref=e850] [cursor=pointer]:
+              - /url: //ja.aliexpress.com
+            - text: ","
+            - link "한국어" [ref=e851] [cursor=pointer]:
+              - /url: //ko.aliexpress.com
+            - text: ","
+            - link "ภาษาไทย" [ref=e852] [cursor=pointer]:
+              - /url: //th.aliexpress.com
+            - text: ","
+            - link "اللغة العربي" [ref=e853] [cursor=pointer]:
+              - /url: //ar.aliexpress.com
+            - text: ","
+            - link "עברית" [ref=e854] [cursor=pointer]:
+              - /url: //he.aliexpress.com
+            - text: ","
+            - link "Polish" [ref=e855] [cursor=pointer]:
+              - /url: //pl.aliexpress.com
+      - generic [ref=e857]:
+        - term [ref=e858]:
+          - heading "Buscar por categoría" [level=5] [ref=e859]
+        - definition [ref=e860]:
+          - generic [ref=e861]:
+            - link "Todos los populares" [ref=e862] [cursor=pointer]:
+              - /url: //es.aliexpress.com/popular.html
+            - text: ","
+            - link "Producto" [ref=e863] [cursor=pointer]:
+              - /url: //es.aliexpress.com/wholesale.html
+            - text: ","
+            - link "Promoción" [ref=e864] [cursor=pointer]:
+              - /url: //es.aliexpress.com/promotion.html
+            - text: ","
+            - link "Precio bajo" [ref=e865] [cursor=pointer]:
+              - /url: //es.aliexpress.com/price.html
+            - text: ","
+            - link "Gran Valor" [ref=e866] [cursor=pointer]:
+              - /url: //es.aliexpress.com/cheap.html
+            - text: ","
+            - link "Reseñas" [ref=e867] [cursor=pointer]:
+              - /url: //es.aliexpress.com/reviews.html
+            - text: ","
+            - link "Wiki" [ref=e868] [cursor=pointer]:
+              - /url: https://es.aliexpress.com/p/wiki/home.html
+            - text: ","
+            - link "Blog" [ref=e869] [cursor=pointer]:
+              - /url: https://es.aliexpress.com/p/blog/home.html
+            - text: ","
+            - link "Video" [ref=e870] [cursor=pointer]:
+              - /url: https://es.aliexpress.com/p/video/home.html
+      - generic [ref=e872]:
+        - term [ref=e873]:
+          - heading "Alibaba Group" [level=5] [ref=e874]
+        - definition [ref=e875]:
+          - link "Página del Grupo Alibaba" [ref=e876] [cursor=pointer]:
+            - /url: http://www.alibabagroup.com/en/global/home
+          - text: ","
+          - link "AliExpress" [ref=e877] [cursor=pointer]:
+            - /url: //www.aliexpress.com/
+          - text: ","
+          - link "Alimama" [ref=e878] [cursor=pointer]:
+            - /url: http://www.alimama.com/
+          - text: ","
+          - link "Alipay" [ref=e879] [cursor=pointer]:
+            - /url: https://intl.alipay.com/index.htm
+          - text: ","
+          - link "Fliggy" [ref=e880] [cursor=pointer]:
+            - /url: http://www.fliggy.com/
+          - text: ","
+          - link "Alibaba Cloud" [ref=e881] [cursor=pointer]:
+            - /url: http://www.alibabacloud.com
+          - text: ","
+          - link "Alibaba International" [ref=e882] [cursor=pointer]:
+            - /url: http://www.alibaba.com/
+          - text: ","
+          - link "AliTelecom" [ref=e883] [cursor=pointer]:
+            - /url: http://aliqin.tmall.com/
+          - text: ","
+          - link "DingTalk" [ref=e884] [cursor=pointer]:
+            - /url: http://www.dingtalk.com/
+          - text: ","
+          - link "Juhuasuan" [ref=e885] [cursor=pointer]:
+            - /url: http://ju.taobao.com/
+          - text: ","
+          - link "Taobao Marketplace" [ref=e886] [cursor=pointer]:
+            - /url: http://www.taobao.com/
+          - text: ","
+          - link "Tmall" [ref=e887] [cursor=pointer]:
+            - /url: http://www.tmall.com/
+          - text: ","
+          - link "Taobao Global" [ref=e888] [cursor=pointer]:
+            - /url: https://world.taobao.com/
+          - text: ","
+          - link "AliOS" [ref=e889] [cursor=pointer]:
+            - /url: http://www.alios.cn/
+          - text: ","
+          - link "1688" [ref=e890] [cursor=pointer]:
+            - /url: http://www.1688.com/
+    - generic [ref=e892]:
+      - link "Intellectual Property Protection" [ref=e893] [cursor=pointer]:
+        - /url: https://ipp.aidcgroup.net/#/ippHome
+      - text: "-"
+      - link "Privacy Policy" [ref=e894] [cursor=pointer]:
+        - /url: https://campaign.aliexpress.com/wow/gcp/app-redirect-terms/index
+      - text: "-"
+      - link "Mapa del sitio web" [ref=e895] [cursor=pointer]:
+        - /url: https://www.aliexpress.com/sitemap.html
+      - text: "-"
+      - link "Términos de uso de AliExpress.com" [ref=e896] [cursor=pointer]:
+        - /url: https://terms.alicdn.com/legal-agreement/terms/platform_service/20220531142242826/20220531142242826.html
+      - text: "-"
+      - link "Información para consumidores de la UE" [ref=e897] [cursor=pointer]:
+        - /url: https://sale.aliexpress.com/__pc/QnoLFBVfqY.htm
+      - text: "-"
+      - link "Acuerdo de servicios de transacción para consumidores fuera de la UE/Reino Unido" [ref=e898] [cursor=pointer]:
+        - /url: https://rulechannel.alibaba.com/icbu?type=detail&ruleId=2054&cId=1304#/rule/detail?cId=1304&ruleId=2054
+      - text: "-"
+      - link "Términos y Condiciones para Consumidores de la UE/EEE/Reino Unido" [ref=e899] [cursor=pointer]:
+        - /url: https://campaign.aliexpress.com/wow/gcp-plus/ae/tupr?_immersiveMode=true&pha_manifest=upr&disableNav=YES&wh_pid=300000414/pt8AMcBikk
+      - text: "-"
+      - link "User Information Legal Enquiry Guide" [ref=e900] [cursor=pointer]:
+        - /url: https://terms.alicdn.com/legal-agreement/terms/data_processing_agreement_others/20231101174825691/20231101174825691.html
+      - text: ©️ 2010-2025 AliExpress.com. Todos los derechos reservados.

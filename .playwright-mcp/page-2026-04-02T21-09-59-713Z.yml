@@ -1,0 +1,641 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - link "Logo de AliExpress" [ref=e6] [cursor=pointer]:
+        - /url: https://es.aliexpress.com
+        - text: AliExpress
+      - button "Todas las categorías" [ref=e9]:
+        - img "Todas las categorías" [ref=e10]
+    - generic [ref=e12]:
+      - generic [ref=e14]:
+        - searchbox "Puedes escribir el nombre de un artículo o una palabra clave para buscar." [ref=e15]: segway
+        - img [ref=e20] [cursor=pointer]
+        - button "Puedes hacer clic en este botón para buscar." [ref=e21] [cursor=pointer]
+      - generic [ref=e22]:
+        - button "Puedes escanear el código QR para descargar la aplicación de AliExpress." [ref=e23] [cursor=pointer]:
+          - img [ref=e25]
+          - img [ref=e29]
+        - button "Puedes seleccionar un país, una región o un idioma para comprar en AliExpress co. El idioma actual es inglés." [ref=e33] [cursor=pointer]:
+          - img [ref=e36]
+        - button "Puedes registrarte, iniciar sesión o ver más información sobre tu cuenta." [ref=e38] [cursor=pointer]:
+          - img [ref=e40]
+          - img [ref=e43]
+        - link "0 artículos en la cesta." [ref=e46] [cursor=pointer]:
+          - /url: //www.aliexpress.com/p/shoppingcart/index.html
+          - img [ref=e48]
+          - generic [ref=e50]: "0"
+  - generic [ref=e51]:
+    - generic [ref=e53]:
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - generic [ref=e56] [cursor=pointer]:
+            - generic [ref=e57]: Ofertas y descuentos
+            - img [ref=e59]
+          - generic [ref=e62]:
+            - generic "filterCode:bigsale" [ref=e63] [cursor=pointer]:
+              - checkbox "Promo" [ref=e64]
+              - generic [ref=e65]: Promo
+            - generic "filterCode:freeshipping" [ref=e66] [cursor=pointer]:
+              - checkbox "Envío gratis" [ref=e67]
+              - generic [ref=e68]: Envío gratis
+        - generic [ref=e69]:
+          - generic [ref=e70] [cursor=pointer]:
+            - generic [ref=e71]: Entrega y servicio
+            - img [ref=e73]
+          - generic "filterCode:choice_atm" [ref=e77] [cursor=pointer]:
+            - checkbox "Choice" [ref=e78]
+            - generic [ref=e79]: Choice
+        - generic [ref=e80]:
+          - generic [ref=e81] [cursor=pointer]:
+            - generic [ref=e82]: Calidad y confianza
+            - img [ref=e84]
+          - generic "filterCode:4StarRating" [ref=e88] [cursor=pointer]:
+            - checkbox "y más y más" [ref=e89]
+            - generic [ref=e91]:
+              - img "y más" [ref=e92]
+              - generic [ref=e93]: y más
+        - generic [ref=e94]:
+          - generic [ref=e95] [cursor=pointer]:
+            - generic [ref=e96]: Envío desde
+            - img [ref=e98]
+          - generic [ref=e101]:
+            - generic "-1" [ref=e102] [cursor=pointer]:
+              - radio "Todos" [checked] [ref=e103]
+              - generic [ref=e104]: Todos
+            - generic "TR" [ref=e105] [cursor=pointer]:
+              - radio "Turquía" [ref=e106]
+              - generic [ref=e110]: Turquía
+            - generic "CN" [ref=e111] [cursor=pointer]:
+              - radio "China" [ref=e112]
+              - generic [ref=e116]: China
+        - generic [ref=e117]:
+          - generic [ref=e118] [cursor=pointer]:
+            - generic [ref=e119]: Precio
+            - img [ref=e121]
+          - generic [ref=e125]:
+            - generic [ref=e126]:
+              - generic [ref=e128]: COP
+              - textbox "Mín." [ref=e129]
+            - generic [ref=e130]: "-"
+            - generic [ref=e131]:
+              - generic [ref=e133]: COP
+              - textbox "Máx." [ref=e134]
+            - generic [ref=e135] [cursor=pointer]: OK
+      - generic [ref=e136]:
+        - generic [ref=e141]:
+          - generic [ref=e142]: "Ordenar por:"
+          - generic [ref=e143]:
+            - generic [ref=e145] [cursor=pointer]: Relevancia
+            - generic [ref=e147] [cursor=pointer]: Pedidos
+            - generic [ref=e148] [cursor=pointer]:
+              - generic [ref=e149]: Precio
+              - generic [ref=e150]:
+                - img [ref=e152]
+                - img [ref=e155]
+        - generic [ref=e158]:
+          - link "Report fraud item Pastillas de freno para patinete eléctrico Ninebot by Segway Max G3 G3D G3E, pastillas de freno de disco resistentes al desgaste, accesorios de repuesto $10.110 4.9 496 vendidos -$7.600 en $58.000 -$47.366,6 · 1er pedido" [ref=e162] [cursor=pointer]:
+            - /url: //es.aliexpress.com/item/1005011587313225.html?algo_pvid=37c13ca7-7150-4161-ab58-fd7add98dd39&algo_exp_id=37c13ca7-7150-4161-ab58-fd7add98dd39-0&pdp_ext_f=%7B%22order%22%3A%22496%22%2C%22eval%22%3A%221%22%2C%22orig_sl_item_id%22%3A%221005011587313225%22%2C%22orig_item_id%22%3A%221005010127507775%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21COP%2157476.60%2110110.00%21%21%21106.24%2118.69%21%402101c59117751641965586932e81dd%2112000055993345085%21sea%21CO%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Ab034317e%3Bm03_new_user%3A-29895%3BpisId%3A5000000203545096&curPageLogUid=mLU1ZTSt5yNU&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005011587313225%7C_p_origin_prod%3A1005010127507775
+            - generic [ref=e163]:
+              - generic [ref=e167]:
+                - img [ref=e168]
+                - img [ref=e169]
+                - img [ref=e170]
+                - img [ref=e171]
+                - img [ref=e172]
+                - img [ref=e173]
+              - generic "Report fraud item" [ref=e185]
+            - generic [ref=e186]:
+              - heading "Pastillas de freno para patinete eléctrico Ninebot by Segway Max G3 G3D G3E, pastillas de freno de disco resistentes al desgaste, accesorios de repuesto" [level=3] [ref=e187]:
+                - img [ref=e188]
+                - img [ref=e189]
+                - heading "Pastillas de freno para patinete eléctrico Ninebot by Segway Max G3 G3D G3E, pastillas de freno de disco resistentes al desgaste, accesorios de repuesto" [level=3] [ref=e190]
+              - generic "$10.110" [ref=e191]:
+                - generic [ref=e192]: $10.110
+                - generic [ref=e193]: ($5.055/par)
+                - generic [ref=e194]: "-82%"
+              - generic [ref=e195]:
+                - generic [ref=e197]: "4.9"
+                - generic [ref=e198]: 496 vendidos
+              - generic [ref=e200]:
+                - generic [ref=e201]:
+                  - img [ref=e202]
+                  - generic "-$7.600 en $58.000" [ref=e203]
+                - generic [ref=e204]:
+                  - img [ref=e205]
+                  - generic "-$47.366,6 · 1er pedido" [ref=e206]
+          - link "Report fraud item Controlador de placa base, accesorios de placa de circuito de patinete eléctrico para Ninebot de Segway Max G2, controlador de placa principal $96.591 4.9 600+ vendidos -$7.600 en $58.000 -$121.488,7 · 1er pedido" [ref=e210] [cursor=pointer]:
+            - /url: //es.aliexpress.com/item/1005008660268488.html?algo_pvid=37c13ca7-7150-4161-ab58-fd7add98dd39&algo_exp_id=37c13ca7-7150-4161-ab58-fd7add98dd39-1&pdp_ext_f=%7B%22order%22%3A%22669%22%2C%22eval%22%3A%221%22%2C%22orig_sl_item_id%22%3A%221005008660268488%22%2C%22orig_item_id%22%3A%221005007646962525%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21COP%21218079.70%2196591.00%21%21%21403.11%21178.54%21%402101c59117751641965586932e81dd%2112000046135945163%21sea%21CO%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Ab034317e%3Bm03_new_user%3A-29895%3BpisId%3A5000000197828964&curPageLogUid=nnIcJ5xQlck2&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005008660268488%7C_p_origin_prod%3A1005007646962525
+            - generic [ref=e211]:
+              - generic [ref=e215]:
+                - img [ref=e216]
+                - img [ref=e217]
+                - img [ref=e218]
+                - img [ref=e219]
+                - img [ref=e220]
+                - img [ref=e221]
+              - generic "Report fraud item" [ref=e233]
+            - generic [ref=e234]:
+              - heading "Controlador de placa base, accesorios de placa de circuito de patinete eléctrico para Ninebot de Segway Max G2, controlador de placa principal" [level=3] [ref=e235]:
+                - img [ref=e236]
+                - img [ref=e237]
+                - heading "Controlador de placa base, accesorios de placa de circuito de patinete eléctrico para Ninebot de Segway Max G2, controlador de placa principal" [level=3] [ref=e238]
+              - generic "$96.591" [ref=e239]:
+                - generic [ref=e240]: $96.591
+                - generic [ref=e241]: $218.079,7
+                - generic [ref=e242]: "-55%"
+              - generic [ref=e243]:
+                - generic [ref=e245]: "4.9"
+                - generic [ref=e246]: 600+ vendidos
+              - generic [ref=e248]:
+                - generic [ref=e249]:
+                  - img [ref=e250]
+                  - generic "-$7.600 en $58.000" [ref=e251]
+                - generic [ref=e252]:
+                  - img [ref=e253]
+                  - generic "-$121.488,7 · 1er pedido" [ref=e254]
+          - link "Report fraud item Para Segway Ninebot ES1/ES2/ES3/ES4 tablero de Control de tablero de patinete eléctrico activado Bluetooth tablero controlador de placa base $110.717 4.5 215 vendidos -$15.000 en $110.000 -$143.600,02 · 1er pedido" [ref=e258] [cursor=pointer]:
+            - /url: //es.aliexpress.com/item/1005008639612843.html?algo_pvid=37c13ca7-7150-4161-ab58-fd7add98dd39&algo_exp_id=37c13ca7-7150-4161-ab58-fd7add98dd39-2&pdp_ext_f=%7B%22order%22%3A%22215%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21COP%21254317.02%21110717.00%21%21%21470.09%21204.65%21%402101c59117751641965586932e81dd%2112000046054745728%21sea%21CO%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Ab034317e%3Bm03_new_user%3A-29895%3BpisId%3A5000000197828964&curPageLogUid=oj07iGCEwXuf&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005008639612843%7C_p_origin_prod%3A
+            - generic [ref=e259]:
+              - generic [ref=e263]:
+                - img [ref=e264]
+                - img [ref=e265]
+                - img [ref=e266]
+                - img [ref=e267]
+                - img [ref=e268]
+                - img [ref=e269]
+              - generic "Report fraud item" [ref=e281]
+            - generic [ref=e282]:
+              - heading "Para Segway Ninebot ES1/ES2/ES3/ES4 tablero de Control de tablero de patinete eléctrico activado Bluetooth tablero controlador de placa base" [level=3] [ref=e283]:
+                - img [ref=e284]
+                - img [ref=e285]
+                - heading "Para Segway Ninebot ES1/ES2/ES3/ES4 tablero de Control de tablero de patinete eléctrico activado Bluetooth tablero controlador de placa base" [level=3] [ref=e286]
+              - generic "$110.717" [ref=e287]:
+                - generic [ref=e288]: $110.717
+                - generic [ref=e289]: $254.317,02
+                - generic [ref=e290]: "-56%"
+              - generic [ref=e291]:
+                - generic [ref=e293]: "4.5"
+                - generic [ref=e294]: 215 vendidos
+              - generic [ref=e296]:
+                - generic [ref=e297]:
+                  - img [ref=e298]
+                  - generic "-$15.000 en $110.000" [ref=e299]
+                - generic [ref=e300]:
+                  - img [ref=e301]
+                  - generic "-$143.600,02 · 1er pedido" [ref=e302]
+          - generic [ref=e305]:
+            - link "Report fraud item Casa Contenedor Expandible de 20 y 40 Pies, Contenedor de 20 y 40 Pies con Planos de Vivienda de 3 Dormitorios $21.918.352 -$95.000 en $790.000 Ahorra $37.320.437,13" [ref=e306] [cursor=pointer]:
+              - /url: //es.aliexpress.com/item/1005011858779194.html?aem_p4p_detail=202604021409564771665668276880000218935&algo_pvid=37c13ca7-7150-4161-ab58-fd7add98dd39&algo_exp_id=37c13ca7-7150-4161-ab58-fd7add98dd39-3&pdp_ext_f=%7B%22order%22%3A%22-1%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21COP%2159238789.13%2121918352.00%21%21%21109500.00%2140515.00%21%402101c59117751641965586932e81dd%2112000056800275271%21sea%21CO%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Ab034317e%3Bm03_new_user%3A-29895&curPageLogUid=vXWnk79Xhy7l&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005011858779194%7C_p_origin_prod%3A&search_p4p_id=202604021409564771665668276880000218935_1
+              - generic [ref=e307]:
+                - generic [ref=e311]:
+                  - img [ref=e312]
+                  - img [ref=e313]
+                  - img [ref=e314]
+                  - img [ref=e315]
+                  - img [ref=e316]
+                  - img [ref=e317]
+                - generic "Report fraud item" [ref=e329]
+              - generic [ref=e330]:
+                - heading "Casa Contenedor Expandible de 20 y 40 Pies, Contenedor de 20 y 40 Pies con Planos de Vivienda de 3 Dormitorios" [level=3] [ref=e331]:
+                  - img [ref=e332]
+                  - heading "Casa Contenedor Expandible de 20 y 40 Pies, Contenedor de 20 y 40 Pies con Planos de Vivienda de 3 Dormitorios" [level=3] [ref=e333]
+                - generic "$21.918.352" [ref=e334]:
+                  - generic [ref=e335]: $21.918.352
+                - generic [ref=e336]:
+                  - generic [ref=e337]:
+                    - img [ref=e338]
+                    - generic "-$95.000 en $790.000" [ref=e339]
+                  - generic [ref=e340]:
+                    - img [ref=e341]
+                    - generic "Ahorra $37.320.437,13" [ref=e342]
+            - generic [ref=e344] [cursor=pointer]: Publicidad
+          - link "Report fraud item Manillar de aceleración para el scooter Ninebot Segway ZT3 Pro, piezas de repuesto originales. $37.870 -5% con monedas" [ref=e348] [cursor=pointer]:
+            - /url: //es.aliexpress.com/item/1005011851062863.html?algo_pvid=37c13ca7-7150-4161-ab58-fd7add98dd39&algo_exp_id=37c13ca7-7150-4161-ab58-fd7add98dd39-4&pdp_ext_f=%7B%22order%22%3A%22-1%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21COP%2137870.00%2137870.00%21%21%2170.00%2170.00%21%402101c59117751641965586932e81dd%2112000057017088882%21sea%21CO%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Ab034317e%3Bm03_new_user%3A-29895&curPageLogUid=RydTrhEDXpLV&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005011851062863%7C_p_origin_prod%3A
+            - generic [ref=e349]:
+              - generic [ref=e353]:
+                - img [ref=e354]
+                - img [ref=e355]
+                - img [ref=e356]
+                - img [ref=e357]
+                - img [ref=e358]
+              - generic "Report fraud item" [ref=e369]
+            - generic [ref=e370]:
+              - heading "Manillar de aceleración para el scooter Ninebot Segway ZT3 Pro, piezas de repuesto originales." [level=3] [ref=e371]:
+                - heading "Manillar de aceleración para el scooter Ninebot Segway ZT3 Pro, piezas de repuesto originales." [level=3] [ref=e372]
+              - generic "$37.870" [ref=e373]:
+                - generic [ref=e374]: $37.870
+              - generic "-5% con monedas" [ref=e377]
+          - link "Report fraud item MAX G2 Scooter Eléctrico varias piezas de repuesto de reparación para Segway Ninebot MAX G2 tablero guardabarros neumático pie soporte velocidad pulgar $12.732 4 149 vendidos -$7.600 en $58.000 $12.093 por Ud., ≥ 2 Uds" [ref=e382] [cursor=pointer]:
+            - /url: //es.aliexpress.com/item/1005010289605826.html?algo_pvid=37c13ca7-7150-4161-ab58-fd7add98dd39&algo_exp_id=37c13ca7-7150-4161-ab58-fd7add98dd39-5&pdp_ext_f=%7B%22order%22%3A%22149%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21COP%2135016.30%2112732.00%21%21%2164.73%2123.54%21%402101c59117751641965586932e81dd%2112000051803431197%21sea%21CO%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Ab034317e%3Bm03_new_user%3A-29895%3BpisId%3A5000000197828964&curPageLogUid=ByCL3rvS6VNM&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005010289605826%7C_p_origin_prod%3A
+            - generic [ref=e383]:
+              - generic [ref=e387]:
+                - img [ref=e388]
+                - img [ref=e389]
+                - img [ref=e390]
+                - img [ref=e391]
+                - img [ref=e392]
+                - img [ref=e393]
+              - generic "Report fraud item" [ref=e405]
+            - generic [ref=e406]:
+              - heading "MAX G2 Scooter Eléctrico varias piezas de repuesto de reparación para Segway Ninebot MAX G2 tablero guardabarros neumático pie soporte velocidad pulgar" [level=3] [ref=e407]:
+                - img [ref=e408]
+                - img [ref=e409]
+                - heading "MAX G2 Scooter Eléctrico varias piezas de repuesto de reparación para Segway Ninebot MAX G2 tablero guardabarros neumático pie soporte velocidad pulgar" [level=3] [ref=e410]
+              - generic "$12.732" [ref=e411]:
+                - generic [ref=e412]: $12.732
+                - generic [ref=e413]: $35.016,3
+                - generic [ref=e414]: "-63%"
+              - generic [ref=e415]:
+                - generic [ref=e417]: "4"
+                - generic [ref=e418]: 149 vendidos
+              - generic [ref=e420]:
+                - generic [ref=e421]:
+                  - img [ref=e422]
+                  - generic "-$7.600 en $58.000" [ref=e423]
+                - generic "$12.093 por Ud., ≥ 2 Uds" [ref=e425]
+          - link "Report fraud item Funda de silicona Max G30 para pantalla de tablero Ninebot para scooter Eléctrico segway G30D, cubierta de Panel de cinta resistente al agua y a la suciedad $9.017 4.2 47 vendidos -$7.600 en $58.000 Ahorra $152,34" [ref=e429] [cursor=pointer]:
+            - /url: //es.aliexpress.com/item/1005004383995520.html?algo_pvid=37c13ca7-7150-4161-ab58-fd7add98dd39&algo_exp_id=37c13ca7-7150-4161-ab58-fd7add98dd39-6&pdp_ext_f=%7B%22order%22%3A%2247%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21COP%219169.34%219017.00%21%21%212.46%212.42%21%402101c59117751641965586932e81dd%2112000028987858529%21sea%21CO%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Ab034317e%3Bm03_new_user%3A-29895&curPageLogUid=17D0SJmzEsAX&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005004383995520%7C_p_origin_prod%3A
+            - generic [ref=e430]:
+              - img [ref=e435]
+              - generic "Report fraud item" [ref=e447]
+            - generic [ref=e448]:
+              - heading "Funda de silicona Max G30 para pantalla de tablero Ninebot para scooter Eléctrico segway G30D, cubierta de Panel de cinta resistente al agua y a la suciedad" [level=3] [ref=e449]:
+                - img [ref=e450]
+                - img [ref=e451]
+                - heading "Funda de silicona Max G30 para pantalla de tablero Ninebot para scooter Eléctrico segway G30D, cubierta de Panel de cinta resistente al agua y a la suciedad" [level=3] [ref=e452]
+              - generic "$9.017" [ref=e453]:
+                - generic [ref=e454]: $9.017
+              - generic [ref=e455]:
+                - generic [ref=e457]: "4.2"
+                - generic [ref=e458]: 47 vendidos
+              - generic [ref=e460]:
+                - generic [ref=e461]:
+                  - img [ref=e462]
+                  - generic "-$7.600 en $58.000" [ref=e463]
+                - generic [ref=e464]:
+                  - img [ref=e465]
+                  - generic "Ahorra $152,34" [ref=e466]
+          - generic [ref=e469]:
+            - link "Report fraud item Casa contenedor expandible plegable moderna de 20 pies y 40 pies Villa prefabricada de 2 pisos con energía solar para vida móvil $22.598.484 1 vendidos -$95.000 en $790.000 Personalizable" [ref=e470] [cursor=pointer]:
+              - /url: //es.aliexpress.com/item/1005010437475313.html?aem_p4p_detail=202604021409564771665668276880000218935&algo_pvid=37c13ca7-7150-4161-ab58-fd7add98dd39&algo_exp_id=37c13ca7-7150-4161-ab58-fd7add98dd39-7&pdp_ext_f=%7B%22order%22%3A%221%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21COP%2172898335.45%2122598484.00%21%21%21134749.00%2141772.19%21%402101c59117751641965586932e81dd%2112000056684525208%21sea%21CO%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Ab034317e%3Bm03_new_user%3A-29895&curPageLogUid=uSwJHcoZky2f&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005010437475313%7C_p_origin_prod%3A&search_p4p_id=202604021409564771665668276880000218935_2
+              - generic [ref=e471]:
+                - img [ref=e476]
+                - generic "Report fraud item" [ref=e488]
+              - generic [ref=e489]:
+                - heading "Casa contenedor expandible plegable moderna de 20 pies y 40 pies Villa prefabricada de 2 pisos con energía solar para vida móvil" [level=3] [ref=e490]:
+                  - heading "Casa contenedor expandible plegable moderna de 20 pies y 40 pies Villa prefabricada de 2 pisos con energía solar para vida móvil" [level=3] [ref=e491]
+                - generic "$22.598.484" [ref=e492]:
+                  - generic [ref=e493]: $22.598.484
+                  - generic [ref=e494]: $72.898.335,45
+                  - generic [ref=e495]: "-68%"
+                - generic [ref=e497]: 1 vendidos
+                - generic [ref=e498]:
+                  - generic [ref=e499]:
+                    - img [ref=e500]
+                    - generic "-$95.000 en $790.000" [ref=e501]
+                  - generic "Personalizable" [ref=e503]
+            - generic [ref=e504] [cursor=pointer]: Publicidad
+          - link "Report fraud item Placa de circuito de tablero para Segway Ninebot MAX G30 Kickscooter, pantalla de tablero de patinete eléctrico con accesorios de cubierta de pantalla $3.689 4.3 600+ vendidos -$7.600 en $58.000 $3.505 por Ud., ≥ 2 Uds" [ref=e508] [cursor=pointer]:
+            - /url: //es.aliexpress.com/item/1005008638617800.html?algo_pvid=37c13ca7-7150-4161-ab58-fd7add98dd39&algo_exp_id=37c13ca7-7150-4161-ab58-fd7add98dd39-8&pdp_ext_f=%7B%22order%22%3A%22639%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21COP%2127845.19%213689.00%21%21%2151.47%216.82%21%402101c59117751641965586932e81dd%2112000046052153296%21sea%21CO%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Ab034317e%3Bm03_new_user%3A-29895%3BpisId%3A5000000203545078&curPageLogUid=M9BXWsFya7cH&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005008638617800%7C_p_origin_prod%3A
+            - generic [ref=e509]:
+              - img [ref=e514]
+              - generic "Report fraud item" [ref=e526]
+            - generic [ref=e527]:
+              - heading "Placa de circuito de tablero para Segway Ninebot MAX G30 Kickscooter, pantalla de tablero de patinete eléctrico con accesorios de cubierta de pantalla" [level=3] [ref=e528]:
+                - img [ref=e529]
+                - img [ref=e530]
+                - heading "Placa de circuito de tablero para Segway Ninebot MAX G30 Kickscooter, pantalla de tablero de patinete eléctrico con accesorios de cubierta de pantalla" [level=3] [ref=e531]
+              - generic "$3.689" [ref=e532]:
+                - generic [ref=e533]: $3.689
+                - generic [ref=e534]: $27.845,19
+                - generic [ref=e535]: "-86%"
+              - generic [ref=e536]:
+                - generic [ref=e538]: "4.3"
+                - generic [ref=e539]: 600+ vendidos
+              - generic [ref=e541]:
+                - generic [ref=e542]:
+                  - img [ref=e543]
+                  - generic "-$7.600 en $58.000" [ref=e544]
+                - generic "$3.505 por Ud., ≥ 2 Uds" [ref=e546]
+          - link "Report fraud item Gancho delantero duradero para patinete eléctrico Segway Ninebot MAX G30, colgador de almacenamiento para monopatín, piezas para patinete $11.885 4.9 101 vendidos El mejor precio en ofertas similares -5% con monedas" [ref=e550] [cursor=pointer]:
+            - /url: //es.aliexpress.com/item/1005005180312625.html?algo_pvid=37c13ca7-7150-4161-ab58-fd7add98dd39&algo_exp_id=37c13ca7-7150-4161-ab58-fd7add98dd39-9&pdp_ext_f=%7B%22order%22%3A%22101%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21COP%2111885.00%2111885.00%21%21%213.19%213.19%21%402101c59117751641965586932e81dd%2112000031994817175%21sea%21CO%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Ab034317e%3Bm03_new_user%3A-29895&curPageLogUid=3fkElcA07yhG&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005005180312625%7C_p_origin_prod%3A
+            - generic [ref=e551]:
+              - img [ref=e556]
+              - generic "Report fraud item" [ref=e568]
+            - generic [ref=e569]:
+              - heading "Gancho delantero duradero para patinete eléctrico Segway Ninebot MAX G30, colgador de almacenamiento para monopatín, piezas para patinete" [level=3] [ref=e570]:
+                - img [ref=e571]
+                - heading "Gancho delantero duradero para patinete eléctrico Segway Ninebot MAX G30, colgador de almacenamiento para monopatín, piezas para patinete" [level=3] [ref=e572]
+              - generic "$11.885" [ref=e573]:
+                - generic [ref=e574]: $11.885
+              - generic [ref=e575]:
+                - generic [ref=e577]: "4.9"
+                - generic [ref=e578]: 101 vendidos
+              - generic [ref=e580]:
+                - generic [ref=e581]:
+                  - img [ref=e582]
+                  - generic "El mejor precio en ofertas similares" [ref=e583]
+                - generic "-5% con monedas" [ref=e585]
+          - link "Report fraud item Espejos retrovisores manillar espejo retrovisor para Segway Ninebot MAX G3 ZT3 Pro F3 F3 Pro E3 E3 Pro piezas de repuesto para patinete eléctrico $30.985 4.2 214 vendidos -$7.600 en $58.000 $29.438 por Ud., ≥ 2 Uds" [ref=e589] [cursor=pointer]:
+            - /url: //es.aliexpress.com/item/1005010368782258.html?algo_pvid=37c13ca7-7150-4161-ab58-fd7add98dd39&algo_exp_id=37c13ca7-7150-4161-ab58-fd7add98dd39-10&pdp_ext_f=%7B%22order%22%3A%22214%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21COP%2173852.47%2130985.00%21%21%21136.51%2157.27%21%402101c59117751641965586932e81dd%2112000052158686165%21sea%21CO%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Ab034317e%3Bm03_new_user%3A-29895%3BpisId%3A5000000197828964&curPageLogUid=bmwUqetlwoFH&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005010368782258%7C_p_origin_prod%3A
+            - generic [ref=e590]:
+              - img [ref=e595]
+              - generic "Report fraud item" [ref=e607]
+            - generic [ref=e608]:
+              - heading "Espejos retrovisores manillar espejo retrovisor para Segway Ninebot MAX G3 ZT3 Pro F3 F3 Pro E3 E3 Pro piezas de repuesto para patinete eléctrico" [level=3] [ref=e609]:
+                - img [ref=e610]
+                - img [ref=e611]
+                - heading "Espejos retrovisores manillar espejo retrovisor para Segway Ninebot MAX G3 ZT3 Pro F3 F3 Pro E3 E3 Pro piezas de repuesto para patinete eléctrico" [level=3] [ref=e612]
+              - generic "$30.985" [ref=e613]:
+                - generic [ref=e614]: $30.985
+                - generic [ref=e615]: $73.852,47
+                - generic [ref=e616]: "-58%"
+              - generic [ref=e617]:
+                - generic [ref=e619]: "4.2"
+                - generic [ref=e620]: 214 vendidos
+              - generic [ref=e622]:
+                - generic [ref=e623]:
+                  - img [ref=e624]
+                  - generic "-$7.600 en $58.000" [ref=e625]
+                - generic "$29.438 por Ud., ≥ 2 Uds" [ref=e627]
+          - generic [ref=e630]:
+            - link "Report fraud item Casa Prefabricada Personalizada YG de 20 pies/40 pies, Casas Económicas, Fácil Instalación, Planos de Planta Personalizables, Estructura de Acero $22.721.500 1 vendidos -$95.000 en $790.000 Envío gratis" [ref=e631] [cursor=pointer]:
+              - /url: //es.aliexpress.com/item/1005011611443028.html?aem_p4p_detail=202604021409564771665668276880000218935&algo_pvid=37c13ca7-7150-4161-ab58-fd7add98dd39&algo_exp_id=37c13ca7-7150-4161-ab58-fd7add98dd39-11&pdp_ext_f=%7B%22order%22%3A%221%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21COP%2154098809.50%2122721500.00%21%21%2199999.00%2141999.58%21%402101c59117751641965586932e81dd%2112000057110494772%21sea%21CO%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Ab034317e%3Bm03_new_user%3A-29895&curPageLogUid=JzNf2Y2230qs&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005011611443028%7C_p_origin_prod%3A&search_p4p_id=202604021409564771665668276880000218935_3
+              - generic [ref=e632]:
+                - img [ref=e637]
+                - generic "Report fraud item" [ref=e649]
+              - generic [ref=e650]:
+                - heading "Casa Prefabricada Personalizada YG de 20 pies/40 pies, Casas Económicas, Fácil Instalación, Planos de Planta Personalizables, Estructura de Acero" [level=3] [ref=e651]:
+                  - heading "Casa Prefabricada Personalizada YG de 20 pies/40 pies, Casas Económicas, Fácil Instalación, Planos de Planta Personalizables, Estructura de Acero" [level=3] [ref=e652]
+                - generic "$22.721.500" [ref=e653]:
+                  - generic [ref=e654]: $22.721.500
+                  - generic [ref=e655]: $54.098.809,5
+                  - generic [ref=e656]: "-57%"
+                - generic [ref=e658]: 1 vendidos
+                - generic [ref=e659]:
+                  - generic [ref=e660]:
+                    - img [ref=e661]
+                    - generic "-$95.000 en $790.000" [ref=e662]
+                  - generic "Envío gratis" [ref=e664]
+            - generic [ref=e665] [cursor=pointer]: Publicidad
+        - generic [ref=e715]:
+          - generic [ref=e716]:
+            - heading "Búsquedas relacionadas" [level=2] [ref=e717]
+            - generic [ref=e718]:
+              - link "sterway" [ref=e721] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/item/1005001325995823.html
+              - link "senewave" [ref=e724] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/item/1005006908708881.html
+          - generic [ref=e725]:
+            - heading "Palabras clave de clasificación" [level=2] [ref=e726]
+            - generic [ref=e727]:
+              - link "segway quad" [ref=e729] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-segway-quad.html
+              - link "keyway" [ref=e731] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-keyway.html
+              - link "segi" [ref=e733] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-segi.html
+              - link "speedways" [ref=e735] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-speedways.html
+              - link "segovia" [ref=e737] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-segovia.html
+              - link "segway max g2" [ref=e739] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-segway-max-g2.html
+              - link "onway" [ref=e741] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-onway.html
+              - link "segway ninebot g30" [ref=e743] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-segway-ninebot-g30.html
+              - link "superway" [ref=e745] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-superway.html
+              - link "sewol" [ref=e747] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-sewol.html
+              - link "segway hoverboard" [ref=e749] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-segway-hoverboard.html
+              - link "segway drift w1" [ref=e751] [cursor=pointer]:
+                - /url: https://es.aliexpress.com/w/wholesale-segway-drift-w1.html
+        - generic [ref=e753]:
+          - generic [ref=e755]:
+            - generic [ref=e756]:
+              - generic [ref=e758]:
+                - generic [ref=e759]: "5"
+                - generic [ref=e760]:
+                  - generic [ref=e761]:
+                    - img [ref=e763]
+                    - img [ref=e766]
+                    - img [ref=e769]
+                    - img [ref=e772]
+                    - img [ref=e775]
+                  - generic [ref=e778]:
+                    - img [ref=e780]
+                    - img [ref=e783]
+                    - img [ref=e786]
+                    - img [ref=e789]
+                    - img [ref=e792]
+              - heading "Resultados para segway" [level=1] [ref=e796]
+            - generic [ref=e798]:
+              - img [ref=e800] [cursor=pointer]
+              - generic [ref=e802]: Si todavía estás buscando accesorios para un patinete eléctrico, no debes perderte los productos que hemos preparado para ti. También puede filtrar para encontrar el producto que desea. Por ejemplo, puede filtrar para encontrar envío gratuito o productos con las ventas más altas, lo que puede brindarle una experiencia de compra perfecta.
+          - generic [ref=e804]:
+            - heading "Accesorios para patinetes eléctricos para comprar en AliExpress" [level=2] [ref=e805]
+            - generic [ref=e807]:
+              - img [ref=e809] [cursor=pointer]
+              - generic [ref=e812]:
+                - generic [ref=e813]: "Introducción de scooter eléctrico:"
+                - generic [ref=e814]: Los monopatines eléctricos se basan en monopatines tradicionales impulsados por humanos y funcionan con kits eléctricos. El método de control del scooter eléctrico es el mismo que el de la bicicleta eléctrica tradicional, que es fácil de aprender por parte del conductor. Está equipado con un asiento desmontable y plegable. En comparación con la bicicleta eléctrica tradicional, la estructura es más simple, la rueda es más pequeña, más ligera y más sencilla, y puede ahorrar muchos recursos sociales. En los últimos años, el rápido desarrollo de los patinetes eléctricos con baterías de litio ha generado nuevas demandas y tendencias.
+                - generic [ref=e816]: "Nuestros productos para usted:"
+                - generic [ref=e817]: Con el fin de satisfacer las necesidades de los diferentes grupos de consumidores, hemos preparado scooters eléctricos y accesorios para usted, y los productos que le ofrecemos son de alta calidad. Al mismo tiempo, también puede encontrar todos los productos relacionados que necesita en nuestra plataforma, y puede seguir nuestra plataforma para obtener más información sobre productos.
+                - generic [ref=e819]: ¿Cómo obtener más información sobre el producto?
+                - generic [ref=e820]: Si desea conocer más información del producto, puede ir a la página para navegar por nuestros parámetros del producto y la experiencia del usuario. Esta es la evaluación más auténtica de los productos que ofrecemos por parte de muchos compradores, lo que puede brindarle la comprensión más intuitiva de nuestros productos. Antes de completar su pedido, tómese un momento para verificar el cupón para que pueda obtener una mejor oferta. Desde cupones de nuevos usuarios hasta cupones de tiendas, puede encontrar muchos descuentos si lee y observa detenidamente.
+                - text: Al mismo tiempo, puede pagar su pedido a través de la aplicación móvil. Además de las transacciones con tarjeta de crédito y débito (CMV), también puedes usar Boleto, iDeal y AliExpress Pocket. Nuestras transacciones son simples y rápidas para su máxima comodidad.
+    - generic [ref=e823]:
+      - generic [ref=e824]:
+        - link "facebook" [ref=e826] [cursor=pointer]:
+          - /url: https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fes.aliexpress.com%2Fw%2Fwholesale-segway.html%3Fchannel%3Dfacebook
+        - link "twitter" [ref=e828] [cursor=pointer]:
+          - /url: https://twitter.com/intent/tweet?url=https%3A%2F%2Fes.aliexpress.com%2Fw%2Fwholesale-segway.html%3Fchannel%3Dtwinner&text=segway
+        - link "pinterest" [ref=e830] [cursor=pointer]:
+          - /url: https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fes.aliexpress.com%2Fw%2Fwholesale-segway.html%3Fchannel%3Dpinterest&media=https%3A&description=Compra%20accesorios%20para%20patinetes%20el%C3%A9ctricos%20online%20en%20AliExpress%2C%20entrega%20r%C3%A1pida%20de%20productos%20de%20gran%20calidad%20a%20precios%20bajos%20y%20te%20ofrecemos%20env%C3%ADo%20gratis.%20Adem%C3%A1s%2C%20siempre%20puede%20aprovechar%20grandes%20ofertas%20y%20promociones%20como%20la%20oferta%20de%20aniversario%20o%20la%20oferta%20de%20verano%20para%20obtener%20un%20gran%20valor%20a%20un%20precio%20m%C3%A1s%20bajo.
+      - link "feedback" [ref=e833] [cursor=pointer]:
+        - /url: javascript:void(0);
+  - contentinfo [ref=e836]:
+    - generic [ref=e838]:
+      - generic [ref=e839]:
+        - generic [ref=e841]:
+          - term [ref=e842]:
+            - heading "Ayuda" [level=5] [ref=e843]
+          - definition [ref=e844]:
+            - link "Atención al cliente" [ref=e845] [cursor=pointer]:
+              - /url: //so.aliexpress.com/s/ByrCmn?language=es_ES
+            - text: ","
+            - link "Litigios e informes" [ref=e846] [cursor=pointer]:
+              - /url: //report.aliexpress.com
+            - text: ","
+            - link "Política de devoluciones y reembolsos" [ref=e847] [cursor=pointer]:
+              - /url: https://www.aliexpress.com/ssr/300000437/PinKTaDpEb?disableNav=YES&pha_manifest=ssr&_immersiveMode=true
+            - text: ","
+            - link "Informar de una infracción DPI" [ref=e848] [cursor=pointer]:
+              - /url: https://ipp.aidcgroup.net/#/ippHome
+            - text: ","
+            - link "Información DSA/OSA" [ref=e849] [cursor=pointer]:
+              - /url: https://www.aliexpress.com/p/transparencycenter/dsa.html
+            - text: ","
+            - link "Cumplimiento de la integridad" [ref=e850] [cursor=pointer]:
+              - /url: https://aidc.jubao.alibaba.com
+            - text: ","
+            - link "Centro de Transparencia" [ref=e851] [cursor=pointer]:
+              - /url: https://www.aliexpress.com/p/transparencycenter/index.html
+            - text: ","
+            - link "Entrada de quejas sin iniciar sesión" [ref=e852] [cursor=pointer]:
+              - /url: https://m.aliexpress.com/p/complaint-center/index.html#/complaint/report
+            - text: ","
+            - link "Política de devoluciones" [ref=e853] [cursor=pointer]:
+              - /url: https://www.aliexpress.com/ssr/300000437/G7ZED4yXte?disableNav=YES&pha_manifest=ssr&_immersiveMode=true
+        - generic [ref=e855]:
+          - term [ref=e856]:
+            - heading "Páginas multilingües de AliExpress" [level=5] [ref=e857]
+          - definition [ref=e858]:
+            - link "Pусский" [ref=e859] [cursor=pointer]:
+              - /url: //ru.aliexpress.com
+            - text: ","
+            - link "Português" [ref=e860] [cursor=pointer]:
+              - /url: //pt.aliexpress.com
+            - text: ","
+            - link "Español" [ref=e861] [cursor=pointer]:
+              - /url: //es.aliexpress.com
+            - text: ","
+            - link "Français" [ref=e862] [cursor=pointer]:
+              - /url: //fr.aliexpress.com
+            - text: ","
+            - link "Deutsch" [ref=e863] [cursor=pointer]:
+              - /url: //de.aliexpress.com
+            - text: ","
+            - link "Italiano" [ref=e864] [cursor=pointer]:
+              - /url: //it.aliexpress.com
+            - text: ","
+            - link "Nederlands" [ref=e865] [cursor=pointer]:
+              - /url: //nl.aliexpress.com
+            - text: ","
+            - link "Türk" [ref=e866] [cursor=pointer]:
+              - /url: //tr.aliexpress.com
+            - text: ","
+            - link "日本語" [ref=e867] [cursor=pointer]:
+              - /url: //ja.aliexpress.com
+            - text: ","
+            - link "한국어" [ref=e868] [cursor=pointer]:
+              - /url: //ko.aliexpress.com
+            - text: ","
+            - link "ภาษาไทย" [ref=e869] [cursor=pointer]:
+              - /url: //th.aliexpress.com
+            - text: ","
+            - link "اللغة العربي" [ref=e870] [cursor=pointer]:
+              - /url: //ar.aliexpress.com
+            - text: ","
+            - link "עברית" [ref=e871] [cursor=pointer]:
+              - /url: //he.aliexpress.com
+            - text: ","
+            - link "Polish" [ref=e872] [cursor=pointer]:
+              - /url: //pl.aliexpress.com
+      - generic [ref=e874]:
+        - term [ref=e875]:
+          - heading "Buscar por categoría" [level=5] [ref=e876]
+        - definition [ref=e877]:
+          - generic [ref=e878]:
+            - link "Todos los populares" [ref=e879] [cursor=pointer]:
+              - /url: //es.aliexpress.com/popular.html
+            - text: ","
+            - link "Producto" [ref=e880] [cursor=pointer]:
+              - /url: //es.aliexpress.com/wholesale.html
+            - text: ","
+            - link "Promoción" [ref=e881] [cursor=pointer]:
+              - /url: //es.aliexpress.com/promotion.html
+            - text: ","
+            - link "Precio bajo" [ref=e882] [cursor=pointer]:
+              - /url: //es.aliexpress.com/price.html
+            - text: ","
+            - link "Gran Valor" [ref=e883] [cursor=pointer]:
+              - /url: //es.aliexpress.com/cheap.html
+            - text: ","
+            - link "Reseñas" [ref=e884] [cursor=pointer]:
+              - /url: //es.aliexpress.com/reviews.html
+            - text: ","
+            - link "Wiki" [ref=e885] [cursor=pointer]:
+              - /url: https://es.aliexpress.com/p/wiki/home.html
+            - text: ","
+            - link "Blog" [ref=e886] [cursor=pointer]:
+              - /url: https://es.aliexpress.com/p/blog/home.html
+            - text: ","
+            - link "Video" [ref=e887] [cursor=pointer]:
+              - /url: https://es.aliexpress.com/p/video/home.html
+      - generic [ref=e889]:
+        - term [ref=e890]:
+          - heading "Alibaba Group" [level=5] [ref=e891]
+        - definition [ref=e892]:
+          - link "Página del Grupo Alibaba" [ref=e893] [cursor=pointer]:
+            - /url: http://www.alibabagroup.com/en/global/home
+          - text: ","
+          - link "AliExpress" [ref=e894] [cursor=pointer]:
+            - /url: //www.aliexpress.com/
+          - text: ","
+          - link "Alimama" [ref=e895] [cursor=pointer]:
+            - /url: http://www.alimama.com/
+          - text: ","
+          - link "Alipay" [ref=e896] [cursor=pointer]:
+            - /url: https://intl.alipay.com/index.htm
+          - text: ","
+          - link "Fliggy" [ref=e897] [cursor=pointer]:
+            - /url: http://www.fliggy.com/
+          - text: ","
+          - link "Alibaba Cloud" [ref=e898] [cursor=pointer]:
+            - /url: http://www.alibabacloud.com
+          - text: ","
+          - link "Alibaba International" [ref=e899] [cursor=pointer]:
+            - /url: http://www.alibaba.com/
+          - text: ","
+          - link "AliTelecom" [ref=e900] [cursor=pointer]:
+            - /url: http://aliqin.tmall.com/
+          - text: ","
+          - link "DingTalk" [ref=e901] [cursor=pointer]:
+            - /url: http://www.dingtalk.com/
+          - text: ","
+          - link "Juhuasuan" [ref=e902] [cursor=pointer]:
+            - /url: http://ju.taobao.com/
+          - text: ","
+          - link "Taobao Marketplace" [ref=e903] [cursor=pointer]:
+            - /url: http://www.taobao.com/
+          - text: ","
+          - link "Tmall" [ref=e904] [cursor=pointer]:
+            - /url: http://www.tmall.com/
+          - text: ","
+          - link "Taobao Global" [ref=e905] [cursor=pointer]:
+            - /url: https://world.taobao.com/
+          - text: ","
+          - link "AliOS" [ref=e906] [cursor=pointer]:
+            - /url: http://www.alios.cn/
+          - text: ","
+          - link "1688" [ref=e907] [cursor=pointer]:
+            - /url: http://www.1688.com/
+    - generic [ref=e909]:
+      - link "Intellectual Property Protection" [ref=e910] [cursor=pointer]:
+        - /url: https://ipp.aidcgroup.net/#/ippHome
+      - text: "-"
+      - link "Privacy Policy" [ref=e911] [cursor=pointer]:
+        - /url: https://campaign.aliexpress.com/wow/gcp/app-redirect-terms/index
+      - text: "-"
+      - link "Mapa del sitio web" [ref=e912] [cursor=pointer]:
+        - /url: https://www.aliexpress.com/sitemap.html
+      - text: "-"
+      - link "Términos de uso de AliExpress.com" [ref=e913] [cursor=pointer]:
+        - /url: https://terms.alicdn.com/legal-agreement/terms/platform_service/20220531142242826/20220531142242826.html
+      - text: "-"
+      - link "Información para consumidores de la UE" [ref=e914] [cursor=pointer]:
+        - /url: https://sale.aliexpress.com/__pc/QnoLFBVfqY.htm
+      - text: "-"
+      - link "Acuerdo de servicios de transacción para consumidores fuera de la UE/Reino Unido" [ref=e915] [cursor=pointer]:
+        - /url: https://rulechannel.alibaba.com/icbu?type=detail&ruleId=2054&cId=1304#/rule/detail?cId=1304&ruleId=2054
+      - text: "-"
+      - link "Términos y Condiciones para Consumidores de la UE/EEE/Reino Unido" [ref=e916] [cursor=pointer]:
+        - /url: https://campaign.aliexpress.com/wow/gcp-plus/ae/tupr?_immersiveMode=true&pha_manifest=upr&disableNav=YES&wh_pid=300000414/pt8AMcBikk
+      - text: "-"
+      - link "User Information Legal Enquiry Guide" [ref=e917] [cursor=pointer]:
+        - /url: https://terms.alicdn.com/legal-agreement/terms/data_processing_agreement_others/20231101174825691/20231101174825691.html
+      - text: ©️ 2010-2025 AliExpress.com. Todos los derechos reservados.

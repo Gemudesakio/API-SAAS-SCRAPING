@@ -1,9 +1,7 @@
 import { load as loadHtml } from 'cheerio';
 import { AppError } from '../../errors/app-error.js';
-import { detectChallenge } from '../../utils/scraper.helpers.js';
+import { buildUserAgent, detectChallenge } from '../../utils/scraper.helpers.js';
 import { flaresolverrGet, isFlareSolverrEnabled } from '../clients/flaresolverr.client.js';
-
-const ALIEXPRESS_ENGINE = 'flaresolverr';
 
 function isValidAliExpressUrl(rawUrl) {
   try {
@@ -56,51 +54,93 @@ function normalizeUrl(rawUrl) {
   return rawUrl;
 }
 
+async function fetchDirect(targetUrl) {
+  const response = await fetch(targetUrl, {
+    headers: {
+      'User-Agent': buildUserAgent(),
+      Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+      'Accept-Language': 'es-CO,es;q=0.9,en-US;q=0.8,en;q=0.7',
+      'Accept-Encoding': 'gzip, deflate, br',
+    },
+    redirect: 'follow',
+  });
+
+  if (!response.ok) {
+    return { html: '', status: response.status, finalUrl: targetUrl };
+  }
+
+  return {
+    html: await response.text(),
+    status: response.status,
+    finalUrl: response.url || targetUrl,
+  };
+}
+
+async function fetchWithFlareSolverr(targetUrl) {
+  const flareData = await flaresolverrGet(targetUrl);
+  const solution = flareData?.solution || {};
+  return {
+    html: String(solution.response || ''),
+    status: Number(solution.status) || null,
+    finalUrl: String(solution.url || targetUrl),
+  };
+}
+
+function isBlockedPage(html) {
+  if (!html || html.length < 500) return true;
+  if (html.includes('captcha') || html.includes('punish') || html.includes('_bx-verify')) return true;
+  return detectChallenge({
+    pageText: html.slice(0, 3000),
+    title: '',
+    url: '',
+    status: null,
+  });
+}
+
 function extractFromInlineData(html, maxItems) {
-  // AliExpress embeds search results in itemList.content[] inside a <script> bundle.
-  // Only extract from this section to avoid mixing in recommendation products.
   const marker = '"itemList":{"content":[';
-  const itemListStart = html.indexOf(marker);
-  if (itemListStart === -1) return [];
+  const markerIdx = html.indexOf(marker);
+  if (markerIdx === -1) return [];
 
-  const contentStart = itemListStart + marker.length;
-  const contentSlice = html.substring(contentStart, contentStart + 500000);
-
+  const arrayStart = markerIdx + marker.length;
   const products = [];
   const seen = new Set();
 
-  const productIdMatches = [...contentSlice.matchAll(/"productId":"(\d+)"/g)];
+  let i = arrayStart;
+  while (i < html.length && products.length < maxItems) {
+    while (i < html.length && (html[i] === ',' || html[i] === ' ' || html[i] === '\n')) i++;
+    if (html[i] !== '{') break;
 
-  for (const match of productIdMatches) {
-    if (products.length >= maxItems) break;
+    let depth = 0;
+    const objStart = i;
+    for (; i < html.length; i++) {
+      if (html[i] === '{') depth++;
+      else if (html[i] === '}') {
+        depth--;
+        if (depth === 0) { i++; break; }
+      }
+    }
+    if (depth !== 0) break;
 
-    const productId = match[1];
-    if (seen.has(productId)) continue;
+    const objStr = html.substring(objStart, i);
+    let obj;
+    try { obj = JSON.parse(objStr); } catch { continue; }
+
+    const productId = obj.productId;
+    if (!productId || seen.has(productId)) continue;
     seen.add(productId);
 
-    const start = Math.max(0, match.index - 500);
-    const end = Math.min(contentSlice.length, match.index + 3000);
-    const chunk = contentSlice.substring(start, end);
-
-    const title =
-      chunk.match(/"displayTitle":"([^"]+)"/)?.[1] ||
-      chunk.match(/"productTitle":"([^"]+)"/)?.[1] ||
-      '';
-
-    const priceRaw =
-      chunk.match(/"formattedPrice":"([^"]+)"/)?.[1] ||
-      chunk.match(/"minPrice":(\d+)/)?.[1] ||
-      '';
-
-    const imgUrl = normalizeUrl(
-      chunk.match(/"imgUrl":"([^"]+)"/)?.[1] || ''
-    );
-
+    const title = obj.title?.displayTitle || '';
     if (!title) continue;
+
+    const price = obj.prices?.salePrice?.minPrice;
+    const priceRaw = price != null ? String(price) : '';
+
+    const imgUrl = normalizeUrl(obj.image?.imgUrl || '');
 
     products.push({
       title,
-      priceRaw: String(priceRaw),
+      priceRaw,
       url: `https://es.aliexpress.com/item/${productId}.html`,
       image: imgUrl,
       availabilityRaw: 'DISPONIBLE',
@@ -113,7 +153,6 @@ function extractFromInlineData(html, maxItems) {
 function extractFromDom($, maxItems) {
   const products = [];
 
-  // Fallback: find all links to product detail pages
   $('a[href*="/item/"]').each((_, el) => {
     if (products.length >= maxItems) return;
 
@@ -122,7 +161,6 @@ function extractFromDom($, maxItems) {
     const url = normalizeUrl(href);
     if (!url || !url.includes('/item/')) return;
 
-    // Walk up to find the product card container
     const card = link.closest('div[class]');
     const title =
       card.find('[class*="title"], h1, h2, h3').first().text().trim() ||
@@ -155,14 +193,9 @@ export async function scrapeAliExpress({
   maxItems = 20,
   maxPages = 3,
 }) {
-  if (!isFlareSolverrEnabled()) {
-    throw new AppError(
-      'AliExpress requiere FLARESOLVERR_URL configurada',
-      503,
-      'SCRAPER_NAVIGATION_ERROR',
-      { reason: 'flaresolverr_not_configured' }
-    );
-  }
+  const flareSolverrAvailable = isFlareSolverrEnabled();
+  let useFlareSolverr = false;
+  let engine = 'fetch';
 
   const products = [];
   const seen = new Set();
@@ -173,55 +206,60 @@ export async function scrapeAliExpress({
   for (let page = 1; page <= maxPages && products.length < maxItems; page++) {
     const targetUrl = resolveAliExpressTargetUrl({ query, url }, page);
 
-    const flareData = await flaresolverrGet(targetUrl);
-    const solution = flareData?.solution || {};
+    let result;
 
-    const status = Number.isFinite(Number(solution.status))
-      ? Number(solution.status)
-      : null;
-    const finalUrl = String(solution.url || targetUrl);
-    const html = String(solution.response || '');
+    if (useFlareSolverr) {
+      result = await fetchWithFlareSolverr(targetUrl);
+    } else {
+      result = await fetchDirect(targetUrl);
 
-    if (firstStatus === null) firstStatus = status;
-    lastFinalUrl = finalUrl;
+      if (isBlockedPage(result.html)) {
+        if (!flareSolverrAvailable) {
+          if (products.length > 0) break;
+          throw new AppError(
+            'AliExpress bloqueó la petición. Configura FLARESOLVERR_URL para bypass automático.',
+            503,
+            'BOT_CHALLENGE',
+            { reason: 'aliexpress_block', hint: 'Set FLARESOLVERR_URL env variable' }
+          );
+        }
+
+        useFlareSolverr = true;
+        engine = 'fetch+flaresolverr';
+        result = await fetchWithFlareSolverr(targetUrl);
+      }
+    }
+
+    if (firstStatus === null) firstStatus = result.status;
+    lastFinalUrl = result.finalUrl;
     pagesVisited++;
 
-    // Strategy 1: Extract from inline JS data (itemList.content[])
-    let pageProducts = extractFromInlineData(html, maxItems - products.length);
+    if (!result.html || isBlockedPage(result.html)) {
+      if (products.length > 0) break;
+      throw new AppError(
+        useFlareSolverr
+          ? 'AliExpress bloqueó la petición incluso con FlareSolverr'
+          : 'AliExpress bloqueó la petición',
+        503,
+        'BOT_CHALLENGE',
+        { reason: 'aliexpress_block', engine, status: result.status }
+      );
+    }
 
-    // Strategy 2: Fallback to DOM parsing
+    let pageProducts = extractFromInlineData(result.html, maxItems - products.length);
+
     if (!pageProducts.length) {
-      const $ = loadHtml(html);
+      const $ = loadHtml(result.html);
       pageProducts = extractFromDom($, maxItems - products.length);
     }
 
     if (!pageProducts.length) {
-      if (
-        detectChallenge({
-          pageText: html.slice(0, 2000),
-          title: '',
-          url: finalUrl,
-          status,
-        }) ||
-        html.includes('captcha') ||
-        html.includes('punish')
-      ) {
-        if (products.length > 0) break;
-        throw new AppError(
-          'Bloqueo anti-bot detectado en AliExpress. FlareSolverr no pudo resolver el CAPTCHA.',
-          503,
-          'BOT_CHALLENGE',
-          { reason: 'aliexpress_captcha', status, url: finalUrl }
-        );
-      }
-
       if (products.length > 0) break;
-
       throw new AppError(
         'No se encontraron productos en AliExpress',
         404,
         'NO_RESULTS',
-        { reason: 'no_products_found', status, url: finalUrl }
+        { reason: 'no_products_found', status: result.status, url: result.finalUrl }
       );
     }
 
@@ -237,7 +275,7 @@ export async function scrapeAliExpress({
   return {
     products,
     meta: {
-      engine: ALIEXPRESS_ENGINE,
+      engine,
       status: firstStatus,
       finalUrl: lastFinalUrl,
       pagesVisited,

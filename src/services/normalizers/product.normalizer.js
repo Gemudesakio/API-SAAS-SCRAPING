@@ -7,7 +7,14 @@ function mapStock(raw = '') {
   if (value.includes('agot') || value.includes('outofstock') || value.includes('sin stock')) {
     return 'AGOTADO';
   }
-
+  if (
+    value.includes('no puede enviarse') ||
+    value.includes('cannot be shipped') ||
+    value.includes('currently unavailable') ||
+    value.includes('no disponible para enviar')
+  ) {
+    return 'AGOTADO';
+  }
   return 'DISPONIBLE';
 }
 
