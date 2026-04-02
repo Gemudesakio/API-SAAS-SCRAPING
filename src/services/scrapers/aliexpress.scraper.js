@@ -57,16 +57,19 @@ function normalizeUrl(rawUrl) {
 }
 
 function extractFromInlineData(html, maxItems) {
-  // AliExpress embeds product data in a <script> bundle with itemList.content[]
-  // Each product has: productId, title.displayTitle, prices.salePrice.formattedPrice,
-  // image.imgUrl, productDetailUrl
-  if (!html.includes('"itemList"')) return [];
+  // AliExpress embeds search results in itemList.content[] inside a <script> bundle.
+  // Only extract from this section to avoid mixing in recommendation products.
+  const marker = '"itemList":{"content":[';
+  const itemListStart = html.indexOf(marker);
+  if (itemListStart === -1) return [];
+
+  const contentStart = itemListStart + marker.length;
+  const contentSlice = html.substring(contentStart, contentStart + 500000);
 
   const products = [];
   const seen = new Set();
 
-  // Find each productId and extract surrounding fields from its chunk
-  const productIdMatches = [...html.matchAll(/"productId":"(\d+)"/g)];
+  const productIdMatches = [...contentSlice.matchAll(/"productId":"(\d+)"/g)];
 
   for (const match of productIdMatches) {
     if (products.length >= maxItems) break;
@@ -75,10 +78,9 @@ function extractFromInlineData(html, maxItems) {
     if (seen.has(productId)) continue;
     seen.add(productId);
 
-    // Extract a chunk around this productId (data is nearby in the JS)
     const start = Math.max(0, match.index - 500);
-    const end = Math.min(html.length, match.index + 3000);
-    const chunk = html.substring(start, end);
+    const end = Math.min(contentSlice.length, match.index + 3000);
+    const chunk = contentSlice.substring(start, end);
 
     const title =
       chunk.match(/"displayTitle":"([^"]+)"/)?.[1] ||
@@ -94,16 +96,12 @@ function extractFromInlineData(html, maxItems) {
       chunk.match(/"imgUrl":"([^"]+)"/)?.[1] || ''
     );
 
-    const detailUrl = normalizeUrl(
-      chunk.match(/"productDetailUrl":"([^"]+)"/)?.[1] || ''
-    );
-
-    if (!title || !detailUrl) continue;
+    if (!title) continue;
 
     products.push({
       title,
       priceRaw: String(priceRaw),
-      url: detailUrl,
+      url: `https://es.aliexpress.com/item/${productId}.html`,
       image: imgUrl,
       availabilityRaw: 'DISPONIBLE',
     });

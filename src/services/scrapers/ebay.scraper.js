@@ -1,7 +1,10 @@
 import { load as loadHtml } from 'cheerio';
 import { AppError } from '../../errors/app-error.js';
-import { buildUserAgent } from '../../utils/scraper.helpers.js';
-import { flaresolverrGet, isFlareSolverrEnabled } from '../clients/flaresolverr.client.js';
+import { buildUserAgent, detectChallenge } from '../../utils/scraper.helpers.js';
+import {
+  flaresolverrGet,
+  isFlareSolverrEnabled,
+} from '../clients/flaresolverr.client.js';
 
 const EBAY_BASE_URL = 'https://www.ebay.com';
 
@@ -32,9 +35,8 @@ function resolveEbayTargetUrl({ query, url }, page) {
         'INVALID_URL'
       );
     }
-    if (page <= 1) return url;
     const parsed = new URL(url);
-    parsed.searchParams.set('_pgn', String(page));
+    if (page > 1) parsed.searchParams.set('_pgn', String(page));
     return parsed.toString();
   }
 
@@ -90,11 +92,44 @@ function extractProductsFromHtml(html, maxItems) {
 }
 
 function isBlockedPage(html) {
-  return (
+  if (!html || html.length < 500) return true;
+
+  if (
     html.includes('Pardon Our Interruption') ||
-    html.includes('Security Measure') ||
-    html.includes('captcha')
-  );
+    html.includes('Disculpa la interrupción') ||
+    html.includes('Security Measure')
+  ) {
+    return true;
+  }
+
+  return detectChallenge({
+    pageText: html.slice(0, 3000),
+    title: '',
+    url: '',
+    status: null,
+  });
+}
+
+async function fetchDirect(targetUrl) {
+  const response = await fetch(targetUrl, {
+    headers: {
+      'User-Agent': buildUserAgent(),
+      Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+      'Accept-Language': 'es-CO,es;q=0.9,en-US;q=0.8,en;q=0.7',
+      'Accept-Encoding': 'gzip, deflate, br',
+    },
+    redirect: 'follow',
+  });
+
+  if (!response.ok) {
+    return { html: '', status: response.status, finalUrl: targetUrl };
+  }
+
+  return {
+    html: await response.text(),
+    status: response.status,
+    finalUrl: response.url || targetUrl,
+  };
 }
 
 async function fetchWithFlareSolverr(targetUrl) {
@@ -107,34 +142,15 @@ async function fetchWithFlareSolverr(targetUrl) {
   };
 }
 
-async function fetchDirect(targetUrl) {
-  const response = await fetch(targetUrl, {
-    headers: {
-      'User-Agent': buildUserAgent(),
-      Accept: 'text/html,application/xhtml+xml',
-      'Accept-Language': 'en-US,en;q=0.9',
-    },
-  });
-
-  if (!response.ok) {
-    return { html: '', status: response.status, finalUrl: targetUrl };
-  }
-
-  return {
-    html: await response.text(),
-    status: response.status,
-    finalUrl: targetUrl,
-  };
-}
-
 export async function scrapeEbay({
   query,
   url,
   maxItems = 20,
   maxPages = 3,
 }) {
-  const useFlareSolverr = isFlareSolverrEnabled();
-  const engine = useFlareSolverr ? 'flaresolverr' : 'fetch';
+  const flareSolverrAvailable = isFlareSolverrEnabled();
+  let useFlareSolverr = false;
+  let engine = 'fetch';
 
   const products = [];
   const seen = new Set();
@@ -146,32 +162,56 @@ export async function scrapeEbay({
     const targetUrl = resolveEbayTargetUrl({ query, url }, page);
     lastUrl = targetUrl;
 
-    // Use FlareSolverr for ALL pages when available (like Homecenter/Decathlon).
-    // eBay blocks repeated fetch requests from the same IP, so FlareSolverr must
-    // handle the full session (cookies, browser state) from page 1 onward.
-    const result = useFlareSolverr
-      ? await fetchWithFlareSolverr(targetUrl)
-      : await fetchDirect(targetUrl);
+    let result;
+
+    if (useFlareSolverr) {
+      result = await fetchWithFlareSolverr(targetUrl);
+    } else {
+      result = await fetchDirect(targetUrl);
+
+      if (isBlockedPage(result.html)) {
+        if (!flareSolverrAvailable) {
+          if (products.length > 0) break;
+          throw new AppError(
+            'eBay bloqueó la petición. Configura FLARESOLVERR_URL para bypass automático.',
+            503,
+            'BOT_CHALLENGE',
+            { reason: 'ebay_block', hint: 'Set FLARESOLVERR_URL env variable' }
+          );
+        }
+
+        useFlareSolverr = true;
+        engine = 'fetch+flaresolverr';
+        result = await fetchWithFlareSolverr(targetUrl);
+      }
+    }
 
     if (firstStatus === null) firstStatus = result.status;
     pagesVisited++;
 
     if (!result.html || isBlockedPage(result.html)) {
       if (products.length > 0) break;
-
       throw new AppError(
         useFlareSolverr
           ? 'eBay bloqueó la petición incluso con FlareSolverr'
-          : 'eBay bloqueó la petición. Configura FLARESOLVERR_URL para bypass automático.',
+          : 'eBay bloqueó la petición',
         503,
         'BOT_CHALLENGE',
-        { reason: 'ebay_block', hint: useFlareSolverr ? undefined : 'Set FLARESOLVERR_URL env variable' }
+        { reason: 'ebay_block', engine, status: result.status }
       );
     }
 
     const pageProducts = extractProductsFromHtml(result.html, maxItems - products.length);
 
-    if (!pageProducts.length) break;
+    if (!pageProducts.length) {
+      if (products.length > 0) break;
+      throw new AppError(
+        'No se encontraron productos en eBay',
+        404,
+        'NO_RESULTS',
+        { reason: 'no_products_found', status: result.status, url: result.finalUrl }
+      );
+    }
 
     for (const p of pageProducts) {
       const key = p.url || p.title;
