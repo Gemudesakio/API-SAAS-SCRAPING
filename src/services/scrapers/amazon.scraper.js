@@ -6,6 +6,7 @@ import {
   isFlareSolverrEnabled,
 } from '../clients/flaresolverr.client.js';
 import { convertToCOP } from '../../utils/currency.js';
+import { getAmazonColombiaCookies } from '../clients/amazon-session.js';
 
 const AMAZON_BASE_URL = 'https://www.amazon.com';
 
@@ -124,10 +125,18 @@ function extractProductsFromHtml(html, maxItems) {
     const image = card.find('img.s-image').first().attr('src') || '';
 
     const deliveryText = card
-      .find('[data-cy="delivery-recipe"] span')
+      .find('[data-cy="delivery-recipe"]')
       .first()
       .text()
+      .replace(/\s+/g, ' ')
       .trim();
+
+    if (
+      deliveryText.includes('no puede enviarse') ||
+      deliveryText.includes('cannot be shipped') ||
+      deliveryText.includes('Currently unavailable') ||
+      deliveryText.includes('No disponible')
+    ) return;
 
     products.push({
       title,
@@ -157,17 +166,18 @@ function isBlockedPage(html) {
 }
 
 async function fetchDirect(targetUrl) {
-  const response = await fetch(targetUrl, {
-    headers: {
-      'User-Agent': buildUserAgent(),
-      Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-      'Accept-Language': 'es-CO,es;q=0.9,en-US;q=0.8,en;q=0.7',
-      'Accept-Encoding': 'gzip, deflate, br',
-      'Cache-Control': 'no-cache',
-      Pragma: 'no-cache',
-    },
-    redirect: 'follow',
-  });
+  const cookies = await getAmazonColombiaCookies();
+  const headers = {
+    'User-Agent': buildUserAgent(),
+    Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'es-CO,es;q=0.9,en-US;q=0.8,en;q=0.7',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'Cache-Control': 'no-cache',
+    Pragma: 'no-cache',
+  };
+  if (cookies) headers.Cookie = cookies;
+
+  const response = await fetch(targetUrl, { headers, redirect: 'follow' });
 
   if (!response.ok) {
     return { html: '', status: response.status, finalUrl: targetUrl };

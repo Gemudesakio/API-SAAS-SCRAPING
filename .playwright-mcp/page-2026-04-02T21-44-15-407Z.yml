@@ -1,0 +1,1671 @@
+- generic [ref=e2]:
+  - navigation "Menú de métodos abreviados" [ref=e3]:
+    - heading "Saltar a" [level=2] [ref=e4]
+    - list "Saltar a" [ref=e5]:
+      - listitem [ref=e6]:
+        - link "contenido principal" [ref=e7] [cursor=pointer]:
+          - /url: "#skippedLink"
+          - text: Contenido principal
+    - separator [ref=e8]
+    - heading "Métodos abreviados de teclado" [level=2] [ref=e9]
+    - list "Métodos abreviados de teclado" [ref=e10]:
+      - listitem [ref=e11]:
+        - link "Buscar, alt, barra inclinada" [ref=e12] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e13]:
+            - generic [ref=e14]: Buscar
+            - generic [ref=e15]:
+              - generic [ref=e16]: alt
+              - generic [ref=e17]: +
+              - generic [ref=e18]: /
+      - listitem [ref=e19]:
+        - link "Carrito, Shift, alt, c" [ref=e20] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e21]:
+            - generic [ref=e22]: Carrito
+            - generic [ref=e23]:
+              - generic [ref=e24]: shift
+              - generic [ref=e25]: +
+              - generic [ref=e26]: alt
+              - generic [ref=e27]: +
+              - generic [ref=e28]: C
+      - listitem [ref=e29]:
+        - link "Inicio, Shift, alt, h" [ref=e30] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e31]:
+            - generic [ref=e32]: Inicio
+            - generic [ref=e33]:
+              - generic [ref=e34]: shift
+              - generic [ref=e35]: +
+              - generic [ref=e36]: alt
+              - generic [ref=e37]: +
+              - generic [ref=e38]: H
+      - listitem [ref=e39]:
+        - link "Tus pedidos, Shift, alt, o" [ref=e40] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e41]:
+            - generic [ref=e42]: Pedidos
+            - generic [ref=e43]:
+              - generic [ref=e44]: shift
+              - generic [ref=e45]: +
+              - generic [ref=e46]: alt
+              - generic [ref=e47]: +
+              - generic [ref=e48]: O
+      - listitem [ref=e49]:
+        - button "Mostrar/ocultar métodos abreviados, Shift, alt, z" [ref=e50] [cursor=pointer]:
+          - generic [ref=e51]:
+            - generic [ref=e52]: Mostrar/ocultar métodos abreviados
+            - generic [ref=e53]:
+              - generic [ref=e54]: shift
+              - generic [ref=e55]: +
+              - generic [ref=e56]: alt
+              - generic [ref=e57]: +
+              - generic [ref=e58]: Z
+    - generic [ref=e64]: Para moverte entre elementos, usa las flechas arriba o abajo del teclado.
+  - banner [ref=e65]:
+    - navigation "Primary" [ref=e66]:
+      - generic [ref=e67]:
+        - generic [ref=e68]:
+          - link "Amazon" [ref=e70] [cursor=pointer]:
+            - /url: /-/es/ref=nav_logo
+          - button "Enviar a Colombia" [ref=e73] [cursor=pointer]:
+            - generic [ref=e75]:
+              - generic [ref=e76]: Enviar a
+              - generic [ref=e77]: Colombia
+        - search [ref=e80]:
+          - generic [ref=e83]:
+            - generic [ref=e85]: Todos
+            - combobox "Selecciona el departamento donde deseas realizar tu búsqueda" [ref=e87] [cursor=pointer]:
+              - option "Todos los departamentos" [selected]
+              - option "Arte y artesanías"
+              - option "Automotriz"
+              - option "Bebé"
+              - option "Belleza y cuidado personal"
+              - option "Cine y TV"
+              - option "Computadoras"
+              - option "Deportes y actividades al aire libre"
+              - option "Electrónicos"
+              - option "Equipaje"
+              - option "Herramientas y mejoramiento del hogar"
+              - option "Hogar y cocina"
+              - option "Industria y Ciencia"
+              - option "Insumos para mascotas"
+              - option "Juguetes y juegos"
+              - option "Libros"
+              - option "Moda para Hombre"
+              - option "Moda para Mujer"
+              - option "Moda para Niñas"
+              - option "Moda para Niños"
+              - option "Música MP3"
+              - option "Música, CDs y Vinilos"
+              - option "Ofertas"
+              - option "Prime Video"
+              - option "Salud y Hogar"
+              - option "Software"
+              - option "Tienda Kindle"
+              - option "Videojuegos"
+          - searchbox "Buscar en Amazon" [ref=e90]
+          - generic [ref=e91]:
+            - generic "Ir" [ref=e93] [cursor=pointer]:
+              - button "Ir" [ref=e94]
+            - button [ref=e96]: Agent Search
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - link "Elige un idioma para comprar en Amazon Estados Unidos. La selección actual es Español (ES)." [ref=e100] [cursor=pointer]:
+              - /url: /-/es/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais
+              - generic [ref=e103]:
+                - img "Estados Unidos" [ref=e104]
+                - generic [ref=e105]: ES
+            - button "Ampliar para cambiar el idioma o país" [ref=e106] [cursor=pointer]
+          - generic [ref=e107]:
+            - link "Hola, Identifícate Cuenta y Listas" [ref=e108] [cursor=pointer]:
+              - /url: https://www.amazon.com/-/es/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2F%3Fref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+              - generic [ref=e110]: Hola, Identifícate
+              - generic [ref=e111]: Cuenta y Listas
+            - button "Expandir cuenta y listas" [ref=e112] [cursor=pointer]
+          - link "Devoluciones y pedidos" [ref=e113] [cursor=pointer]:
+            - /url: /-/es/gp/css/order-history?ref_=nav_orders_first
+            - generic [ref=e114]: Devoluciones
+            - generic [ref=e115]: y pedidos
+          - link "0 artículos en el carrito" [ref=e116] [cursor=pointer]:
+            - /url: /-/es/gp/cart/view.html?ref_=nav_cart
+            - generic [ref=e118]: "0"
+            - generic [ref=e121]: Carrito
+      - alertdialog "Alerta de transición a compras internacionales" [ref=e122]:
+        - generic [ref=e123]:
+          - generic [ref=e127]:
+            - text: Te mostramos los productos que se envían a
+            - strong [ref=e128]: Colombia
+            - text: . Para ver productos que se envían a otro país, cambia tu dirección de envío.
+          - generic [ref=e129]:
+            - generic [ref=e131] [cursor=pointer]:
+              - button "Submit" [ref=e132]
+              - generic [ref=e133]: CONTINUAR
+            - generic [ref=e135] [cursor=pointer]:
+              - button "Submit" [ref=e136]
+              - generic [ref=e137]: CAMBIAR LA DIRECCIÓN
+      - generic [ref=e141]:
+        - link "Identifícate" [ref=e142] [cursor=pointer]:
+          - /url: https://www.amazon.com/-/es/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2F%3Fref_%3Dnav_custrec_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+          - generic [ref=e143]: Identifícate
+        - generic [ref=e144]:
+          - text: ¿Eres un cliente nuevo?
+          - link "¿No tienes cuenta en Amazon? Comienza aquí para crear una cuenta" [ref=e145] [cursor=pointer]:
+            - /url: https://www.amazon.com/-/es/ap/register?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2F%3F_encoding%3DUTF8%26ref_%3Dnav_custrec_newcust&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+            - text: Empieza aquí.
+      - generic [ref=e150]:
+        - button "Abrir menú de todas las categorías" [ref=e152] [cursor=pointer]:
+          - generic [ref=e154]: Todo
+        - list [ref=e158]:
+          - listitem [ref=e159]:
+            - link "Prime" [ref=e161] [cursor=pointer]:
+              - /url: /-/es/prime?ref_=nav_cs_primelink_nonmember
+          - listitem [ref=e162]:
+            - link "Prime Video" [ref=e164] [cursor=pointer]:
+              - /url: /gp/redirect.html?location=https%3A%2F%2Fwww.primevideo.com&source=nav_linktree&token=491B3E20E8D6C755745FD7E34BCE779F25003CB2
+          - listitem [ref=e165]:
+            - link "Ofertas del Día" [ref=e167] [cursor=pointer]:
+              - /url: /-/es/gp/goldbox?ref_=nav_cs_gb_bau
+          - listitem [ref=e168]:
+            - link "Tarjetas de Regalo" [ref=e170] [cursor=pointer]:
+              - /url: /-/es/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc
+          - listitem [ref=e171]:
+            - link "Vender" [ref=e173] [cursor=pointer]:
+              - /url: /-/es/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell
+          - listitem [ref=e174]:
+            - link "Listas" [ref=e176] [cursor=pointer]:
+              - /url: /-/es/gp/browse.html?node=16115931011&ref_=nav_cs_registry
+          - listitem [ref=e177]:
+            - link "Servicio al Cliente" [ref=e179] [cursor=pointer]:
+              - /url: /-/es/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice
+          - link "Haz clic para llamar a nuestra línea de servicio al cliente para discapacitados, o contáctanos directamente al 1-888-283-1678" [ref=e180] [cursor=pointer]:
+            - /url: /-/es/gp/help/customer/accessibility
+            - text: Servicio al cliente con discapacidad
+        - link "Prime entrega gratis desde EE. UU." [ref=e183] [cursor=pointer]:
+          - /url: /-/es/Prime/?_encoding=UTF8&ref_=nav_swm_undefined&pf_rd_p=09cb99f1-3648-45f3-86f3-cbe9cb3a30cb&pf_rd_s=nav-sitewide-msg-text-export&pf_rd_t=4201&pf_rd_i=navbar-4201&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=09W7ZGB2EEDXDB70S1XZ
+  - main [ref=e185]:
+    - banner [ref=e187]:
+      - group "Contenido destacado" [ref=e188]:
+        - generic [ref=e190]:
+          - button "Previous slide" [disabled] [ref=e192] [cursor=pointer]:
+            - generic [ref=e194]: Previous slide
+          - group [ref=e196]:
+            - list [ref=e197]:
+              - listitem [ref=e198]:
+                - link "Compra con Amazon Prime Envío gratis a Colombia desde Estados Unidos" [ref=e201] [cursor=pointer]:
+                  - /url: /-/es/Prime/?_encoding=UTF8&pd_rd_w=F8URY&content-id=amzn1.sym.de91ebe6-8121-44ab-ba24-4ba3a26c8f8b&pf_rd_p=de91ebe6-8121-44ab-ba24-4ba3a26c8f8b&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=joUtd&pd_rd_r=3bcccbf8-eda8-4183-8b1f-94abd33b3c3b&ref_=pd_hp_d_hero_unk
+                  - img "Compra con Amazon Prime Envío gratis a Colombia desde Estados Unidos" [ref=e203]
+          - button "Next slide" [ref=e205] [cursor=pointer]:
+            - generic [ref=e207]: Next slide
+    - generic [ref=e208]:
+      - generic [ref=e209]:
+        - generic [ref=e211]:
+          - heading "Mejora tu juego" [level=2] [ref=e213]
+          - link "Mejora tu juego Compra videojuegos" [ref=e214] [cursor=pointer]:
+            - /url: /-/es/s/?_encoding=UTF8&k=gaming&pd_rd_w=w3AkK&content-id=amzn1.sym.edf433e2-b6d4-408e-986d-75239a5ced10&pf_rd_p=edf433e2-b6d4-408e-986d-75239a5ced10&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac&ref_=pd_hp_d_atf_unk
+            - img "Mejora tu juego" [ref=e217]
+            - generic [ref=e219]:
+              - generic [ref=e220]: Compra videojuegos
+              - generic [ref=e221]: Compra videojuegos
+        - generic [ref=e223]:
+          - heading "Novedades en hogar por menos de $50" [level=2] [ref=e225]
+          - generic [ref=e226]:
+            - generic [ref=e227]:
+              - link "Cocina y Comedor" [ref=e229] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=kitchen%20and%20dining&rh=p_36%3A-5000&s=date-desc-rank&pd_rd_w=gAGWW&content-id=amzn1.sym.679a99a5-333c-46b8-a493-b812dbdccbc0&pf_rd_p=679a99a5-333c-46b8-a493-b812dbdccbc0&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac&ref_=pd_hp_d_atf_unk
+                - img "Cocina y Comedor" [ref=e231]
+                - generic [ref=e233]: Cocina y Comedor
+              - link "Mejoras del hogar" [ref=e235] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=home%20improvement&i=tools&rh=n%3A228013%2Cp_36%3A-5000&dc=&ds=v1%3AU%2F9vxcfd6LLqNGLcdfGjetkk3KJGd0ZuNoxWMV3LcAk&pd_rd_w=gAGWW&content-id=amzn1.sym.679a99a5-333c-46b8-a493-b812dbdccbc0&pf_rd_p=679a99a5-333c-46b8-a493-b812dbdccbc0&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac&ref_=pd_hp_d_atf_unk
+                - img "Mejoras del hogar" [ref=e237]
+                - generic [ref=e239]: Mejoras del Hogar
+            - generic [ref=e240]:
+              - link "Decoración" [ref=e242] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=home%20decor&rh=p_36%3A-5000&s=date-desc-rank&pd_rd_w=gAGWW&content-id=amzn1.sym.679a99a5-333c-46b8-a493-b812dbdccbc0&pf_rd_p=679a99a5-333c-46b8-a493-b812dbdccbc0&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac&ref_=pd_hp_d_atf_unk
+                - img "Decoración" [ref=e244]
+                - generic [ref=e246]: Decoración
+              - link "Ropa de cama y baño" [ref=e248] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=bedding%20and%20bath&rh=p_36%3A-5000&s=date-desc-rank&pd_rd_w=gAGWW&content-id=amzn1.sym.679a99a5-333c-46b8-a493-b812dbdccbc0&pf_rd_p=679a99a5-333c-46b8-a493-b812dbdccbc0&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac&ref_=pd_hp_d_atf_unk
+                - img "Ropa de cama y baño" [ref=e250]
+                - generic [ref=e252]: Ropa de Cama y Baño
+          - link "Novedades en hogar por menos de $50 - Compra lo último desde casa" [ref=e254] [cursor=pointer]:
+            - /url: /-/es/s/?_encoding=UTF8&k=home&i=garden&rh=n%3A1055398%2Cp_36%3A-5000&s=exact-aware-popularity-rank&dc=&pd_rd_w=gAGWW&content-id=amzn1.sym.679a99a5-333c-46b8-a493-b812dbdccbc0&pf_rd_p=679a99a5-333c-46b8-a493-b812dbdccbc0&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac&ref_=pd_hp_d_atf_unk
+            - generic [ref=e255]:
+              - generic [ref=e256]: Compra lo último desde casa
+              - generic [ref=e257]: Compra lo último desde casa
+        - generic [ref=e259]:
+          - heading "Aprovecha envíos rápidos en millones de productos" [level=2] [ref=e261]
+          - link "Aprovecha envíos rápidos y ofertas en millones de productos Prueba gratis por 30 días" [ref=e262] [cursor=pointer]:
+            - /url: /-/es/Prime/?_encoding=UTF8&pd_rd_w=XRG9X&content-id=amzn1.sym.70be071c-4aed-4237-86d3-6f8d0ff10344&pf_rd_p=70be071c-4aed-4237-86d3-6f8d0ff10344&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac&ref_=pd_hp_d_atf_unk
+            - img "Aprovecha envíos rápidos y ofertas en millones de productos" [ref=e265]
+            - generic [ref=e267]:
+              - generic [ref=e268]: Prueba gratis por 30 días
+              - generic [ref=e269]: Prueba gratis por 30 días
+        - generic [ref=e271]:
+          - heading "Encuentra regalos para mamá" [level=2] [ref=e273]
+          - generic [ref=e274]:
+            - generic [ref=e275]:
+              - link "Ropa" [ref=e277] [cursor=pointer]:
+                - /url: /-/es/gp/goldbox/?ie=UTF8&ref_=nav_cs_gb&discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%255C%2522departments%255C%2522%253A%255B%255C%25227141124011%252F7147440011%252F1040660%255C%2522%255D%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522&pd_rd_w=ViE8p&content-id=amzn1.sym.57b609ae-c7fa-4e50-ad85-9ee3e725c9ef&pf_rd_p=57b609ae-c7fa-4e50-ad85-9ee3e725c9ef&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac
+                - img "Ropa" [ref=e279]
+                - generic [ref=e281]: Ropa
+              - link "Zapatos" [ref=e283] [cursor=pointer]:
+                - /url: /-/es/gp/goldbox/?ie=UTF8&ref_=nav_cs_gb&discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%255C%2522departments%255C%2522%253A%255B%255C%25227141124011%252F7147440011%252F679337011%255C%2522%255D%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522&pd_rd_w=ViE8p&content-id=amzn1.sym.57b609ae-c7fa-4e50-ad85-9ee3e725c9ef&pf_rd_p=57b609ae-c7fa-4e50-ad85-9ee3e725c9ef&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac
+                - img "Zapatos" [ref=e285]
+                - generic [ref=e287]: Zapatos
+            - generic [ref=e288]:
+              - link "Joyería" [ref=e290] [cursor=pointer]:
+                - /url: /-/es/gp/goldbox/?ie=UTF8&ref_=nav_cs_gb&discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%255C%2522departments%255C%2522%253A%255B%255C%25227141124011%252F7147440011%252F7192394011%255C%2522%255D%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522&pd_rd_w=ViE8p&content-id=amzn1.sym.57b609ae-c7fa-4e50-ad85-9ee3e725c9ef&pf_rd_p=57b609ae-c7fa-4e50-ad85-9ee3e725c9ef&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac
+                - img "Joyería" [ref=e292]
+                - generic [ref=e294]: Joyería
+              - link "Bolsos de mano" [ref=e296] [cursor=pointer]:
+                - /url: /-/es/gp/goldbox/?ie=UTF8&ref_=nav_cs_gb&discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%255C%2522departments%255C%2522%253A%255B%255C%25227141124011%252F7147440011%252F15743631%255C%2522%255D%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522&pd_rd_w=ViE8p&content-id=amzn1.sym.57b609ae-c7fa-4e50-ad85-9ee3e725c9ef&pf_rd_p=57b609ae-c7fa-4e50-ad85-9ee3e725c9ef&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac
+                - img "Bolsos de mano" [ref=e298]
+                - generic [ref=e300]: Bolsos de mano
+          - link "Encuentra regalos para mamá - Compra regalos del Día de la Madre" [ref=e302] [cursor=pointer]:
+            - /url: /-/es/b/?_encoding=UTF8&node=23175097011&pd_rd_w=ViE8p&content-id=amzn1.sym.57b609ae-c7fa-4e50-ad85-9ee3e725c9ef&pf_rd_p=57b609ae-c7fa-4e50-ad85-9ee3e725c9ef&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac&ref_=pd_hp_d_atf_unk
+            - generic [ref=e303]:
+              - generic [ref=e304]: Compra regalos del Día de la Madre
+              - generic [ref=e305]: Compra regalos del Día de la Madre
+        - separator [ref=e306]
+        - generic [ref=e308]:
+          - heading "Zona de envío gratis" [level=2] [ref=e310]
+          - link "Zona de envío gratis Compra ahora" [ref=e311] [cursor=pointer]:
+            - /url: /-/es/fmc/intl-free-shipping/?_encoding=UTF8&ref_=ais_homepage_fsz_hero&pd_rd_w=gxMTF&content-id=amzn1.sym.539ed56f-a06d-43da-9fb3-1910ec5bc3f2&pf_rd_p=539ed56f-a06d-43da-9fb3-1910ec5bc3f2&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac
+            - img "Zona de envío gratis" [ref=e314]
+            - generic [ref=e316]:
+              - generic [ref=e317]: Compra ahora
+              - generic [ref=e318]: Compra ahora
+        - generic [ref=e320]:
+          - heading "Regalos para mamás techie" [level=2] [ref=e322]
+          - generic [ref=e323]:
+            - generic [ref=e324]:
+              - link "Auriculares" [ref=e326] [cursor=pointer]:
+                - /url: /-/es/gp/goldbox/?ie=UTF8&ref_=nav_cs_gb&discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%255C%2522departments%255C%2522%253A%255B%255C%2522493964%252F24046923011%255C%2522%255D%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522&pd_rd_w=9ju3L&content-id=amzn1.sym.e1d44ae7-e256-47cc-aa96-79428d059a43&pf_rd_p=e1d44ae7-e256-47cc-aa96-79428d059a43&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac
+                - img "Auriculares" [ref=e328]
+                - generic [ref=e330]: Auriculares
+              - link "Seguridad y Vigilancia" [ref=e332] [cursor=pointer]:
+                - /url: /-/es/gp/goldbox/?ie=UTF8&ref_=nav_cs_gb&discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%255C%2522departments%255C%2522%253A%255B%255C%2522493964%252F524136%255C%2522%255D%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522&pd_rd_w=9ju3L&content-id=amzn1.sym.e1d44ae7-e256-47cc-aa96-79428d059a43&pf_rd_p=e1d44ae7-e256-47cc-aa96-79428d059a43&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac
+                - img "Seguridad y Vigilancia" [ref=e334]
+                - generic [ref=e336]: Seguridad y Vigilancia
+            - generic [ref=e337]:
+              - link "Tecnología portátil" [ref=e339] [cursor=pointer]:
+                - /url: /-/es/gp/goldbox/?ie=UTF8&ref_=nav_cs_gb&discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%255C%2522departments%255C%2522%253A%255B%255C%2522493964%252F10048700011%255C%2522%255D%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522&pd_rd_w=9ju3L&content-id=amzn1.sym.e1d44ae7-e256-47cc-aa96-79428d059a43&pf_rd_p=e1d44ae7-e256-47cc-aa96-79428d059a43&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac
+                - img "Tecnología portátil" [ref=e341]
+                - generic [ref=e343]: Tecnología portátil
+              - link "Computadoras y Accesorios" [ref=e345] [cursor=pointer]:
+                - /url: /-/es/gp/goldbox/?ie=UTF8&ref_=nav_cs_gb&discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%255C%2522departments%255C%2522%253A%255B%255C%2522493964%252F541966%255C%2522%255D%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522&pd_rd_w=9ju3L&content-id=amzn1.sym.e1d44ae7-e256-47cc-aa96-79428d059a43&pf_rd_p=e1d44ae7-e256-47cc-aa96-79428d059a43&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac
+                - img "Computadoras y Accesorios" [ref=e347]
+                - generic [ref=e349]: Computadoras y Accesorios
+          - link "Regalos para mamás techie - Explora regalos para el Día de la Madre" [ref=e351] [cursor=pointer]:
+            - /url: /-/es/b/?_encoding=UTF8&node=23175097011&pd_rd_w=9ju3L&content-id=amzn1.sym.e1d44ae7-e256-47cc-aa96-79428d059a43&pf_rd_p=e1d44ae7-e256-47cc-aa96-79428d059a43&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac&ref_=pd_hp_d_atf_unk
+            - generic [ref=e352]:
+              - generic [ref=e353]: Explora regalos para el Día de la Madre
+              - generic [ref=e354]: Explora regalos para el Día de la Madre
+        - generic [ref=e356]:
+          - heading "Mejoras fáciles para espacios elevados" [level=2] [ref=e358]
+          - generic [ref=e359]:
+            - generic [ref=e360]:
+              - link "Cestas y canastos" [ref=e362] [cursor=pointer]:
+                - /url: /-/es/b/?_encoding=UTF8&ie=UTF8&node=87586343011&pd_rd_w=UsUm3&content-id=amzn1.sym.31f066d0-45a7-43c0-a30b-21b2971be7c8&pf_rd_p=31f066d0-45a7-43c0-a30b-21b2971be7c8&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac&ref_=pd_hp_d_atf_unk
+                - img "Cestas y canastos" [ref=e364]
+                - generic [ref=e366]: Cestas y canastos
+              - link "Herramientas" [ref=e368] [cursor=pointer]:
+                - /url: /-/es/b/?_encoding=UTF8&ie=UTF8&node=87586178011&pd_rd_w=UsUm3&content-id=amzn1.sym.31f066d0-45a7-43c0-a30b-21b2971be7c8&pf_rd_p=31f066d0-45a7-43c0-a30b-21b2971be7c8&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac&ref_=pd_hp_d_atf_unk
+                - img "Herramientas" [ref=e370]
+                - generic [ref=e372]: Herramientas
+            - generic [ref=e373]:
+              - link "Muebles decorativos" [ref=e375] [cursor=pointer]:
+                - /url: /-/es/b/?_encoding=UTF8&ie=UTF8&node=87586177011&pd_rd_w=UsUm3&content-id=amzn1.sym.31f066d0-45a7-43c0-a30b-21b2971be7c8&pf_rd_p=31f066d0-45a7-43c0-a30b-21b2971be7c8&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac&ref_=pd_hp_d_atf_unk
+                - img "Muebles decorativos" [ref=e377]
+                - generic [ref=e379]: Muebles decorativos
+              - link "Tapizado y pintura" [ref=e381] [cursor=pointer]:
+                - /url: /-/es/b/?_encoding=UTF8&ie=UTF8&node=87586176011&pd_rd_w=UsUm3&content-id=amzn1.sym.31f066d0-45a7-43c0-a30b-21b2971be7c8&pf_rd_p=31f066d0-45a7-43c0-a30b-21b2971be7c8&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac&ref_=pd_hp_d_atf_unk
+                - img "Tapizado y pintura" [ref=e383]
+                - generic [ref=e385]: Tapizado y pintura
+          - link "Mejoras fáciles para espacios elevados - Comprar productos para el hogar" [ref=e387] [cursor=pointer]:
+            - /url: /-/es/b/?_encoding=UTF8&ie=UTF8&node=87586174011&pd_rd_w=UsUm3&content-id=amzn1.sym.31f066d0-45a7-43c0-a30b-21b2971be7c8&pf_rd_p=31f066d0-45a7-43c0-a30b-21b2971be7c8&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac&ref_=pd_hp_d_atf_unk
+            - generic [ref=e388]:
+              - generic [ref=e389]: Comprar productos para el hogar
+              - generic [ref=e390]: Comprar productos para el hogar
+        - generic [ref=e392]:
+          - heading "Click here to shop in English" [level=2] [ref=e394]
+          - link "Click here to shop in English Change your language preference" [ref=e395] [cursor=pointer]:
+            - /url: /-/es/gp/customer-preferences/select-currency/?ie=UTF8&pd_rd_w=GevWq&content-id=amzn1.sym.04cc8721-e61a-4d7b-afee-3c1f8826c8fa&pf_rd_p=04cc8721-e61a-4d7b-afee-3c1f8826c8fa&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=5TLAb&pd_rd_r=f0df8476-73e2-4295-ac89-0f54b864e6ac&ref_=pd_hp_d_atf_unk
+            - img "Click here to shop in English" [ref=e398]
+            - generic [ref=e400]:
+              - generic [ref=e401]: Change your language preference
+              - generic [ref=e402]: Change your language preference
+      - generic [ref=e404]:
+        - generic [ref=e407]:
+          - heading "Los Más Vendidos en Hogar y Cocina" [level=2] [ref=e409]
+          - generic [ref=e410]:
+            - list [ref=e412]:
+              - listitem [ref=e413]:
+                - link "Juego de sábanas de 4 piezas talla Queen, cómodas, transpirables, refrescantes, de hotel, unisex, esquinas tipo..." [ref=e415] [cursor=pointer]:
+                  - /url: /-/es/transpirables-refrescantes-bolsillos-microfibra-extrasuaves/dp/B01M16WBW1/?_encoding=UTF8&pd_rd_w=Bzgdr&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_1055398
+                  - img "Juego de sábanas de 4 piezas talla Queen, cómodas, transpirables, refrescantes, de hotel, unisex, esquinas tipo..." [ref=e416]
+              - listitem [ref=e417]:
+                - link "Owala - Botella de agua FreeSip de acero inoxidable con aislamiento, sin bisfenol A, incluye sorbete, para deportes y..." [ref=e419] [cursor=pointer]:
+                  - /url: /-/es/Owala-inoxidable-aislamiento-bisfenol-deportes/dp/B0BZYCJK89/?_encoding=UTF8&pd_rd_w=Bzgdr&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_1055398
+                  - img "Owala - Botella de agua FreeSip de acero inoxidable con aislamiento, sin bisfenol A, incluye sorbete, para deportes y..." [ref=e420]
+              - listitem [ref=e421]:
+                - link "upsimples - Portarretratos de 11 x 14 pulgadas, para fotos de 8 x 10 pulgadas con paspartú o de 11 x 14 pulgadas sin..." [ref=e423] [cursor=pointer]:
+                  - /url: /-/es/upsimples-Portarretratos-pulgadas-paspart%C3%BA-paquete/dp/B0BQR2BQYZ/?_encoding=UTF8&pd_rd_w=Bzgdr&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_1055398
+                  - img "upsimples - Portarretratos de 11 x 14 pulgadas, para fotos de 8 x 10 pulgadas con paspartú o de 11 x 14 pulgadas sin..." [ref=e424]
+              - listitem [ref=e425]:
+                - link "Amazon Basics - Juego de 50 perchas antideslizantes, delgadas, con acabado de terciopelo, color negro" [ref=e427] [cursor=pointer]:
+                  - /url: /-/es/Amazon-Basics-antideslizantes-delgadas-terciopelo/dp/B00FXNAAW2/?_encoding=UTF8&pd_rd_w=Bzgdr&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_1055398
+                  - img "Amazon Basics - Juego de 50 perchas antideslizantes, delgadas, con acabado de terciopelo, color negro" [ref=e428]
+              - listitem [ref=e429]:
+                - link "BISSELL Little Green Mini Limpiador portátil profundo de alfombras y tapicería, para detalles de automóviles, con..." [ref=e431] [cursor=pointer]:
+                  - /url: /-/es/autom%C3%B3viles-herramienta-autolimpieza-HydroRinse-resistentes/dp/B0DJMP6T3N/?_encoding=UTF8&pd_rd_w=Bzgdr&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_1055398
+                  - img "BISSELL Little Green Mini Limpiador portátil profundo de alfombras y tapicería, para detalles de automóviles, con..." [ref=e432]
+              - listitem [ref=e433]:
+                - link "Stanley Quencher H2.0 - Vaso de acero inoxidable con asa, pajilla y tapa FlowState giratoria de 3 posiciones;..." [ref=e435] [cursor=pointer]:
+                  - /url: /-/es/Stanley-Quencher-H2-0-inoxidable-aislamiento/dp/B0DR9PPMRP/?_encoding=UTF8&pd_rd_w=Bzgdr&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_1055398
+                  - img "Stanley Quencher H2.0 - Vaso de acero inoxidable con asa, pajilla y tapa FlowState giratoria de 3 posiciones;..." [ref=e436]
+              - listitem [ref=e437]:
+                - link "OLANLY Alfombras de Baño 30x20, Alfombras de Baño Extra Suaves y Absorbentes de Chenilla, Parte Posterior de Goma de..." [ref=e439] [cursor=pointer]:
+                  - /url: /-/es/OLANLY-Alfombras-Absorbentes-Chenilla-Posterior/dp/B0CFGYFCYL/?_encoding=UTF8&pd_rd_w=Bzgdr&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_1055398
+                  - img "OLANLY Alfombras de Baño 30x20, Alfombras de Baño Extra Suaves y Absorbentes de Chenilla, Parte Posterior de Goma de..." [ref=e440]
+              - listitem [ref=e441]:
+                - link "Zulay Kitchen Potente varita espumadora de leche con 2 baterías Duracell – Mezclador de bebidas portátil ultrarrápido –..." [ref=e443] [cursor=pointer]:
+                  - /url: /-/es/Zulay-Kitchen-espumadora-bater%C3%ADas-Duracell/dp/B09D8T11YS/?_encoding=UTF8&pd_rd_w=Bzgdr&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_1055398
+                  - img "Zulay Kitchen Potente varita espumadora de leche con 2 baterías Duracell – Mezclador de bebidas portátil ultrarrápido –..." [ref=e444]
+              - listitem [ref=e445]:
+                - link "Utopia Bedding - Relleno de almohadas decorativas (paquete de 2, color blanco), almohadas para cama y sofá de 18 x 18..." [ref=e447] [cursor=pointer]:
+                  - /url: /-/es/Utopia-Bedding-almohadas-decorativas-interiores/dp/B01NBNDC1T/?_encoding=UTF8&pd_rd_w=Bzgdr&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_1055398
+                  - img "Utopia Bedding - Relleno de almohadas decorativas (paquete de 2, color blanco), almohadas para cama y sofá de 18 x 18..." [ref=e448]
+              - listitem [ref=e449]:
+                - link "Bedsure - Juego de 2 fundas de almohada de satén" [ref=e451] [cursor=pointer]:
+                  - /url: /-/es/Bedsure-Juego-fundas-almohada-sat%C3%A9n/dp/B0725WFLMB/?_encoding=UTF8&pd_rd_w=Bzgdr&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_1055398
+                  - img "Bedsure - Juego de 2 fundas de almohada de satén" [ref=e452]
+              - listitem [ref=e453]:
+                - link "STANLEY Quencher ProTour - Vaso de paja con tapa a prueba de fugas, popote y asa integrados, compatible con portavasos..." [ref=e455] [cursor=pointer]:
+                  - /url: /-/es/STANLEY-Quencher-ProTour-integrados-portavasos/dp/B0FB7D5PHW/?_encoding=UTF8&pd_rd_w=Bzgdr&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_1055398
+                  - img "STANLEY Quencher ProTour - Vaso de paja con tapa a prueba de fugas, popote y asa integrados, compatible con portavasos..." [ref=e456]
+              - listitem [ref=e457]:
+                - link "LEVOIT Purificadores de aire para dormitorio, hogar, dormitorio, verificado por AHAM, limpiador de filtro 3 en 1 con..." [ref=e459] [cursor=pointer]:
+                  - /url: /-/es/LEVOIT-Purificadores-dormitorio-verificado-almohadilla/dp/B09GTRVJQM/?_encoding=UTF8&pd_rd_w=Bzgdr&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_1055398
+                  - img "LEVOIT Purificadores de aire para dormitorio, hogar, dormitorio, verificado por AHAM, limpiador de filtro 3 en 1 con..." [ref=e460]
+              - listitem [ref=e461]:
+                - link "Flexzilla - HFZG550YW - Manguera de entrada para jardín, 0.63 pulgadas x 50 pies, resistente, ligera, segura para agua..." [ref=e463] [cursor=pointer]:
+                  - /url: /-/es/Flexzilla-HFZG550YW-Manguera-pulgadas-resistente/dp/B003TFE7ZM/?_encoding=UTF8&pd_rd_w=Bzgdr&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_1055398
+                  - img "Flexzilla - HFZG550YW - Manguera de entrada para jardín, 0.63 pulgadas x 50 pies, resistente, ligera, segura para agua..." [ref=e464]
+              - listitem [ref=e465]:
+                - link "LiBa Cortina de ducha de baño de plástico impermeable, cortina de ducha premium PEVA, no tóxica con ojales a prueba de..." [ref=e467] [cursor=pointer]:
+                  - /url: /-/es/LiBa-pl%C3%A1stico-impermeable-transparente-accesorios/dp/B00LS9UD2M/?_encoding=UTF8&pd_rd_w=Bzgdr&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_1055398
+                  - img "LiBa Cortina de ducha de baño de plástico impermeable, cortina de ducha premium PEVA, no tóxica con ojales a prueba de..." [ref=e468]
+              - listitem [ref=e469]:
+                - link "Kitsch Funda de almohada de satén con cremallera para cabello y piel, tamaño Queen, más suave que la seda, paquete de 2..." [ref=e471] [cursor=pointer]:
+                  - /url: /-/es/Kitsch-almohada-cremallera-refrescantes-lavables/dp/B09MDJ1ZK8/?_encoding=UTF8&pd_rd_w=Bzgdr&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_1055398
+                  - img "Kitsch Funda de almohada de satén con cremallera para cabello y piel, tamaño Queen, más suave que la seda, paquete de 2..." [ref=e472]
+              - listitem [ref=e473]:
+                - link "Vacbird Bolsas de vacío para viajes con bomba de aire recargable, paquete de 15 bolsas de compresión de embalaje de..." [ref=e475] [cursor=pointer]:
+                  - /url: /-/es/Vacbird-recargable-compresi%C3%B3n-embalaje-ahorrador/dp/B0DRNRC5H5/?_encoding=UTF8&pd_rd_w=Bzgdr&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_1055398
+                  - img "Vacbird Bolsas de vacío para viajes con bomba de aire recargable, paquete de 15 bolsas de compresión de embalaje de..." [ref=e476]
+              - listitem [ref=e477]:
+                - link "Termómetro para carne de lectura inmediata para asar en la parrilla y cocinar Modelo actualizado con funciones..." [ref=e479] [cursor=pointer]:
+                  - /url: /-/es/Term%C3%B3metro-actualizado-calibraci%C3%B3n-ultrarr%C3%A1pida-temperatura/dp/B00S93EQUK/?_encoding=UTF8&pd_rd_w=Bzgdr&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_1055398
+                  - img "Termómetro para carne de lectura inmediata para asar en la parrilla y cocinar Modelo actualizado con funciones..." [ref=e480]
+              - listitem [ref=e481]:
+                - link "YARRAMATE Pulverizador de aceite de oliva de vidrio de 16 oz/15.9 fl oz para cocinar con calcomanías, dispensador de..." [ref=e483] [cursor=pointer]:
+                  - /url: /-/es/Pulverizador-calcoman%C3%ADas-dispensador-utensilios-alimenticio/dp/B0CP4XY9QC/?_encoding=UTF8&pd_rd_w=Bzgdr&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_1055398
+                  - img "YARRAMATE Pulverizador de aceite de oliva de vidrio de 16 oz/15.9 fl oz para cocinar con calcomanías, dispensador de..." [ref=e484]
+            - link [ref=e485] [cursor=pointer]:
+              - /url: "#"
+            - link [ref=e487] [cursor=pointer]:
+              - /url: "#"
+        - separator [ref=e491]
+        - generic [ref=e494]:
+          - heading "Los mejores vendedores en Juguetes para ti" [level=2] [ref=e496]
+          - list [ref=e499]:
+            - listitem [ref=e500]:
+              - link "Monopoly App Banking Board Game | Juego habilitado para aplicaciones | Enlaces a dispositivos inteligentes | A partir de..." [ref=e502] [cursor=pointer]:
+                - /url: /-/es/habilitado-aplicaciones-dispositivos-inteligentes-familiares/dp/B0DN39W4ZB/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Monopoly App Banking Board Game | Juego habilitado para aplicaciones | Enlaces a dispositivos inteligentes | A partir de..." [ref=e503]
+            - listitem [ref=e504]:
+              - 'link "Funko Pop Star Wars: Star Wars New Classics - Darth Vader - Figura de vinilo coleccionable - Idea de regalo - Producto..." [ref=e506] [cursor=pointer]':
+                - /url: /-/es/Funko-Pop-Star-Wars-coleccionable/dp/B0BBYX1H6C/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - 'img "Funko Pop Star Wars: Star Wars New Classics - Darth Vader - Figura de vinilo coleccionable - Idea de regalo - Producto..." [ref=e507]'
+            - listitem [ref=e508]:
+              - link "2026 Panini FIFA Copa del Mundo - Caja de colección de cromos – 50 paquetes de cromos | Exclusivo de Amazon Naranja..." [ref=e510] [cursor=pointer]:
+                - /url: /-/es/2026-Panini-FIFA-Copa-Mundo/dp/B0G3Y89LW9/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "2026 Panini FIFA Copa del Mundo - Caja de colección de cromos – 50 paquetes de cromos | Exclusivo de Amazon Naranja..." [ref=e511]
+            - listitem [ref=e512]:
+              - link "SEREED - Bicicleta de equilibrio para bebés de 1 año, niños y niñas de 12 a 24 meses, primera bicicleta para niños de 4..." [ref=e514] [cursor=pointer]:
+                - /url: /-/es/SEREED-Bicicleta-equilibrio-bicicleta-cumplea%C3%B1os/dp/B08SGH7NKX/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "SEREED - Bicicleta de equilibrio para bebés de 1 año, niños y niñas de 12 a 24 meses, primera bicicleta para niños de 4..." [ref=e515]
+            - listitem [ref=e516]:
+              - link "Libro para colorear de Crayola Paw Patrol (288 páginas), libro para colorear para niños con páginas y calcomanías,..." [ref=e518] [cursor=pointer]:
+                - /url: /-/es/colorear-Crayola-calcoman%C3%ADas-juguetes-calcetines/dp/B08LQNW75X/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Libro para colorear de Crayola Paw Patrol (288 páginas), libro para colorear para niños con páginas y calcomanías,..." [ref=e519]
+            - listitem [ref=e520]:
+              - link "Funko Pop Marvel - Iron Man - Marvel Comics - Figura de vinilo coleccionable - Idea de regalo - Mercancía oficial -..." [ref=e522] [cursor=pointer]:
+                - /url: /-/es/Funko-Pop-Marvel-coleccionable-superh%C3%A9roes/dp/B0CSVB667Y/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Funko Pop Marvel - Iron Man - Marvel Comics - Figura de vinilo coleccionable - Idea de regalo - Mercancía oficial -..." [ref=e523]
+            - listitem [ref=e524]:
+              - 'link "Funko Animación: Dragon Ball GT - Super Saiyan 4 Gogeta - 1/6 probabilidades para variante de persecución rara - (Glow..." [ref=e526] [cursor=pointer]':
+                - /url: /-/es/Funko-Animaci%C3%B3n-probabilidades-persecuci%C3%B3n-coleccionable/dp/B0DP75NZRS/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - 'img "Funko Animación: Dragon Ball GT - Super Saiyan 4 Gogeta - 1/6 probabilidades para variante de persecución rara - (Glow..." [ref=e527]'
+            - listitem [ref=e528]:
+              - 'link "Funko Pop! Animation: Kaiju No.8 - Kaiju No. 8-1/6 Probabilidades para variante de persecución rara - Figura de vinilo..." [ref=e530] [cursor=pointer]':
+                - /url: /-/es/Funko-Pop-Animation-Probabilidades-coleccionable/dp/B0DP7B22PL/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - 'img "Funko Pop! Animation: Kaiju No.8 - Kaiju No. 8-1/6 Probabilidades para variante de persecución rara - Figura de vinilo..." [ref=e531]'
+            - listitem [ref=e532]:
+              - link "Juguetes Sensoriales Montessori para Bebés de 0-6 6-12 Meses, Mordedor Juguetes de Dentición para Bebés de 0 3 6 9 12 18..." [ref=e534] [cursor=pointer]:
+                - /url: /-/es/Sensoriales-Montessori-Dentici%C3%B3n-Aprendizaje-Desarrollo/dp/B0CD42KQ3K/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Juguetes Sensoriales Montessori para Bebés de 0-6 6-12 Meses, Mordedor Juguetes de Dentición para Bebés de 0 3 6 9 12 18..." [ref=e535]
+            - listitem [ref=e536]:
+              - link "Hasbro Gaming ¿Quién es Quién? Juego de cartas para niños, juego de adivinanzas para 2 jugadores, actividades divertidas..." [ref=e538] [cursor=pointer]:
+                - /url: /-/es/Hasbro-Gaming-adivinanzas-actividades-divertidas/dp/B07MWJ699K/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Hasbro Gaming ¿Quién es Quién? Juego de cartas para niños, juego de adivinanzas para 2 jugadores, actividades divertidas..." [ref=e539]
+            - listitem [ref=e540]:
+              - 'link "Funko Pop! Animation: One Piece - (Refresh) - Tony Tony Chopper - 1/6 Odds for Rare Chase Variant - Collectable Vinyl..." [ref=e542] [cursor=pointer]':
+                - /url: /-/es/Funko-90643/dp/B08HH5R3RZ/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - 'img "Funko Pop! Animation: One Piece - (Refresh) - Tony Tony Chopper - 1/6 Odds for Rare Chase Variant - Collectable Vinyl..." [ref=e543]'
+            - listitem [ref=e544]:
+              - link "Colección de calcomanías de la Copa Mundial de la FIFA 2026, paquete exclusivo de coleccionistas de Amazon, álbum de..." [ref=e546] [cursor=pointer]:
+                - /url: /-/es/Colecci%C3%B3n-calcoman%C3%ADas-exclusivo-coleccionistas-paquetes/dp/B0GQK3FGVG/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Colección de calcomanías de la Copa Mundial de la FIFA 2026, paquete exclusivo de coleccionistas de Amazon, álbum de..." [ref=e547]
+            - listitem [ref=e548]:
+              - 'link "Funko Pop Animation: Boruto - Code - Boruto: Naruto Next Generations - Figura de vinilo coleccionable - Idea de regalo -..." [ref=e550] [cursor=pointer]':
+                - /url: /-/es/Funko-Pop-Animation-Generations-coleccionable/dp/B0D98V1WZ9/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - 'img "Funko Pop Animation: Boruto - Code - Boruto: Naruto Next Generations - Figura de vinilo coleccionable - Idea de regalo -..." [ref=e551]'
+            - listitem [ref=e552]:
+              - link "Jugo Micro Series" [ref=e554] [cursor=pointer]:
+                - /url: /-/es/Hasbro-Gaming-B0639000-Micro-Series/dp/B00N4ONUCE/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Jugo Micro Series" [ref=e555]
+            - listitem [ref=e556]:
+              - link "Juego de bloques de construcción tecno-mecánicos para motocicleta, juguetes de aprendizaje educativo STEM, bloques..." [ref=e558] [cursor=pointer]:
+                - /url: /-/es/construcci%C3%B3n-tecno-mec%C3%A1nicos-motocicleta-aprendizaje-coleccionables/dp/B0CNRXGXL6/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Juego de bloques de construcción tecno-mecánicos para motocicleta, juguetes de aprendizaje educativo STEM, bloques..." [ref=e559]
+            - listitem [ref=e560]:
+              - link "Infinno Calcetines con sonajero de muñeca y juego de calcetines con buscador de pies para bebé, juguetes perfectos para..." [ref=e562] [cursor=pointer]:
+                - /url: /-/es/Infinno-Calcetines-sonajero-calcetines-perfectos/dp/B0B21ZM7LJ/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Infinno Calcetines con sonajero de muñeca y juego de calcetines con buscador de pies para bebé, juguetes perfectos para..." [ref=e563]
+            - listitem [ref=e564]:
+              - 'link "Funko Pop! Deluxe: Frieren Beyond Journeys End - Frieren - Collectable Vinyl Figure - Gift Idea - Official Merchandise -..." [ref=e566] [cursor=pointer]':
+                - /url: /-/es/Funko-90652/dp/B0FS8VXVLK/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - 'img "Funko Pop! Deluxe: Frieren Beyond Journeys End - Frieren - Collectable Vinyl Figure - Gift Idea - Official Merchandise -..." [ref=e567]'
+            - listitem [ref=e568]:
+              - 'link "Funko POP Animation: Dragon Ball Super: Broly - Gogeta - 1/6 probabilidades para variante chase rara - Dragon Ball Super..." [ref=e570] [cursor=pointer]':
+                - /url: /-/es/Funko-POP-Animation-probabilidades-coleccionable/dp/B0D6D1RR8Y/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - 'img "Funko POP Animation: Dragon Ball Super: Broly - Gogeta - 1/6 probabilidades para variante chase rara - Dragon Ball Super..." [ref=e571]'
+            - listitem [ref=e572]:
+              - 'link "Funko Pop! Heroes: DC Dark Multiverse - The Batman Who Laughs - DC Comics - Figura de vinilo coleccionable - Idea de..." [ref=e574] [cursor=pointer]':
+                - /url: /-/es/Funko-Pop-Heroes-Multiverse-coleccionable/dp/B0DSWDHH5B/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - 'img "Funko Pop! Heroes: DC Dark Multiverse - The Batman Who Laughs - DC Comics - Figura de vinilo coleccionable - Idea de..." [ref=e575]'
+            - listitem [ref=e576]:
+              - 'link "Funko Pop Animation: Jujutsu Kaisen - Satoru Gojo - Figura de vinilo coleccionable - Idea de regalo - Producto oficial -..." [ref=e578] [cursor=pointer]':
+                - /url: /-/es/Funko-Pop-Animation-coleccionable-Producto/dp/B09HLBVD56/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - 'img "Funko Pop Animation: Jujutsu Kaisen - Satoru Gojo - Figura de vinilo coleccionable - Idea de regalo - Producto oficial -..." [ref=e579]'
+            - listitem [ref=e580]:
+              - link "Jumbo Hitster - Latino, divertido juego de cartas de trivia de música, 2-10 jugadores - 300 éxitos de música latina -..." [ref=e582] [cursor=pointer]:
+                - /url: /-/es/Jumbo-Hitster-divertido-jugadores-familia/dp/B0FTMRJVFY/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Jumbo Hitster - Latino, divertido juego de cartas de trivia de música, 2-10 jugadores - 300 éxitos de música latina -..." [ref=e583]
+            - listitem [ref=e584]:
+              - link "Crayola Juego de marcadores Super Tips (100 unidades), marcadores lavables de punta fina, marcadores de dibujo para..." [ref=e586] [cursor=pointer]:
+                - /url: /-/es/Crayola-marcadores-unidades-lavables-suministros/dp/B071CP6X88/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Crayola Juego de marcadores Super Tips (100 unidades), marcadores lavables de punta fina, marcadores de dibujo para..." [ref=e587]
+            - listitem [ref=e588]:
+              - link "Juego de mesa Monopoly Junior Edición Super Mario, Diversión para niños de 5 años en adelante, Explora el Reino de los..." [ref=e590] [cursor=pointer]:
+                - /url: /-/es/Monopoly-Edici%C3%B3n-Diversi%C3%B3n-adelante-Exclusivo/dp/B09D44P9HK/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Juego de mesa Monopoly Junior Edición Super Mario, Diversión para niños de 5 años en adelante, Explora el Reino de los..." [ref=e591]
+            - listitem [ref=e592]:
+              - 'link "Hasbro Jenga: Juego Edición de Super Mario | Juego de torre apilable de bloques | Regalos de regreso a clases para niños..." [ref=e594] [cursor=pointer]':
+                - /url: /-/es/Hasbro-Jenga-Edici%C3%B3n-apilable-Exclusivo/dp/B083YKVN9Z/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - 'img "Hasbro Jenga: Juego Edición de Super Mario | Juego de torre apilable de bloques | Regalos de regreso a clases para niños..." [ref=e595]'
+            - listitem [ref=e596]:
+              - link "Mini Brands Fill The Fridge Mini Minis Series 1 de ZURU, juguete coleccionable en miniatura, (2 cápsulas)" [ref=e598] [cursor=pointer]:
+                - /url: /-/es/Mini-Brands-coleccionable-miniatura-c%C3%A1psulas/dp/B0DR3SZ2QP/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Mini Brands Fill The Fridge Mini Minis Series 1 de ZURU, juguete coleccionable en miniatura, (2 cápsulas)" [ref=e599]
+            - listitem [ref=e600]:
+              - 'link "Funko Marvel Collector Corp Caja de suscripción: Wolverine 50th Anniversary - L" [ref=e602] [cursor=pointer]':
+                - /url: /-/es/Funko-Marvel-Collector-Corp-suscripci%C3%B3n/dp/B0CCBNBCFH/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - 'img "Funko Marvel Collector Corp Caja de suscripción: Wolverine 50th Anniversary - L" [ref=e603]'
+            - listitem [ref=e604]:
+              - link "Bitzee, Disney con 30 personajes interactivos en el interior, reacciona a deslizamientos, inclinaciones y toques,..." [ref=e606] [cursor=pointer]:
+                - /url: /-/es/personajes-interactivos-deslizamientos-inclinaciones-calcetines/dp/B0CSJQHF6W/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Bitzee, Disney con 30 personajes interactivos en el interior, reacciona a deslizamientos, inclinaciones y toques,..." [ref=e607]
+            - listitem [ref=e608]:
+              - link "Play-Doh Ultimate Color Collection - Paquete de 65 latas de 1 onza, incluye brillo, confeti y explosión de color,..." [ref=e610] [cursor=pointer]:
+                - /url: /-/es/Play-Doh-Ultimate-Color-Collection-preescolares/dp/B09NRS8C5Y/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Play-Doh Ultimate Color Collection - Paquete de 65 latas de 1 onza, incluye brillo, confeti y explosión de color,..." [ref=e611]
+            - listitem [ref=e612]:
+              - link "LEGO Super Mario Game Boy - Juegos de construcción retro para adultos, a partir de 18 años - Regalos para cumpleaños -..." [ref=e614] [cursor=pointer]:
+                - /url: /-/es/LEGO-Super-Mario-Game-coleccionable/dp/B0DX3J6MT7/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "LEGO Super Mario Game Boy - Juegos de construcción retro para adultos, a partir de 18 años - Regalos para cumpleaños -..." [ref=e615]
+            - listitem [ref=e616]:
+              - link "¡Lo siento! Juego de mesa para niños a partir de 6 años; Clásico juego de mesa Hasbro; Cada jugador recibe 4 fichas;..." [ref=e618] [cursor=pointer]:
+                - /url: /-/es/siento-Cl%C3%A1sico-Hasbro-jugador-familiar/dp/B076HK9H7Z/?_encoding=UTF8&pd_rd_w=dXGm0&content-id=amzn1.sym.0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_p=0ee7ac10-1e05-43b4-8708-e2b0e6430ef1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "¡Lo siento! Juego de mesa para niños a partir de 6 años; Clásico juego de mesa Hasbro; Cada jugador recibe 4 fichas;..." [ref=e619]
+        - separator [ref=e621]
+        - generic [ref=e623]:
+          - heading "Equípate para estar fit" [level=2] [ref=e625]
+          - generic [ref=e626]:
+            - generic [ref=e627]:
+              - link "Ropa" [ref=e629] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=fitness%20clothing&pd_rd_w=Y7JGN&content-id=amzn1.sym.3fdbc1ee-e2a3-48ef-a93a-bce40e980706&pf_rd_p=3fdbc1ee-e2a3-48ef-a93a-bce40e980706&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Ropa" [ref=e631]
+                - generic [ref=e633]: Ropa
+              - link "Rastreadores" [ref=e635] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=fitness%20trackers&pd_rd_w=Y7JGN&content-id=amzn1.sym.3fdbc1ee-e2a3-48ef-a93a-bce40e980706&pf_rd_p=3fdbc1ee-e2a3-48ef-a93a-bce40e980706&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Rastreadores" [ref=e637]
+                - generic [ref=e639]: Rastreadores
+            - generic [ref=e640]:
+              - link "Equipo" [ref=e642] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=fitness%20equipment&pd_rd_w=Y7JGN&content-id=amzn1.sym.3fdbc1ee-e2a3-48ef-a93a-bce40e980706&pf_rd_p=3fdbc1ee-e2a3-48ef-a93a-bce40e980706&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Equipo" [ref=e644]
+                - generic [ref=e646]: Equipo
+              - link "Ofertas de ejercicio" [ref=e648] [cursor=pointer]:
+                - /url: /gp/goldbox/?ie=UTF8&discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%255C%2522departments%255C%2522%253A%255B%255C%25223375301%252F3407731%255C%2522%255D%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522&pd_rd_w=Y7JGN&content-id=amzn1.sym.3fdbc1ee-e2a3-48ef-a93a-bce40e980706&pf_rd_p=3fdbc1ee-e2a3-48ef-a93a-bce40e980706&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Ofertas de ejercicio" [ref=e650]
+                - generic [ref=e652]: Ofertas de ejercicio
+          - link "Equípate para estar fit - Ver más" [ref=e654] [cursor=pointer]:
+            - /url: /-/es/s/?_encoding=UTF8&k=fitness%20gear&pd_rd_w=Y7JGN&content-id=amzn1.sym.3fdbc1ee-e2a3-48ef-a93a-bce40e980706&pf_rd_p=3fdbc1ee-e2a3-48ef-a93a-bce40e980706&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+            - generic [ref=e655]:
+              - generic [ref=e656]: Ver más
+              - generic [ref=e657]: Ver más
+        - generic [ref=e659]:
+          - heading "Tecnología inalámbrica" [level=2] [ref=e661]
+          - generic [ref=e662]:
+            - generic [ref=e663]:
+              - link "Smartphones" [ref=e665] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=smartphones&pd_rd_w=LLJZn&content-id=amzn1.sym.69a935ef-cee6-41d5-aefa-c36bfc7821bc&pf_rd_p=69a935ef-cee6-41d5-aefa-c36bfc7821bc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Smartphones" [ref=e667]
+                - generic [ref=e669]: Smartphones
+              - link "Relojes" [ref=e671] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=smart%20watches&pd_rd_w=LLJZn&content-id=amzn1.sym.69a935ef-cee6-41d5-aefa-c36bfc7821bc&pf_rd_p=69a935ef-cee6-41d5-aefa-c36bfc7821bc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Relojes" [ref=e673]
+                - generic [ref=e675]: Relojes
+            - generic [ref=e676]:
+              - link "Audífonos" [ref=e678] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=headphones&pd_rd_w=LLJZn&content-id=amzn1.sym.69a935ef-cee6-41d5-aefa-c36bfc7821bc&pf_rd_p=69a935ef-cee6-41d5-aefa-c36bfc7821bc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Audífonos" [ref=e680]
+                - generic [ref=e682]: Audífonos
+              - link "Tablets" [ref=e684] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=tablets&pd_rd_w=LLJZn&content-id=amzn1.sym.69a935ef-cee6-41d5-aefa-c36bfc7821bc&pf_rd_p=69a935ef-cee6-41d5-aefa-c36bfc7821bc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Tablets" [ref=e686]
+                - generic [ref=e688]: Tablets
+          - link "Tecnología inalámbrica - Descubre más" [ref=e690] [cursor=pointer]:
+            - /url: /-/es/s/?_encoding=UTF8&k=electronics&pd_rd_w=LLJZn&content-id=amzn1.sym.69a935ef-cee6-41d5-aefa-c36bfc7821bc&pf_rd_p=69a935ef-cee6-41d5-aefa-c36bfc7821bc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+            - generic [ref=e691]:
+              - generic [ref=e692]: Descubre más
+              - generic [ref=e693]: Descubre más
+        - generic [ref=e695]:
+          - heading "Diviértete más con la familia" [level=2] [ref=e697]
+          - generic [ref=e698]:
+            - generic [ref=e699]:
+              - link "Sets de actividades al aire libre" [ref=e701] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=outdoor%20play%20toys&pd_rd_w=XFhYB&content-id=amzn1.sym.b378ed84-9ce7-4534-ab5a-a5a362ea6b4e&pf_rd_p=b378ed84-9ce7-4534-ab5a-a5a362ea6b4e&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Sets de actividades al aire libre" [ref=e703]
+                - generic [ref=e705]: Sets de actividades al aire libre
+              - link "Juguetes de aprendizaje" [ref=e707] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=learning%20toys&pd_rd_w=XFhYB&content-id=amzn1.sym.b378ed84-9ce7-4534-ab5a-a5a362ea6b4e&pf_rd_p=b378ed84-9ce7-4534-ab5a-a5a362ea6b4e&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Juguetes de aprendizaje" [ref=e709]
+                - generic [ref=e711]: Juguetes de aprendizaje
+            - generic [ref=e712]:
+              - link "Figuras de acción" [ref=e714] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=action%20figures&pd_rd_w=XFhYB&content-id=amzn1.sym.b378ed84-9ce7-4534-ab5a-a5a362ea6b4e&pf_rd_p=b378ed84-9ce7-4534-ab5a-a5a362ea6b4e&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Figuras de acción" [ref=e716]
+                - generic [ref=e718]: Figuras de acción
+              - link "Juguetes de simulación" [ref=e720] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=Pretend%20Play%20Toys&pd_rd_w=XFhYB&content-id=amzn1.sym.b378ed84-9ce7-4534-ab5a-a5a362ea6b4e&pf_rd_p=b378ed84-9ce7-4534-ab5a-a5a362ea6b4e&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Juguetes de simulación" [ref=e722]
+                - generic [ref=e724]: Juguetes de simulación
+          - link "Diviértete más con la familia - Ver más" [ref=e726] [cursor=pointer]:
+            - /url: /-/es/s/?_encoding=UTF8&k=toys%20and%20games&pd_rd_w=XFhYB&content-id=amzn1.sym.b378ed84-9ce7-4534-ab5a-a5a362ea6b4e&pf_rd_p=b378ed84-9ce7-4534-ab5a-a5a362ea6b4e&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+            - generic [ref=e727]:
+              - generic [ref=e728]: Ver más
+              - generic [ref=e729]: Ver más
+        - generic [ref=e731]:
+          - heading "Relojes favoritos" [level=2] [ref=e733]
+          - generic [ref=e734]:
+            - generic [ref=e735]:
+              - link "Mujeres" [ref=e737] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=women%20watch&pd_rd_w=W8L6o&content-id=amzn1.sym.db94be39-53f1-4c79-89b2-88aa81be709e&pf_rd_p=db94be39-53f1-4c79-89b2-88aa81be709e&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Mujeres" [ref=e739]
+                - generic [ref=e741]: Mujeres
+              - link "Hombres" [ref=e743] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=men%20watches&pd_rd_w=W8L6o&content-id=amzn1.sym.db94be39-53f1-4c79-89b2-88aa81be709e&pf_rd_p=db94be39-53f1-4c79-89b2-88aa81be709e&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Hombres" [ref=e745]
+                - generic [ref=e747]: Hombres
+            - generic [ref=e748]:
+              - link "Niñas" [ref=e750] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=girls%20watches&pd_rd_w=W8L6o&content-id=amzn1.sym.db94be39-53f1-4c79-89b2-88aa81be709e&pf_rd_p=db94be39-53f1-4c79-89b2-88aa81be709e&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Niñas" [ref=e752]
+                - generic [ref=e754]: Niñas
+              - link "Niños" [ref=e756] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=Boys%20watches&pd_rd_w=W8L6o&content-id=amzn1.sym.db94be39-53f1-4c79-89b2-88aa81be709e&pf_rd_p=db94be39-53f1-4c79-89b2-88aa81be709e&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Niños" [ref=e758]
+                - generic [ref=e760]: Niños
+          - link "Relojes favoritos - Descubre más" [ref=e762] [cursor=pointer]:
+            - /url: /-/es/s/?_encoding=UTF8&k=watches&pd_rd_w=W8L6o&content-id=amzn1.sym.db94be39-53f1-4c79-89b2-88aa81be709e&pf_rd_p=db94be39-53f1-4c79-89b2-88aa81be709e&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+            - generic [ref=e763]:
+              - generic [ref=e764]: Descubre más
+              - generic [ref=e765]: Descubre más
+        - separator [ref=e766]
+        - generic [ref=e769]:
+          - heading "Las mejores selecciones para Colombia" [level=2] [ref=e771]
+          - list [ref=e774]:
+            - listitem [ref=e775]:
+              - link "eos Shea Better Loción corporal Vanilla Cashmere, cuidado de la piel con humedad las 24 horas, ligera y no grasosa,..." [ref=e777] [cursor=pointer]:
+                - /url: /-/es/eos-corporal-Cashmere-vainilla-l%C3%ADquidas/dp/B08KT2Z93D/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "eos Shea Better Loción corporal Vanilla Cashmere, cuidado de la piel con humedad las 24 horas, ligera y no grasosa,..." [ref=e778]
+            - listitem [ref=e779]:
+              - link "Cámara para interiores, cámara de seguridad HD 3K para interiores, cámara para mascotas con inclinación panorámica de..." [ref=e781] [cursor=pointer]:
+                - /url: /-/es/interiores-seguridad-inclinaci%C3%B3n-panor%C3%A1mica-bidireccional/dp/B0DLBFVT55/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "Cámara para interiores, cámara de seguridad HD 3K para interiores, cámara para mascotas con inclinación panorámica de..." [ref=e782]
+            - listitem [ref=e783]:
+              - link "Tapo - Cámara de seguridad 2K Pan/Tilt para monitor de bebé, cámara de perro con detección de movimiento, sirena de..." [ref=e785] [cursor=pointer]:
+                - /url: /-/es/Tapo-seguridad-detecci%C3%B3n-movimiento-almacenamiento/dp/B09Y8C185M/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "Tapo - Cámara de seguridad 2K Pan/Tilt para monitor de bebé, cámara de perro con detección de movimiento, sirena de..." [ref=e786]
+            - listitem [ref=e787]:
+              - link "Stanley IceFlow - Vaso de acero inoxidable con aislamiento térmico, pajilla abatible, tapa antifugas para el hogar,..." [ref=e789] [cursor=pointer]:
+                - /url: /-/es/Stanley-IceFlow-inoxidable-aislamiento-antifugas/dp/B0BNYR7MQV/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "Stanley IceFlow - Vaso de acero inoxidable con aislamiento térmico, pajilla abatible, tapa antifugas para el hogar,..." [ref=e790]
+            - listitem [ref=e791]:
+              - link "UGREEN Uno - Bloque de cargador USB C de 30 W, cargador rápido compacto robot GaN para iPhone 17, regalos para mujeres y..." [ref=e793] [cursor=pointer]:
+                - /url: /-/es/UGREEN-Uno-cargador-compacto-compatible/dp/B0BZHZ56M9/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "UGREEN Uno - Bloque de cargador USB C de 30 W, cargador rápido compacto robot GaN para iPhone 17, regalos para mujeres y..." [ref=e794]
+            - listitem [ref=e795]:
+              - link "AMD Procesador de escritorio desbloqueado Ryzen™ 5 9600X de 6 núcleos y 12 hilos" [ref=e797] [cursor=pointer]:
+                - /url: /-/es/AMD-Procesador-desbloqueado-RyzenTM-9600X/dp/B0D6NN6TM7/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "AMD Procesador de escritorio desbloqueado Ryzen™ 5 9600X de 6 núcleos y 12 hilos" [ref=e798]
+            - listitem [ref=e799]:
+              - link "INNZA - Depiladora IPL con función de enfriamiento por hielo para mujeres, resultados duraderos, 999,999 destellos,..." [ref=e801] [cursor=pointer]:
+                - /url: /-/es/INNZA-Depiladora-enfriamiento-resultados-dispositivo/dp/B0CWL9S4L1/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "INNZA - Depiladora IPL con función de enfriamiento por hielo para mujeres, resultados duraderos, 999,999 destellos,..." [ref=e802]
+            - listitem [ref=e803]:
+              - link "AMD Ryzen 5 5500 - Procesador para computadora de escritorio desbloqueado de 6 núcleos y 12 hilos con enfriador Wraith..." [ref=e805] [cursor=pointer]:
+                - /url: /-/es/AMD-Ryzen-5500-computadora-desbloqueado/dp/B09VCJ171S/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "AMD Ryzen 5 5500 - Procesador para computadora de escritorio desbloqueado de 6 núcleos y 12 hilos con enfriador Wraith..." [ref=e806]
+            - listitem [ref=e807]:
+              - link "celimax The Vita A Retinal Shot Potenciador Reafirmante | 0.1% Retinal, 3% Matryxyl, Retinoide de Alta Potencia para..." [ref=e809] [cursor=pointer]:
+                - /url: /-/es/celimax-Potenciador-Reafirmante-Antienvejecimiento-Minimizador/dp/B0DK4Y2YP3/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "celimax The Vita A Retinal Shot Potenciador Reafirmante | 0.1% Retinal, 3% Matryxyl, Retinoide de Alta Potencia para..." [ref=e810]
+            - listitem [ref=e811]:
+              - link "Vaseline Glazed and Glisten Golden Hour - Aceite de gel corporal Glow Vanilla Cocoa brillante con lípidos..." [ref=e813] [cursor=pointer]:
+                - /url: /-/es/Vaseline-Glazed-Glisten-Golden-Hour/dp/B0FD8VWSNJ/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "Vaseline Glazed and Glisten Golden Hour - Aceite de gel corporal Glow Vanilla Cocoa brillante con lípidos..." [ref=e814]
+            - listitem [ref=e815]:
+              - link "DEWALT Kit de combo de perforación inalámbrico de 20V MAX, 2-Herramienta (DCK240C2)" [ref=e817] [cursor=pointer]:
+                - /url: /-/es/DEWALT-perforaci%C3%B3n-inal%C3%A1mbrico-2-Herramienta-DCK240C2/dp/B00IJ0ALYS/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "DEWALT Kit de combo de perforación inalámbrico de 20V MAX, 2-Herramienta (DCK240C2)" [ref=e818]
+            - listitem [ref=e819]:
+              - link "NIVEA Lip Care, Paquete Variado de Bálsamo Labial Tintado Frutal, Sabores a Cereza, Fresa, Mora y Sandía, Humedad,..." [ref=e821] [cursor=pointer]:
+                - /url: /-/es/NIVEA-Paquete-Variado-B%C3%A1lsamo-Reparaci%C3%B3n/dp/B07Y91BMSK/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "NIVEA Lip Care, Paquete Variado de Bálsamo Labial Tintado Frutal, Sabores a Cereza, Fresa, Mora y Sandía, Humedad,..." [ref=e822]
+            - listitem [ref=e823]:
+              - link "Sistema de viaje todo terreno Graco Outpace LX - Incluye asiento de auto para bebé SnugRide 30 Lite, Briggs, combinación..." [ref=e825] [cursor=pointer]:
+                - /url: /-/es/Sistema-viaje-terreno-Graco-Outpace/dp/B0CLBCWTDG/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "Sistema de viaje todo terreno Graco Outpace LX - Incluye asiento de auto para bebé SnugRide 30 Lite, Briggs, combinación..." [ref=e826]
+            - listitem [ref=e827]:
+              - link "Olympia Tools 85-189 Pack N Roll Carrito de servicio plegable, XL, capacidad de 300 libras, color negro" [ref=e829] [cursor=pointer]:
+                - /url: /-/es/Olympia-Tools-85-189-servicio-capacidad/dp/B07FNTYX82/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "Olympia Tools 85-189 Pack N Roll Carrito de servicio plegable, XL, capacidad de 300 libras, color negro" [ref=e830]
+            - listitem [ref=e831]:
+              - link "RXFSP Carretillas de mano eléctricas para subir escaleras de 880 libras, también adecuadas para escaleras curvas,..." [ref=e833] [cursor=pointer]:
+                - /url: /-/es/Carretillas-el%C3%A9ctricas-escaleras-carretilla-resistente/dp/B0C5JCLVKR/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "RXFSP Carretillas de mano eléctricas para subir escaleras de 880 libras, también adecuadas para escaleras curvas,..." [ref=e834]
+            - listitem [ref=e835]:
+              - link "GIGABYTE Tarjeta gráfica GeForce RTX 5060 WINDFORCE OC 8G, 8 GB 128 bits GDDR7, PCIe 5.0, sistema de refrigeración..." [ref=e837] [cursor=pointer]:
+                - /url: /-/es/GIGABYTE-Tarjeta-WINDFORCE-refrigeraci%C3%B3n-GV-N5060WF2OC-8GD/dp/B0F8LDHQ7Y/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "GIGABYTE Tarjeta gráfica GeForce RTX 5060 WINDFORCE OC 8G, 8 GB 128 bits GDDR7, PCIe 5.0, sistema de refrigeración..." [ref=e838]
+            - listitem [ref=e839]:
+              - link "AMD Ryzen™ 7 5800XT, procesador de escritorio desbloqueado de 8 núcleos y 16 hilos" [ref=e841] [cursor=pointer]:
+                - /url: /-/es/AMD-RyzenTM-5800XT-procesador-desbloqueado/dp/B0D6NNDQ92/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "AMD Ryzen™ 7 5800XT, procesador de escritorio desbloqueado de 8 núcleos y 16 hilos" [ref=e842]
+            - listitem [ref=e843]:
+              - link "Amazon Basics Calentador de patio de propano para exteriores de 46,000 BTU con ruedas, comercial y residencial, gris..." [ref=e845] [cursor=pointer]:
+                - /url: /-/es/Amazon-Basics-Calentador-exteriores-residencial/dp/B010VFKZEO/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "Amazon Basics Calentador de patio de propano para exteriores de 46,000 BTU con ruedas, comercial y residencial, gris..." [ref=e846]
+            - listitem [ref=e847]:
+              - link "Invicta Men's Specialty Silicone Quartz Watch" [ref=e849] [cursor=pointer]:
+                - /url: /-/es/Invicta-Cuarzo-Silicona-Specialty-Hombre/dp/B00962GV2E/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "Invicta Men's Specialty Silicone Quartz Watch" [ref=e850]
+            - listitem [ref=e851]:
+              - link "ASUS Dual GeForce RTX™ 5060 8GB GDDR7 OC Edition (PCIe 5.0, 8GB GDDR7, DLSS 4, HDMI 2.1b, DisplayPort 2.1b, diseño de..." [ref=e853] [cursor=pointer]:
+                - /url: /-/es/GeForce-DisplayPort-ventilador-Axial-tech-tecnolog%C3%ADa/dp/B0F8PR9L3X/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "ASUS Dual GeForce RTX™ 5060 8GB GDDR7 OC Edition (PCIe 5.0, 8GB GDDR7, DLSS 4, HDMI 2.1b, DisplayPort 2.1b, diseño de..." [ref=e854]
+            - listitem [ref=e855]:
+              - link "FUJIFILM Instax Mini Película Instantánea Paquete Doble (Blanco), 20 Fotos" [ref=e857] [cursor=pointer]:
+                - /url: /-/es/FUJIFILM-Mini-Pel%C3%ADcula-Instant%C3%A1nea-Paquete/dp/B00EB4ADQW/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "FUJIFILM Instax Mini Película Instantánea Paquete Doble (Blanco), 20 Fotos" [ref=e858]
+            - listitem [ref=e859]:
+              - link "ROG STRIX B550-F GAMING WIFI II - Tarjeta madre para AMD AM4 (3ra Gen Ryzen) y ATX, PCIe 4.0,WiFi 6E, LAN 2.5Gb, BIOS..." [ref=e861] [cursor=pointer]:
+                - /url: /-/es/ROG-STRIX-B550-F-GAMING-WIFI/dp/B09GP7P1XS/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "ROG STRIX B550-F GAMING WIFI II - Tarjeta madre para AMD AM4 (3ra Gen Ryzen) y ATX, PCIe 4.0,WiFi 6E, LAN 2.5Gb, BIOS..." [ref=e862]
+            - listitem [ref=e863]:
+              - link "Máquina de palomitas de maíz Great Northern Popcorn estilo antiguo de cine matiné, color rojo, 8 onzas, Máquina y..." [ref=e865] [cursor=pointer]:
+                - /url: /-/es/M%C3%A1quina-palomitas-Great-Northern-Popcorn/dp/B001T7M32G/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "Máquina de palomitas de maíz Great Northern Popcorn estilo antiguo de cine matiné, color rojo, 8 onzas, Máquina y..." [ref=e866]
+            - listitem [ref=e867]:
+              - link "GIGABYTE B550M K - Tarjeta madre compatible con AM4/AMD/B550/Micro-ATX/Dual M.2/SATA 6Gb/s/USB 3.2 Gen 1/Realtek GbE..." [ref=e869] [cursor=pointer]:
+                - /url: /-/es/GIGABYTE-B550M-Tarjeta-compatible-Micro-ATX/dp/B0BTTZFQTP/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "GIGABYTE B550M K - Tarjeta madre compatible con AM4/AMD/B550/Micro-ATX/Dual M.2/SATA 6Gb/s/USB 3.2 Gen 1/Realtek GbE..." [ref=e870]
+            - listitem [ref=e871]:
+              - link "NZXT H9 Flow (2025) - Carcasa grande de doble cámara ATX Mid-Tower Airflow para PC - Incluye 3 ventiladores de 5.512 in..." [ref=e873] [cursor=pointer]:
+                - /url: /-/es/NZXT-H9-Flow-Mid-Tower-ventiladores/dp/B0DQPPKNSS/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "NZXT H9 Flow (2025) - Carcasa grande de doble cámara ATX Mid-Tower Airflow para PC - Incluye 3 ventiladores de 5.512 in..." [ref=e874]
+            - listitem [ref=e875]:
+              - link "Samsung 49\" Odyssey OLED G9 (G91SD) Monitor de juegos Dual QHD QD-OLED Compatible con G-Sync Curvo, 144Hz, 0.03ms, AMD..." [ref=e877] [cursor=pointer]:
+                - /url: /-/es/Samsung-Compatible-FreeSync-ergon%C3%B3mico-LS49DG910SNXZA/dp/B0DSGJRKCR/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "Samsung 49\" Odyssey OLED G9 (G91SD) Monitor de juegos Dual QHD QD-OLED Compatible con G-Sync Curvo, 144Hz, 0.03ms, AMD..." [ref=e878]
+            - listitem [ref=e879]:
+              - link "AOC Gaming Q27G41ZE - Monitor de juegos de 27 pulgadas QHD IPS 2560x1440, 240Hz 0.3ms MPRT, sin marco en 3 lados, 1x..." [ref=e881] [cursor=pointer]:
+                - /url: /-/es/AOC-Gaming-Q27G41ZE-2560x1440-compatible/dp/B0FF5HXGJK/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "AOC Gaming Q27G41ZE - Monitor de juegos de 27 pulgadas QHD IPS 2560x1440, 240Hz 0.3ms MPRT, sin marco en 3 lados, 1x..." [ref=e882]
+            - listitem [ref=e883]:
+              - link "Difeel Aceite de ricino natural prémium para el cabello, 7.1 onzas, aceite de ricino para el crecimiento del cabello" [ref=e885] [cursor=pointer]:
+                - /url: /-/es/Difeel-natural-pr%C3%A9mium-cabello-crecimiento/dp/B075YZHYQV/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "Difeel Aceite de ricino natural prémium para el cabello, 7.1 onzas, aceite de ricino para el crecimiento del cabello" [ref=e886]
+            - listitem [ref=e887]:
+              - link "ChooChoo Armario de almacenamiento de zapatos con 2 cajones abatibles, organizador de zapatos desodorizante para..." [ref=e889] [cursor=pointer]:
+                - /url: /-/es/ChooChoo-almacenamiento-organizador-desodorizante-independiente/dp/B0FQ4WCGW9/?_encoding=UTF8&pd_rd_w=FteZ5&content-id=amzn1.sym.4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_p=4bba068a-9322-4692-abd5-0bbe652907a9&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_nta-top-picks
+                - img "ChooChoo Armario de almacenamiento de zapatos con 2 cajones abatibles, organizador de zapatos desodorizante para..." [ref=e890]
+        - separator [ref=e892]
+        - generic [ref=e895]:
+          - heading "Los Más Vendidos en Computadoras y Accesorios" [level=2] [ref=e897]
+          - list [ref=e900]:
+            - listitem [ref=e901]:
+              - link "Ailun Protector de pantalla para iPad 11th A16 2025 [11 pulgadas] / 10ª generación 2022 [10.9 pulgadas], vidrio templado..." [ref=e903] [cursor=pointer]:
+                - /url: /-/es/Ailun-iPad-11th-A16-2025/dp/B0BJPXXM7D/?_encoding=UTF8&pd_rd_w=bHhl3&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_541966
+                - img "Ailun Protector de pantalla para iPad 11th A16 2025 [11 pulgadas] / 10ª generación 2022 [10.9 pulgadas], vidrio templado..." [ref=e904]
+            - listitem [ref=e905]:
+              - link "MoKo Funda para iPad (A16) 11ª Generación Case 11 Pulgadas 2025, Funda para iPad 10ª Generación Case 10.9 Pulgadas 2022,..." [ref=e907] [cursor=pointer]:
+                - /url: /-/es/MoKo-Generaci%C3%B3n-Pulgadas-Inteligente-Transl%C3%BAcida/dp/B0B8STRJYJ/?_encoding=UTF8&pd_rd_w=bHhl3&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_541966
+                - img "MoKo Funda para iPad (A16) 11ª Generación Case 11 Pulgadas 2025, Funda para iPad 10ª Generación Case 10.9 Pulgadas 2022,..." [ref=e908]
+            - listitem [ref=e909]:
+              - link "Taygeer - Mochila de viaje para mujeres, mochila de cabina con puerto de carga USB y bolsa para zapatos, mochila TSA..." [ref=e911] [cursor=pointer]:
+                - /url: /-/es/Taygeer-Mochila-pulgadas-aprobada-enfermera/dp/B09MQWWP87/?_encoding=UTF8&pd_rd_w=bHhl3&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_541966
+                - img "Taygeer - Mochila de viaje para mujeres, mochila de cabina con puerto de carga USB y bolsa para zapatos, mochila TSA..." [ref=e912]
+            - listitem [ref=e913]:
+              - link "MOSISO Funda vertical de poliéster con bolsillo para laptop de 13 y 13.3 pulgadas, para computadora MacBook Air, Pro 13...." [ref=e915] [cursor=pointer]:
+                - /url: /-/es/MOSISO-vertical-poli%C3%A9ster-bolsillo-computadora/dp/B01N6M1Y9N/?_encoding=UTF8&pd_rd_w=bHhl3&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_541966
+                - img "MOSISO Funda vertical de poliéster con bolsillo para laptop de 13 y 13.3 pulgadas, para computadora MacBook Air, Pro 13...." [ref=e916]
+            - listitem [ref=e917]:
+              - link "ProCase Paquete de 2 protectores de pantalla para iPad A16 2025 de 11ª/10ª generación 2022 (11 pulgadas/10.9), protector..." [ref=e919] [cursor=pointer]:
+                - /url: /-/es/ProCase-iPad-A16-2025-2022/dp/B0BDKJFRX4/?_encoding=UTF8&pd_rd_w=bHhl3&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_541966
+                - img "ProCase Paquete de 2 protectores de pantalla para iPad A16 2025 de 11ª/10ª generación 2022 (11 pulgadas/10.9), protector..." [ref=e920]
+            - listitem [ref=e921]:
+              - link "Máquina etiquetadora con cinta Nelko, impresora de etiquetas Bluetooth P21, etiquetadoras mini inalámbricas con..." [ref=e923] [cursor=pointer]:
+                - /url: /-/es/etiquetadora-Nelko-P21-etiquetadoras-inal%C3%A1mbricas/dp/B0C3L93F2Q/?_encoding=UTF8&pd_rd_w=bHhl3&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_541966
+                - img "Máquina etiquetadora con cinta Nelko, impresora de etiquetas Bluetooth P21, etiquetadoras mini inalámbricas con..." [ref=e924]
+            - listitem [ref=e925]:
+              - link "SPARIN Protector de pantalla para iPad A16 2025 de 11ª (11 pulgadas), 10ª generación 2022 (10.9 pulgadas), 2 unidades de..." [ref=e927] [cursor=pointer]:
+                - /url: /-/es/SPARIN-iPad-11-generaci%C3%B3n-antiara%C3%B1azos/dp/B0BKL7KD6Y/?_encoding=UTF8&pd_rd_w=bHhl3&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_541966
+                - img "SPARIN Protector de pantalla para iPad A16 2025 de 11ª (11 pulgadas), 10ª generación 2022 (10.9 pulgadas), 2 unidades de..." [ref=e928]
+            - listitem [ref=e929]:
+              - link "Epson EcoTank ET-2800 Impresora Supertank inalámbrica a color todo en uno sin cartuchos con escaneo y copia, la..." [ref=e931] [cursor=pointer]:
+                - /url: /-/es/Epson-Impresora-Supertank-inal%C3%A1mbrica-cartuchos/dp/B096N8DN2H/?_encoding=UTF8&pd_rd_w=bHhl3&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_541966
+                - img "Epson EcoTank ET-2800 Impresora Supertank inalámbrica a color todo en uno sin cartuchos con escaneo y copia, la..." [ref=e932]
+            - listitem [ref=e933]:
+              - link "MNN Monitor portátil de 15.6 pulgadas FHD 1080P USB C HDMI Gaming, pantalla IPS ultradelgada con cubierta inteligente y..." [ref=e935] [cursor=pointer]:
+                - /url: /-/es/MNN-port%C3%A1til-ultradelgada-inteligente-altavoces/dp/B0B9NNWXVP/?_encoding=UTF8&pd_rd_w=bHhl3&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_541966
+                - img "MNN Monitor portátil de 15.6 pulgadas FHD 1080P USB C HDMI Gaming, pantalla IPS ultradelgada con cubierta inteligente y..." [ref=e936]
+            - listitem [ref=e937]:
+              - link "Anker Hub USB C, divisor USBC a HDMI 5 en 1 con pantalla 4K, 1 puerto USB-C de 5 Gbps alimentado y 2 puertos de datos..." [ref=e939] [cursor=pointer]:
+                - /url: /-/es/Anker-divisor-pantalla-alimentado-puertos/dp/B0BQLLB61B/?_encoding=UTF8&pd_rd_w=bHhl3&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_541966
+                - img "Anker Hub USB C, divisor USBC a HDMI 5 en 1 con pantalla 4K, 1 puerto USB-C de 5 Gbps alimentado y 2 puertos de datos..." [ref=e940]
+            - listitem [ref=e941]:
+              - link "Mosiso Funda para MacBook Air de 13 y 13.6 pulgadas, 2024, 2023 y 2022, M3 A3113, M2 A2681, Touch ID, carcasa rígida,..." [ref=e943] [cursor=pointer]:
+                - /url: /-/es/pulgadas-cubierta-protector-adaptador-transparente/dp/B0B7H3V2V7/?_encoding=UTF8&pd_rd_w=bHhl3&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_541966
+                - img "Mosiso Funda para MacBook Air de 13 y 13.6 pulgadas, 2024, 2023 y 2022, M3 A3113, M2 A2681, Touch ID, carcasa rígida,..." [ref=e944]
+            - listitem [ref=e945]:
+              - link "ProCase Funda para iPad de 9ª/8ª/7ª generación Caso de 10.2 pulgadas (versión 2021/2020/2019), funda 10.2 iPad de..." [ref=e947] [cursor=pointer]:
+                - /url: /-/es/ProCase-generaci%C3%B3n-pulgadas-inteligente-transl%C3%BAcida/dp/B07XY28FZG/?_encoding=UTF8&pd_rd_w=bHhl3&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_541966
+                - img "ProCase Funda para iPad de 9ª/8ª/7ª generación Caso de 10.2 pulgadas (versión 2021/2020/2019), funda 10.2 iPad de..." [ref=e948]
+            - listitem [ref=e949]:
+              - link "Lamicall Soporte para reposacabezas de tableta para coche - [Brazo extensible 3 en 1] Soporte ajustable para tableta en..." [ref=e951] [cursor=pointer]:
+                - /url: /-/es/Lamicall-Soporte-reposacabezas-tableta-coche/dp/B0BRRPP5KH/?_encoding=UTF8&pd_rd_w=bHhl3&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_541966
+                - img "Lamicall Soporte para reposacabezas de tableta para coche - [Brazo extensible 3 en 1] Soporte ajustable para tableta en..." [ref=e952]
+            - listitem [ref=e953]:
+              - link "MOBDIK Pack de 2 protectores de pantalla Paperfeel compatibles con iPad A16 11ª / 10ª generación (2025/2022) y iPad Air..." [ref=e955] [cursor=pointer]:
+                - /url: /-/es/MOBDIK-protectores-iPad-A16-Air/dp/B0BD9P8CFG/?_encoding=UTF8&pd_rd_w=bHhl3&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_541966
+                - img "MOBDIK Pack de 2 protectores de pantalla Paperfeel compatibles con iPad A16 11ª / 10ª generación (2025/2022) y iPad Air..." [ref=e956]
+            - listitem [ref=e957]:
+              - link "Phomemo D30 - Etiquetadora con cinta, Bluetooth, portátil, pequeña, para teléfono inteligente, múltiples plantillas,..." [ref=e959] [cursor=pointer]:
+                - /url: /-/es/Phomemo-D30-Etiquetadora-inteligente-plantillas/dp/B08HV3MPFD/?_encoding=UTF8&pd_rd_w=bHhl3&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_541966
+                - img "Phomemo D30 - Etiquetadora con cinta, Bluetooth, portátil, pequeña, para teléfono inteligente, múltiples plantillas,..." [ref=e960]
+            - listitem [ref=e961]:
+              - link "Cargador Mac Book Pro - Cargador USB C de 118 W, cargador rápido compatible con MacBook pro/Air, M1 M2 M3 M4 M5, iPad..." [ref=e963] [cursor=pointer]:
+                - /url: /-/es/Cargador-Mac-Book-Pro-compatible/dp/B0B1HJ666G/?_encoding=UTF8&pd_rd_w=bHhl3&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_541966
+                - img "Cargador Mac Book Pro - Cargador USB C de 118 W, cargador rápido compatible con MacBook pro/Air, M1 M2 M3 M4 M5, iPad..." [ref=e964]
+            - listitem [ref=e965]:
+              - link "Hastraith Lápiz capacitivo para iPad (2018-2025) - Carga rápida de 13 minutos con sensibilidad de inclinación y rechazo..." [ref=e967] [cursor=pointer]:
+                - /url: /-/es/Hastraith-L%C3%A1piz-capacitivo-para-2018-2025/dp/B0F21WN48Z/?_encoding=UTF8&pd_rd_w=bHhl3&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_541966
+                - img "Hastraith Lápiz capacitivo para iPad (2018-2025) - Carga rápida de 13 minutos con sensibilidad de inclinación y rechazo..." [ref=e968]
+            - listitem [ref=e969]:
+              - link "HP Envy 6155e Impresora inalámbrica todo en uno de inyección de tinta a color, Portobello, Imprimir, escanear, copiar,..." [ref=e971] [cursor=pointer]:
+                - /url: /-/es/HP-Envy-6155e-inal%C3%A1mbrica-Portobello/dp/B0D7JS7S2P/?_encoding=UTF8&pd_rd_w=bHhl3&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_541966
+                - img "HP Envy 6155e Impresora inalámbrica todo en uno de inyección de tinta a color, Portobello, Imprimir, escanear, copiar,..." [ref=e972]
+            - listitem [ref=e973]:
+              - link "SEYMAC stock Funda para iPad (A16) de 11ª/10ª generación de 11''/10.9 pulgadas 2025/2022, funda de protección contra..." [ref=e975] [cursor=pointer]:
+                - /url: /-/es/SEYMAC-stock-iPad-A16-generaci%C3%B3n/dp/B0BK8RFV57/?_encoding=UTF8&pd_rd_w=bHhl3&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_541966
+                - img "SEYMAC stock Funda para iPad (A16) de 11ª/10ª generación de 11''/10.9 pulgadas 2025/2022, funda de protección contra..." [ref=e976]
+            - listitem [ref=e977]:
+              - link "Cargador compatible con computadora portátil HP 65W 45W Adaptador de energía punta azul inteligente" [ref=e979] [cursor=pointer]:
+                - /url: /-/es/Cargador-compatible-computadora-Adaptador-inteligente/dp/B089T1SX32/?_encoding=UTF8&pd_rd_w=bHhl3&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_541966
+                - img "Cargador compatible con computadora portátil HP 65W 45W Adaptador de energía punta azul inteligente" [ref=e980]
+            - listitem [ref=e981]:
+              - link "Gogoonike Soporte ajustable para computadora portátil, soporte elevador plegable de metal para laptop, soportes..." [ref=e983] [cursor=pointer]:
+                - /url: /-/es/Gogoonike-computadora-port%C3%A1tiles-refrigeraci%C3%B3n-compatible/dp/B0C7BKZ883/?_encoding=UTF8&pd_rd_w=bHhl3&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_541966
+                - img "Gogoonike Soporte ajustable para computadora portátil, soporte elevador plegable de metal para laptop, soportes..." [ref=e984]
+            - listitem [ref=e985]:
+              - link "CloudValley Funda deslizante para cámara web [Paquete de 2], cubierta de cámara web de metal ultradelgada de 0.023..." [ref=e987] [cursor=pointer]:
+                - /url: /-/es/CloudValley-deslizante-cubierta-ultradelgada-pulgadas/dp/B079MCPJGH/?_encoding=UTF8&pd_rd_w=bHhl3&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_541966
+                - img "CloudValley Funda deslizante para cámara web [Paquete de 2], cubierta de cámara web de metal ultradelgada de 0.023..." [ref=e988]
+        - separator [ref=e990]
+        - generic [ref=e992]:
+          - heading "Mejora tu PC aquí" [level=2] [ref=e994]
+          - generic [ref=e995]:
+            - generic [ref=e996]:
+              - link "Portátiles" [ref=e998] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=laptops&pd_rd_w=VU4iM&content-id=amzn1.sym.4d71698b-309b-46ab-ad93-6701581285d6&pf_rd_p=4d71698b-309b-46ab-ad93-6701581285d6&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Portátiles" [ref=e1000]
+                - generic [ref=e1002]: Portátiles
+              - link "Equipo de PC" [ref=e1004] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=PC%20computers&pd_rd_w=VU4iM&content-id=amzn1.sym.4d71698b-309b-46ab-ad93-6701581285d6&pf_rd_p=4d71698b-309b-46ab-ad93-6701581285d6&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Equipo de PC" [ref=e1006]
+                - generic [ref=e1008]: Equipo de PC
+            - generic [ref=e1009]:
+              - link "Discos duros" [ref=e1011] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=hard%20drives&pd_rd_w=VU4iM&content-id=amzn1.sym.4d71698b-309b-46ab-ad93-6701581285d6&pf_rd_p=4d71698b-309b-46ab-ad93-6701581285d6&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Discos duros" [ref=e1013]
+                - generic [ref=e1015]: Discos duros
+              - link "Monitores" [ref=e1017] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=computer%20monitors&pd_rd_w=VU4iM&content-id=amzn1.sym.4d71698b-309b-46ab-ad93-6701581285d6&pf_rd_p=4d71698b-309b-46ab-ad93-6701581285d6&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Monitores" [ref=e1019]
+                - generic [ref=e1021]: Monitores
+          - link "Mejora tu PC aquí - Ver más" [ref=e1023] [cursor=pointer]:
+            - /url: /-/es/s/?_encoding=UTF8&k=computers&pd_rd_w=VU4iM&content-id=amzn1.sym.4d71698b-309b-46ab-ad93-6701581285d6&pf_rd_p=4d71698b-309b-46ab-ad93-6701581285d6&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+            - generic [ref=e1024]:
+              - generic [ref=e1025]: Ver más
+              - generic [ref=e1026]: Ver más
+        - generic [ref=e1028]:
+          - heading "Mercancía de juegos" [level=2] [ref=e1030]
+          - generic [ref=e1031]:
+            - generic [ref=e1032]:
+              - link "Vestimenta" [ref=e1034] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=gaming%20apparel&ref=nb_sb_noss&pd_rd_w=OcW32&content-id=amzn1.sym.89d97acb-d763-4a60-bc09-dc9a65d74969&pf_rd_p=89d97acb-d763-4a60-bc09-dc9a65d74969&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Vestimenta" [ref=e1036]
+                - generic [ref=e1038]: Vestimenta
+              - link "Sombreros" [ref=e1040] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=gaming%20hats&ref=nb_sb_noss_2&pd_rd_w=OcW32&content-id=amzn1.sym.89d97acb-d763-4a60-bc09-dc9a65d74969&pf_rd_p=89d97acb-d763-4a60-bc09-dc9a65d74969&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Sombreros" [ref=e1042]
+                - generic [ref=e1044]: Sombreros
+            - generic [ref=e1045]:
+              - link "Figuras de acción" [ref=e1047] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=gaming%20action%20figures&i=toys-and-games-intl-ship&ref=nb_sb_noss_2&pd_rd_w=OcW32&content-id=amzn1.sym.89d97acb-d763-4a60-bc09-dc9a65d74969&pf_rd_p=89d97acb-d763-4a60-bc09-dc9a65d74969&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Figuras de acción" [ref=e1049]
+                - generic [ref=e1051]: Figuras de acción
+              - link "Tazas de desayuno" [ref=e1053] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=gaming%20mugs&i=kitchen-intl-ship&ref=nb_sb_noss&pd_rd_w=OcW32&content-id=amzn1.sym.89d97acb-d763-4a60-bc09-dc9a65d74969&pf_rd_p=89d97acb-d763-4a60-bc09-dc9a65d74969&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Tazas de desayuno" [ref=e1055]
+                - generic [ref=e1057]: Tazas de desayuno
+          - link "Mercancía de juegos - Ver más" [ref=e1059] [cursor=pointer]:
+            - /url: /-/es/b/?_encoding=UTF8&node=23508887011&pd_rd_w=OcW32&content-id=amzn1.sym.89d97acb-d763-4a60-bc09-dc9a65d74969&pf_rd_p=89d97acb-d763-4a60-bc09-dc9a65d74969&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+            - generic [ref=e1060]:
+              - generic [ref=e1061]: Ver más
+              - generic [ref=e1062]: Ver más
+        - generic [ref=e1064]:
+          - heading "Hallazgos fantásticos para el hogar" [level=2] [ref=e1066]
+          - generic [ref=e1067]:
+            - generic [ref=e1068]:
+              - link "Cocina" [ref=e1070] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=kitchen&pd_rd_w=JfAeG&content-id=amzn1.sym.20c14023-dc4e-49db-9d00-9553df5d755b&pf_rd_p=20c14023-dc4e-49db-9d00-9553df5d755b&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Cocina" [ref=e1072]
+                - generic [ref=e1074]: Cocina
+              - link "Decoración del hogar" [ref=e1076] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=home%20decor&pd_rd_w=JfAeG&content-id=amzn1.sym.20c14023-dc4e-49db-9d00-9553df5d755b&pf_rd_p=20c14023-dc4e-49db-9d00-9553df5d755b&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Decoración del hogar" [ref=e1078]
+                - generic [ref=e1080]: Decoración del hogar
+            - generic [ref=e1081]:
+              - link "Comedor" [ref=e1083] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=kitchen%20and%20dining&pd_rd_w=JfAeG&content-id=amzn1.sym.20c14023-dc4e-49db-9d00-9553df5d755b&pf_rd_p=20c14023-dc4e-49db-9d00-9553df5d755b&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Comedor" [ref=e1085]
+                - generic [ref=e1087]: Comedor
+              - link "Hogar inteligente" [ref=e1089] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=smart%20home&pd_rd_w=JfAeG&content-id=amzn1.sym.20c14023-dc4e-49db-9d00-9553df5d755b&pf_rd_p=20c14023-dc4e-49db-9d00-9553df5d755b&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Hogar inteligente" [ref=e1091]
+                - generic [ref=e1093]: Hogar inteligente
+          - link "Hallazgos fantásticos para el hogar - Más información" [ref=e1095] [cursor=pointer]:
+            - /url: /-/es/s/?_encoding=UTF8&k=home%20and%20kitchen&pd_rd_w=JfAeG&content-id=amzn1.sym.20c14023-dc4e-49db-9d00-9553df5d755b&pf_rd_p=20c14023-dc4e-49db-9d00-9553df5d755b&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+            - generic [ref=e1096]:
+              - generic [ref=e1097]: Más información
+              - generic [ref=e1098]: Más información
+        - generic [ref=e1100]:
+          - heading "Consigue los equipos y accesorios más destacados" [level=2] [ref=e1102]
+          - generic [ref=e1103]:
+            - generic [ref=e1104]:
+              - link "Computadoras de escritorio" [ref=e1106] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=desktop%20computers&pd_rd_w=aSSBm&content-id=amzn1.sym.1d3b8f55-c47a-4b7f-a127-3409d1ca6dd1&pf_rd_p=1d3b8f55-c47a-4b7f-a127-3409d1ca6dd1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Computadoras de escritorio" [ref=e1108]
+                - generic [ref=e1110]: Computadoras de escritorio
+              - link "Portátiles" [ref=e1112] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=laptops&pd_rd_w=aSSBm&content-id=amzn1.sym.1d3b8f55-c47a-4b7f-a127-3409d1ca6dd1&pf_rd_p=1d3b8f55-c47a-4b7f-a127-3409d1ca6dd1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Portátiles" [ref=e1114]
+                - generic [ref=e1116]: Portátiles
+            - generic [ref=e1117]:
+              - link "Discos duros" [ref=e1119] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=external%20hard%20drives&pd_rd_w=aSSBm&content-id=amzn1.sym.1d3b8f55-c47a-4b7f-a127-3409d1ca6dd1&pf_rd_p=1d3b8f55-c47a-4b7f-a127-3409d1ca6dd1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Discos duros" [ref=e1121]
+                - generic [ref=e1123]: Discos duros
+              - link "Accesorios para equipos" [ref=e1125] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=computer%20accessories&pd_rd_w=aSSBm&content-id=amzn1.sym.1d3b8f55-c47a-4b7f-a127-3409d1ca6dd1&pf_rd_p=1d3b8f55-c47a-4b7f-a127-3409d1ca6dd1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Accesorios para equipos" [ref=e1127]
+                - generic [ref=e1129]: Accesorios para equipos
+          - link "Consigue los equipos y accesorios más destacados - Ver más" [ref=e1131] [cursor=pointer]:
+            - /url: /-/es/s/?_encoding=UTF8&k=computers%20and%20accessories&pd_rd_w=aSSBm&content-id=amzn1.sym.1d3b8f55-c47a-4b7f-a127-3409d1ca6dd1&pf_rd_p=1d3b8f55-c47a-4b7f-a127-3409d1ca6dd1&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+            - generic [ref=e1133]: Ver más
+        - separator [ref=e1134]
+        - generic [ref=e1137]:
+          - heading "Los Más Vendidos en Celulares y Accesorios" [level=2] [ref=e1139]
+          - list [ref=e1142]:
+            - listitem [ref=e1143]:
+              - link "Ailun Paquete de 3 protectores de pantalla para iPhone 17 Pro Max [6.9 pulgadas] + 3 protectores de lente de cámara con..." [ref=e1145] [cursor=pointer]:
+                - /url: /-/es/Ailun-protectores-iPhone-Pro-Max/dp/B0FDQH511S/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "Ailun Paquete de 3 protectores de pantalla para iPhone 17 Pro Max [6.9 pulgadas] + 3 protectores de lente de cámara con..." [ref=e1146]
+            - listitem [ref=e1147]:
+              - link "Ailun Paquete de 3 Protectores de Pantalla para iPhone 17 Pro Max [6.9 pulgadas] con Marco de Instalación, Vidrio..." [ref=e1149] [cursor=pointer]:
+                - /url: /-/es/Ailun-Protectores-iPhone-Pro-Max/dp/B0FDQK69GQ/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "Ailun Paquete de 3 Protectores de Pantalla para iPhone 17 Pro Max [6.9 pulgadas] con Marco de Instalación, Vidrio..." [ref=e1150]
+            - listitem [ref=e1151]:
+              - link "SUPFINE Funda magnética para iPhone 17 Pro Max (compatible con MagSafe) (protección contra caídas de grado militar),..." [ref=e1153] [cursor=pointer]:
+                - /url: /-/es/SUPFINE-Pro-Max-transl%C3%BAcida-antihuellas/dp/B0FH655984/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "SUPFINE Funda magnética para iPhone 17 Pro Max (compatible con MagSafe) (protección contra caídas de grado militar),..." [ref=e1154]
+            - listitem [ref=e1155]:
+              - link "Ailun Paquete de 3 protectores de pantalla de privacidad para iPhone 17 Pro Max [6.9 pulgadas] + 3 protectores de lente..." [ref=e1157] [cursor=pointer]:
+                - /url: /-/es/Ailun-protectores-iPhone-Pro-Max/dp/B0FDQH15KW/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "Ailun Paquete de 3 protectores de pantalla de privacidad para iPhone 17 Pro Max [6.9 pulgadas] + 3 protectores de lente..." [ref=e1158]
+            - listitem [ref=e1159]:
+              - link "Fntcase Funda para iPhone 17 Pro Max, magnética, transparente, protector de pantalla, delgada, antiamarilleo, protección..." [ref=e1161] [cursor=pointer]:
+                - /url: /-/es/iPhone-Pro-Max-transparente-antiamarilleo/dp/B0FDQ3PWCX/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "Fntcase Funda para iPhone 17 Pro Max, magnética, transparente, protector de pantalla, delgada, antiamarilleo, protección..." [ref=e1162]
+            - listitem [ref=e1163]:
+              - link "NEW'C Paquete de 3 protectores de pantalla diseñados para iPhone 17, 17 Pro, iPhone 16 Pro (6.3 pulgadas), protección de..." [ref=e1165] [cursor=pointer]:
+                - /url: /-/es/NEWC-protectores-Pro-6-3-herramienta/dp/B0F8VZ7QVX/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "NEW'C Paquete de 3 protectores de pantalla diseñados para iPhone 17, 17 Pro, iPhone 16 Pro (6.3 pulgadas), protección de..." [ref=e1166]
+            - listitem [ref=e1167]:
+              - link "Cargador de carga rápida para iPhone 17, 16, 15, cargador tipo C, cargador USB C, cargador para iPhone 17, 16, 15, Air..." [ref=e1169] [cursor=pointer]:
+                - /url: /-/es/Cargador-carga-r%C3%A1pida-iPhone-cargador/dp/B09KR8P3L5/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "Cargador de carga rápida para iPhone 17, 16, 15, cargador tipo C, cargador USB C, cargador para iPhone 17, 16, 15, Air..." [ref=e1170]
+            - listitem [ref=e1171]:
+              - link "Ailun Protector de pantalla de privacidad para iPhone 16e / iPhone 14 / iPhone 13 / iPhone 13 Pro [6.1 pulgadas] paquete..." [ref=e1173] [cursor=pointer]:
+                - /url: /-/es/Ailun-iPhone-16e-Pro-antiara%C3%B1azos/dp/B09F2JY5FF/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "Ailun Protector de pantalla de privacidad para iPhone 16e / iPhone 14 / iPhone 13 / iPhone 13 Pro [6.1 pulgadas] paquete..." [ref=e1174]
+            - listitem [ref=e1175]:
+              - link "Misxi - 2 fundas de policarbonato con protector de pantalla de vidrio templado compatibles con Apple Watch Series 11..." [ref=e1177] [cursor=pointer]:
+                - /url: /-/es/Misxi-policarbonato-protector-compatibles-protectora/dp/B0DFVB13XF/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "Misxi - 2 fundas de policarbonato con protector de pantalla de vidrio templado compatibles con Apple Watch Series 11..." [ref=e1178]
+            - listitem [ref=e1179]:
+              - link "Cargador de iPhone de carga rápida, paquete de 2 bloques de carga de pared tipo C con 2 unidades [6 pies y 10 pies]..." [ref=e1181] [cursor=pointer]:
+                - /url: /-/es/Cargador-paquete-bloques-unidades-Lightning/dp/B0B283QP2N/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "Cargador de iPhone de carga rápida, paquete de 2 bloques de carga de pared tipo C con 2 unidades [6 pies y 10 pies]..." [ref=e1182]
+            - listitem [ref=e1183]:
+              - link "PEHAEL 3+3 paquete para iPhone 17 Pro Max protector de pantalla de privacidad con protector de lente de cámara, película..." [ref=e1185] [cursor=pointer]:
+                - /url: /-/es/iPhone-17-Pro-Max-privacidad/dp/B0FH4ZWQ6X/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "PEHAEL 3+3 paquete para iPhone 17 Pro Max protector de pantalla de privacidad con protector de lente de cámara, película..." [ref=e1186]
+            - listitem [ref=e1187]:
+              - link "Miracase Funda magnética para iPhone 16e de cuerpo completo con protector de pantalla de vidrio integrado, [compatible..." [ref=e1189] [cursor=pointer]:
+                - /url: /-/es/Miracase-magn%C3%A9tica-protector-compatible-parachoques/dp/B0F1TNK61D/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "Miracase Funda magnética para iPhone 16e de cuerpo completo con protector de pantalla de vidrio integrado, [compatible..." [ref=e1190]
+            - listitem [ref=e1191]:
+              - link "FNTCASE - Funda para iPhone 15, iPhone 14 y iPhone 13, magnética, translúcida, fina y antigolpes, protección de grado..." [ref=e1193] [cursor=pointer]:
+                - /url: /-/es/FNTCASE-transl%C3%BAcida-antigolpes-protecci%C3%B3n-resistente/dp/B0DFH8SNK5/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "FNTCASE - Funda para iPhone 15, iPhone 14 y iPhone 13, magnética, translúcida, fina y antigolpes, protección de grado..." [ref=e1194]
+            - listitem [ref=e1195]:
+              - link "TOCOL Protector de pantalla para iPhone 17 Pro Max / iPhone 16 Pro Max Protector de pantalla de 6.9 pulgadas,..." [ref=e1197] [cursor=pointer]:
+                - /url: /-/es/TOCOL-iPhone-Pro-Max-transparente/dp/B0FDKJDFGZ/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "TOCOL Protector de pantalla para iPhone 17 Pro Max / iPhone 16 Pro Max Protector de pantalla de 6.9 pulgadas,..." [ref=e1198]
+            - listitem [ref=e1199]:
+              - link "Paquete de 2 bloques de cargador USB C, cargador de pared tipo C de doble puerto de carga rápida, adaptador de corriente..." [ref=e1201] [cursor=pointer]:
+                - /url: /-/es/Paquete-bloques-cargador-adaptador-corriente/dp/B0CPSBD68W/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "Paquete de 2 bloques de cargador USB C, cargador de pared tipo C de doble puerto de carga rápida, adaptador de corriente..." [ref=e1202]
+            - listitem [ref=e1203]:
+              - link "Hiearcool - Funda impermeable IPX8, universal y compatible con celular iPhone 12, Pro 11, Pro Max, XS, Max, XR, X, 8, 7,..." [ref=e1205] [cursor=pointer]:
+                - /url: /-/es/Hiearcool-impermeable-universal-compatible-pulgadas/dp/B079HV3TC9/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "Hiearcool - Funda impermeable IPX8, universal y compatible con celular iPhone 12, Pro 11, Pro Max, XS, Max, XR, X, 8, 7,..." [ref=e1206]
+            - listitem [ref=e1207]:
+              - link "SuydanBox Funda magnética para iPhone 17 Pro, compatible con MagSafe, [protección completa de la cámara] [protector de..." [ref=e1209] [cursor=pointer]:
+                - /url: /-/es/SuydanBox-magn%C3%A9tica-compatible-protecci%C3%B3n-protectora/dp/B0FH6HYW1H/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "SuydanBox Funda magnética para iPhone 17 Pro, compatible con MagSafe, [protección completa de la cámara] [protector de..." [ref=e1210]
+            - listitem [ref=e1211]:
+              - link "UNBREAKcable Paquete de 2 protectores de pantalla para iPhone 16, vidrio templado doble inastillable [marco de fácil..." [ref=e1213] [cursor=pointer]:
+                - /url: /UNBREAKcable-protectores-iPhone-inastillable-transparente/dp/B0F189TSGJ/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "UNBREAKcable Paquete de 2 protectores de pantalla para iPhone 16, vidrio templado doble inastillable [marco de fácil..." [ref=e1214]
+            - listitem [ref=e1215]:
+              - link "Ailun Protector de pantalla de vidrio para Galaxy S26 Ultra [6.9 pulgadas], paquete de 3 + 2 unidades de lente de..." [ref=e1217] [cursor=pointer]:
+                - /url: /-/es/Ailun-S26-Ultra-6-9-desbloqueo/dp/B0GCBMBGBX/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "Ailun Protector de pantalla de vidrio para Galaxy S26 Ultra [6.9 pulgadas], paquete de 3 + 2 unidades de lente de..." [ref=e1218]
+            - listitem [ref=e1219]:
+              - link "Ailun Paquete de 3 protectores de lente de cámara para iPhone 16 Pro / 14 Pro y iPhone 16 Pro Max / 14 Pro Max, vidrio..." [ref=e1221] [cursor=pointer]:
+                - /url: /-/es/Ailun-iPhone-Pro-Max-antiara%C3%B1azos/dp/B0B768XC42/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "Ailun Paquete de 3 protectores de lente de cámara para iPhone 16 Pro / 14 Pro y iPhone 16 Pro Max / 14 Pro Max, vidrio..." [ref=e1222]
+            - listitem [ref=e1223]:
+              - link "Miracase Funda compatible con iPhone 16, [forro de microfibra suave antiarañazos], compatible con MagSafe, funda de..." [ref=e1225] [cursor=pointer]:
+                - /url: /-/es/Miracase-compatible-microfibra-antiara%C3%B1azos-protecci%C3%B3n/dp/B0FM23CNBM/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "Miracase Funda compatible con iPhone 16, [forro de microfibra suave antiarañazos], compatible con MagSafe, funda de..." [ref=e1226]
+            - listitem [ref=e1227]:
+              - link "FireNova Funda magnética para iPhone 17 Pro, compatible con MagSafe, [botón de control de cámara de silicona integrado]..." [ref=e1229] [cursor=pointer]:
+                - /url: /-/es/FireNova-iPhone-17-Pro-antiara%C3%B1azos/dp/B0FFT8P8XP/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "FireNova Funda magnética para iPhone 17 Pro, compatible con MagSafe, [botón de control de cámara de silicona integrado]..." [ref=e1230]
+            - listitem [ref=e1231]:
+              - link "SPIDERCASE Funda magnética para iPhone 15, con 2 protectores de pantalla de vidrio templado, protección completa de la..." [ref=e1233] [cursor=pointer]:
+                - /url: /-/es/SPIDERCASE-magn%C3%A9tica-protectores-protecci%C3%B3n-antiara%C3%B1azos/dp/B0DSPWQWYH/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "SPIDERCASE Funda magnética para iPhone 15, con 2 protectores de pantalla de vidrio templado, protección completa de la..." [ref=e1234]
+            - listitem [ref=e1235]:
+              - link "ANDERY Soporte para teléfono de coche para Magsafe [78+LBS de succión más fuerte y 2400gf magnético] Montura de teléfono..." [ref=e1237] [cursor=pointer]:
+                - /url: /-/es/ANDERY-tel%C3%A9fono-magn%C3%A9tico-ajustable-soportes/dp/B0DN1S1YLV/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "ANDERY Soporte para teléfono de coche para Magsafe [78+LBS de succión más fuerte y 2400gf magnético] Montura de teléfono..." [ref=e1238]
+            - listitem [ref=e1239]:
+              - link "SKYLMW - Funda compatible con iPhone 15 Pro Max de 6.7 pulgadas, con soporte magnético invisible tipo anillo, protección..." [ref=e1241] [cursor=pointer]:
+                - /url: /-/es/SKYLMW-compatible-magn%C3%A9tico-invisible-protecci%C3%B3n/dp/B0D5MDVSC7/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "SKYLMW - Funda compatible con iPhone 15 Pro Max de 6.7 pulgadas, con soporte magnético invisible tipo anillo, protección..." [ref=e1242]
+            - listitem [ref=e1243]:
+              - link "CANSHN Funda magnética compatible con iPhone 17 Pro Max, mejorada [protección completa de la cámara] [compatible con..." [ref=e1245] [cursor=pointer]:
+                - /url: /-/es/CANSHN-iPhone-Pro-Max-transl%C3%BAcido/dp/B0FDW734NW/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "CANSHN Funda magnética compatible con iPhone 17 Pro Max, mejorada [protección completa de la cámara] [compatible con..." [ref=e1246]
+            - listitem [ref=e1247]:
+              - link "FNTCASE Funda para teléfono Galaxy A17/A16 5G - Protección contra caídas de grado militar Samsung A17, probada contra..." [ref=e1249] [cursor=pointer]:
+                - /url: /-/es/FNTCASE-tel%C3%A9fono-Galaxy-A17-A16/dp/B0DGXBJ51X/?_encoding=UTF8&pd_rd_w=nVUrv&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_2335752011
+                - img "FNTCASE Funda para teléfono Galaxy A17/A16 5G - Protección contra caídas de grado militar Samsung A17, probada contra..." [ref=e1250]
+        - separator [ref=e1252]
+        - generic [ref=e1255]:
+          - heading "Mejores vendedores internacionales en Cocina" [level=2] [ref=e1257]
+          - list [ref=e1260]:
+            - listitem [ref=e1261]:
+              - link "Owala FreeSip - Botella de agua aislada de acero inoxidable con popote, botella de agua deportiva sin BPA, ideal para..." [ref=e1263] [cursor=pointer]:
+                - /url: /-/es/Owala-FreeSip-Botella-inoxidable-deportiva/dp/B0FK1LF5PM/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Owala FreeSip - Botella de agua aislada de acero inoxidable con popote, botella de agua deportiva sin BPA, ideal para..." [ref=e1264]
+            - listitem [ref=e1265]:
+              - link "Gourmetop Juego de cuchillos de cocina con funda 3 piezas, juego de cuchillos de chef negros para cocinar, cuchillos de..." [ref=e1267] [cursor=pointer]:
+                - /url: /-/es/Gourmetop-cuchillos-afilados-cuchillo-utilitario/dp/B0CM3BT33D/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Gourmetop Juego de cuchillos de cocina con funda 3 piezas, juego de cuchillos de chef negros para cocinar, cuchillos de..." [ref=e1268]
+            - listitem [ref=e1269]:
+              - link "Hamilton Beach Fresh Grind - Molinillo eléctrico para café en grano, especias y más, con cuchillas de acero inoxidable,..." [ref=e1271] [cursor=pointer]:
+                - /url: /-/es/Hamilton-Beach-Fresh-Grind-inoxidable/dp/B005EPRFKO/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Hamilton Beach Fresh Grind - Molinillo eléctrico para café en grano, especias y más, con cuchillas de acero inoxidable,..." [ref=e1272]
+            - listitem [ref=e1273]:
+              - link "FORLIM Juego de Molinillo Eléctrico de Sal y Pimienta por Gravedad con Cubierta Antipolvo LED Baterías Mejoradas..." [ref=e1275] [cursor=pointer]:
+                - /url: /-/es/Molinillo-El%C3%A9ctrico-Antipolvo-Alimentado-Autom%C3%A1tico/dp/B0D22KT83D/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "FORLIM Juego de Molinillo Eléctrico de Sal y Pimienta por Gravedad con Cubierta Antipolvo LED Baterías Mejoradas..." [ref=e1276]
+            - listitem [ref=e1277]:
+              - link "Kitchen in the box Licuadora de 68 onzas – Batidoras de cocina de 1500 W, gran capacidad, licuadora profesional para..." [ref=e1279] [cursor=pointer]:
+                - /url: /-/es/Kitchen-box-Licuadora-onzas-profesional/dp/B0DHCY83SZ/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Kitchen in the box Licuadora de 68 onzas – Batidoras de cocina de 1500 W, gran capacidad, licuadora profesional para..." [ref=e1280]
+            - listitem [ref=e1281]:
+              - link "Batidora de inmersión de mano con cable turelar, juego de licuadoras de mano de 1100W, disparador de velocidad variable..." [ref=e1283] [cursor=pointer]:
+                - /url: /-/es/inmersi%C3%B3n-turelar-licuadoras-disparador-emulsionador/dp/B0CPLVLFK2/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Batidora de inmersión de mano con cable turelar, juego de licuadoras de mano de 1100W, disparador de velocidad variable..." [ref=e1284]
+            - listitem [ref=e1285]:
+              - link "AeroPress Prensa de café original – Prensa francesa todo en uno, cafetera manual estilo espresso y vertido, preparación..." [ref=e1287] [cursor=pointer]:
+                - /url: /-/es/AeroPress-Prensa-caf%C3%A9-original-preparaci%C3%B3n/dp/B0047BIWSK/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "AeroPress Prensa de café original – Prensa francesa todo en uno, cafetera manual estilo espresso y vertido, preparación..." [ref=e1288]
+            - listitem [ref=e1289]:
+              - link "Bolsas selladoras al vacío Syntus, 2 rollos de 8\" x 50' de grado comercial, bolsas al vacío para alimentos libres de BPA..." [ref=e1291] [cursor=pointer]:
+                - /url: /-/es/selladoras-Syntus-comercial-almacenamiento-preparaci%C3%B3n/dp/B0BHYNFFLW/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Bolsas selladoras al vacío Syntus, 2 rollos de 8\" x 50' de grado comercial, bolsas al vacío para alimentos libres de BPA..." [ref=e1292]
+            - listitem [ref=e1293]:
+              - link "Vtopmart Paquete de 8 recipientes de vidrio para almacenamiento de alimentos con tapas herméticas, recipientes de vidrio..." [ref=e1295] [cursor=pointer]:
+                - /url: /-/es/Vtopmart-recipientes-almacenamiento-herm%C3%A9ticas-preparaci%C3%B3n/dp/B0B9S5HZ26/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Vtopmart Paquete de 8 recipientes de vidrio para almacenamiento de alimentos con tapas herméticas, recipientes de vidrio..." [ref=e1296]
+            - listitem [ref=e1297]:
+              - link "Ultrean Báscula de Alimentos, Báscula de Cocina Digital con Pantalla LED, Peso en Gramos y Onzas para Hornear y Cocinar,..." [ref=e1299] [cursor=pointer]:
+                - /url: /-/es/Ultrean-Alimentos-Pantalla-Unidades-incluida/dp/B0DDNQS5LC/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Ultrean Báscula de Alimentos, Báscula de Cocina Digital con Pantalla LED, Peso en Gramos y Onzas para Hornear y Cocinar,..." [ref=e1300]
+            - listitem [ref=e1301]:
+              - link "Owala SmoothSip Slider Vaso Térmico de Acero Inoxidable Aislado, Taza de Café Helado Reutilizable, Taza de Viaje para..." [ref=e1303] [cursor=pointer]:
+                - /url: /-/es/Owala-SmoothSip-Inoxidable-Reutilizable-Caliente/dp/B0FFTN3SQS/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Owala SmoothSip Slider Vaso Térmico de Acero Inoxidable Aislado, Taza de Café Helado Reutilizable, Taza de Viaje para..." [ref=e1304]
+            - listitem [ref=e1305]:
+              - link "bella Snack-n-Store Mini Waflera, revestimiento antiadherente de cerámica EverGood™, enrollado de cable, luz indicadora..." [ref=e1307] [cursor=pointer]:
+                - /url: /-/es/Snack-n-Store-revestimiento-antiadherente-EverGoodTM-personalizables/dp/B0CYJ5X2FM/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "bella Snack-n-Store Mini Waflera, revestimiento antiadherente de cerámica EverGood™, enrollado de cable, luz indicadora..." [ref=e1308]
+            - listitem [ref=e1309]:
+              - link "TrendPlain - Pulverizador de aceite de oliva de vidrio de 16oz/470ml para cocinar – Botella dispensadora de aceite de..." [ref=e1311] [cursor=pointer]:
+                - /url: /-/es/TrendPlain-Pulverizador-dispensadora-accesorios-freidora/dp/B0CJF94M8J/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "TrendPlain - Pulverizador de aceite de oliva de vidrio de 16oz/470ml para cocinar – Botella dispensadora de aceite de..." [ref=e1312]
+            - listitem [ref=e1313]:
+              - link "HuggieGems Paquete de 4 organizadores magnéticos para especias para refrigerador y horno, organizadores negros para..." [ref=e1315] [cursor=pointer]:
+                - /url: /-/es/HuggieGems-organizadores-magn%C3%A9ticos-refrigerador-almacenamiento/dp/B0DQNH85JP/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "HuggieGems Paquete de 4 organizadores magnéticos para especias para refrigerador y horno, organizadores negros para..." [ref=e1316]
+            - listitem [ref=e1317]:
+              - link "AMZCHEF Máquina de café expreso de 20 bares, cafetera compacta con espumador de leche a vapor, cafetera con tanque de..." [ref=e1319] [cursor=pointer]:
+                - /url: /-/es/AMZCHEF-espumador-extra%C3%ADble-capuchino-americano/dp/B0FCF8331R/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "AMZCHEF Máquina de café expreso de 20 bares, cafetera compacta con espumador de leche a vapor, cafetera con tanque de..." [ref=e1320]
+            - listitem [ref=e1321]:
+              - link "Picador de verduras todo en uno de 8 cuchillas con contenedor, picador de alimentos, picador de cebolla, cortador de..." [ref=e1323] [cursor=pointer]:
+                - /url: /-/es/cuchillas-contenedor-alimentos-accesorios-esenciales/dp/B0FLXY2CBC/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Picador de verduras todo en uno de 8 cuchillas con contenedor, picador de alimentos, picador de cebolla, cortador de..." [ref=e1324]
+            - listitem [ref=e1325]:
+              - link "CAROTE - Sartén antiadherente para saltear y freír, sartén de granito sin adherencia para huevos y tortillas, utensilio..." [ref=e1327] [cursor=pointer]:
+                - /url: /-/es/CAROTE-antiadherente-adherencia-tortillas-compatible/dp/B0732NXYNS/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "CAROTE - Sartén antiadherente para saltear y freír, sartén de granito sin adherencia para huevos y tortillas, utensilio..." [ref=e1328]
+            - listitem [ref=e1329]:
+              - link "OstWony 12 toallas de cocina, paños de cocina multiusos reutilizables, trapos de limpieza de microfibra de doble cara..." [ref=e1331] [cursor=pointer]:
+                - /url: /-/es/multiusos-reutilizables-limpieza-microfibra-pulgadas/dp/B08QTRG66J/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "OstWony 12 toallas de cocina, paños de cocina multiusos reutilizables, trapos de limpieza de microfibra de doble cara..." [ref=e1332]
+            - listitem [ref=e1333]:
+              - link "AeroPress Microfiltros de papel blanco para cafetera, filtros de café compostables hechos de papel blanco, sin cloro, se..." [ref=e1335] [cursor=pointer]:
+                - /url: /-/es/AeroPress-Microfiltros-cafetera-compostables-cafeteras/dp/B000LTOCSG/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "AeroPress Microfiltros de papel blanco para cafetera, filtros de café compostables hechos de papel blanco, sin cloro, se..." [ref=e1336]
+            - listitem [ref=e1337]:
+              - link "BAGAIL BASICS Báscula de café con temporizador, báscula de cocina de alta precisión de 0.1g, báscula de café para verter..." [ref=e1339] [cursor=pointer]:
+                - /url: /-/es/BAGAIL-BASICS-temporizador-precisi%C3%B3n-autom%C3%A1tico/dp/B0BNL5JCVR/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "BAGAIL BASICS Báscula de café con temporizador, báscula de cocina de alta precisión de 0.1g, báscula de café para verter..." [ref=e1340]
+            - listitem [ref=e1341]:
+              - link "YDDZZM - Hervidor eléctrico de cuello de cisne, control inteligente de temperatura, interior de acero inoxidable,..." [ref=e1343] [cursor=pointer]:
+                - /url: /-/es/YDDZZM-inteligente-temperatura-inoxidable-calentamiento/dp/B0DMVCNQVD/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "YDDZZM - Hervidor eléctrico de cuello de cisne, control inteligente de temperatura, interior de acero inoxidable,..." [ref=e1344]
+            - listitem [ref=e1345]:
+              - link "Astercook Juego de cuchillos, juego de 13 piezas de cuchillos de cocina con revestimiento saludable antióxido, apto para..." [ref=e1347] [cursor=pointer]:
+                - /url: /-/es/Astercook-revestimiento-lavavajillas-inoxidable-protectores/dp/B0D9B96TBX/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Astercook Juego de cuchillos, juego de 13 piezas de cuchillos de cocina con revestimiento saludable antióxido, apto para..." [ref=e1348]
+            - listitem [ref=e1349]:
+              - link "Juego de utensilios de cocina de cerámica antiadherentes, 8 piezas, juego de ollas y sartenes, mango desmontable, juego..." [ref=e1351] [cursor=pointer]:
+                - /url: /-/es/utensilios-antiadherentes-desmontable-inducci%C3%B3n-lavavajillas/dp/B0F2F3B2ZS/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Juego de utensilios de cocina de cerámica antiadherentes, 8 piezas, juego de ollas y sartenes, mango desmontable, juego..." [ref=e1352]
+            - listitem [ref=e1353]:
+              - link "Brewin CHEFILOSOPHI - Juego de 5 cuchillos de chef japoneses con elegante mango de madera de Pakka roja, diseño..." [ref=e1355] [cursor=pointer]:
+                - /url: /-/es/Brewin-CHEFILOSOPHI-cuchillos-ergon%C3%B3mico-profesionales/dp/B09YQY517H/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Brewin CHEFILOSOPHI - Juego de 5 cuchillos de chef japoneses con elegante mango de madera de Pakka roja, diseño..." [ref=e1356]
+            - listitem [ref=e1357]:
+              - link "YARRAMATE Pulverizador de aceite de oliva de vidrio de 16 oz/15.9 fl oz para cocinar con calcomanías, dispensador de..." [ref=e1359] [cursor=pointer]:
+                - /url: /-/es/Pulverizador-calcoman%C3%ADas-dispensador-utensilios-alimenticio/dp/B0CP4XY9QC/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "YARRAMATE Pulverizador de aceite de oliva de vidrio de 16 oz/15.9 fl oz para cocinar con calcomanías, dispensador de..." [ref=e1360]
+            - listitem [ref=e1361]:
+              - link "Brita Plus Filtro de agua, sin BPA, filtro de repuesto de alta densidad para jarras y dispensadores, reduce 2 veces los..." [ref=e1363] [cursor=pointer]:
+                - /url: /-/es/repuesto-densidad-dispensadores-contaminantes-galones/dp/B0CKV2QT1R/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Brita Plus Filtro de agua, sin BPA, filtro de repuesto de alta densidad para jarras y dispensadores, reduce 2 veces los..." [ref=e1364]
+            - listitem [ref=e1365]:
+              - link "Vingud Lonchera Eléctrica para Adultos, Lonchera Calentada para Hombres Mujeres con Contenedores Duales de 1.5L de Acero..." [ref=e1367] [cursor=pointer]:
+                - /url: /-/es/El%C3%A9ctrica-Calentada-Contenedores-Inoxidable-Calentador/dp/B0F183L87B/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Vingud Lonchera Eléctrica para Adultos, Lonchera Calentada para Hombres Mujeres con Contenedores Duales de 1.5L de Acero..." [ref=e1368]
+            - listitem [ref=e1369]:
+              - link "Agilive - Molinillo de café manual, configuraciones de molienda ajustables, rebabas de acero inoxidable, molinillo de..." [ref=e1371] [cursor=pointer]:
+                - /url: /-/es/Agilive-configuraciones-ajustables-inoxidable-accionamiento/dp/B0FC6XY612/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Agilive - Molinillo de café manual, configuraciones de molienda ajustables, rebabas de acero inoxidable, molinillo de..." [ref=e1372]
+            - listitem [ref=e1373]:
+              - link "Tabla de cortar de titanio para cocina, tabla de cortar de doble cara de grado alimenticio, titanio puro y paja de trigo..." [ref=e1375] [cursor=pointer]:
+                - /url: /-/es/titanio-alimenticio-lavavajillas-limpiar-pulgadas/dp/B0DQG2VHKJ/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Tabla de cortar de titanio para cocina, tabla de cortar de doble cara de grado alimenticio, titanio puro y paja de trigo..." [ref=e1376]
+            - listitem [ref=e1377]:
+              - link "Báscula de Alimentos, Báscula de Cocina de 11 lb con 6 Unidades Función de Tara y Pantalla LCD, Báscula Digital de..." [ref=e1379] [cursor=pointer]:
+                - /url: /-/es/B%C3%A1scula-Alimentos-Unidades-Pantalla-Inoxidable/dp/B0CXM7CY6F/?_encoding=UTF8&pd_rd_w=T2HPb&content-id=amzn1.sym.0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_p=0e739659-7c9d-4d82-868c-90015618ffcc&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_exports_top_sellers_unrec
+                - img "Báscula de Alimentos, Báscula de Cocina de 11 lb con 6 Unidades Función de Tara y Pantalla LCD, Báscula Digital de..." [ref=e1380]
+        - separator [ref=e1382]
+        - generic [ref=e1384]:
+          - heading "E-readers Kindle" [level=2] [ref=e1386]
+          - link "E-readers Kindle Comprar ahora" [ref=e1387] [cursor=pointer]:
+            - /url: /-/es/s/?_encoding=UTF8&k=E-readers%20Kindle&__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2&pd_rd_w=CCrTS&content-id=amzn1.sym.439ab483-9f47-4bb9-9c14-6fbccaa65e99&pf_rd_p=439ab483-9f47-4bb9-9c14-6fbccaa65e99&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+            - img "E-readers Kindle" [ref=e1390]
+            - generic [ref=e1393]: Comprar ahora
+        - generic [ref=e1395]:
+          - heading "Compra los esenciales para tu hogar" [level=2] [ref=e1397]
+          - generic [ref=e1398]:
+            - generic [ref=e1399]:
+              - link "Para limpieza" [ref=e1401] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=cleaning%20tools&pd_rd_w=C2DQw&content-id=amzn1.sym.b339463f-0d6e-47d8-9e3c-1e3a64e416e2&pf_rd_p=b339463f-0d6e-47d8-9e3c-1e3a64e416e2&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Para limpieza" [ref=e1403]
+                - generic [ref=e1405]: Para limpieza
+              - link "Almacenamiento para el hogar" [ref=e1407] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=home%20storage&pd_rd_w=C2DQw&content-id=amzn1.sym.b339463f-0d6e-47d8-9e3c-1e3a64e416e2&pf_rd_p=b339463f-0d6e-47d8-9e3c-1e3a64e416e2&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Almacenamiento para el hogar" [ref=e1409]
+                - generic [ref=e1411]: Almacenamiento para el hogar
+            - generic [ref=e1412]:
+              - link "Decoración del hogar" [ref=e1414] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=home%20decor&pd_rd_w=C2DQw&content-id=amzn1.sym.b339463f-0d6e-47d8-9e3c-1e3a64e416e2&pf_rd_p=b339463f-0d6e-47d8-9e3c-1e3a64e416e2&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Decoración del hogar" [ref=e1416]
+                - generic [ref=e1418]: Decoración del hogar
+              - link "Ropa de cama" [ref=e1420] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=bedding&pd_rd_w=C2DQw&content-id=amzn1.sym.b339463f-0d6e-47d8-9e3c-1e3a64e416e2&pf_rd_p=b339463f-0d6e-47d8-9e3c-1e3a64e416e2&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Ropa de cama" [ref=e1422]
+                - generic [ref=e1424]: Ropa de cama
+          - link "Compra los esenciales para tu hogar - Descubre más en Hogar" [ref=e1426] [cursor=pointer]:
+            - /url: /-/es/s/?_encoding=UTF8&k=home&pd_rd_w=C2DQw&content-id=amzn1.sym.b339463f-0d6e-47d8-9e3c-1e3a64e416e2&pf_rd_p=b339463f-0d6e-47d8-9e3c-1e3a64e416e2&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+            - generic [ref=e1428]: Descubre más en Hogar
+        - generic [ref=e1430]:
+          - heading "Libros que atrapan" [level=2] [ref=e1432]
+          - generic [ref=e1433]:
+            - generic [ref=e1434]:
+              - link "Niños" [ref=e1436] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=childrens%20books&pd_rd_w=AbM60&content-id=amzn1.sym.d51c404a-da39-423c-9202-335828916db0&pf_rd_p=d51c404a-da39-423c-9202-335828916db0&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Niños" [ref=e1438]
+                - generic [ref=e1440]: Niños
+              - link "Misterio" [ref=e1442] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=mystery%20books&pd_rd_w=AbM60&content-id=amzn1.sym.d51c404a-da39-423c-9202-335828916db0&pf_rd_p=d51c404a-da39-423c-9202-335828916db0&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Misterio" [ref=e1444]
+                - generic [ref=e1446]: Misterio
+            - generic [ref=e1447]:
+              - link "Ficción" [ref=e1449] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=fiction%20books&pd_rd_w=AbM60&content-id=amzn1.sym.d51c404a-da39-423c-9202-335828916db0&pf_rd_p=d51c404a-da39-423c-9202-335828916db0&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Ficción" [ref=e1451]
+                - generic [ref=e1453]: Ficción
+              - link "Motivacional" [ref=e1455] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=motivational%20books&pd_rd_w=AbM60&content-id=amzn1.sym.d51c404a-da39-423c-9202-335828916db0&pf_rd_p=d51c404a-da39-423c-9202-335828916db0&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Motivacional" [ref=e1457]
+                - generic [ref=e1459]: Motivacional
+          - link "Libros que atrapan - Ver más" [ref=e1461] [cursor=pointer]:
+            - /url: /-/es/s/?_encoding=UTF8&k=great%20books&pd_rd_w=AbM60&content-id=amzn1.sym.d51c404a-da39-423c-9202-335828916db0&pf_rd_p=d51c404a-da39-423c-9202-335828916db0&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+            - generic [ref=e1463]: Ver más
+        - generic [ref=e1465]:
+          - heading "Explora más en Deportes" [level=2] [ref=e1467]
+          - generic [ref=e1468]:
+            - generic [ref=e1469]:
+              - link "Ciclismo" [ref=e1471] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=cycling&pd_rd_w=At1PV&content-id=amzn1.sym.8b84246f-fc49-4c92-87bb-845a9891e030&pf_rd_p=8b84246f-fc49-4c92-87bb-845a9891e030&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Ciclismo" [ref=e1473]
+                - generic [ref=e1475]: Ciclismo
+              - link "Para correr" [ref=e1477] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=running&pd_rd_w=At1PV&content-id=amzn1.sym.8b84246f-fc49-4c92-87bb-845a9891e030&pf_rd_p=8b84246f-fc49-4c92-87bb-845a9891e030&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Para correr" [ref=e1479]
+                - generic [ref=e1481]: Para correr
+            - generic [ref=e1482]:
+              - link "Ejercicio y fitness" [ref=e1484] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=exercise%20and%20fitness&pd_rd_w=At1PV&content-id=amzn1.sym.8b84246f-fc49-4c92-87bb-845a9891e030&pf_rd_p=8b84246f-fc49-4c92-87bb-845a9891e030&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Ejercicio y fitness" [ref=e1486]
+                - generic [ref=e1488]: Ejercicio y fitness
+              - link "Golf" [ref=e1490] [cursor=pointer]:
+                - /url: /-/es/s/?_encoding=UTF8&k=golf&pd_rd_w=At1PV&content-id=amzn1.sym.8b84246f-fc49-4c92-87bb-845a9891e030&pf_rd_p=8b84246f-fc49-4c92-87bb-845a9891e030&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+                - img "Golf" [ref=e1492]
+                - generic [ref=e1494]: Golf
+          - link "Explora más en Deportes - Explorar más" [ref=e1496] [cursor=pointer]:
+            - /url: /-/es/s/?_encoding=UTF8&k=sports&pd_rd_w=At1PV&content-id=amzn1.sym.8b84246f-fc49-4c92-87bb-845a9891e030&pf_rd_p=8b84246f-fc49-4c92-87bb-845a9891e030&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_unk
+            - generic [ref=e1498]: Explorar más
+        - separator [ref=e1499]
+        - generic [ref=e1502]:
+          - heading "Los Más Vendidos en Cocina y Comedor" [level=2] [ref=e1504]
+          - list [ref=e1507]:
+            - listitem [ref=e1508]:
+              - link "Bounty Toallas de papel de tamaño rápido, color blanco, 16 rollos familiares = 40 rollos regulares" [ref=e1510] [cursor=pointer]:
+                - /url: /-/es/Bounty-Toallas-tama%C3%B1o-familiares-regulares/dp/B079VP6DH5/?_encoding=UTF8&pd_rd_w=hyb8P&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_284507
+                - img "Bounty Toallas de papel de tamaño rápido, color blanco, 16 rollos familiares = 40 rollos regulares" [ref=e1511]
+            - listitem [ref=e1512]:
+              - link "Amazon Basics Toallas de papel de hojas flexibles de 2 capas, 12 rollos básicos = 40 rollos regulares, valor diario con..." [ref=e1514] [cursor=pointer]:
+                - /url: /-/es/Amazon-Basics-flexibles-regulares-embalaje/dp/B09BWFX1L6/?_encoding=UTF8&pd_rd_w=hyb8P&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_284507
+                - img "Amazon Basics Toallas de papel de hojas flexibles de 2 capas, 12 rollos básicos = 40 rollos regulares, valor diario con..." [ref=e1515]
+            - listitem [ref=e1516]:
+              - link "Scott Toallas de papel, elige una hoja, 6 rollos dobles = 12 rollos regulares (108 hojas por rollo)" [ref=e1518] [cursor=pointer]:
+                - /url: /-/es/Scott-Toallas-rollos-dobles-regulares/dp/B0DF8RSVJK/?_encoding=UTF8&pd_rd_w=hyb8P&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_284507
+                - img "Scott Toallas de papel, elige una hoja, 6 rollos dobles = 12 rollos regulares (108 hojas por rollo)" [ref=e1519]
+            - listitem [ref=e1520]:
+              - link "Sparkle Pick-A-Size - Toallas de papel, 6 rollos dobles (660 hojas en total), toallas fuertes de 2 capas para limpieza..." [ref=e1522] [cursor=pointer]:
+                - /url: /-/es/Sparkle-Pick-Size-limpieza-desorden/dp/B09NW92T8Q/?_encoding=UTF8&pd_rd_w=hyb8P&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_284507
+                - img "Sparkle Pick-A-Size - Toallas de papel, 6 rollos dobles (660 hojas en total), toallas fuertes de 2 capas para limpieza..." [ref=e1523]
+            - listitem [ref=e1524]:
+              - link "Brawny Tear-A-Square Toallas de papel de 3 capas, 12 rollos familiares XL = 30 rollos regulares, fuertes, absorbentes y..." [ref=e1526] [cursor=pointer]:
+                - /url: /-/es/Brawny-familiares-regulares-absorbentes-duraderas/dp/B0F5Z1W4Y1/?_encoding=UTF8&pd_rd_w=hyb8P&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_284507
+                - img "Brawny Tear-A-Square Toallas de papel de 3 capas, 12 rollos familiares XL = 30 rollos regulares, fuertes, absorbentes y..." [ref=e1527]
+            - listitem [ref=e1528]:
+              - link "Dixie - Platos de papel medianos, 8.5 pulgadas, 90 unidades, 2 veces más resistentes*, aptos para microondas, a prueba..." [ref=e1530] [cursor=pointer]:
+                - /url: /-/es/Dixie-medianos-resistentes-microondas-desechables/dp/B0748J34WZ/?_encoding=UTF8&pd_rd_w=hyb8P&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_284507
+                - img "Dixie - Platos de papel medianos, 8.5 pulgadas, 90 unidades, 2 veces más resistentes*, aptos para microondas, a prueba..." [ref=e1531]
+            - listitem [ref=e1532]:
+              - link "Dixie Platos de papel grandes, 10 pulgadas, 150 unidades, 2 veces más fuertes, aptos para microondas, a prueba de..." [ref=e1534] [cursor=pointer]:
+                - /url: /-/es/Dixie-pulgadas-microondas-resistentes-desechables/dp/B074PY4Y8Y/?_encoding=UTF8&pd_rd_w=hyb8P&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_284507
+                - img "Dixie Platos de papel grandes, 10 pulgadas, 150 unidades, 2 veces más fuertes, aptos para microondas, a prueba de..." [ref=e1535]
+            - listitem [ref=e1536]:
+              - link "Bounty Servilletas de papel, blancas, 200 unidades, el embalaje puede variar" [ref=e1538] [cursor=pointer]:
+                - /url: /-/es/Bounty-Servilletas-blancas-unidades-embalaje/dp/B000VCFB0G/?_encoding=UTF8&pd_rd_w=hyb8P&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_284507
+                - img "Bounty Servilletas de papel, blancas, 200 unidades, el embalaje puede variar" [ref=e1539]
+            - listitem [ref=e1540]:
+              - link "Botella de agua Owala FreeSip con aislamiento de acero inoxidable con pico de dos vías, pajita incorporada y asa de..." [ref=e1542] [cursor=pointer]:
+                - /url: /-/es/Owala-aislamiento-inoxidable-incorporada-fabricada/dp/B0FJZDV6BH/?_encoding=UTF8&pd_rd_w=hyb8P&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_284507
+                - img "Botella de agua Owala FreeSip con aislamiento de acero inoxidable con pico de dos vías, pajita incorporada y asa de..." [ref=e1543]
+            - listitem [ref=e1544]:
+              - link "STANLEY IceFlow 2.0 - Vaso con pajilla abatible con asa, 30 onzas, tapa giratoria y popote abatible, botella de agua..." [ref=e1546] [cursor=pointer]:
+                - /url: /-/es/STANLEY-IceFlow-2-0-resistente-inoxidable/dp/B0FB7396CF/?_encoding=UTF8&pd_rd_w=hyb8P&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_284507
+                - img "STANLEY IceFlow 2.0 - Vaso con pajilla abatible con asa, 30 onzas, tapa giratoria y popote abatible, botella de agua..." [ref=e1547]
+            - listitem [ref=e1548]:
+              - link "Viva Signature - Toallas de papel de tela, 3 rollos dobles, 86 hojas por rollo" [ref=e1550] [cursor=pointer]:
+                - /url: /-/es/Viva-Signature-Toallas-rollos-dobles/dp/B0DF9BGP8S/?_encoding=UTF8&pd_rd_w=hyb8P&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_284507
+                - img "Viva Signature - Toallas de papel de tela, 3 rollos dobles, 86 hojas por rollo" [ref=e1551]
+            - listitem [ref=e1552]:
+              - link "Dixie Platos de papel ultra grandes, 10 pulgadas, 172 unidades (4 paquetes de 43 platos), 3 veces más fuertes,..." [ref=e1554] [cursor=pointer]:
+                - /url: /-/es/Dixie-pulgadas-unidades-resistentes-microondas/dp/B099BWGZBP/?_encoding=UTF8&pd_rd_w=hyb8P&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_284507
+                - img "Dixie Platos de papel ultra grandes, 10 pulgadas, 172 unidades (4 paquetes de 43 platos), 3 veces más fuertes,..." [ref=e1555]
+            - listitem [ref=e1556]:
+              - link "Amazon Basics Tenedores desechables de plástico transparente, calidad premium, 100 unidades, paquete grande" [ref=e1558] [cursor=pointer]:
+                - /url: /-/es/Amazon-Basics-Tenedores-desechables-transparente/dp/B0CLH1445W/?_encoding=UTF8&pd_rd_w=hyb8P&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_284507
+                - img "Amazon Basics Tenedores desechables de plástico transparente, calidad premium, 100 unidades, paquete grande" [ref=e1559]
+            - listitem [ref=e1560]:
+              - link "Amazon Basics Ultra - Platos de papel, 10 pulgadas, desechables, 100 unidades" [ref=e1562] [cursor=pointer]:
+                - /url: /-/es/Amazon-Basics-Ultra-pulgadas-desechables/dp/B0DN895DMC/?_encoding=UTF8&pd_rd_w=hyb8P&content-id=amzn1.sym.9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_p=9929d3ab-edb7-4ef5-a232-26d90f828fa5&pf_rd_r=09W7ZGB2EEDXDB70S1XZ&pd_rd_wg=yQheu&pd_rd_r=19c490ce-5088-40d4-87ca-bf3cb6410317&ref_=pd_hp_d_btf_crs_zg_bs_284507
+                - img "Amazon Basics Ultra - Platos de papel, 10 pulgadas, desechables, 100 unidades" [ref=e1563]
+  - complementary "Productos que has visto recientemente y recomendaciones destacadas"
+  - generic [ref=e1565]:
+    - button "Inicio de Página" [ref=e1566] [cursor=pointer]:
+      - generic [ref=e1567]: Inicio de Página
+    - generic [ref=e1568]:
+      - generic [ref=e1569]:
+        - heading "Conócenos" [level=6] [ref=e1570]
+        - list [ref=e1571]:
+          - listitem [ref=e1572]:
+            - link "Trabaja en Amazon" [ref=e1573] [cursor=pointer]:
+              - /url: https://www.amazon.jobs
+          - listitem [ref=e1574]:
+            - link "Blog" [ref=e1575] [cursor=pointer]:
+              - /url: https://blog.aboutamazon.com/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=e1576]:
+            - link "Acerca de Amazon" [ref=e1577] [cursor=pointer]:
+              - /url: https://www.aboutamazon.com/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=e1578]:
+            - link "Relaciones con los Inversionistas" [ref=e1579] [cursor=pointer]:
+              - /url: https://www.amazon.com/-/es/ir
+          - listitem [ref=e1580]:
+            - link "Dispositivos Amazon" [ref=e1581] [cursor=pointer]:
+              - /url: /-/es/gp/browse.html?node=2102313011&ref_=footer_devices
+          - listitem [ref=e1582]:
+            - link "Amazon Science" [ref=e1583] [cursor=pointer]:
+              - /url: https://www.amazon.science
+      - generic [ref=e1585]:
+        - heading "Gana Dinero con Nosotros" [level=6] [ref=e1586]
+        - list [ref=e1587]:
+          - listitem [ref=e1588]:
+            - link "Vender productos en Amazon" [ref=e1589] [cursor=pointer]:
+              - /url: https://services.amazon.com/sell.html?ld=AZFSSOA&ref_=footer_soa
+          - listitem [ref=e1590]:
+            - link "Vende en Amazon Business" [ref=e1591] [cursor=pointer]:
+              - /url: https://services.amazon.com/amazon-business.html?ld=usb2bunifooter&ref_=footer_b2b
+          - listitem [ref=e1592]:
+            - link "Vender aplicaciones en Amazon" [ref=e1593] [cursor=pointer]:
+              - /url: https://developer.amazon.com
+          - listitem [ref=e1594]:
+            - link "Programa de Afiliados" [ref=e1595] [cursor=pointer]:
+              - /url: https://affiliate-program.amazon.com/
+          - listitem [ref=e1596]:
+            - link "Anuncia tus Productos" [ref=e1597] [cursor=pointer]:
+              - /url: https://advertising.amazon.com/?ref=ext_amzn_ftr
+          - listitem [ref=e1598]:
+            - link "Publica tu Libro en Kindle" [ref=e1599] [cursor=pointer]:
+              - /url: /-/es/gp/seller-account/mm-summary-page.html?ld=AZFooterSelfPublish&topic=200260520&ref_=footer_publishing
+          - listitem [ref=e1600]:
+            - link "Habilita un Amazon Hub" [ref=e1601] [cursor=pointer]:
+              - /url: https://go.thehub-amazon.com/amazon-hub-locker
+          - listitem [ref=e1602]:
+            - text: ›
+            - link "Ver más Gana Dinero con Nosotros" [ref=e1603] [cursor=pointer]:
+              - /url: /-/es/b/?node=18190131011&ld=AZUSSOA-seemore&ref_=footer_seemore
+      - generic [ref=e1605]:
+        - heading "Productos de Pago de Amazon" [level=6] [ref=e1606]
+        - list [ref=e1607]:
+          - listitem [ref=e1608]:
+            - link "Compra con Puntos" [ref=e1609] [cursor=pointer]:
+              - /url: /-/es/gp/browse.html?node=16218619011&ref_=footer_swp
+          - listitem [ref=e1610]:
+            - link "Recarga tu Saldo" [ref=e1611] [cursor=pointer]:
+              - /url: /-/es/dp/B0CHTVMXZJ?th=1?ref_=footer_reload_us
+          - listitem [ref=e1612]:
+            - link "Conversor de divisas de Amazon" [ref=e1613] [cursor=pointer]:
+              - /url: /-/es/gp/browse.html?node=388305011&ref_=footer_tfx
+      - generic [ref=e1615]:
+        - heading "Podemos Ayudarte" [level=6] [ref=e1616]
+        - list [ref=e1617]:
+          - listitem [ref=e1618]:
+            - link "Amazon y el COVID-19" [ref=e1619] [cursor=pointer]:
+              - /url: /-/es/gp/help/customer/display.html?nodeId=GDFU3JS5AL6SYHRD&ref_=footer_covid
+          - listitem [ref=e1620]:
+            - link "Tu Cuenta" [ref=e1621] [cursor=pointer]:
+              - /url: https://www.amazon.com/-/es/gp/css/homepage.html?ref_=footer_ya
+          - listitem [ref=e1622]:
+            - link "Tus Pedidos" [ref=e1623] [cursor=pointer]:
+              - /url: https://www.amazon.com/-/es/gp/css/order-history?ref_=footer_yo
+          - listitem [ref=e1624]:
+            - link "Tarifas de Envío y Políticas" [ref=e1625] [cursor=pointer]:
+              - /url: /-/es/gp/help/customer/display.html?nodeId=468520&ref_=footer_shiprates
+          - listitem [ref=e1626]:
+            - link "Devoluciones y Reemplazos" [ref=e1627] [cursor=pointer]:
+              - /url: /-/es/gp/css/returns/homepage.html?ref_=footer_hy_f_4
+          - listitem [ref=e1628]:
+            - link "Administrar Contenido y Dispositivos" [ref=e1629] [cursor=pointer]:
+              - /url: /-/es/gp/digital/fiona/manage?ref_=footer_myk
+          - listitem [ref=e1630]:
+            - link "Ayuda" [ref=e1631] [cursor=pointer]:
+              - /url: /-/es/gp/help/customer/display.html?nodeId=508510&ref_=footer_gw_m_b_he
+    - generic [ref=e1633]:
+      - link "Amazon US Home" [ref=e1636] [cursor=pointer]:
+        - /url: /-/es/?ref_=footer_logo
+      - generic [ref=e1639]:
+        - generic [ref=e1640]:
+          - link "Elige un idioma para hacer compras. La selección actual es Español." [ref=e1641] [cursor=pointer]:
+            - /url: /-/es/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=footer_lang
+            - generic [ref=e1643]: Español
+          - button "Ampliar para cambiar el idioma o país" [ref=e1644] [cursor=pointer]
+        - link "$ USD - dólar estadounidense" [ref=e1645] [cursor=pointer]:
+          - /url: /-/es/customer-preferences/edit?ie=UTF8&ref_=footer_cop&preferencesReturnUrl=%2F
+          - generic [ref=e1646]: $
+          - generic [ref=e1647]: USD - dólar estadounidense
+        - button "Selecciona un país/una región para comprar. La selección actual esEstados Unidos." [ref=e1648] [cursor=pointer]:
+          - generic [ref=e1650]: Estados Unidos
+    - navigation "Más en Amazon" [ref=e1651]:
+      - generic "Más en Amazon" [ref=e1652]:
+        - list [ref=e1653]:
+          - listitem [ref=e1654]:
+            - link "Amazon Music Reproduce millones de canciones" [ref=e1655] [cursor=pointer]:
+              - /url: https://music.amazon.com?ref=dm_aff_amz_com
+              - heading "Amazon Music" [level=5] [ref=e1656]
+              - generic [ref=e1657]:
+                - text: Reproduce millones
+                - text: de canciones
+          - listitem [ref=e1658]
+          - listitem [ref=e1659]:
+            - link "Amazon Advertising Encontrar, atraer y captar clientes" [ref=e1660] [cursor=pointer]:
+              - /url: https://advertising.amazon.com/?ref=footer_advtsing_amzn_com
+              - heading "Amazon Advertising" [level=5] [ref=e1661]
+              - generic [ref=e1662]:
+                - text: Encontrar, atraer y
+                - text: captar clientes
+          - listitem [ref=e1663]
+          - listitem [ref=e1664]:
+            - link "6pm Descubre ofertas en marcas de moda" [ref=e1665] [cursor=pointer]:
+              - /url: https://www.6pm.com
+              - heading "6pm" [level=5] [ref=e1666]
+              - generic [ref=e1667]:
+                - text: Descubre ofertas
+                - text: en marcas de moda
+          - listitem [ref=e1668]
+          - listitem [ref=e1669]:
+            - link "AbeBooks Libros, arte & artículos de colección" [ref=e1670] [cursor=pointer]:
+              - /url: https://www.abebooks.com
+              - heading "AbeBooks" [level=5] [ref=e1671]
+              - generic [ref=e1672]:
+                - text: Libros, arte
+                - text: "& artículos de colección"
+          - listitem [ref=e1673]
+          - listitem [ref=e1674]:
+            - link "ACX Editorial de Audiolibros Hecho Fácil" [ref=e1675] [cursor=pointer]:
+              - /url: https://www.acx.com/
+              - heading "ACX" [level=5] [ref=e1676]
+              - generic [ref=e1677]:
+                - text: Editorial de Audiolibros
+                - text: Hecho Fácil
+          - listitem [ref=e1678]
+          - listitem [ref=e1679]:
+            - link "Venda en Amazon Comience una cuenta de venta" [ref=e1680] [cursor=pointer]:
+              - /url: https://sell.amazon.com/?ld=AZUSSOA-footer-aff&ref_=footer_sell
+              - heading "Venda en Amazon" [level=5] [ref=e1681]
+              - generic [ref=e1682]: Comience una cuenta de venta
+        - list [ref=e1683]:
+          - listitem [ref=e1684]:
+            - link "Veeqo Shipping Software Inventory Management" [ref=e1685] [cursor=pointer]:
+              - /url: https://www.veeqo.com/?utm_source=amazon&utm_medium=website&utm_campaign=footer
+              - heading "Veeqo" [level=5] [ref=e1686]
+              - generic [ref=e1687]:
+                - text: Shipping Software
+                - text: Inventory Management
+          - listitem [ref=e1688]
+          - listitem [ref=e1689]:
+            - link "Amazon Business Todo para tu negocio" [ref=e1690] [cursor=pointer]:
+              - /url: /-/es/business?ref_=footer_retail_b2b
+              - heading "Amazon Business" [level=5] [ref=e1691]
+              - generic [ref=e1692]:
+                - text: Todo para
+                - text: tu negocio
+          - listitem [ref=e1693]
+          - listitem [ref=e1694]:
+            - link "AmazonGlobal Pedidos de Envío Internacional" [ref=e1695] [cursor=pointer]:
+              - /url: /-/es/gp/browse.html?node=230659011&ref_=footer_amazonglobal
+              - heading "AmazonGlobal" [level=5] [ref=e1696]
+              - generic [ref=e1697]:
+                - text: Pedidos de Envío
+                - text: Internacional
+          - listitem [ref=e1698]
+          - listitem [ref=e1699]:
+            - link "Amazon Web Services Servicios de cómputo en nube escalable" [ref=e1700] [cursor=pointer]:
+              - /url: https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&sc_campaign=amazonfooter
+              - heading "Amazon Web Services" [level=5] [ref=e1701]
+              - generic [ref=e1702]:
+                - text: Servicios de cómputo
+                - text: en nube escalable
+          - listitem [ref=e1703]
+          - listitem [ref=e1704]:
+            - link "Audible Escucha Libros e Interpretaciones de Audio Originales" [ref=e1705] [cursor=pointer]:
+              - /url: https://www.audible.com
+              - heading "Audible" [level=5] [ref=e1706]
+              - generic [ref=e1707]:
+                - text: Escucha Libros e Interpretaciones
+                - text: de Audio Originales
+          - listitem [ref=e1708]
+          - listitem [ref=e1709]:
+            - link "Box Office Mojo Encuentra películas Datos de taquilla" [ref=e1710] [cursor=pointer]:
+              - /url: https://www.boxofficemojo.com/?ref_=amzn_nav_ftr
+              - heading "Box Office Mojo" [level=5] [ref=e1711]
+              - generic [ref=e1712]:
+                - text: Encuentra películas
+                - text: Datos de taquilla
+        - list [ref=e1713]:
+          - listitem [ref=e1714]:
+            - link "Goodreads Análisis de libros y recomendaciones" [ref=e1715] [cursor=pointer]:
+              - /url: https://www.goodreads.com
+              - heading "Goodreads" [level=5] [ref=e1716]
+              - generic [ref=e1717]:
+                - text: Análisis de libros
+                - text: y recomendaciones
+          - listitem [ref=e1718]
+          - listitem [ref=e1719]:
+            - link "IMDb Películas, TV y Celebridades" [ref=e1720] [cursor=pointer]:
+              - /url: https://www.imdb.com
+              - heading "IMDb" [level=5] [ref=e1721]
+              - generic [ref=e1722]:
+                - text: Películas, TV
+                - text: y Celebridades
+          - listitem [ref=e1723]
+          - listitem [ref=e1724]:
+            - link "IMDbPro Obtén información de entretenimiento que los profesionales necesitan" [ref=e1725] [cursor=pointer]:
+              - /url: https://pro.imdb.com?ref_=amzn_nav_ftr
+              - heading "IMDbPro" [level=5] [ref=e1726]
+              - generic [ref=e1727]:
+                - text: Obtén información de entretenimiento
+                - text: que los profesionales necesitan
+          - listitem [ref=e1728]
+          - listitem [ref=e1729]:
+            - link "Kindle Direct Publishing Publica tu libro en papel y digital de manera independiente" [ref=e1730] [cursor=pointer]:
+              - /url: https://kdp.amazon.com
+              - heading "Kindle Direct Publishing" [level=5] [ref=e1731]
+              - generic [ref=e1732]:
+                - text: Publica tu libro en papel y digital
+                - text: de manera independiente
+          - listitem [ref=e1733]
+          - listitem [ref=e1734]:
+            - link "Prime Video Direct Distribución de Video Sin Esfuerzo" [ref=e1735] [cursor=pointer]:
+              - /url: https://videodirect.amazon.com/home/landing
+              - heading "Prime Video Direct" [level=5] [ref=e1736]
+              - generic [ref=e1737]:
+                - text: Distribución de Video
+                - text: Sin Esfuerzo
+          - listitem [ref=e1738]
+          - listitem [ref=e1739]:
+            - link "Shopbop Diseñador Marcas de Moda" [ref=e1740] [cursor=pointer]:
+              - /url: https://www.shopbop.com
+              - heading "Shopbop" [level=5] [ref=e1741]
+              - generic [ref=e1742]:
+                - text: Diseñador
+                - text: Marcas de Moda
+        - list [ref=e1743]:
+          - listitem [ref=e1744]:
+            - link "Woot! Descuentos y travesuras" [ref=e1745] [cursor=pointer]:
+              - /url: https://www.woot.com/
+              - heading "Woot!" [level=5] [ref=e1746]
+              - generic [ref=e1747]:
+                - text: Descuentos y
+                - text: travesuras
+          - listitem [ref=e1748]
+          - listitem [ref=e1749]:
+            - link "Zappos Zapatos y ropa" [ref=e1750] [cursor=pointer]:
+              - /url: https://www.zappos.com
+              - heading "Zappos" [level=5] [ref=e1751]
+              - generic [ref=e1752]:
+                - text: Zapatos y
+                - text: ropa
+          - listitem [ref=e1753]
+          - listitem [ref=e1754]:
+            - link "Ring Casa Inteligente Sistemas de Seguridad" [ref=e1755] [cursor=pointer]:
+              - /url: https://ring.com
+              - heading "Ring" [level=5] [ref=e1756]
+              - generic [ref=e1757]:
+                - text: Casa Inteligente
+                - text: Sistemas de Seguridad
+          - listitem [ref=e1758]
+          - listitem [ref=e1759]:
+            - link "Wifi eero Video 4K en tiempo real en todas las habitaciones" [ref=e1760] [cursor=pointer]:
+              - /url: https://eero.com/
+              - heading "Wifi eero" [level=5] [ref=e1761]
+              - generic [ref=e1762]: Video 4K en tiempo real en todas las habitaciones
+          - listitem [ref=e1763]
+          - listitem [ref=e1764]:
+            - link "Blink Seguridad inteligente para todos los hogares" [ref=e1765] [cursor=pointer]:
+              - /url: https://blinkforhome.com/?ref=nav_footer
+              - heading "Blink" [level=5] [ref=e1766]
+              - generic [ref=e1767]:
+                - text: Seguridad inteligente
+                - text: para todos los hogares
+          - listitem [ref=e1768]
+          - listitem [ref=e1769]:
+            - link "Neighbors App Alertas de seguridad y delitos en tiempo real" [ref=e1770] [cursor=pointer]:
+              - /url: https://shop.ring.com/pages/neighbors-app
+              - heading "Neighbors App" [level=5] [ref=e1771]
+              - generic [ref=e1772]:
+                - text: Alertas de seguridad
+                - text: y delitos en tiempo real
+        - list [ref=e1773]:
+          - listitem [ref=e1774]
+          - listitem [ref=e1775]
+          - listitem [ref=e1776]
+          - listitem [ref=e1777]
+          - listitem [ref=e1778]:
+            - link "Suscríbete con Amazon a los servicios de suscripción de \"Discover & try\"" [ref=e1779] [cursor=pointer]:
+              - /url: /-/es/gp/browse.html?node=14498690011&ref_=amzn_nav_ftr_swa
+              - heading "Suscríbete con Amazon" [level=5] [ref=e1780]
+              - generic [ref=e1781]:
+                - text: a los servicios de suscripción
+                - text: de "Discover & try"
+          - listitem [ref=e1782]
+          - listitem [ref=e1783]:
+            - link "PillPack Pharmacy simplificado" [ref=e1784] [cursor=pointer]:
+              - /url: https://www.pillpack.com
+              - heading "PillPack" [level=5] [ref=e1785]
+              - generic [ref=e1786]: Pharmacy simplificado
+          - listitem [ref=e1787]
+          - listitem [ref=e1788]
+          - listitem [ref=e1789]
+          - listitem [ref=e1790]
+    - generic [ref=e1791]:
+      - list [ref=e1792]:
+        - listitem [ref=e1793]:
+          - link "Condiciones de uso" [ref=e1794] [cursor=pointer]:
+            - /url: /-/es/gp/help/customer/display.html?nodeId=508088&ref_=footer_cou
+        - listitem [ref=e1795]:
+          - link "Aviso de privacidad" [ref=e1796] [cursor=pointer]:
+            - /url: /-/es/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ&ref_=footer_privacy
+        - listitem [ref=e1797]:
+          - link "Aviso de Privacidad de Datos de Salud del Consumidor" [ref=e1798] [cursor=pointer]:
+            - /url: /-/es/gp/help/customer/display.html?ie=UTF8&nodeId=TnACMrGVghHocjL8KB&ref_=footer_consumer_health_data_privacy
+        - listitem [ref=e1799]:
+          - link "Tus opciones de privacidad de los anuncios" [ref=e1800] [cursor=pointer]:
+            - /url: /-/es/privacyprefs?ref_=footer_iba
+        - listitem [ref=e1801]
+      - generic [ref=e1803]: © 1996-2026 Amazon.com, Inc. o sus afiliados
