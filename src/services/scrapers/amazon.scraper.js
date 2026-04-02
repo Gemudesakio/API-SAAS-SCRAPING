@@ -16,6 +16,8 @@ function isValidAmazonUrl(rawUrl) {
 
 function buildAmazonUrl(query, page = 1) {
   const params = new URLSearchParams({ k: query.trim() });
+  params.set('dc', '');
+  params.set('delivery', 'countryCode:CO');
   if (page > 1) params.set('page', String(page));
   return `${AMAZON_BASE_URL}/s?${params}`;
 }

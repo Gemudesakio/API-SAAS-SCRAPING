@@ -50,76 +50,103 @@ function resolveAliExpressTargetUrl({ query, url }, page) {
   );
 }
 
-function extractFromRunParams(html, maxItems) {
-  const match = html.match(/window\.runParams\s*=\s*({.*?});\s*<\/script>/s);
-  if (!match) return [];
+function normalizeUrl(rawUrl) {
+  if (!rawUrl) return '';
+  if (rawUrl.startsWith('//')) return `https:${rawUrl}`;
+  return rawUrl;
+}
 
-  try {
-    const data = JSON.parse(match[1]);
-    const items =
-      data?.data?.root?.fields?.mods?.itemList?.content ||
-      data?.mods?.itemList?.content ||
-      [];
+function extractFromInlineData(html, maxItems) {
+  // AliExpress embeds product data in a <script> bundle with itemList.content[]
+  // Each product has: productId, title.displayTitle, prices.salePrice.formattedPrice,
+  // image.imgUrl, productDetailUrl
+  if (!html.includes('"itemList"')) return [];
 
-    return items.slice(0, maxItems).map((item) => {
-      const title = item.title?.displayTitle || item.title || '';
-      const priceRaw =
-        item.prices?.salePrice?.formattedPrice ||
-        item.prices?.salePrice?.minPrice ||
-        '';
-      const productUrl = item.productDetailUrl || '';
-      const url = productUrl.startsWith('//')
-        ? `https:${productUrl}`
-        : productUrl;
-      const image = item.image?.imgUrl
-        ? (item.image.imgUrl.startsWith('//') ? `https:${item.image.imgUrl}` : item.image.imgUrl)
-        : '';
+  const products = [];
+  const seen = new Set();
 
-      return { title, priceRaw, url, image, availabilityRaw: 'DISPONIBLE' };
+  // Find each productId and extract surrounding fields from its chunk
+  const productIdMatches = [...html.matchAll(/"productId":"(\d+)"/g)];
+
+  for (const match of productIdMatches) {
+    if (products.length >= maxItems) break;
+
+    const productId = match[1];
+    if (seen.has(productId)) continue;
+    seen.add(productId);
+
+    // Extract a chunk around this productId (data is nearby in the JS)
+    const start = Math.max(0, match.index - 500);
+    const end = Math.min(html.length, match.index + 3000);
+    const chunk = html.substring(start, end);
+
+    const title =
+      chunk.match(/"displayTitle":"([^"]+)"/)?.[1] ||
+      chunk.match(/"productTitle":"([^"]+)"/)?.[1] ||
+      '';
+
+    const priceRaw =
+      chunk.match(/"formattedPrice":"([^"]+)"/)?.[1] ||
+      chunk.match(/"minPrice":(\d+)/)?.[1] ||
+      '';
+
+    const imgUrl = normalizeUrl(
+      chunk.match(/"imgUrl":"([^"]+)"/)?.[1] || ''
+    );
+
+    const detailUrl = normalizeUrl(
+      chunk.match(/"productDetailUrl":"([^"]+)"/)?.[1] || ''
+    );
+
+    if (!title || !detailUrl) continue;
+
+    products.push({
+      title,
+      priceRaw: String(priceRaw),
+      url: detailUrl,
+      image: imgUrl,
+      availabilityRaw: 'DISPONIBLE',
     });
-  } catch {
-    return [];
   }
+
+  return products;
 }
 
 function extractFromDom($, maxItems) {
   const products = [];
 
-  const selectors = [
-    '[class*="SearchResultList"] [class*="CardWrapper"]',
-    '[class*="product-card"]',
-    '.search-item-card-wrapper-gallery',
-    'a[href*="/item/"]',
-  ];
+  // Fallback: find all links to product detail pages
+  $('a[href*="/item/"]').each((_, el) => {
+    if (products.length >= maxItems) return;
 
-  for (const selector of selectors) {
-    $(selector).each((_, el) => {
-      if (products.length >= maxItems) return;
+    const link = $(el);
+    const href = link.attr('href') || '';
+    const url = normalizeUrl(href);
+    if (!url || !url.includes('/item/')) return;
 
-      const card = $(el);
-      const title = card.find('h1, h2, h3, [class*="title"]').first().text().trim();
-      const priceRaw = card.find('[class*="price"], [class*="Price"]').first().text().trim();
-      const href = card.find('a[href*="/item/"]').first().attr('href') ||
-        card.attr('href') || '';
-      const url = href.startsWith('//') ? `https:${href}` : href;
-      const image =
-        card.find('img').first().attr('src') ||
-        card.find('img').first().attr('data-src') ||
-        '';
+    // Walk up to find the product card container
+    const card = link.closest('div[class]');
+    const title =
+      card.find('[class*="title"], h1, h2, h3').first().text().trim() ||
+      link.text().trim();
+    const priceRaw =
+      card.find('[class*="price"], [class*="Price"]').first().text().trim();
+    const image = normalizeUrl(
+      card.find('img').first().attr('src') ||
+      card.find('img').first().attr('data-src') ||
+      ''
+    );
 
-      if (title && url) {
-        products.push({
-          title,
-          priceRaw,
-          url: url.startsWith('http') ? url : `https://es.aliexpress.com${url}`,
-          image: image.startsWith('//') ? `https:${image}` : image,
-          availabilityRaw: 'DISPONIBLE',
-        });
-      }
-    });
-
-    if (products.length > 0) break;
-  }
+    if (title && title.length > 3) {
+      products.push({
+        title,
+        priceRaw,
+        url: url.startsWith('http') ? url : `https://es.aliexpress.com${url}`,
+        image,
+        availabilityRaw: 'DISPONIBLE',
+      });
+    }
+  });
 
   return products;
 }
@@ -161,9 +188,10 @@ export async function scrapeAliExpress({
     lastFinalUrl = finalUrl;
     pagesVisited++;
 
-    // Try runParams first (structured JSON), then DOM parsing
-    let pageProducts = extractFromRunParams(html, maxItems - products.length);
+    // Strategy 1: Extract from inline JS data (itemList.content[])
+    let pageProducts = extractFromInlineData(html, maxItems - products.length);
 
+    // Strategy 2: Fallback to DOM parsing
     if (!pageProducts.length) {
       const $ = loadHtml(html);
       pageProducts = extractFromDom($, maxItems - products.length);

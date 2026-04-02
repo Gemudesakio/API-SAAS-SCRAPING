@@ -146,20 +146,12 @@ export async function scrapeEbay({
     const targetUrl = resolveEbayTargetUrl({ query, url }, page);
     lastUrl = targetUrl;
 
-    // Try direct fetch first, fallback to FlareSolverr if blocked
-    let result;
-
-    if (useFlareSolverr && page > 1) {
-      // Page 2+ always needs FlareSolverr (eBay blocks repeat requests)
-      result = await fetchWithFlareSolverr(targetUrl);
-    } else {
-      result = await fetchDirect(targetUrl);
-
-      // If blocked, retry with FlareSolverr
-      if (isBlockedPage(result.html) && useFlareSolverr) {
-        result = await fetchWithFlareSolverr(targetUrl);
-      }
-    }
+    // Use FlareSolverr for ALL pages when available (like Homecenter/Decathlon).
+    // eBay blocks repeated fetch requests from the same IP, so FlareSolverr must
+    // handle the full session (cookies, browser state) from page 1 onward.
+    const result = useFlareSolverr
+      ? await fetchWithFlareSolverr(targetUrl)
+      : await fetchDirect(targetUrl);
 
     if (firstStatus === null) firstStatus = result.status;
     pagesVisited++;
@@ -167,20 +159,13 @@ export async function scrapeEbay({
     if (!result.html || isBlockedPage(result.html)) {
       if (products.length > 0) break;
 
-      if (!useFlareSolverr) {
-        throw new AppError(
-          'eBay bloqueó la petición. Configura FLARESOLVERR_URL para bypass automático.',
-          503,
-          'BOT_CHALLENGE',
-          { reason: 'ebay_rate_limit', hint: 'Set FLARESOLVERR_URL env variable' }
-        );
-      }
-
       throw new AppError(
-        'eBay bloqueó la petición incluso con FlareSolverr',
+        useFlareSolverr
+          ? 'eBay bloqueó la petición incluso con FlareSolverr'
+          : 'eBay bloqueó la petición. Configura FLARESOLVERR_URL para bypass automático.',
         503,
         'BOT_CHALLENGE',
-        { reason: 'ebay_block' }
+        { reason: 'ebay_block', hint: useFlareSolverr ? undefined : 'Set FLARESOLVERR_URL env variable' }
       );
     }
 
