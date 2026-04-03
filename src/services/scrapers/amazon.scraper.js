@@ -9,7 +9,7 @@ import {
 import { convertToCOP } from '../../utils/currency.js';
 
 const AMAZON_BASE_URL = 'https://www.amazon.com';
-const AMAZON_PROXY_URL = process.env.AMAZON_PROXY_URL || '';
+const PROXY_URL = process.env.PROXY_URL || '';
 
 function isValidAmazonUrl(rawUrl) {
   try {
@@ -141,7 +141,7 @@ function extractProductsFromHtml(html, maxItems) {
 
     // With a Colombian proxy, delivery texts always contain "Colombia"
     // for shippable products. Filter out non-Colombia products.
-    if (AMAZON_PROXY_URL && !deliveryText.includes('Colombia')) return;
+    if (PROXY_URL && !deliveryText.includes('Colombia')) return;
 
     products.push({
       title,
@@ -181,8 +181,8 @@ async function fetchDirect(targetUrl) {
   };
 
   const fetchOptions = { headers, redirect: 'follow' };
-  if (AMAZON_PROXY_URL) {
-    fetchOptions.dispatcher = new ProxyAgent(AMAZON_PROXY_URL);
+  if (PROXY_URL) {
+    fetchOptions.dispatcher = new ProxyAgent(PROXY_URL);
   }
 
   const response = await undiciFetch(targetUrl, fetchOptions);

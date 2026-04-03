@@ -5,35 +5,15 @@ import { collectPageDiagnostics } from '../../utils/scraper-diagnostics.js';
 
 const ML_BASE_URL = 'https://listado.mercadolibre.com.co';
 
-function parseBooleanEnv(value, fallback = false) {
-  if (value === undefined || value === null || value === '') return fallback;
-  if (typeof value === 'boolean') return value;
 
-  const normalized = String(value).trim().toLowerCase();
+function getPlaywrightProxyConfig() {
+  const raw = (process.env.PROXY_URL || '').trim();
+  if (!raw) return null;
 
-  if (['1', 'true', 'yes', 'on'].includes(normalized)) return true;
-  if (['0', 'false', 'no', 'off'].includes(normalized)) return false;
-
-  return fallback;
-}
-
-function getMercadoLibreProxyConfig() {
-  const enabled = parseBooleanEnv(process.env.ML_PROXY_ENABLED, false);
-  if (!enabled) return null;
-
-  const server = (process.env.ML_PROXY_SERVER || '').trim();
-  if (!server) return null;
-
-  const username = (process.env.ML_PROXY_USERNAME || '').trim();
-  const password = (process.env.ML_PROXY_PASSWORD || '').trim();
-  const bypass = (process.env.ML_PROXY_BYPASS || '').trim();
-
-  const proxy = { server };
-
-  if (username) proxy.username = username;
-  if (password) proxy.password = password;
-  if (bypass) proxy.bypass = bypass;
-
+  const parsed = new URL(raw);
+  const proxy = { server: `${parsed.protocol}//${parsed.host}` };
+  if (parsed.username) proxy.username = decodeURIComponent(parsed.username);
+  if (parsed.password) proxy.password = decodeURIComponent(parsed.password);
   return proxy;
 }
 
@@ -228,7 +208,7 @@ export async function scrapeMercadoLibre({
   headless = true,
 }) {
   const targetUrl = resolveMercadoLibreTargetUrl({ query, url });
-  const proxyConfig = getMercadoLibreProxyConfig();
+  const proxyConfig = getPlaywrightProxyConfig();
 
   const browser = await chromium.launch({
     headless,

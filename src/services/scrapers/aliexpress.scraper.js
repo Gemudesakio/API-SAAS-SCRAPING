@@ -1,7 +1,10 @@
 import { load as loadHtml } from 'cheerio';
+import { fetch as undiciFetch, ProxyAgent } from 'undici';
 import { AppError } from '../../errors/app-error.js';
 import { buildUserAgent, detectChallenge } from '../../utils/scraper.helpers.js';
 import { flaresolverrGet, isFlareSolverrEnabled } from '../clients/flaresolverr.client.js';
+
+const PROXY_URL = process.env.PROXY_URL || '';
 
 function isValidAliExpressUrl(rawUrl) {
   try {
@@ -55,15 +58,19 @@ function normalizeUrl(rawUrl) {
 }
 
 async function fetchDirect(targetUrl) {
-  const response = await fetch(targetUrl, {
-    headers: {
-      'User-Agent': buildUserAgent(),
-      Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-      'Accept-Language': 'es-CO,es;q=0.9,en-US;q=0.8,en;q=0.7',
-      'Accept-Encoding': 'gzip, deflate, br',
-    },
-    redirect: 'follow',
-  });
+  const headers = {
+    'User-Agent': buildUserAgent(),
+    Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'es-CO,es;q=0.9,en-US;q=0.8,en;q=0.7',
+    'Accept-Encoding': 'gzip, deflate, br',
+  };
+
+  const fetchOptions = { headers, redirect: 'follow' };
+  if (PROXY_URL) {
+    fetchOptions.dispatcher = new ProxyAgent(PROXY_URL);
+  }
+
+  const response = await undiciFetch(targetUrl, fetchOptions);
 
   if (!response.ok) {
     return { html: '', status: response.status, finalUrl: targetUrl };
@@ -214,19 +221,19 @@ export async function scrapeAliExpress({
       result = await fetchDirect(targetUrl);
 
       if (isBlockedPage(result.html)) {
-        if (!flareSolverrAvailable) {
+        if (flareSolverrAvailable) {
+          useFlareSolverr = true;
+          engine = 'fetch+flaresolverr';
+          result = await fetchWithFlareSolverr(targetUrl);
+        } else {
           if (products.length > 0) break;
           throw new AppError(
-            'AliExpress bloqueó la petición. Configura FLARESOLVERR_URL para bypass automático.',
+            'AliExpress bloqueó la petición. Configura PROXY_URL o FLARESOLVERR_URL.',
             503,
             'BOT_CHALLENGE',
-            { reason: 'aliexpress_block', hint: 'Set FLARESOLVERR_URL env variable' }
+            { reason: 'aliexpress_block', hint: 'Set PROXY_URL env variable' }
           );
         }
-
-        useFlareSolverr = true;
-        engine = 'fetch+flaresolverr';
-        result = await fetchWithFlareSolverr(targetUrl);
       }
     }
 
