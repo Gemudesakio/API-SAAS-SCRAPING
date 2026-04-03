@@ -1,4 +1,5 @@
 import { load as loadHtml } from 'cheerio';
+import { ProxyAgent } from 'undici';
 import { AppError } from '../../errors/app-error.js';
 import { buildUserAgent, detectChallenge } from '../../utils/scraper.helpers.js';
 import {
@@ -6,9 +7,9 @@ import {
   isFlareSolverrEnabled,
 } from '../clients/flaresolverr.client.js';
 import { convertToCOP } from '../../utils/currency.js';
-import { getAmazonColombiaCookies } from '../clients/amazon-session.js';
 
 const AMAZON_BASE_URL = 'https://www.amazon.com';
+const AMAZON_PROXY_URL = process.env.AMAZON_PROXY_URL || '';
 
 function isValidAmazonUrl(rawUrl) {
   try {
@@ -138,6 +139,10 @@ function extractProductsFromHtml(html, maxItems) {
       deliveryText.includes('No disponible')
     ) return;
 
+    // With a Colombian proxy, delivery texts always contain "Colombia"
+    // for shippable products. Filter out non-Colombia products.
+    if (AMAZON_PROXY_URL && !deliveryText.includes('Colombia')) return;
+
     products.push({
       title,
       priceRaw,
@@ -166,7 +171,6 @@ function isBlockedPage(html) {
 }
 
 async function fetchDirect(targetUrl) {
-  const cookies = await getAmazonColombiaCookies();
   const headers = {
     'User-Agent': buildUserAgent(),
     Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
@@ -175,9 +179,13 @@ async function fetchDirect(targetUrl) {
     'Cache-Control': 'no-cache',
     Pragma: 'no-cache',
   };
-  if (cookies) headers.Cookie = cookies;
 
-  const response = await fetch(targetUrl, { headers, redirect: 'follow' });
+  const fetchOptions = { headers, redirect: 'follow' };
+  if (AMAZON_PROXY_URL) {
+    fetchOptions.dispatcher = new ProxyAgent(AMAZON_PROXY_URL);
+  }
+
+  const response = await fetch(targetUrl, fetchOptions);
 
   if (!response.ok) {
     return { html: '', status: response.status, finalUrl: targetUrl };

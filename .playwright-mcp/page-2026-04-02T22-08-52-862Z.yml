@@ -1,0 +1,1319 @@
+- generic [ref=e2]:
+  - navigation "Menú de métodos abreviados" [ref=e3]:
+    - heading "Saltar a" [level=2] [ref=e4]
+    - list "Saltar a" [ref=e5]:
+      - listitem [ref=e6]:
+        - link "contenido principal" [ref=e7] [cursor=pointer]:
+          - /url: "#skippedLink"
+          - text: Contenido principal
+      - listitem [ref=e8]:
+        - link "Acerca de este producto" [ref=e9] [cursor=pointer]:
+          - /url: "#featurebullets_feature_div"
+          - text: Acerca de este artículo
+      - listitem [ref=e10]:
+        - link "Saltar a las opciones de compra" [ref=e11] [cursor=pointer]:
+          - /url: "#buybox"
+          - text: Opciones de compra
+      - listitem [ref=e12]:
+        - link "Saltar a videos" [ref=e13] [cursor=pointer]:
+          - /url: "#va-related-videos-widget_feature_div"
+          - text: Videos
+      - listitem [ref=e14]:
+        - link "Opiniones" [ref=e15] [cursor=pointer]:
+          - /url: "#customerReviews"
+    - separator [ref=e16]
+    - heading "Métodos abreviados de teclado" [level=2] [ref=e17]
+    - list "Métodos abreviados de teclado" [ref=e18]:
+      - listitem [ref=e19]:
+        - link "Buscar, alt, barra inclinada" [ref=e20] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e21]:
+            - generic [ref=e22]: Buscar
+            - generic [ref=e23]:
+              - generic [ref=e24]: alt
+              - generic [ref=e25]: +
+              - generic [ref=e26]: /
+      - listitem [ref=e27]:
+        - link "Carrito, Shift, alt, c" [ref=e28] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e29]:
+            - generic [ref=e30]: Carrito
+            - generic [ref=e31]:
+              - generic [ref=e32]: shift
+              - generic [ref=e33]: +
+              - generic [ref=e34]: alt
+              - generic [ref=e35]: +
+              - generic [ref=e36]: C
+      - listitem [ref=e37]:
+        - link "Inicio, Shift, alt, h" [ref=e38] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e39]:
+            - generic [ref=e40]: Inicio
+            - generic [ref=e41]:
+              - generic [ref=e42]: shift
+              - generic [ref=e43]: +
+              - generic [ref=e44]: alt
+              - generic [ref=e45]: +
+              - generic [ref=e46]: H
+      - listitem [ref=e47]:
+        - link "Tus pedidos, Shift, alt, o" [ref=e48] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e49]:
+            - generic [ref=e50]: Pedidos
+            - generic [ref=e51]:
+              - generic [ref=e52]: shift
+              - generic [ref=e53]: +
+              - generic [ref=e54]: alt
+              - generic [ref=e55]: +
+              - generic [ref=e56]: O
+      - listitem [ref=e57]:
+        - button "Mostrar/ocultar métodos abreviados, Shift, alt, z" [ref=e58] [cursor=pointer]:
+          - generic [ref=e59]:
+            - generic [ref=e60]: Mostrar/ocultar métodos abreviados
+            - generic [ref=e61]:
+              - generic [ref=e62]: shift
+              - generic [ref=e63]: +
+              - generic [ref=e64]: alt
+              - generic [ref=e65]: +
+              - generic [ref=e66]: Z
+    - generic [ref=e72]: Para moverte entre elementos, usa las flechas arriba o abajo del teclado.
+  - banner [ref=e73]:
+    - navigation "Primary" [ref=e74]:
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - link "Amazon" [ref=e78] [cursor=pointer]:
+            - /url: /-/es/ref=nav_logo
+          - button "Enviar a Colombia" [ref=e81] [cursor=pointer]:
+            - generic [ref=e83]:
+              - generic [ref=e84]: Enviar a
+              - generic [ref=e85]: Colombia
+        - search [ref=e88]:
+          - generic [ref=e91]:
+            - generic [ref=e93]: Todos
+            - combobox "Selecciona el departamento donde deseas realizar tu búsqueda" [ref=e95] [cursor=pointer]:
+              - option "Todos los departamentos" [selected]
+              - option "Arte y artesanías"
+              - option "Automotriz"
+              - option "Bebé"
+              - option "Belleza y cuidado personal"
+              - option "Cine y TV"
+              - option "Computadoras"
+              - option "Deportes y actividades al aire libre"
+              - option "Electrónicos"
+              - option "Equipaje"
+              - option "Herramientas y mejoramiento del hogar"
+              - option "Hogar y cocina"
+              - option "Industria y Ciencia"
+              - option "Insumos para mascotas"
+              - option "Juguetes y juegos"
+              - option "Libros"
+              - option "Moda para Hombre"
+              - option "Moda para Mujer"
+              - option "Moda para Niñas"
+              - option "Moda para Niños"
+              - option "Música MP3"
+              - option "Música, CDs y Vinilos"
+              - option "Ofertas"
+              - option "Prime Video"
+              - option "Salud y Hogar"
+              - option "Software"
+              - option "Tienda Kindle"
+              - option "Videojuegos"
+          - searchbox "Buscar en Amazon" [ref=e98]
+          - generic [ref=e99]:
+            - generic "Ir" [ref=e101] [cursor=pointer]:
+              - button "Ir" [ref=e102]
+            - button [ref=e104]: Agent Search
+        - generic [ref=e106]:
+          - generic [ref=e107]:
+            - link "Elige un idioma para comprar en Amazon Estados Unidos. La selección actual es Español (ES)." [ref=e108] [cursor=pointer]:
+              - /url: /-/es/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais
+              - generic [ref=e111]:
+                - img "Estados Unidos" [ref=e112]
+                - generic [ref=e113]: ES
+            - button "Ampliar para cambiar el idioma o país" [ref=e114] [cursor=pointer]
+          - generic [ref=e115]:
+            - link "Hola, Identifícate Cuenta y Listas" [ref=e116] [cursor=pointer]:
+              - /url: https://www.amazon.com/-/es/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2F-%2Fes%2Fdp%2FB0CT2WN59R%3Fref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+              - generic [ref=e118]: Hola, Identifícate
+              - generic [ref=e119]: Cuenta y Listas
+            - button "Expandir cuenta y listas" [ref=e120] [cursor=pointer]
+          - link "Devoluciones y pedidos" [ref=e121] [cursor=pointer]:
+            - /url: /-/es/gp/css/order-history?ref_=nav_orders_first
+            - generic [ref=e122]: Devoluciones
+            - generic [ref=e123]: y pedidos
+          - link "0 artículos en el carrito" [ref=e124] [cursor=pointer]:
+            - /url: /-/es/gp/cart/view.html?ref_=nav_cart
+            - generic [ref=e126]: "0"
+            - generic [ref=e129]: Carrito
+      - alertdialog "Alerta de transición a compras internacionales" [ref=e130]:
+        - generic [ref=e131]:
+          - generic [ref=e135]:
+            - text: Te mostramos los productos que se envían a
+            - strong [ref=e136]: Colombia
+            - text: . Para ver productos que se envían a otro país, cambia tu dirección de envío.
+          - generic [ref=e137]:
+            - generic [ref=e139] [cursor=pointer]:
+              - button "Submit" [ref=e140]
+              - generic [ref=e141]: CONTINUAR
+            - generic [ref=e143] [cursor=pointer]:
+              - button "Submit" [ref=e144]
+              - generic [ref=e145]: CAMBIAR LA DIRECCIÓN
+      - generic [ref=e149]:
+        - link "Identifícate" [ref=e150] [cursor=pointer]:
+          - /url: https://www.amazon.com/-/es/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2F-%2Fes%2Fdp%2FB0CT2WN59R%3Fref_%3Dnav_custrec_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+          - generic [ref=e151]: Identifícate
+        - generic [ref=e152]:
+          - text: ¿Eres un cliente nuevo?
+          - link "¿No tienes cuenta en Amazon? Comienza aquí para crear una cuenta" [ref=e153] [cursor=pointer]:
+            - /url: https://www.amazon.com/-/es/ap/register?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2F-%2Fes%2Fdp%2FB0CT2WN59R%2F%3F_encoding%3DUTF8%26language%3Des%26ref_%3Dnav_custrec_newcust&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+            - text: Empieza aquí.
+      - generic [ref=e158]:
+        - button "Abrir menú de todas las categorías" [ref=e160] [cursor=pointer]:
+          - generic [ref=e162]: Todo
+        - list [ref=e166]:
+          - listitem [ref=e167]:
+            - link "Prime" [ref=e169] [cursor=pointer]:
+              - /url: /-/es/prime?ref_=nav_cs_primelink_nonmember
+          - listitem [ref=e170]:
+            - link "Prime Video" [ref=e172] [cursor=pointer]:
+              - /url: /gp/redirect.html?location=https%3A%2F%2Fwww.primevideo.com&source=nav_linktree&token=491B3E20E8D6C755745FD7E34BCE779F25003CB2
+          - listitem [ref=e173]:
+            - link "Ofertas del Día" [ref=e175] [cursor=pointer]:
+              - /url: /-/es/gp/goldbox?ref_=nav_cs_gb_bau
+          - listitem [ref=e176]:
+            - link "Tarjetas de Regalo" [ref=e178] [cursor=pointer]:
+              - /url: /-/es/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc
+          - listitem [ref=e179]:
+            - link "Vender" [ref=e181] [cursor=pointer]:
+              - /url: /-/es/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell
+          - listitem [ref=e182]:
+            - link "Listas" [ref=e184] [cursor=pointer]:
+              - /url: /-/es/gp/browse.html?node=16115931011&ref_=nav_cs_registry
+          - listitem [ref=e185]:
+            - link "Servicio al Cliente" [ref=e187] [cursor=pointer]:
+              - /url: /-/es/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice
+          - link "Haz clic para llamar a nuestra línea de servicio al cliente para discapacitados, o contáctanos directamente al 1-888-283-1678" [ref=e188] [cursor=pointer]:
+            - /url: /-/es/gp/help/customer/accessibility
+            - text: Servicio al cliente con discapacidad
+        - link "Prime entrega gratis desde EE. UU." [ref=e191] [cursor=pointer]:
+          - /url: /-/es/Prime/?_encoding=UTF8&ref_=nav_swm_undefined&pf_rd_p=09cb99f1-3648-45f3-86f3-cbe9cb3a30cb&pf_rd_s=nav-sitewide-msg-text-export&pf_rd_t=4201&pf_rd_i=navbar-4201&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=96FFXGSS8F2KF77ASZPA
+      - dialog [ref=e192]
+  - generic [ref=e194]:
+    - heading "El resumen del producto presenta información clave del producto Atajo del teclado shift + alt + D" [level=1] [ref=e197]:
+      - button "El resumen del producto presenta información clave del producto" [ref=e198] [cursor=pointer]:
+        - generic [ref=e199]: El resumen del producto presenta información clave del producto
+      - separator [ref=e201]
+      - generic [ref=e202]:
+        - text: Atajo del teclado
+        - generic [ref=e203]: shift + alt + D
+    - main [ref=e204]:
+      - generic [ref=e205]:
+        - link "Shop top categories that ship internationally" [ref=e209] [cursor=pointer]:
+          - /url: /-/es/b/?_encoding=UTF8&node=21439846011&pd_rd_w=xHdYk&content-id=amzn1.sym.34ef58bd-dcf4-4e33-b605-79695e8e618a&pf_rd_p=34ef58bd-dcf4-4e33-b605-79695e8e618a&pf_rd_r=96FFXGSS8F2KF77ASZPA&pd_rd_wg=BwtdI&pd_rd_r=64fbadb2-85ac-4ac5-b3f1-d09ba0900bd2
+          - img "Shop top categories that ship internationally" [ref=e210]
+        - list [ref=e215]:
+          - listitem [ref=e216]:
+            - link "Deportes y Actividades al Aire Libre" [ref=e218] [cursor=pointer]:
+              - /url: /-/es/b/ref=dp_bc_1?ie=UTF8&node=3375251
+          - listitem [ref=e219]: ›
+          - listitem [ref=e220]:
+            - link "Deportes" [ref=e222] [cursor=pointer]:
+              - /url: /-/es/Deportes-Actividad-Fisica/b/ref=dp_bc_2?ie=UTF8&node=10971181011
+          - listitem [ref=e223]: ›
+          - listitem [ref=e224]:
+            - link "Patines, Patinetas y Patines del Diablo" [ref=e226] [cursor=pointer]:
+              - /url: /-/es/Patines-Patinetas-Patines-Diablo/b/ref=dp_bc_3?ie=UTF8&node=11051398011
+          - listitem [ref=e227]: ›
+          - listitem [ref=e228]:
+            - link "Patines del Diablo y Equipo" [ref=e230] [cursor=pointer]:
+              - /url: /-/es/Patines-Diablo-Equipo/b/ref=dp_bc_4?ie=UTF8&node=11063781
+          - listitem [ref=e231]: ›
+          - listitem [ref=e232]:
+            - link "Patines del Diablo" [ref=e234] [cursor=pointer]:
+              - /url: /-/es/Patines-Diablo/b/ref=dp_bc_5?ie=UTF8&node=2345825011
+      - generic [ref=e235]:
+        - generic [ref=e236]:
+          - generic [ref=e241]:
+            - generic [ref=e242]: No hay ofertas destacadas disponibles
+            - button "Más información" [ref=e244] [cursor=pointer]: Más información
+          - generic [ref=e253]:
+            - generic [ref=e254]:
+              - text: No puede enviarse este producto al punto de entrega seleccionado. Selecciona un punto de entrega diferente.
+              - generic [ref=e261] [cursor=pointer]:
+                - button "Ver artículos similares" [ref=e262]
+                - generic [ref=e263]: Ver artículos similares
+              - button "Enviar a Colombia" [ref=e265] [cursor=pointer]:
+                - generic [ref=e271]: Enviar a Colombia
+            - separator [ref=e272]
+            - link "Agregar a la Lista" [ref=e277] [cursor=pointer]:
+              - /url: https://www.amazon.com/-/es/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fgp%2Faw%2Fd%2FB0CT2WN59R&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&
+        - generic [ref=e279]:
+          - generic [ref=e281]:
+            - button "Compartir" [ref=e282]:
+              - button "Compartir" [ref=e283] [cursor=pointer]
+            - generic [ref=e286]:
+              - radiogroup "Miniaturas de imagen" [ref=e288]:
+                - listitem [ref=e289]:
+                  - radio [ref=e294] [cursor=pointer]
+                - listitem [ref=e296]:
+                  - radio [ref=e301] [cursor=pointer]
+                - listitem [ref=e303]:
+                  - radio [ref=e308] [cursor=pointer]
+                - listitem [ref=e310]:
+                  - radio [ref=e315] [cursor=pointer]
+                - listitem [ref=e317]:
+                  - radio [ref=e322] [cursor=pointer]
+                - listitem [ref=e324]:
+                  - generic [ref=e328] [cursor=pointer]:
+                    - radio "7+" [ref=e329]
+                    - generic [ref=e331]: 7+
+                - listitem [ref=e332]:
+                  - generic [ref=e334]:
+                    - radio [ref=e337] [cursor=pointer]
+                    - generic [ref=e339]: 6 VIDEOS
+              - generic [ref=e340]:
+                - generic [ref=e342]:
+                  - list
+                  - list [ref=e343]:
+                    - listitem [ref=e344] [cursor=pointer]:
+                      - button "Segway Ninebot S2 - Patinete eléctrico de autoequilibrio, velocidad máxima de 11.2 mph, rango de 21.7 millas con altura ajustable, aeropatineta certificada UL-2271 2272" [ref=e347]:
+                        - img "Segway Ninebot S2 - Patinete eléctrico de autoequilibrio, velocidad máxima de 11.2 mph, rango de 21.7 millas con altura ajustable, aeropatineta certificada UL-2271 2272" [ref=e348]
+                    - text:           
+                - link "Haz clic para una vista completa" [ref=e352] [cursor=pointer]:
+                  - /url: "#"
+            - text:           
+          - generic [ref=e354]:
+            - generic:
+              - button
+          - generic:
+            - link:
+              - generic:
+                - list
+        - generic [ref=e355]:
+          - heading "Segway Ninebot S2 - Patinete eléctrico de autoequilibrio, velocidad máxima de 11.2 mph, rango de 21.7 millas con altura ajustable, aeropatineta certificada UL-2271 2272" [level=1] [ref=e358]
+          - link "Visita la tienda de Segway" [ref=e361] [cursor=pointer]:
+            - /url: /-/es/stores/Segway/page/C3033951-97D9-48CA-9233-97F3E1CF36D0?lp_asin=B0CT2WN59R&ref_=ast_bln&store_ref=bl_ast_dp_brandlogo_sto
+          - generic [ref=e363]:
+            - generic "4.5 de 5 estrellas" [ref=e365]:
+              - button "4.5 de 5 estrellas" [ref=e367] [cursor=pointer]:
+                - text: "4.5"
+                - generic [ref=e369]: 4.5 de 5 estrellas
+            - link "303 Opiniones" [ref=e372] [cursor=pointer]:
+              - /url: "#averageCustomerReviewsAnchor"
+              - text: (303)
+          - separator [ref=e373]
+          - generic [ref=e377]: No puede enviarse este producto al punto de entrega seleccionado. Selecciona un punto de entrega diferente.
+          - generic [ref=e383]: "Estilo: Ninebot S2"
+          - list [ref=e386]:
+            - rowgroup [ref=e387]:
+              - listitem [ref=e388]: Marca Segway
+              - listitem [ref=e389]: Nombre del modelo Ninebot S2
+              - listitem [ref=e390]: Color Negro
+              - listitem [ref=e391]: Rango de edad (descripción) Adulto
+              - listitem [ref=e392]:
+                - text: Características especiales
+                - generic [ref=e394]:
+                  - generic [ref=e395]: Ajuste de altura, Gestión inteligente de aplicaciones, Luces traseras y luces de rueda, con neumáticos todoterreno
+                  - generic [ref=e396]: Ajuste de altura, Gestión inteligente de aplicaciones, Luces traseras y luces de rueda, con neumáticos todoterreno
+          - generic [ref=e398]:
+            - separator [ref=e399]
+            - heading "Sobre este artículo" [level=1] [ref=e400]
+            - list [ref=e401]:
+              - listitem [ref=e402]: "Velocidad y alcance: Experimenta paseos emocionantes con la impresionante velocidad máxima de 11.2 mph y el alcance de 21.7 millas del Ninebot S2."
+              - listitem [ref=e403]: "Apto para principiantes: perfecto para usuarios de 16 a 50 años, el Segway S2 cuenta con un modo de aprendizaje fácil de usar, proporcionando una introducción suave y gradual."
+              - listitem [ref=e404]: "Ajustable y de apoyo: disfruta de un ajuste personalizado adaptado a tus necesidades, ya que el Segway S2 se adapta a alturas que van desde 4'3\" hasta 6'6\" y soporta pesos de hasta 220 libras, asegurando comodidad y estabilidad para cada usuario."
+              - listitem [ref=e405]: "Conquistador de colinas: Conquista pendientes con confianza mientras el Segway S2 navega sin esfuerzo por pendientes de 15°."
+              - listitem [ref=e406]: "Carga eficiente: con un sistema de gestión de batería inteligente (BMS) y una batería de alta capacidad de 335 Wh que se carga completamente en solo 4,5 horas."
+              - listitem [ref=e407]: "Seguro y confiable: viaja con tranquilidad sabiendo que el Segway S2 está certificado UL-2272, cumpliendo con estrictos estándares de seguridad para una conducción sin preocupaciones."
+              - listitem [ref=e408]: Sus robustos neumáticos todoterreno sin cámara de 10 pulgadas garantizan una mayor estabilidad y durabilidad, ofreciendo una tracción superior en cualquier superficie.
+            - generic [ref=e409]:
+              - text: ›
+              - link "Ver los detalles del producto" [ref=e410] [cursor=pointer]:
+                - /url: "#productDetails"
+          - link "Informar de un problema con este producto o vendedor" [ref=e416] [cursor=pointer]:
+            - /url: "#"
+            - text: Informar de un problema con este producto o vendedor
+      - generic [ref=e422]:
+        - heading "Videos de productos similares" [level=3] [ref=e425]
+        - group [ref=e429]:
+          - group [ref=e433]:
+            - list [ref=e434]:
+              - listitem [ref=e435]:
+                - button "Haz clic para reproducir el vídeo, duration 2:13, Inmotion E20 EUC" [ref=e437] [cursor=pointer]:
+                  - generic [ref=e439]:
+                    - img [ref=e440]
+                    - textbox [ref=e442]
+                - link "INMOTION E20 - Monopatineta eléctrica para principiantes – Rueda de 14 pulgadas, motor de 900 W, rango de 18.6 millas, 12.5 mph, certificado UL2272 – Scooter de autoequilibrio ligero y seguro 169 US$399.00" [ref=e445] [cursor=pointer]:
+                  - /url: /-/es/INMOTION-E20-Monopatineta-principiantes-autoequilibrio/dp/B0D2LF4XDF/ref=vse_cards_0?_encoding=UTF8&pd_rd_w=s28bh&content-id=amzn1.sym.26dedd2b-540b-4bff-af75-7fea8d8f8913&pf_rd_p=26dedd2b-540b-4bff-af75-7fea8d8f8913&pf_rd_r=96FFXGSS8F2KF77ASZPA&pd_rd_wg=4tk3l&pd_rd_r=3aded32f-5008-454f-85e8-ba20c63e671f
+                  - generic [ref=e449]:
+                    - generic [ref=e451]: INMOTION E20 - Monopatineta eléctrica para principiantes – Rueda de 14 pulgadas, motor de 900 W, rango de 18.6 millas, 12.5 mph, certificado UL2272 – Scooter de autoequilibrio ligero y seguro
+                    - generic [ref=e452]: "169"
+                    - generic [ref=e455]:
+                      - generic [ref=e456]: US$399.00
+                      - generic [ref=e457]:
+                        - text: US$
+                        - generic [ref=e458]:
+                          - text: "399"
+                          - generic [ref=e459]: .
+                        - text: "00"
+              - listitem [ref=e460]:
+                - button "Haz clic para reproducir el vídeo, duration 0:50, Found my confidence in less than 2 hours of practice" [ref=e462] [cursor=pointer]:
+                  - generic [ref=e464]:
+                    - img [ref=e465]
+                    - textbox [ref=e467]
+                - link "INMOTION E20 - Monopatineta eléctrica para principiantes – Rueda de 14 pulgadas, motor de 900 W, rango de 18.6 millas, 12.5 mph, certificado UL2272 – Scooter de autoequilibrio ligero y seguro 169 US$399.00" [ref=e470] [cursor=pointer]:
+                  - /url: /-/es/INMOTION-E20-Monopatineta-principiantes-autoequilibrio/dp/B0D2LF4XDF/ref=vse_cards_0?_encoding=UTF8&pd_rd_w=s28bh&content-id=amzn1.sym.26dedd2b-540b-4bff-af75-7fea8d8f8913&pf_rd_p=26dedd2b-540b-4bff-af75-7fea8d8f8913&pf_rd_r=96FFXGSS8F2KF77ASZPA&pd_rd_wg=4tk3l&pd_rd_r=3aded32f-5008-454f-85e8-ba20c63e671f
+                  - generic [ref=e474]:
+                    - generic [ref=e476]: INMOTION E20 - Monopatineta eléctrica para principiantes – Rueda de 14 pulgadas, motor de 900 W, rango de 18.6 millas, 12.5 mph, certificado UL2272 – Scooter de autoequilibrio ligero y seguro
+                    - generic [ref=e477]: "169"
+                    - generic [ref=e480]:
+                      - generic [ref=e481]: US$399.00
+                      - generic [ref=e482]:
+                        - text: US$
+                        - generic [ref=e483]:
+                          - text: "399"
+                          - generic [ref=e484]: .
+                        - text: "00"
+      - generic [ref=e490]:
+        - generic [ref=e492]:
+          - separator [ref=e493]
+          - heading "De la marca" [level=2] [ref=e494]
+          - generic [ref=e499]:
+            - img "34 ES" [ref=e504]
+            - region "Carrusel de contenido destacado" [ref=e505]:
+              - list [ref=e510]:
+                - listitem
+                - listitem [ref=e511]:
+                  - img "Acerca de Segway" [ref=e515]
+                - listitem [ref=e516]:
+                  - img "Por qué Segway" [ref=e520]
+                - listitem [ref=e521]:
+                  - img "34 ES" [ref=e525]
+                - listitem [ref=e526]:
+                  - img "Por qué Segway" [ref=e530]
+                - listitem [ref=e531]:
+                  - img "Por qué Segway" [ref=e535]
+                - listitem [ref=e536]
+                - listitem [ref=e540]:
+                  - img "34 ES" [ref=e544]
+                - listitem [ref=e545]:
+                  - img "34 ES" [ref=e549]
+                - listitem [ref=e550]:
+                  - img "34 ES" [ref=e554]
+                - listitem [ref=e555]:
+                  - img "G2" [ref=e559]
+                - listitem [ref=e560]
+                - listitem [ref=e564]:
+                  - img "NS2" [ref=e568]
+                - listitem [ref=e569]:
+                  - img "E2 Plus" [ref=e573]
+                - listitem [ref=e574]:
+                  - img "GKT" [ref=e578]
+        - generic [ref=e579]:
+          - separator [ref=e580]
+          - generic [ref=e582]:
+            - heading "Información del producto" [level=1] [ref=e583]
+            - generic [ref=e587]:
+              - generic [ref=e588]:
+                - generic [ref=e590]:
+                  - button "Características y especificaciones" [ref=e593] [cursor=pointer]:
+                    - heading "Características y especificaciones" [level=5] [ref=e595]
+                  - button "Estilo" [ref=e598] [cursor=pointer]:
+                    - heading "Estilo" [level=5] [ref=e600]
+                  - button "Materiales y cuidado" [ref=e603] [cursor=pointer]:
+                    - heading "Materiales y cuidado" [level=5] [ref=e605]
+                - generic [ref=e608]:
+                  - heading "Comentarios" [level=3] [ref=e609]
+                  - generic [ref=e614]:
+                    - text: ¿Quieres
+                    - button "informarnos sobre un precio más bajo?" [ref=e616] [cursor=pointer]: informarnos sobre un precio más bajo?
+              - generic [ref=e620]:
+                - button "Detalles del producto" [ref=e623] [cursor=pointer]:
+                  - heading "Detalles del producto" [level=5] [ref=e625]
+                - button "Guía de usuario" [ref=e628] [cursor=pointer]:
+                  - heading "Guía de usuario" [level=5] [ref=e630]
+        - generic [ref=e632]:
+          - separator [ref=e633]
+          - heading "Más información del producto" [level=2] [ref=e634]
+          - generic [ref=e637]:
+            - img "Ninebot S2" [ref=e642]
+            - img "Ninebot S2" [ref=e647]
+            - generic [ref=e657]:
+              - button "Haz clic para reproducir el video" [ref=e660] [cursor=pointer]:
+                - text: 
+                - generic [ref=e661]: Haz clic para reproducir el video
+              - text:          
+            - generic [ref=e664]:
+              - region "Carrusel de contenido destacado" [ref=e665]:
+                - list [ref=e670]:
+                  - listitem [ref=e671]:
+                    - img "Ninebot S2" [ref=e674]
+                  - listitem [ref=e675]:
+                    - img "Ninebot S2" [ref=e678]
+                  - listitem [ref=e679]:
+                    - img "Ninebot S2" [ref=e682]
+                  - listitem [ref=e683]:
+                    - img "Ninebot S2" [ref=e686]
+                  - listitem [ref=e687]:
+                    - img "Ninebot S2" [ref=e690]
+                  - listitem [ref=e691]:
+                    - img "Ninebot S2" [ref=e694]
+              - tablist "tablist-section" [ref=e698]:
+                - listitem [ref=e699]:
+                  - tab "slide-1" [selected] [ref=e700] [cursor=pointer]
+                - listitem [ref=e701]:
+                  - tab "slide-2" [ref=e702] [cursor=pointer]
+                - listitem [ref=e703]:
+                  - tab "slide-3" [ref=e704] [cursor=pointer]
+                - listitem [ref=e705]:
+                  - tab "slide-4" [ref=e706] [cursor=pointer]
+                - listitem [ref=e707]:
+                  - tab "slide-5" [ref=e708] [cursor=pointer]
+                - listitem [ref=e709]:
+                  - tab "slide-6" [ref=e710] [cursor=pointer]
+            - generic [ref=e713]:
+              - region "Carrusel de contenido destacado" [ref=e714]:
+                - list [ref=e719]:
+                  - listitem [ref=e720]:
+                    - img "Adjustable Height" [ref=e723]
+                  - listitem [ref=e724]:
+                    - img "Ninebot S2" [ref=e727]
+                  - listitem [ref=e728]:
+                    - img "NS2" [ref=e731]
+                  - listitem [ref=e732]:
+                    - img "Ninbot S2" [ref=e735]
+                  - listitem [ref=e736]:
+                    - img "Ninbot S2" [ref=e739]
+              - tablist "tablist-section" [ref=e743]:
+                - listitem [ref=e744]:
+                  - tab "slide-1" [selected] [ref=e745] [cursor=pointer]
+                - listitem [ref=e746]:
+                  - tab "slide-2" [ref=e747] [cursor=pointer]
+                - listitem [ref=e748]:
+                  - tab "slide-3" [ref=e749] [cursor=pointer]
+                - listitem [ref=e750]:
+                  - tab "slide-4" [ref=e751] [cursor=pointer]
+                - listitem [ref=e752]:
+                  - tab "slide-5" [ref=e753] [cursor=pointer]
+            - generic [ref=e755]:
+              - heading "Technical Specifications" [level=3] [ref=e756]
+              - generic [ref=e757]:
+                - table [ref=e759]:
+                  - rowgroup [ref=e760]:
+                    - row "Item Dimensions L x W 10.4 × 21.8 in" [ref=e761]:
+                      - cell "Item Dimensions L x W" [ref=e762]
+                      - cell "10.4 × 21.8 in" [ref=e763]
+                    - row "Item Dimensions H 25.4–30.3 in" [ref=e764]:
+                      - cell "Item Dimensions H" [ref=e765]
+                      - cell "25.4–30.3 in" [ref=e766]
+                    - row "Package Dimensions L x W x H 24.8 x 12.6 x 14.3 in" [ref=e767]:
+                      - cell "Package Dimensions L x W x H" [ref=e768]
+                      - cell "24.8 x 12.6 x 14.3 in" [ref=e769]
+                    - row "Net / Gross weight Approx. 30.0 lbs / 36.6 lbs" [ref=e770]:
+                      - cell "Net / Gross weight" [ref=e771]
+                      - cell "Approx. 30.0 lbs / 36.6 lbs" [ref=e772]
+                    - row "Rider Requirements 16 – 50 years, 4'3\"–6'6\" (130–200 cm)" [ref=e773]:
+                      - cell "Rider Requirements" [ref=e774]
+                      - cell "16 – 50 years, 4'3\"–6'6\" (130–200 cm)" [ref=e775]
+                    - row "Beginner mode Can be disabled or reset via the app after 0.6 miles (1 km) riding." [ref=e776]:
+                      - cell "Beginner mode" [ref=e777]
+                      - cell "Can be disabled or reset via the app after 0.6 miles (1 km) riding." [ref=e778]
+                    - row "Traversable Terrain Pavement, packed dirt, slopes < 15°, obstacles < 0.4 in (1 cm), gaps < 1.2 in (3 cm)" [ref=e779]:
+                      - cell "Traversable Terrain" [ref=e780]
+                      - cell "Pavement, packed dirt, slopes < 15°, obstacles < 0.4 in (1 cm), gaps < 1.2 in (3 cm)" [ref=e781]
+                    - row "Operating temperature 14–104°F (-10–40°C)" [ref=e782]:
+                      - cell "Operating temperature" [ref=e783]
+                      - cell "14–104°F (-10–40°C)" [ref=e784]
+                - table [ref=e786]:
+                  - rowgroup [ref=e787]:
+                    - row "Storage temperature -4–122°F (-20–50°C)" [ref=e788]:
+                      - cell "Storage temperature" [ref=e789]
+                      - cell "-4–122°F (-20–50°C)" [ref=e790]
+                    - row "Permitted charging temperature 32–104°F (0–40°C)" [ref=e791]:
+                      - cell "Permitted charging temperature" [ref=e792]
+                      - cell "32–104°F (0–40°C)" [ref=e793]
+                    - row "Tire pressure 45–50 psi (310–345 kPa)" [ref=e794]:
+                      - cell "Tire pressure" [ref=e795]
+                      - cell "45–50 psi (310–345 kPa)" [ref=e796]
+                    - row "Charging time Approx. 4.5 h" [ref=e797]:
+                      - cell "Charging time" [ref=e798]
+                      - cell "Approx. 4.5 h" [ref=e799]
+                    - row "Rated voltage 54 V" [ref=e800]:
+                      - cell "Rated voltage" [ref=e801]
+                      - cell "54 V" [ref=e802]
+                    - row "Maximum charging voltage 63 V" [ref=e803]:
+                      - cell "Maximum charging voltage" [ref=e804]
+                      - cell "63 V" [ref=e805]
+                    - row "Nominal Energy 335 Wh" [ref=e806]:
+                      - cell "Nominal Energy" [ref=e807]
+                      - cell "335 Wh" [ref=e808]
+                    - row "Charging temperature 32–104°F (0–40°C)" [ref=e809]:
+                      - cell "Charging temperature" [ref=e810]
+                      - cell "32–104°F (0–40°C)" [ref=e811]
+            - generic [ref=e813]:
+              - heading "Segway Ninebot S2 Electric Self-Balancing Scooter" [level=1] [ref=e815]
+              - generic [ref=e816]:
+                - paragraph [ref=e817]: Embark on a journey of convenience and style with the Segway Ninebot S2 Electric Self-Balancing Scooter. Engineered for riders aged 16 to 50 years, and accommodating heights from 4'3" to 6'6", this scooter provides a versatile and thrilling mode of transportation. The S2 boasts a robust design, supporting a maximum payload of 220 lbs, ensuring durability without compromising on comfort. With a maximum speed of 11.2 mph and an impressive range of approximately 21.7 miles, this scooter effortlessly handles your daily commute or leisurely rides. Tailored to your skill level, the S2 introduces a Beginner mode that can be customized through the app, allowing you to learn at your own pace. Navigate varied terrains with confidence, thanks to the S2's exceptional slope-climbing ability of approximately 15°. Experience intelligent battery management with the Smart BMS and a nominal energy of 335 Wh, offering a charging time of approximately 4.5 hours. Stay connected with the Segway app, which allows you to disable or reset the Beginner mode after 0.6 miles, giving you the freedom to customize your riding experience. Unlock the potential of your commute with the Segway Ninebot S2 Electric Self-Balancing Scooter - where performance, adaptability, and style converge for an unparalleled riding experience.
+                - paragraph [ref=e818]: "[1] Vehicle height: The distance from the ground to the highest point of the vehicle body."
+                - paragraph [ref=e819]: "[2] Typical range: Tested while riding under full power, 165.3lbs (75 kg) load, 77°F (25°C), 60% of max. speed on average on pavement."
+                - paragraph [ref=e820]: "* Some of the factors that affect range include: speed, number of starts and stops, ambient temperature, etc."
+        - generic:
+          - navigation:
+            - navigation "Navigate within the product detail page":
+              - navigation "Back to top jump link":
+                - generic:
+                  - generic: Principal
+              - navigation "About this item widget jump link":
+                - generic:
+                  - generic: Acerca de este producto
+              - navigation "Similar widget jump link":
+                - generic:
+                  - generic: Similares
+              - navigation "Product information widget jump link":
+                - generic:
+                  - generic: Información del producto
+              - navigation "From the brand widget jump link":
+                - generic:
+                  - generic: De la marca
+              - navigation "Customer reviews widget jump link":
+                - generic:
+                  - generic: Opiniones
+            - navigation "Back to top Image jump link":
+              - img "Segway Ninebot S2 - Patinete eléctrico autoequilibrado - Domina tu desplazamiento con velocidad máxima de 11.2 mph, autonomía de 21.7 millas, neumáticos todo terreno de 10.5”, compatible con kit"
+            - navigation "Back to top title jump link":
+              - generic: Segway Ninebot S2 - Patinete eléctrico de autoequilibrio, velocidad máxima de 11.2 mph, rango de 21.7 millas con altura ajustable, aeropatineta certificada UL-2271 2272
+        - generic [ref=e829]:
+          - heading "Videos de productos" [level=2] [ref=e831]
+          - generic [ref=e836]:
+            - region "Video Player" [ref=e837]:
+              - generic [ref=e839]:
+                - button "Play" [ref=e840] [cursor=pointer]
+                - slider "Progress Bar" [ref=e843] [cursor=pointer]: .
+                - generic [ref=e844]: "-0:00"
+                - button "Mute" [ref=e845] [cursor=pointer]
+            - generic [ref=e848]:
+              - link [ref=e849] [cursor=pointer]:
+                - /url: /-/es/shop/johnnykfinds
+              - generic [ref=e850]:
+                - generic [ref=e851]:
+                  - link "✅OnlineTopFinds" [ref=e852] [cursor=pointer]:
+                    - /url: /-/es/shop/johnnykfinds
+                  - link "Haz clic para ir a la página de información de Amazon Influencer" [ref=e854] [cursor=pointer]:
+                    - /url: /-/es/shop/info
+                    - text: Gana comisiones
+                - generic [ref=e855]: Did you know about these cool features?!
+            - button "Play" [ref=e856] [cursor=pointer]
+      - generic [ref=e930]:
+        - separator [ref=e931]
+        - generic [ref=e932]:
+          - heading "Seguridad y recursos de productos" [level=2] [ref=e933]
+          - generic [ref=e936]:
+            - heading "Documentos de seguridad" [level=3] [ref=e937]
+            - generic [ref=e941]:
+              - link "Manual de usuario (PDF)" [ref=e942] [cursor=pointer]:
+                - /url: javascript:void(0)
+              - generic [ref=e943]: "|"
+              - link "Certificate of Compliance (PDF)" [ref=e944] [cursor=pointer]:
+                - /url: javascript:void(0)
+      - generic [ref=e946]:
+        - separator [ref=e947]
+        - heading "Contenido de la caja" [level=2] [ref=e948]
+        - listitem [ref=e950]: Ninebot S2, manual de usuario, accesorios, cargador, cable de alimentación
+      - generic [ref=e952]:
+        - separator [ref=e953]
+        - generic [ref=e954]:
+          - 'heading "Marca Destacada: Segway" [level=2] [ref=e955]'
+          - generic [ref=e956]:
+            - generic [ref=e959]:
+              - generic [ref=e960]: Altamente valorada
+              - generic [ref=e961]: Más de 50K+ clientes calificaron los productos de esta marca como excelentes
+            - generic [ref=e964]:
+              - generic [ref=e965]: Tendencia
+              - generic [ref=e966]: 10K+ pedidos de esta marca en los últimos 3 meses
+            - generic [ref=e969]:
+              - generic [ref=e970]: Bajas devoluciones
+              - generic [ref=e971]: Clientes suelen quedarse con artículos de esta marca
+      - generic "Opiniones principales" [ref=e974]:
+        - separator [ref=e975]
+        - generic [ref=e977]:
+          - generic [ref=e978]:
+            - generic [ref=e983]:
+              - heading "Opiniones de clientes" [level=2] [ref=e985]
+              - generic [ref=e987]:
+                - generic [ref=e990]: 4.5 de 5 estrellas
+                - generic [ref=e993]: 4.5 de 5
+              - generic [ref=e994]: 303 calificaciones globales
+              - list [ref=e998]:
+                - listitem [ref=e999]:
+                  - link "El 82 por ciento de las opiniones tienen 5 estrellas" [ref=e1001] [cursor=pointer]:
+                    - /url: /-/es/product-reviews/B0CT2WN59R/ref=acr_dp_hist_5?ie=UTF8&filterByStar=five_star&reviewerType=all_reviews#reviews-filter-bar
+                    - generic [ref=e1002]: 5 estrellas
+                    - progressbar [ref=e1004]
+                    - generic [ref=e1005]: 82%
+                - listitem [ref=e1006]:
+                  - link "El 7 por ciento de las opiniones tienen 4 estrellas" [ref=e1008] [cursor=pointer]:
+                    - /url: /-/es/product-reviews/B0CT2WN59R/ref=acr_dp_hist_4?ie=UTF8&filterByStar=four_star&reviewerType=all_reviews#reviews-filter-bar
+                    - generic [ref=e1009]: 4 estrellas
+                    - progressbar [ref=e1011]
+                    - generic [ref=e1012]: 7%
+                - listitem [ref=e1013]:
+                  - link "El 3 por ciento de las opiniones tienen 3 estrellas" [ref=e1015] [cursor=pointer]:
+                    - /url: /-/es/product-reviews/B0CT2WN59R/ref=acr_dp_hist_3?ie=UTF8&filterByStar=three_star&reviewerType=all_reviews#reviews-filter-bar
+                    - generic [ref=e1016]: 3 estrellas
+                    - progressbar [ref=e1018]
+                    - generic [ref=e1019]: 3%
+                - listitem [ref=e1020]:
+                  - link "El 1 por ciento de las opiniones tienen 2 estrellas" [ref=e1022] [cursor=pointer]:
+                    - /url: /-/es/product-reviews/B0CT2WN59R/ref=acr_dp_hist_2?ie=UTF8&filterByStar=two_star&reviewerType=all_reviews#reviews-filter-bar
+                    - generic [ref=e1023]: 2 estrellas
+                    - progressbar [ref=e1025]
+                    - generic [ref=e1026]: 1%
+                - listitem [ref=e1027]:
+                  - link "El 7 por ciento de las opiniones tienen 1 estrellas" [ref=e1029] [cursor=pointer]:
+                    - /url: /-/es/product-reviews/B0CT2WN59R/ref=acr_dp_hist_1?ie=UTF8&filterByStar=one_star&reviewerType=all_reviews#reviews-filter-bar
+                    - generic [ref=e1030]: 1 estrella
+                    - progressbar [ref=e1032]
+                    - generic [ref=e1033]: 7%
+              - button "Cómo funcionan las opiniones y calificaciones de clientes" [ref=e1038] [cursor=pointer]: Cómo funcionan las opiniones y calificaciones de clientes
+            - separator [ref=e1040]
+            - separator [ref=e1041]
+          - generic [ref=e1045]:
+            - generic [ref=e1048]:
+              - group [ref=e1050]:
+                - generic [ref=e1051]:
+                  - heading "Opiniones con imágenes" [level=3] [ref=e1053]
+                  - link "Ver todas las fotos" [ref=e1056] [cursor=pointer]:
+                    - /url: javascript:void(0)
+                - group [ref=e1060]:
+                  - list [ref=e1061]:
+                    - listitem [ref=e1062]:
+                      - button "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1063] [cursor=pointer]:
+                        - img "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1064]
+                    - listitem [ref=e1066]:
+                      - button "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1067] [cursor=pointer]:
+                        - img "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1068]
+                    - listitem [ref=e1070]:
+                      - button "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1071] [cursor=pointer]:
+                        - img "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1072]
+                    - listitem [ref=e1074]:
+                      - button "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1075] [cursor=pointer]:
+                        - img "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1076]
+                    - listitem [ref=e1078]:
+                      - button "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1079] [cursor=pointer]:
+                        - img "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1080]
+                    - listitem [ref=e1082]:
+                      - button "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1083] [cursor=pointer]:
+                        - img "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1084]
+                    - listitem [ref=e1086]:
+                      - button "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1087] [cursor=pointer]:
+                        - img "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1088]
+                    - listitem [ref=e1090]:
+                      - button "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1091] [cursor=pointer]:
+                        - img "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1092]
+                    - listitem [ref=e1094]:
+                      - button "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1095] [cursor=pointer]:
+                        - img "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1096]
+                    - listitem [ref=e1098]:
+                      - button "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1099] [cursor=pointer]:
+                        - img "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1100]
+              - separator [ref=e1102]
+            - generic [ref=e1106]:
+              - heading "Opiniones destacadas de los Estados Unidos" [level=3] [ref=e1108]
+              - link "Traducir todas las opiniones al Español" [ref=e1114] [cursor=pointer]:
+                - /url: "#customerReviews"
+              - list [ref=e1117]:
+                - listitem [ref=e1118]:
+                  - generic [ref=e1121]:
+                    - link "Christopher" [ref=e1123] [cursor=pointer]:
+                      - /url: /-/es/gp/profile/amzn1.account.AEA2Q7KD5MA3XFCKDHDSPNYDLLTQ
+                      - img [ref=e1126]
+                      - generic [ref=e1127]: Christopher
+                    - heading "5.0 de 5 estrellas Smooth, Fast, and So Much Fun to Ride!" [level=5] [ref=e1129]:
+                      - link "5.0 de 5 estrellas Smooth, Fast, and So Much Fun to Ride!" [ref=e1130] [cursor=pointer]:
+                        - /url: /-/es/gp/customer-reviews/ROZR0DYVE520B/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8
+                        - generic [ref=e1132]: 5.0 de 5 estrellas
+                        - text: Smooth, Fast, and So Much Fun to Ride!
+                    - heading "Calificado en Estados Unidos el 14 de octubre de 2025" [level=6] [ref=e1133]
+                    - generic [ref=e1134]:
+                      - text: "Estilo: Ninebot S2"
+                      - img [ref=e1135]
+                      - 'link "Compra verificada: Más información sobre cómo funcionan las opiniones de clientes en Amazon" [ref=e1136] [cursor=pointer]':
+                        - /url: /-/es/gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?nodeId=G8UYX7LALQC8V9KA
+                        - text: Compra Verificada
+                    - generic [ref=e1141]: The Segway Ninebot S2 is an absolute blast. It’s powerful, easy to control, and feels incredibly stable. The adjustable height feature is great for both kids and adults. The range and speed are impressive, and the battery life lasts longer than I expected. Worth every penny for the quality and performance!
+                    - generic [ref=e1142]:
+                      - generic [ref=e1143]:
+                        - generic [ref=e1144]: A 2 personas les resultó útil
+                        - link "Marcar la opinión como útil" [ref=e1148] [cursor=pointer]:
+                          - /url: https://www.amazon.com/-/es/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0CT2WN59R%2Fref%3Dcm_cr_dp_d_vote_lft%3Fie%3DUTF8%26csrfT%3DhJw%25252FyhLGYivRrkBOc9JwtW1Ta4Voi%25252FU%25252FpS0pnlsoK8%25252BiAAAAAGnO6PIAAAAB%26reviewId%3DROZR0DYVE520B%23ROZR0DYVE520B&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&marketPlaceId=ATVPDKIKX0DER&language=es&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+                          - generic [ref=e1149]: Útil
+                      - generic [ref=e1151]:
+                        - img [ref=e1152]
+                        - link "Reportar opinión de Christopher" [ref=e1154] [cursor=pointer]:
+                          - /url: /-/es/hz/reviews-render/report-review/ref=cm_cr_dp_d_report?csrfT=hJw%2FyhLGYivRrkBOc9JwtW1Ta4Voi%2FU%2FpS0pnlsoK8%2BiAAAAAGnO6PIAAAAB&reviewId=ROZR0DYVE520B
+                          - text: Reportar
+                      - link "Traducir opinión al idioma Español" [ref=e1157] [cursor=pointer]:
+                        - /url: "#customerReviews"
+                - listitem [ref=e1158]:
+                  - generic [ref=e1161]:
+                    - link "Katy Tichenor" [ref=e1163] [cursor=pointer]:
+                      - /url: /-/es/gp/profile/amzn1.account.AFC5ZDDZYZT3DYXJGE5ZSN6SDZOA
+                      - img [ref=e1166]
+                      - generic [ref=e1167]: Katy Tichenor
+                    - heading "5.0 de 5 estrellas Id buy again" [level=5] [ref=e1169]:
+                      - link "5.0 de 5 estrellas Id buy again" [ref=e1170] [cursor=pointer]:
+                        - /url: /-/es/gp/customer-reviews/RPGFY167F9EPC/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8
+                        - generic [ref=e1172]: 5.0 de 5 estrellas
+                        - text: Id buy again
+                    - heading "Calificado en Estados Unidos el 12 de enero de 2026" [level=6] [ref=e1173]
+                    - generic [ref=e1174]:
+                      - text: "Estilo: Ninebot S2"
+                      - img [ref=e1175]
+                      - 'link "Compra verificada: Más información sobre cómo funcionan las opiniones de clientes en Amazon" [ref=e1176] [cursor=pointer]':
+                        - /url: /-/es/gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?nodeId=G8UYX7LALQC8V9KA
+                        - text: Compra Verificada
+                    - generic [ref=e1181]: We love this thing. The quality is great as it's held up thru many crashes. I love how you can adjust the speed, and the speakers. The bigger beefier tires give it a smooth ride and looks good with em. Our son rides his everywhere it is very functional
+                    - generic [ref=e1182]:
+                      - link "Marcar la opinión como útil" [ref=e1186] [cursor=pointer]:
+                        - /url: https://www.amazon.com/-/es/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0CT2WN59R%2Fref%3Dcm_cr_dp_d_vote_lft%3Fie%3DUTF8%26csrfT%3DhOzz5pCK%25252F0%25252BI92V6TQ3FGIyLO5vHx4SsdeNrCR%25252BArwSIAAAAAGnO6PIAAAAB%26reviewId%3DRPGFY167F9EPC%23RPGFY167F9EPC&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&marketPlaceId=ATVPDKIKX0DER&language=es&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+                        - generic [ref=e1187]: Útil
+                      - generic [ref=e1189]:
+                        - img [ref=e1190]
+                        - link "Reportar opinión de Katy Tichenor" [ref=e1192] [cursor=pointer]:
+                          - /url: /-/es/hz/reviews-render/report-review/ref=cm_cr_dp_d_report?csrfT=hOzz5pCK%2F0%2BI92V6TQ3FGIyLO5vHx4SsdeNrCR%2BArwSIAAAAAGnO6PIAAAAB&reviewId=RPGFY167F9EPC
+                          - text: Reportar
+                      - link "Traducir opinión al idioma Español" [ref=e1195] [cursor=pointer]:
+                        - /url: "#customerReviews"
+                - listitem [ref=e1196]:
+                  - generic [ref=e1199]:
+                    - link "Kris Jackson" [ref=e1201] [cursor=pointer]:
+                      - /url: /-/es/gp/profile/amzn1.account.AG3VARSJJO62HZKUZYPHT6PVGGBA
+                      - img [ref=e1204]
+                      - generic [ref=e1205]: Kris Jackson
+                    - heading "5.0 de 5 estrellas The best tractor on wheels!" [level=5] [ref=e1207]:
+                      - link "5.0 de 5 estrellas The best tractor on wheels!" [ref=e1208] [cursor=pointer]:
+                        - /url: /-/es/gp/customer-reviews/R1TUTCTU4SGBUG/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8
+                        - generic [ref=e1210]: 5.0 de 5 estrellas
+                        - text: The best tractor on wheels!
+                    - heading "Calificado en Estados Unidos el 22 de marzo de 2026" [level=6] [ref=e1211]
+                    - generic [ref=e1212]:
+                      - text: "Estilo: Ninebot S2"
+                      - img [ref=e1213]
+                      - 'link "Compra verificada: Más información sobre cómo funcionan las opiniones de clientes en Amazon" [ref=e1214] [cursor=pointer]':
+                        - /url: /-/es/gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?nodeId=G8UYX7LALQC8V9KA
+                        - text: Compra Verificada
+                    - generic [ref=e1219]: Well worth the money! Battery life is great , ride quality is smooth and my kids ride them all over doing chores and feeding horses!
+                    - generic [ref=e1220]:
+                      - link "Marcar la opinión como útil" [ref=e1224] [cursor=pointer]:
+                        - /url: https://www.amazon.com/-/es/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0CT2WN59R%2Fref%3Dcm_cr_dp_d_vote_lft%3Fie%3DUTF8%26csrfT%3DhEwticK8JfDP2z3C%25252F4wAhKRQywltmu0mDuAul5TT0N3uAAAAAGnO6PIAAAAB%26reviewId%3DR1TUTCTU4SGBUG%23R1TUTCTU4SGBUG&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&marketPlaceId=ATVPDKIKX0DER&language=es&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+                        - generic [ref=e1225]: Útil
+                      - generic [ref=e1227]:
+                        - img [ref=e1228]
+                        - link "Reportar opinión de Kris Jackson" [ref=e1230] [cursor=pointer]:
+                          - /url: /-/es/hz/reviews-render/report-review/ref=cm_cr_dp_d_report?csrfT=hEwticK8JfDP2z3C%2F4wAhKRQywltmu0mDuAul5TT0N3uAAAAAGnO6PIAAAAB&reviewId=R1TUTCTU4SGBUG
+                          - text: Reportar
+                      - link "Traducir opinión al idioma Español" [ref=e1233] [cursor=pointer]:
+                        - /url: "#customerReviews"
+                - listitem [ref=e1234]:
+                  - generic [ref=e1237]:
+                    - link "NB" [ref=e1239] [cursor=pointer]:
+                      - /url: /-/es/gp/profile/amzn1.account.AGQUDCM7JSUVZ57C6LU3BN2U2IUA
+                      - img [ref=e1242]
+                      - generic [ref=e1243]: NB
+                    - heading "5.0 de 5 estrellas 10/10 recommend" [level=5] [ref=e1245]:
+                      - link "5.0 de 5 estrellas 10/10 recommend" [ref=e1246] [cursor=pointer]:
+                        - /url: /-/es/gp/customer-reviews/R26WAERCYORCXJ/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8
+                        - generic [ref=e1248]: 5.0 de 5 estrellas
+                        - text: 10/10 recommend
+                    - heading "Calificado en Estados Unidos el 10 de marzo de 2026" [level=6] [ref=e1249]
+                    - generic [ref=e1250]:
+                      - text: "Estilo: Ninebot S2"
+                      - img [ref=e1251]
+                      - 'link "Compra verificada: Más información sobre cómo funcionan las opiniones de clientes en Amazon" [ref=e1252] [cursor=pointer]':
+                        - /url: /-/es/gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?nodeId=G8UYX7LALQC8V9KA
+                        - text: Compra Verificada
+                    - generic [ref=e1257]: My 9-year-old loves this! She tried a family member's and liked it, so this was her Christmas gift. She uses it almost every day, and the neighborhood kids have enjoyed playing with it too. She has used this to accompany my SO on his runs, which is nice because she can't keep up on the long runs, nor does she want to. It can go pretty fast, but I love that I can control it from my phone. The Bluetooth option to play music is cool, too. We are 3 months in to frequent use, hoping it lasts a while!
+                    - generic [ref=e1258]:
+                      - link "Marcar la opinión como útil" [ref=e1262] [cursor=pointer]:
+                        - /url: https://www.amazon.com/-/es/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0CT2WN59R%2Fref%3Dcm_cr_dp_d_vote_lft%3Fie%3DUTF8%26csrfT%3DhKLD6AtyKNXQRiDiPDMC37g5MM4Jj4wTUN5TEV6colnEAAAAAGnO6PIAAAAB%26reviewId%3DR26WAERCYORCXJ%23R26WAERCYORCXJ&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&marketPlaceId=ATVPDKIKX0DER&language=es&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+                        - generic [ref=e1263]: Útil
+                      - generic [ref=e1265]:
+                        - img [ref=e1266]
+                        - link "Reportar opinión de NB" [ref=e1268] [cursor=pointer]:
+                          - /url: /-/es/hz/reviews-render/report-review/ref=cm_cr_dp_d_report?csrfT=hKLD6AtyKNXQRiDiPDMC37g5MM4Jj4wTUN5TEV6colnEAAAAAGnO6PIAAAAB&reviewId=R26WAERCYORCXJ
+                          - text: Reportar
+                      - link "Traducir opinión al idioma Español" [ref=e1271] [cursor=pointer]:
+                        - /url: "#customerReviews"
+                - listitem [ref=e1272]:
+                  - generic [ref=e1275]:
+                    - link "Amazon Customer" [ref=e1277] [cursor=pointer]:
+                      - /url: /-/es/gp/profile/amzn1.account.AFPIS7BESLHD4K5RB7R6ALZ73WVA
+                      - img [ref=e1280]
+                      - generic [ref=e1281]: Amazon Customer
+                    - heading "5.0 de 5 estrellas This-Machine is “Well-Built”! & Put together!👍" [level=5] [ref=e1283]:
+                      - link "5.0 de 5 estrellas This-Machine is “Well-Built”! & Put together!👍" [ref=e1284] [cursor=pointer]:
+                        - /url: /-/es/gp/customer-reviews/R3S2S8VRK05S31/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8
+                        - generic [ref=e1286]: 5.0 de 5 estrellas
+                        - text: This-Machine is “Well-Built”! & Put together!👍
+                    - heading "Calificado en Estados Unidos el 24 de febrero de 2026" [level=6] [ref=e1287]
+                    - generic [ref=e1288]:
+                      - text: "Estilo: Ninebot S2"
+                      - img [ref=e1289]
+                      - 'link "Compra verificada: Más información sobre cómo funcionan las opiniones de clientes en Amazon" [ref=e1290] [cursor=pointer]':
+                        - /url: /-/es/gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?nodeId=G8UYX7LALQC8V9KA
+                        - text: Compra Verificada
+                    - generic [ref=e1295]:
+                      - text: As of right now; it’s too early to give a “full-outside report” on this FUN-machine; (due-to-our extreme winter ❄️ weather conditions remaining up here.)
+                      - text: "So,.. after downloading the app: going thru the instructional portal, & it’s functions and features & fully charging up the battery 🔋 I’ve taken upon the indoor task of balancing & maneuverability (inside my house) which has become a “breeze” ! Cannot wait for the “full-test-run”outside after it warms-up! will-report-in later!"
+                    - generic [ref=e1296]:
+                      - link "Marcar la opinión como útil" [ref=e1300] [cursor=pointer]:
+                        - /url: https://www.amazon.com/-/es/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0CT2WN59R%2Fref%3Dcm_cr_dp_d_vote_lft%3Fie%3DUTF8%26csrfT%3DhCezQSEaxpapjib6EUfuxAUPIQFVdvOkbXgFLqtFnhkpAAAAAGnO6PIAAAAB%26reviewId%3DR3S2S8VRK05S31%23R3S2S8VRK05S31&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&marketPlaceId=ATVPDKIKX0DER&language=es&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+                        - generic [ref=e1301]: Útil
+                      - generic [ref=e1303]:
+                        - img [ref=e1304]
+                        - link "Reportar opinión de Amazon Customer" [ref=e1306] [cursor=pointer]:
+                          - /url: /-/es/hz/reviews-render/report-review/ref=cm_cr_dp_d_report?csrfT=hCezQSEaxpapjib6EUfuxAUPIQFVdvOkbXgFLqtFnhkpAAAAAGnO6PIAAAAB&reviewId=R3S2S8VRK05S31
+                          - text: Reportar
+                      - link "Traducir opinión al idioma Español" [ref=e1309] [cursor=pointer]:
+                        - /url: "#customerReviews"
+                - listitem [ref=e1310]:
+                  - generic [ref=e1313]:
+                    - link "Mike" [ref=e1315] [cursor=pointer]:
+                      - /url: /-/es/gp/profile/amzn1.account.AF5XT45HU6RGJ6MT2J3RTYJLZJLA
+                      - img [ref=e1318]
+                      - generic [ref=e1319]: Mike
+                    - heading "5.0 de 5 estrellas Good purchase overall" [level=5] [ref=e1321]:
+                      - link "5.0 de 5 estrellas Good purchase overall" [ref=e1322] [cursor=pointer]:
+                        - /url: /-/es/gp/customer-reviews/R15V68ZJCWGMBM/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8
+                        - generic [ref=e1324]: 5.0 de 5 estrellas
+                        - text: Good purchase overall
+                    - heading "Calificado en Estados Unidos el 15 de junio de 2024" [level=6] [ref=e1325]
+                    - generic [ref=e1326]:
+                      - text: "Estilo: Ninebot S2"
+                      - img [ref=e1327]
+                      - 'link "Compra verificada: Más información sobre cómo funcionan las opiniones de clientes en Amazon" [ref=e1328] [cursor=pointer]':
+                        - /url: /-/es/gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?nodeId=G8UYX7LALQC8V9KA
+                        - text: Compra Verificada
+                    - generic [ref=e1333]:
+                      - text: Cheaper than the more expensive segway S-plus. Although the S-plus seems to turn smoother and overall has better movement overall. This one is lighter and is more flashy than the other one. The speakers are kinda pointless because you'd probably be better off just listening off your phone at that point.
+                      - text: I'm probably biased of the speakers because I'm spoiled and like good bass.
+                      - text: The steering is slightly less comfortable than the S-plus and has slightly less platform for your feet.
+                      - text: I had to get rid of this one because I wiped out on it twice. Once the first day and the second time ended up in the E.R. and walked out with my arm in a sling (thankfully not broken). Easy to ride until there's a bump too large to ride over that you didn't see. Take it from me, pay attention, your driving. Take it one wheel at a time over bumps.
+                      - text: If you're trying to be budget friendly and have flashy lights, buy this one. If you have a little more money and plan on riding this for more than a hobby, probably buy the S-plus.
+                    - generic [ref=e1334]:
+                      - generic [ref=e1335]:
+                        - generic [ref=e1336]: A 4 personas les resultó útil
+                        - link "Marcar la opinión como útil" [ref=e1340] [cursor=pointer]:
+                          - /url: https://www.amazon.com/-/es/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0CT2WN59R%2Fref%3Dcm_cr_dp_d_vote_lft%3Fie%3DUTF8%26csrfT%3DhFpBlZK1DagWEalBSvW8U8Sqotg%25252Bdn%25252BdR6VgCHU8CkxJAAAAAGnO6PIAAAAB%26reviewId%3DR15V68ZJCWGMBM%23R15V68ZJCWGMBM&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&marketPlaceId=ATVPDKIKX0DER&language=es&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+                          - generic [ref=e1341]: Útil
+                      - generic [ref=e1343]:
+                        - img [ref=e1344]
+                        - link "Reportar opinión de Mike" [ref=e1346] [cursor=pointer]:
+                          - /url: /-/es/hz/reviews-render/report-review/ref=cm_cr_dp_d_report?csrfT=hFpBlZK1DagWEalBSvW8U8Sqotg%2Bdn%2BdR6VgCHU8CkxJAAAAAGnO6PIAAAAB&reviewId=R15V68ZJCWGMBM
+                          - text: Reportar
+                      - link "Traducir opinión al idioma Español" [ref=e1349] [cursor=pointer]:
+                        - /url: "#customerReviews"
+                - listitem [ref=e1350]:
+                  - generic [ref=e1353]:
+                    - link "Forrest43" [ref=e1355] [cursor=pointer]:
+                      - /url: /-/es/gp/profile/amzn1.account.AET6GQ2L36GU3O2OGA3GQXC2OEXA
+                      - img [ref=e1358]
+                      - generic [ref=e1359]: Forrest43
+                    - heading "1.0 de 5 estrellas Cheap replacement of S Plus" [level=5] [ref=e1361]:
+                      - link "1.0 de 5 estrellas Cheap replacement of S Plus" [ref=e1362] [cursor=pointer]:
+                        - /url: /-/es/gp/customer-reviews/R7W33PPO5ACT7/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8
+                        - generic [ref=e1364]: 1.0 de 5 estrellas
+                        - text: Cheap replacement of S Plus
+                    - heading "Calificado en Estados Unidos el 23 de enero de 2025" [level=6] [ref=e1365]
+                    - generic [ref=e1366]:
+                      - text: "Estilo: Ninebot S2"
+                      - img [ref=e1367]
+                      - 'link "Compra verificada: Más información sobre cómo funcionan las opiniones de clientes en Amazon" [ref=e1368] [cursor=pointer]':
+                        - /url: /-/es/gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?nodeId=G8UYX7LALQC8V9KA
+                        - text: Compra Verificada
+                    - generic [ref=e1373]:
+                      - text: This is so rickety and difficult to maneuver compared to the S Plus. They say the specs are similar but as far as quality of what has been built here; it sucks.
+                      - text: The S plus is like riding a Lamborghini and this is like riding a Sentra. The screws get lose, your legs slip off the weirdly positioned and shaped knee bar.
+                      - text: I had no issues with, loved and still have my S Plus but this cheaper alternative is garbage. Do yourself a favor and save the extra $300 and get the S plus.
+                      - text: Very dissatisfied and disappointed.
+                    - generic [ref=e1374]:
+                      - generic [ref=e1375]:
+                        - generic [ref=e1376]: A 6 personas les resultó útil
+                        - link "Marcar la opinión como útil" [ref=e1380] [cursor=pointer]:
+                          - /url: https://www.amazon.com/-/es/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0CT2WN59R%2Fref%3Dcm_cr_dp_d_vote_lft%3Fie%3DUTF8%26csrfT%3DhDq25delNgI12U8OGE1bR3R9qTihwrHC3zWYz%25252Fq6kMR8AAAAAGnO6PIAAAAB%26reviewId%3DR7W33PPO5ACT7%23R7W33PPO5ACT7&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&marketPlaceId=ATVPDKIKX0DER&language=es&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+                          - generic [ref=e1381]: Útil
+                      - generic [ref=e1383]:
+                        - img [ref=e1384]
+                        - link "Reportar opinión de Forrest43" [ref=e1386] [cursor=pointer]:
+                          - /url: /-/es/hz/reviews-render/report-review/ref=cm_cr_dp_d_report?csrfT=hDq25delNgI12U8OGE1bR3R9qTihwrHC3zWYz%2Fq6kMR8AAAAAGnO6PIAAAAB&reviewId=R7W33PPO5ACT7
+                          - text: Reportar
+                      - link "Traducir opinión al idioma Español" [ref=e1389] [cursor=pointer]:
+                        - /url: "#customerReviews"
+                - listitem [ref=e1390]:
+                  - generic [ref=e1393]:
+                    - link "Daniel" [ref=e1395] [cursor=pointer]:
+                      - /url: /-/es/gp/profile/amzn1.account.AEIUBXMD4ZWFFACJV57C56MWTW2Q
+                      - img [ref=e1398]
+                      - generic [ref=e1399]: Daniel
+                    - heading "4.0 de 5 estrellas Good product" [level=5] [ref=e1401]:
+                      - link "4.0 de 5 estrellas Good product" [ref=e1402] [cursor=pointer]:
+                        - /url: /-/es/gp/customer-reviews/R19K0JK7CIO8EB/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8
+                        - generic [ref=e1404]: 4.0 de 5 estrellas
+                        - text: Good product
+                    - heading "Calificado en Estados Unidos el 5 de marzo de 2026" [level=6] [ref=e1405]
+                    - generic [ref=e1406]:
+                      - text: "Estilo: Ninebot S2"
+                      - img [ref=e1407]
+                      - 'link "Compra verificada: Más información sobre cómo funcionan las opiniones de clientes en Amazon" [ref=e1408] [cursor=pointer]':
+                        - /url: /-/es/gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?nodeId=G8UYX7LALQC8V9KA
+                        - text: Compra Verificada
+                    - generic [ref=e1413]: Great product works for once it is intended for
+                    - generic [ref=e1414]:
+                      - link "Marcar la opinión como útil" [ref=e1418] [cursor=pointer]:
+                        - /url: https://www.amazon.com/-/es/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0CT2WN59R%2Fref%3Dcm_cr_dp_d_vote_lft%3Fie%3DUTF8%26csrfT%3DhA19rkmb6rLBIG6qvNdxaG8otZGiH4e5iPqqi4CVWymaAAAAAGnO6PIAAAAB%26reviewId%3DR19K0JK7CIO8EB%23R19K0JK7CIO8EB&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&marketPlaceId=ATVPDKIKX0DER&language=es&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+                        - generic [ref=e1419]: Útil
+                      - generic [ref=e1421]:
+                        - img [ref=e1422]
+                        - link "Reportar opinión de Daniel" [ref=e1424] [cursor=pointer]:
+                          - /url: /-/es/hz/reviews-render/report-review/ref=cm_cr_dp_d_report?csrfT=hA19rkmb6rLBIG6qvNdxaG8otZGiH4e5iPqqi4CVWymaAAAAAGnO6PIAAAAB&reviewId=R19K0JK7CIO8EB
+                          - text: Reportar
+                      - link "Traducir opinión al idioma Español" [ref=e1427] [cursor=pointer]:
+                        - /url: "#customerReviews"
+              - generic [ref=e1429]:
+                - separator [ref=e1430]
+                - link "Ver más opiniones" [ref=e1431] [cursor=pointer]:
+                  - /url: /-/es/product-reviews/B0CT2WN59R/ref=cm_cr_dp_d_show_all_btm?ie=UTF8
+  - complementary "Productos que has visto recientemente y recomendaciones destacadas"
+  - generic [ref=e1436]:
+    - button "Inicio de Página" [ref=e1437] [cursor=pointer]:
+      - generic [ref=e1438]: Inicio de Página
+    - generic [ref=e1439]:
+      - generic [ref=e1440]:
+        - heading "Conócenos" [level=6] [ref=e1441]
+        - list [ref=e1442]:
+          - listitem [ref=e1443]:
+            - link "Trabaja en Amazon" [ref=e1444] [cursor=pointer]:
+              - /url: https://www.amazon.jobs
+          - listitem [ref=e1445]:
+            - link "Blog" [ref=e1446] [cursor=pointer]:
+              - /url: https://blog.aboutamazon.com/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=e1447]:
+            - link "Acerca de Amazon" [ref=e1448] [cursor=pointer]:
+              - /url: https://www.aboutamazon.com/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=e1449]:
+            - link "Relaciones con los Inversionistas" [ref=e1450] [cursor=pointer]:
+              - /url: https://www.amazon.com/-/es/ir
+          - listitem [ref=e1451]:
+            - link "Dispositivos Amazon" [ref=e1452] [cursor=pointer]:
+              - /url: /-/es/gp/browse.html?node=2102313011&ref_=footer_devices
+          - listitem [ref=e1453]:
+            - link "Amazon Science" [ref=e1454] [cursor=pointer]:
+              - /url: https://www.amazon.science
+      - generic [ref=e1456]:
+        - heading "Gana Dinero con Nosotros" [level=6] [ref=e1457]
+        - list [ref=e1458]:
+          - listitem [ref=e1459]:
+            - link "Vender productos en Amazon" [ref=e1460] [cursor=pointer]:
+              - /url: https://services.amazon.com/sell.html?ld=AZFSSOA&ref_=footer_soa
+          - listitem [ref=e1461]:
+            - link "Vende en Amazon Business" [ref=e1462] [cursor=pointer]:
+              - /url: https://services.amazon.com/amazon-business.html?ld=usb2bunifooter&ref_=footer_b2b
+          - listitem [ref=e1463]:
+            - link "Vender aplicaciones en Amazon" [ref=e1464] [cursor=pointer]:
+              - /url: https://developer.amazon.com
+          - listitem [ref=e1465]:
+            - link "Programa de Afiliados" [ref=e1466] [cursor=pointer]:
+              - /url: https://affiliate-program.amazon.com/
+          - listitem [ref=e1467]:
+            - link "Anuncia tus Productos" [ref=e1468] [cursor=pointer]:
+              - /url: https://advertising.amazon.com/?ref=ext_amzn_ftr
+          - listitem [ref=e1469]:
+            - link "Publica tu Libro en Kindle" [ref=e1470] [cursor=pointer]:
+              - /url: /-/es/gp/seller-account/mm-summary-page.html?ld=AZFooterSelfPublish&topic=200260520&ref_=footer_publishing
+          - listitem [ref=e1471]:
+            - link "Habilita un Amazon Hub" [ref=e1472] [cursor=pointer]:
+              - /url: https://go.thehub-amazon.com/amazon-hub-locker
+          - listitem [ref=e1473]:
+            - text: ›
+            - link "Ver más Gana Dinero con Nosotros" [ref=e1474] [cursor=pointer]:
+              - /url: /-/es/b/?node=18190131011&ld=AZUSSOA-seemore&ref_=footer_seemore
+      - generic [ref=e1476]:
+        - heading "Productos de Pago de Amazon" [level=6] [ref=e1477]
+        - list [ref=e1478]:
+          - listitem [ref=e1479]:
+            - link "Compra con Puntos" [ref=e1480] [cursor=pointer]:
+              - /url: /-/es/gp/browse.html?node=16218619011&ref_=footer_swp
+          - listitem [ref=e1481]:
+            - link "Recarga tu Saldo" [ref=e1482] [cursor=pointer]:
+              - /url: /-/es/dp/B0CHTVMXZJ?th=1?ref_=footer_reload_us
+          - listitem [ref=e1483]:
+            - link "Conversor de divisas de Amazon" [ref=e1484] [cursor=pointer]:
+              - /url: /-/es/gp/browse.html?node=388305011&ref_=footer_tfx
+      - generic [ref=e1486]:
+        - heading "Podemos Ayudarte" [level=6] [ref=e1487]
+        - list [ref=e1488]:
+          - listitem [ref=e1489]:
+            - link "Amazon y el COVID-19" [ref=e1490] [cursor=pointer]:
+              - /url: /-/es/gp/help/customer/display.html?nodeId=GDFU3JS5AL6SYHRD&ref_=footer_covid
+          - listitem [ref=e1491]:
+            - link "Tu Cuenta" [ref=e1492] [cursor=pointer]:
+              - /url: https://www.amazon.com/-/es/gp/css/homepage.html?ref_=footer_ya
+          - listitem [ref=e1493]:
+            - link "Tus Pedidos" [ref=e1494] [cursor=pointer]:
+              - /url: https://www.amazon.com/-/es/gp/css/order-history?ref_=footer_yo
+          - listitem [ref=e1495]:
+            - link "Tarifas de Envío y Políticas" [ref=e1496] [cursor=pointer]:
+              - /url: /-/es/gp/help/customer/display.html?nodeId=468520&ref_=footer_shiprates
+          - listitem [ref=e1497]:
+            - link "Devoluciones y Reemplazos" [ref=e1498] [cursor=pointer]:
+              - /url: /-/es/gp/css/returns/homepage.html?ref_=footer_hy_f_4
+          - listitem [ref=e1499]:
+            - link "Administrar Contenido y Dispositivos" [ref=e1500] [cursor=pointer]:
+              - /url: /-/es/gp/digital/fiona/manage?ref_=footer_myk
+          - listitem [ref=e1501]:
+            - link "Ayuda" [ref=e1502] [cursor=pointer]:
+              - /url: /-/es/gp/help/customer/display.html?nodeId=508510&ref_=footer_gw_m_b_he
+    - generic [ref=e1504]:
+      - link "Amazon US Home" [ref=e1507] [cursor=pointer]:
+        - /url: /-/es/?ref_=footer_logo
+      - generic [ref=e1510]:
+        - generic [ref=e1511]:
+          - link "Elige un idioma para hacer compras. La selección actual es Español." [ref=e1512] [cursor=pointer]:
+            - /url: /-/es/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=footer_lang
+            - generic [ref=e1514]: Español
+          - button "Ampliar para cambiar el idioma o país" [ref=e1515] [cursor=pointer]
+        - link "$ USD - dólar estadounidense" [ref=e1516] [cursor=pointer]:
+          - /url: /-/es/customer-preferences/edit?ie=UTF8&ref_=footer_cop&preferencesReturnUrl=%2F-%2Fes%2Fdp%2FB0CT2WN59R
+          - generic [ref=e1517]: $
+          - generic [ref=e1518]: USD - dólar estadounidense
+        - button "Selecciona un país/una región para comprar. La selección actual esEstados Unidos." [ref=e1519] [cursor=pointer]:
+          - generic [ref=e1521]: Estados Unidos
+    - navigation "Más en Amazon" [ref=e1522]:
+      - generic "Más en Amazon" [ref=e1523]:
+        - list [ref=e1524]:
+          - listitem [ref=e1525]:
+            - link "Amazon Music Reproduce millones de canciones" [ref=e1526] [cursor=pointer]:
+              - /url: https://music.amazon.com?ref=dm_aff_amz_com
+              - heading "Amazon Music" [level=5] [ref=e1527]
+              - generic [ref=e1528]:
+                - text: Reproduce millones
+                - text: de canciones
+          - listitem [ref=e1529]
+          - listitem [ref=e1530]:
+            - link "Amazon Advertising Encontrar, atraer y captar clientes" [ref=e1531] [cursor=pointer]:
+              - /url: https://advertising.amazon.com/?ref=footer_advtsing_amzn_com
+              - heading "Amazon Advertising" [level=5] [ref=e1532]
+              - generic [ref=e1533]:
+                - text: Encontrar, atraer y
+                - text: captar clientes
+          - listitem [ref=e1534]
+          - listitem [ref=e1535]:
+            - link "6pm Descubre ofertas en marcas de moda" [ref=e1536] [cursor=pointer]:
+              - /url: https://www.6pm.com
+              - heading "6pm" [level=5] [ref=e1537]
+              - generic [ref=e1538]:
+                - text: Descubre ofertas
+                - text: en marcas de moda
+          - listitem [ref=e1539]
+          - listitem [ref=e1540]:
+            - link "AbeBooks Libros, arte & artículos de colección" [ref=e1541] [cursor=pointer]:
+              - /url: https://www.abebooks.com
+              - heading "AbeBooks" [level=5] [ref=e1542]
+              - generic [ref=e1543]:
+                - text: Libros, arte
+                - text: "& artículos de colección"
+          - listitem [ref=e1544]
+          - listitem [ref=e1545]:
+            - link "ACX Editorial de Audiolibros Hecho Fácil" [ref=e1546] [cursor=pointer]:
+              - /url: https://www.acx.com/
+              - heading "ACX" [level=5] [ref=e1547]
+              - generic [ref=e1548]:
+                - text: Editorial de Audiolibros
+                - text: Hecho Fácil
+          - listitem [ref=e1549]
+          - listitem [ref=e1550]:
+            - link "Venda en Amazon Comience una cuenta de venta" [ref=e1551] [cursor=pointer]:
+              - /url: https://sell.amazon.com/?ld=AZUSSOA-footer-aff&ref_=footer_sell
+              - heading "Venda en Amazon" [level=5] [ref=e1552]
+              - generic [ref=e1553]: Comience una cuenta de venta
+        - list [ref=e1554]:
+          - listitem [ref=e1555]:
+            - link "Veeqo Shipping Software Inventory Management" [ref=e1556] [cursor=pointer]:
+              - /url: https://www.veeqo.com/?utm_source=amazon&utm_medium=website&utm_campaign=footer
+              - heading "Veeqo" [level=5] [ref=e1557]
+              - generic [ref=e1558]:
+                - text: Shipping Software
+                - text: Inventory Management
+          - listitem [ref=e1559]
+          - listitem [ref=e1560]:
+            - link "Amazon Business Todo para tu negocio" [ref=e1561] [cursor=pointer]:
+              - /url: /-/es/business?ref_=footer_retail_b2b
+              - heading "Amazon Business" [level=5] [ref=e1562]
+              - generic [ref=e1563]:
+                - text: Todo para
+                - text: tu negocio
+          - listitem [ref=e1564]
+          - listitem [ref=e1565]:
+            - link "AmazonGlobal Pedidos de Envío Internacional" [ref=e1566] [cursor=pointer]:
+              - /url: /-/es/gp/browse.html?node=230659011&ref_=footer_amazonglobal
+              - heading "AmazonGlobal" [level=5] [ref=e1567]
+              - generic [ref=e1568]:
+                - text: Pedidos de Envío
+                - text: Internacional
+          - listitem [ref=e1569]
+          - listitem [ref=e1570]:
+            - link "Amazon Web Services Servicios de cómputo en nube escalable" [ref=e1571] [cursor=pointer]:
+              - /url: https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&sc_campaign=amazonfooter
+              - heading "Amazon Web Services" [level=5] [ref=e1572]
+              - generic [ref=e1573]:
+                - text: Servicios de cómputo
+                - text: en nube escalable
+          - listitem [ref=e1574]
+          - listitem [ref=e1575]:
+            - link "Audible Escucha Libros e Interpretaciones de Audio Originales" [ref=e1576] [cursor=pointer]:
+              - /url: https://www.audible.com
+              - heading "Audible" [level=5] [ref=e1577]
+              - generic [ref=e1578]:
+                - text: Escucha Libros e Interpretaciones
+                - text: de Audio Originales
+          - listitem [ref=e1579]
+          - listitem [ref=e1580]:
+            - link "Box Office Mojo Encuentra películas Datos de taquilla" [ref=e1581] [cursor=pointer]:
+              - /url: https://www.boxofficemojo.com/?ref_=amzn_nav_ftr
+              - heading "Box Office Mojo" [level=5] [ref=e1582]
+              - generic [ref=e1583]:
+                - text: Encuentra películas
+                - text: Datos de taquilla
+        - list [ref=e1584]:
+          - listitem [ref=e1585]:
+            - link "Goodreads Análisis de libros y recomendaciones" [ref=e1586] [cursor=pointer]:
+              - /url: https://www.goodreads.com
+              - heading "Goodreads" [level=5] [ref=e1587]
+              - generic [ref=e1588]:
+                - text: Análisis de libros
+                - text: y recomendaciones
+          - listitem [ref=e1589]
+          - listitem [ref=e1590]:
+            - link "IMDb Películas, TV y Celebridades" [ref=e1591] [cursor=pointer]:
+              - /url: https://www.imdb.com
+              - heading "IMDb" [level=5] [ref=e1592]
+              - generic [ref=e1593]:
+                - text: Películas, TV
+                - text: y Celebridades
+          - listitem [ref=e1594]
+          - listitem [ref=e1595]:
+            - link "IMDbPro Obtén información de entretenimiento que los profesionales necesitan" [ref=e1596] [cursor=pointer]:
+              - /url: https://pro.imdb.com?ref_=amzn_nav_ftr
+              - heading "IMDbPro" [level=5] [ref=e1597]
+              - generic [ref=e1598]:
+                - text: Obtén información de entretenimiento
+                - text: que los profesionales necesitan
+          - listitem [ref=e1599]
+          - listitem [ref=e1600]:
+            - link "Kindle Direct Publishing Publica tu libro en papel y digital de manera independiente" [ref=e1601] [cursor=pointer]:
+              - /url: https://kdp.amazon.com
+              - heading "Kindle Direct Publishing" [level=5] [ref=e1602]
+              - generic [ref=e1603]:
+                - text: Publica tu libro en papel y digital
+                - text: de manera independiente
+          - listitem [ref=e1604]
+          - listitem [ref=e1605]:
+            - link "Prime Video Direct Distribución de Video Sin Esfuerzo" [ref=e1606] [cursor=pointer]:
+              - /url: https://videodirect.amazon.com/home/landing
+              - heading "Prime Video Direct" [level=5] [ref=e1607]
+              - generic [ref=e1608]:
+                - text: Distribución de Video
+                - text: Sin Esfuerzo
+          - listitem [ref=e1609]
+          - listitem [ref=e1610]:
+            - link "Shopbop Diseñador Marcas de Moda" [ref=e1611] [cursor=pointer]:
+              - /url: https://www.shopbop.com
+              - heading "Shopbop" [level=5] [ref=e1612]
+              - generic [ref=e1613]:
+                - text: Diseñador
+                - text: Marcas de Moda
+        - list [ref=e1614]:
+          - listitem [ref=e1615]:
+            - link "Woot! Descuentos y travesuras" [ref=e1616] [cursor=pointer]:
+              - /url: https://www.woot.com/
+              - heading "Woot!" [level=5] [ref=e1617]
+              - generic [ref=e1618]:
+                - text: Descuentos y
+                - text: travesuras
+          - listitem [ref=e1619]
+          - listitem [ref=e1620]:
+            - link "Zappos Zapatos y ropa" [ref=e1621] [cursor=pointer]:
+              - /url: https://www.zappos.com
+              - heading "Zappos" [level=5] [ref=e1622]
+              - generic [ref=e1623]:
+                - text: Zapatos y
+                - text: ropa
+          - listitem [ref=e1624]
+          - listitem [ref=e1625]:
+            - link "Ring Casa Inteligente Sistemas de Seguridad" [ref=e1626] [cursor=pointer]:
+              - /url: https://ring.com
+              - heading "Ring" [level=5] [ref=e1627]
+              - generic [ref=e1628]:
+                - text: Casa Inteligente
+                - text: Sistemas de Seguridad
+          - listitem [ref=e1629]
+          - listitem [ref=e1630]:
+            - link "Wifi eero Video 4K en tiempo real en todas las habitaciones" [ref=e1631] [cursor=pointer]:
+              - /url: https://eero.com/
+              - heading "Wifi eero" [level=5] [ref=e1632]
+              - generic [ref=e1633]: Video 4K en tiempo real en todas las habitaciones
+          - listitem [ref=e1634]
+          - listitem [ref=e1635]:
+            - link "Blink Seguridad inteligente para todos los hogares" [ref=e1636] [cursor=pointer]:
+              - /url: https://blinkforhome.com/?ref=nav_footer
+              - heading "Blink" [level=5] [ref=e1637]
+              - generic [ref=e1638]:
+                - text: Seguridad inteligente
+                - text: para todos los hogares
+          - listitem [ref=e1639]
+          - listitem [ref=e1640]:
+            - link "Neighbors App Alertas de seguridad y delitos en tiempo real" [ref=e1641] [cursor=pointer]:
+              - /url: https://shop.ring.com/pages/neighbors-app
+              - heading "Neighbors App" [level=5] [ref=e1642]
+              - generic [ref=e1643]:
+                - text: Alertas de seguridad
+                - text: y delitos en tiempo real
+        - list [ref=e1644]:
+          - listitem [ref=e1645]
+          - listitem [ref=e1646]
+          - listitem [ref=e1647]
+          - listitem [ref=e1648]
+          - listitem [ref=e1649]:
+            - link "Suscríbete con Amazon a los servicios de suscripción de \"Discover & try\"" [ref=e1650] [cursor=pointer]:
+              - /url: /-/es/gp/browse.html?node=14498690011&ref_=amzn_nav_ftr_swa
+              - heading "Suscríbete con Amazon" [level=5] [ref=e1651]
+              - generic [ref=e1652]:
+                - text: a los servicios de suscripción
+                - text: de "Discover & try"
+          - listitem [ref=e1653]
+          - listitem [ref=e1654]:
+            - link "PillPack Pharmacy simplificado" [ref=e1655] [cursor=pointer]:
+              - /url: https://www.pillpack.com
+              - heading "PillPack" [level=5] [ref=e1656]
+              - generic [ref=e1657]: Pharmacy simplificado
+          - listitem [ref=e1658]
+          - listitem [ref=e1659]
+          - listitem [ref=e1660]
+          - listitem [ref=e1661]
+    - generic [ref=e1662]:
+      - list [ref=e1663]:
+        - listitem [ref=e1664]:
+          - link "Condiciones de uso" [ref=e1665] [cursor=pointer]:
+            - /url: /-/es/gp/help/customer/display.html?nodeId=508088&ref_=footer_cou
+        - listitem [ref=e1666]:
+          - link "Aviso de privacidad" [ref=e1667] [cursor=pointer]:
+            - /url: /-/es/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ&ref_=footer_privacy
+        - listitem [ref=e1668]:
+          - link "Aviso de Privacidad de Datos de Salud del Consumidor" [ref=e1669] [cursor=pointer]:
+            - /url: /-/es/gp/help/customer/display.html?ie=UTF8&nodeId=TnACMrGVghHocjL8KB&ref_=footer_consumer_health_data_privacy
+        - listitem [ref=e1670]:
+          - link "Tus opciones de privacidad de los anuncios" [ref=e1671] [cursor=pointer]:
+            - /url: /-/es/privacyprefs?ref_=footer_iba
+        - listitem [ref=e1672]
+      - generic [ref=e1674]: © 1996-2026 Amazon.com, Inc. o sus afiliados

@@ -1,0 +1,1532 @@
+- generic [ref=e2]:
+  - navigation "Menú de métodos abreviados" [ref=e3]:
+    - heading "Saltar a" [level=2] [ref=e4]
+    - list "Saltar a" [ref=e5]:
+      - listitem [ref=e6]:
+        - link "contenido principal" [ref=e7] [cursor=pointer]:
+          - /url: "#skippedLink"
+          - text: Contenido principal
+      - listitem [ref=e8]:
+        - link "Acerca de este producto" [ref=e9] [cursor=pointer]:
+          - /url: "#featurebullets_feature_div"
+          - text: Acerca de este artículo
+      - listitem [ref=e10]:
+        - link "Saltar a las opciones de compra" [ref=e11] [cursor=pointer]:
+          - /url: "#buybox"
+          - text: Opciones de compra
+      - listitem [ref=e12]:
+        - link "Saltar a videos" [ref=e13] [cursor=pointer]:
+          - /url: "#va-related-videos-widget_feature_div"
+          - text: Videos
+      - listitem [ref=e14]:
+        - link "Opiniones" [ref=e15] [cursor=pointer]:
+          - /url: "#customerReviews"
+    - separator [ref=e16]
+    - heading "Métodos abreviados de teclado" [level=2] [ref=e17]
+    - list "Métodos abreviados de teclado" [ref=e18]:
+      - listitem [ref=e19]:
+        - link "Buscar, alt, barra inclinada" [ref=e20] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e21]:
+            - generic [ref=e22]: Buscar
+            - generic [ref=e23]:
+              - generic [ref=e24]: alt
+              - generic [ref=e25]: +
+              - generic [ref=e26]: /
+      - listitem [ref=e27]:
+        - link "Carrito, Shift, alt, c" [ref=e28] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e29]:
+            - generic [ref=e30]: Carrito
+            - generic [ref=e31]:
+              - generic [ref=e32]: shift
+              - generic [ref=e33]: +
+              - generic [ref=e34]: alt
+              - generic [ref=e35]: +
+              - generic [ref=e36]: C
+      - listitem [ref=e37]:
+        - link "Inicio, Shift, alt, h" [ref=e38] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e39]:
+            - generic [ref=e40]: Inicio
+            - generic [ref=e41]:
+              - generic [ref=e42]: shift
+              - generic [ref=e43]: +
+              - generic [ref=e44]: alt
+              - generic [ref=e45]: +
+              - generic [ref=e46]: H
+      - listitem [ref=e47]:
+        - link "Tus pedidos, Shift, alt, o" [ref=e48] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e49]:
+            - generic [ref=e50]: Pedidos
+            - generic [ref=e51]:
+              - generic [ref=e52]: shift
+              - generic [ref=e53]: +
+              - generic [ref=e54]: alt
+              - generic [ref=e55]: +
+              - generic [ref=e56]: O
+      - listitem [ref=e57]:
+        - button "Mostrar/ocultar métodos abreviados, Shift, alt, z" [ref=e58] [cursor=pointer]:
+          - generic [ref=e59]:
+            - generic [ref=e60]: Mostrar/ocultar métodos abreviados
+            - generic [ref=e61]:
+              - generic [ref=e62]: shift
+              - generic [ref=e63]: +
+              - generic [ref=e64]: alt
+              - generic [ref=e65]: +
+              - generic [ref=e66]: Z
+    - generic [ref=e72]: Para moverte entre elementos, usa las flechas arriba o abajo del teclado.
+  - banner [ref=e73]:
+    - navigation "Primary" [ref=e74]:
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - link "Amazon" [ref=e78] [cursor=pointer]:
+            - /url: /-/es/ref=nav_logo
+          - button "Enviar a Colombia" [ref=e81] [cursor=pointer]:
+            - generic [ref=e83]:
+              - generic [ref=e84]: Enviar a
+              - generic [ref=e85]: Colombia
+        - search [ref=e88]:
+          - generic [ref=e91]:
+            - generic [ref=e93]: Todos
+            - combobox "Selecciona el departamento donde deseas realizar tu búsqueda" [ref=e95] [cursor=pointer]:
+              - option "Todos los departamentos" [selected]
+              - option "Arte y artesanías"
+              - option "Automotriz"
+              - option "Bebé"
+              - option "Belleza y cuidado personal"
+              - option "Cine y TV"
+              - option "Computadoras"
+              - option "Deportes y actividades al aire libre"
+              - option "Electrónicos"
+              - option "Equipaje"
+              - option "Herramientas y mejoramiento del hogar"
+              - option "Hogar y cocina"
+              - option "Industria y Ciencia"
+              - option "Insumos para mascotas"
+              - option "Juguetes y juegos"
+              - option "Libros"
+              - option "Moda para Hombre"
+              - option "Moda para Mujer"
+              - option "Moda para Niñas"
+              - option "Moda para Niños"
+              - option "Música MP3"
+              - option "Música, CDs y Vinilos"
+              - option "Ofertas"
+              - option "Prime Video"
+              - option "Salud y Hogar"
+              - option "Software"
+              - option "Tienda Kindle"
+              - option "Videojuegos"
+          - searchbox "Buscar en Amazon" [ref=e98]
+          - generic [ref=e99]:
+            - generic "Ir" [ref=e101] [cursor=pointer]:
+              - button "Ir" [ref=e102]
+            - button [ref=e104]: Agent Search
+        - generic [ref=e106]:
+          - generic [ref=e107]:
+            - link "Elige un idioma para comprar en Amazon Estados Unidos. La selección actual es Español (ES)." [ref=e108] [cursor=pointer]:
+              - /url: /-/es/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais
+              - generic [ref=e111]:
+                - img "Estados Unidos" [ref=e112]
+                - generic [ref=e113]: ES
+            - button "Ampliar para cambiar el idioma o país" [ref=e114] [cursor=pointer]
+          - generic [ref=e115]:
+            - link "Hola, Identifícate Cuenta y Listas" [ref=e116] [cursor=pointer]:
+              - /url: https://www.amazon.com/-/es/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2F-%2Fes%2Fdp%2FB0DRXSQMJH%3Fref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+              - generic [ref=e118]: Hola, Identifícate
+              - generic [ref=e119]: Cuenta y Listas
+            - button "Expandir cuenta y listas" [ref=e120] [cursor=pointer]
+          - link "Devoluciones y pedidos" [ref=e121] [cursor=pointer]:
+            - /url: /-/es/gp/css/order-history?ref_=nav_orders_first
+            - generic [ref=e122]: Devoluciones
+            - generic [ref=e123]: y pedidos
+          - link "0 artículos en el carrito" [ref=e124] [cursor=pointer]:
+            - /url: /-/es/gp/cart/view.html?ref_=nav_cart
+            - generic [ref=e126]: "0"
+            - generic [ref=e129]: Carrito
+      - alertdialog "Alerta de transición a compras internacionales" [ref=e130]:
+        - generic [ref=e131]:
+          - generic [ref=e135]:
+            - text: Te mostramos los productos que se envían a
+            - strong [ref=e136]: Colombia
+            - text: . Para ver productos que se envían a otro país, cambia tu dirección de envío.
+          - generic [ref=e137]:
+            - generic [ref=e139] [cursor=pointer]:
+              - button "CONTINUAR" [ref=e140]
+              - generic [ref=e141]: CONTINUAR
+            - generic [ref=e143] [cursor=pointer]:
+              - button "CAMBIAR LA DIRECCIÓN" [ref=e144]
+              - generic [ref=e145]: CAMBIAR LA DIRECCIÓN
+      - generic [ref=e149]:
+        - link "Identifícate" [ref=e150] [cursor=pointer]:
+          - /url: https://www.amazon.com/-/es/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2F-%2Fes%2Fdp%2FB0DRXSQMJH%3Fref_%3Dnav_custrec_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+          - generic [ref=e151]: Identifícate
+        - generic [ref=e152]:
+          - text: ¿Eres un cliente nuevo?
+          - link "¿No tienes cuenta en Amazon? Comienza aquí para crear una cuenta" [ref=e153] [cursor=pointer]:
+            - /url: https://www.amazon.com/-/es/ap/register?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2F-%2Fes%2Fdp%2FB0DRXSQMJH%2F%3F_encoding%3DUTF8%26language%3Des%26ref_%3Dnav_custrec_newcust&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+            - text: Empieza aquí.
+      - generic [ref=e158]:
+        - button "Abrir menú de todas las categorías" [ref=e160] [cursor=pointer]:
+          - generic [ref=e162]: Todo
+        - list [ref=e166]:
+          - listitem [ref=e167]:
+            - link "Prime" [ref=e169] [cursor=pointer]:
+              - /url: /-/es/prime?ref_=nav_cs_primelink_nonmember
+          - listitem [ref=e170]:
+            - link "Prime Video" [ref=e172] [cursor=pointer]:
+              - /url: /gp/redirect.html?location=https%3A%2F%2Fwww.primevideo.com&source=nav_linktree&token=491B3E20E8D6C755745FD7E34BCE779F25003CB2
+          - listitem [ref=e173]:
+            - link "Ofertas del Día" [ref=e175] [cursor=pointer]:
+              - /url: /-/es/gp/goldbox?ref_=nav_cs_gb_bau
+          - listitem [ref=e176]:
+            - link "Tarjetas de Regalo" [ref=e178] [cursor=pointer]:
+              - /url: /-/es/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc
+          - listitem [ref=e179]:
+            - link "Vender" [ref=e181] [cursor=pointer]:
+              - /url: /-/es/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell
+          - listitem [ref=e182]:
+            - link "Listas" [ref=e184] [cursor=pointer]:
+              - /url: /-/es/gp/browse.html?node=16115931011&ref_=nav_cs_registry
+          - listitem [ref=e185]:
+            - link "Servicio al Cliente" [ref=e187] [cursor=pointer]:
+              - /url: /-/es/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice
+          - link "Haz clic para llamar a nuestra línea de servicio al cliente para discapacitados, o contáctanos directamente al 1-888-283-1678" [ref=e188] [cursor=pointer]:
+            - /url: /-/es/gp/help/customer/accessibility
+            - text: Servicio al cliente con discapacidad
+        - link "Prime entrega gratis desde EE. UU." [ref=e191] [cursor=pointer]:
+          - /url: /-/es/Prime/?_encoding=UTF8&ref_=nav_swm_undefined&pf_rd_p=09cb99f1-3648-45f3-86f3-cbe9cb3a30cb&pf_rd_s=nav-sitewide-msg-text-export&pf_rd_t=4201&pf_rd_i=navbar-4201&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=N0GVSPHY729WSFN6H2FN
+      - dialog [ref=e192]
+  - generic [ref=e194]:
+    - heading "El resumen del producto presenta información clave del producto Atajo del teclado shift + alt + D" [level=1] [ref=e197]:
+      - button "El resumen del producto presenta información clave del producto" [ref=e198] [cursor=pointer]:
+        - generic [ref=e199]: El resumen del producto presenta información clave del producto
+      - separator [ref=e201]
+      - generic [ref=e202]:
+        - text: Atajo del teclado
+        - generic [ref=e203]: shift + alt + D
+    - main [ref=e204]:
+      - generic [ref=e205]:
+        - link "Shop top categories that ship internationally" [ref=e209] [cursor=pointer]:
+          - /url: /-/es/b/?_encoding=UTF8&node=21439846011&pd_rd_w=qHfr6&content-id=amzn1.sym.34ef58bd-dcf4-4e33-b605-79695e8e618a&pf_rd_p=34ef58bd-dcf4-4e33-b605-79695e8e618a&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vBXSi&pd_rd_r=83567fec-11ec-47b5-8f63-127169bb7582
+          - img "Shop top categories that ship internationally" [ref=e210]
+        - list [ref=e215]:
+          - listitem [ref=e216]:
+            - link "Deportes" [ref=e218] [cursor=pointer]:
+              - /url: /-/es/Deportes-Actividad-Fisica/b/ref=dp_bc_2?ie=UTF8&node=10971181011
+          - listitem [ref=e219]: ›
+          - listitem [ref=e220]:
+            - link "Patines, Patinetas y Patines del Diablo" [ref=e222] [cursor=pointer]:
+              - /url: /-/es/Patines-Patinetas-Patines-Diablo/b/ref=dp_bc_3?ie=UTF8&node=11051398011
+          - listitem [ref=e223]: ›
+          - listitem [ref=e224]:
+            - link "Patines del Diablo y Equipo" [ref=e226] [cursor=pointer]:
+              - /url: /-/es/Patines-Diablo-Equipo/b/ref=dp_bc_4?ie=UTF8&node=11063781
+          - listitem [ref=e227]: ›
+          - listitem [ref=e228]:
+            - link "Patines del Diablo" [ref=e230] [cursor=pointer]:
+              - /url: /-/es/Patines-Diablo/b/ref=dp_bc_5?ie=UTF8&node=2345825011
+          - listitem [ref=e231]: ›
+          - listitem [ref=e232]:
+            - link "Patines del Diablo Eléctricos" [ref=e234] [cursor=pointer]:
+              - /url: /-/es/b/ref=dp_bc_6?ie=UTF8&node=13280951
+      - generic [ref=e235]:
+        - generic [ref=e236]:
+          - generic [ref=e241]:
+            - generic [ref=e242]: No hay ofertas destacadas disponibles
+            - button "Más información" [ref=e244] [cursor=pointer]: Más información
+          - generic [ref=e253]:
+            - generic [ref=e254]:
+              - text: No puede enviarse este producto al punto de entrega seleccionado. Selecciona un punto de entrega diferente.
+              - generic [ref=e261] [cursor=pointer]:
+                - button "Ver artículos similares" [ref=e262]
+                - generic [ref=e263]: Ver artículos similares
+              - button "Enviar a Colombia" [ref=e265] [cursor=pointer]:
+                - generic [ref=e271]: Enviar a Colombia
+            - separator [ref=e272]
+            - link "Agregar a la Lista" [ref=e277] [cursor=pointer]:
+              - /url: https://www.amazon.com/-/es/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fgp%2Faw%2Fd%2FB0DRXSQMJH&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&
+        - generic [ref=e279]:
+          - generic [ref=e281]:
+            - button "Compartir" [ref=e282]:
+              - button "Compartir" [ref=e283] [cursor=pointer]
+            - generic [ref=e286]:
+              - radiogroup "Miniaturas de imagen" [ref=e288]:
+                - listitem [ref=e289]:
+                  - radio [ref=e294] [cursor=pointer]
+                - listitem [ref=e296]:
+                  - radio [ref=e301] [cursor=pointer]
+                - listitem [ref=e303]:
+                  - radio [ref=e308] [cursor=pointer]
+                - listitem [ref=e310]:
+                  - radio [ref=e315] [cursor=pointer]
+                - listitem [ref=e317]:
+                  - radio [ref=e322] [cursor=pointer]
+                - listitem [ref=e324]:
+                  - generic [ref=e328] [cursor=pointer]:
+                    - radio "7+" [ref=e329]
+                    - generic [ref=e331]: 7+
+                - listitem [ref=e332]:
+                  - generic [ref=e334]:
+                    - radio [ref=e337] [cursor=pointer]
+                    - generic [ref=e339]: 5 VIDEOS
+              - generic [ref=e340]:
+                - generic [ref=e342]:
+                  - list
+                  - list [ref=e343]:
+                    - listitem [ref=e344] [cursor=pointer]:
+                      - button "Segway SuperScooter GT3, 31 MPH w/ 45-Mile Long Range, 2400W Peak Motor, Dual Hydraulic Suspension, Self-Sealing Tires, Flash Charging Electric Scooter for Adults, UL 2272/2271 Certified, Gen3" [ref=e347]:
+                        - img "Segway SuperScooter GT3, 31 MPH w/ 45-Mile Long Range, 2400W Peak Motor, Dual Hydraulic Suspension, Self-Sealing Tires, Flash Charging Electric Scooter for Adults, UL 2272/2271 Certified, Gen3" [ref=e348]
+                    - text:           
+                - link "Haz clic para una vista completa" [ref=e352] [cursor=pointer]:
+                  - /url: "#"
+            - text:           
+          - generic [ref=e354]:
+            - generic:
+              - button
+          - generic:
+            - link:
+              - generic:
+                - list
+        - generic [ref=e355]:
+          - heading "Segway SuperScooter GT3, 31 MPH w/ 45-Mile Long Range, 2400W Peak Motor, Dual Hydraulic Suspension, Self-Sealing Tires, Flash Charging Electric Scooter for Adults, UL 2272/2271 Certified, Gen3" [level=1] [ref=e358]
+          - link "Visita la tienda de Segway" [ref=e361] [cursor=pointer]:
+            - /url: /-/es/stores/Segway/page/C3033951-97D9-48CA-9233-97F3E1CF36D0?lp_asin=B0DRXSQMJH&ref_=ast_bln&store_ref=bl_ast_dp_brandlogo_sto
+          - generic [ref=e363]:
+            - generic "4.4 de 5 estrellas" [ref=e365]:
+              - button "4.4 de 5 estrellas" [ref=e367] [cursor=pointer]:
+                - text: "4.4"
+                - generic [ref=e369]: 4.4 de 5 estrellas
+            - link "74 Opiniones" [ref=e372] [cursor=pointer]:
+              - /url: "#averageCustomerReviewsAnchor"
+              - text: (74)
+          - generic [ref=e377]: Opción Amazon
+          - separator [ref=e378]
+          - generic [ref=e380]:
+            - separator [ref=e381]
+            - heading "Entrega y asistencia" [level=1] [ref=e382]
+            - text: Selecciona para obtener más información
+            - generic [ref=e385]:
+              - list:
+                - listitem:
+                  - button "Atencion al Cliente" [ref=e389] [cursor=pointer]
+          - generic [ref=e393]: No puede enviarse este producto al punto de entrega seleccionado. Selecciona un punto de entrega diferente.
+          - generic [ref=e399]: "Estilo: GT3"
+          - generic [ref=e401]:
+            - list [ref=e404]:
+              - rowgroup [ref=e405]:
+                - listitem [ref=e406]: Marca Segway
+                - listitem [ref=e407]: Color Negro -
+                - listitem [ref=e408]: Rango de edad (descripción) Adulto
+                - listitem [ref=e409]:
+                  - text: Características especiales
+                  - generic [ref=e411]:
+                    - generic [ref=e412]: Carga flash, Faro automático alto/bajo, IPX6, Pantalla a color TFT inteligente de 2,4 pulgadas, Sistema de suspensión hidráulica dual, Tecnología de desbloqueo Bluetooth
+                    - generic [ref=e413]: Carga flash, Faro automático alto/bajo, IPX6, Pantalla a color TFT inteligente de 2,4 pulgadas, Sistema de suspensión hidráulica…
+                  - button "Ver más" [ref=e415] [cursor=pointer]: Ver más
+                - listitem [ref=e417]: Límite de peso 330 Libras
+                - listitem [ref=e418]: Dimensiones del producto 54,1"l. x 26,8"an. x 54,2"al. pulgadas
+                - listitem [ref=e419]: Número de ruedas 2
+                - listitem [ref=e420]: Nombre del modelo Segway SuperScooter GT3
+                - listitem [ref=e421]: Material de la rueda Goma
+                - listitem [ref=e422]: Material del armazón Acero Aleado
+            - button "Ver más" [ref=e425] [cursor=pointer]: Ver más
+          - generic [ref=e428]:
+            - separator [ref=e429]
+            - heading "Sobre este artículo" [level=1] [ref=e430]
+            - list [ref=e431]:
+              - listitem [ref=e432]: "Duración de la batería extendida: recorre hasta 45 millas por carga, con la tecnología SegRange que aumenta la eficiencia en un 20%, para que pueda disfrutar de viajes más largos sin interrupciones"
+              - listitem [ref=e433]: "Manejo sin esfuerzo: Los controles intuitivos y el Sistema de Mejora de Estabilidad SegRide aseguran paseos suaves y equilibrados para todos los niveles de habilidad, desde principiantes hasta ciclistas experimentados"
+              - listitem [ref=e434]: "Construido para la durabilidad: fabricado para un uso regular, el GT3 está diseñado para soportar condiciones ambientales duras y se espera que dure años, asegurando un valor a largo plazo"
+              - listitem [ref=e435]: "Calidad Superior de las Ruedas: Los neumáticos autosellantes de 11 pulgadas, el diseño ultra ancho y la capa de gel resistente a los pinchazos proporcionan una estabilidad superior y viajes suaves sobre cualquier terreno"
+              - listitem [ref=e436]: "Suspensión superior: sistema de suspensión hidráulica dual con amortiguadores delanteros dobles y brazo de arrastre trasero para una conducción suave y controlada sobre cualquier terreno"
+              - listitem [ref=e437]: "Comodidad de carga rápida: Recarga completamente en solo 5.5 horas, con una carga rápida de 1 hora que proporciona 12.4 millas de alcance, lo que facilita la permanencia en movimiento"
+              - listitem [ref=e438]: "Normas de seguridad certificadas: El GT3 cuenta con la certificación UL-2272 de TUV Rheinland, lo que garantiza que cumple con rigurosos requisitos de seguridad tanto para el rendimiento como para la tranquilidad"
+              - listitem [ref=e439]: "Rendimiento impresionante: potencia máxima de 2400 W, una capacidad de pendiente de escalada del 30% y el modo Ultra Boost proporcionan una aceleración rápida (0-30 MPH en 9.5 segundos) para emocionantes paseos de alta velocidad"
+            - generic [ref=e440]:
+              - text: ›
+              - link "Ver los detalles del producto" [ref=e441] [cursor=pointer]:
+                - /url: "#productDetails"
+          - link "Informar de un problema con este producto o vendedor" [ref=e447] [cursor=pointer]:
+            - /url: "#"
+            - text: Informar de un problema con este producto o vendedor
+      - generic [ref=e452]:
+        - separator [ref=e453]
+        - group [ref=e456]:
+          - heading "Los clientes que vieron este producto también vieron" [level=2] [ref=e461]
+          - group [ref=e466]:
+            - list [ref=e467]:
+              - listitem [ref=e468]:
+                - generic [ref=e470]:
+                  - link [ref=e471] [cursor=pointer]:
+                    - /url: /-/es/Segway-ZT3-Pro-todoterreno-certificaci%C3%B3n/dp/B0DDTFMPS6/ref=pd_sbs_d_sccl_1_1/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DDTFMPS6&psc=1
+                    - img [ref=e473]
+                  - generic [ref=e475]:
+                    - link "Segway ZT3 Pro - Patinete eléctrico, hasta 24.9 MPH, rango de 43.5 millas, suspensión doble, carga flash, motor pico de 1600 W, scooter todoterreno para adultos con certificación UL (UL2272/2271)" [ref=e476] [cursor=pointer]:
+                      - /url: /-/es/Segway-ZT3-Pro-todoterreno-certificaci%C3%B3n/dp/B0DDTFMPS6/ref=pd_sbs_d_sccl_1_1/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DDTFMPS6&psc=1
+                      - generic [ref=e478]: Segway ZT3 Pro - Patinete eléctrico, hasta 24.9 MPH, rango de 43.5 millas, suspensión doble, carga flash, motor pico de 1600 W, scooter todoterreno para adultos con certificación UL (UL2272/2271)
+                    - link "4.5 de 5 estrellas, Hay 263 valoraciones" [ref=e481] [cursor=pointer]:
+                      - /url: /-/es/product-reviews/B0DDTFMPS6/ref=pd_sbs_d_sccl_1_1_cr/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DDTFMPS6
+                      - generic [ref=e483]: 4.5 de 5 estrellas
+                      - text: "263"
+                    - link "1 oferta desde US$839.99" [ref=e485] [cursor=pointer]:
+                      - /url: /-/es/Segway-ZT3-Pro-todoterreno-certificaci%C3%B3n/dp/B0DDTFMPS6/ref=pd_sbs_d_sccl_1_1/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DDTFMPS6&psc=1
+                      - generic [ref=e486]:
+                        - text: 1 oferta desde
+                        - generic [ref=e487]: US$839.99
+              - listitem [ref=e488]:
+                - generic [ref=e490]:
+                  - link [ref=e491] [cursor=pointer]:
+                    - /url: /-/es/Segway-Ninebot-suspensi%C3%B3n-elast%C3%B3mero-certificado/dp/B0044PUNIG/ref=pd_sbs_d_sccl_1_2/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0044PUNIG&psc=1
+                    - img [ref=e493]
+                  - generic [ref=e495]:
+                    - link "Segway Ninebot E2 Plus II/E2 Pro/E3 Pro Electric Scooter, 15.5–20 MPH, Long Range, Dual Elastomer Suspension (E3 Pro only), Foldable Adult Scooter, UL 2272 & 2271 Certified" [ref=e496] [cursor=pointer]:
+                      - /url: /-/es/Segway-Ninebot-suspensi%C3%B3n-elast%C3%B3mero-certificado/dp/B0044PUNIG/ref=pd_sbs_d_sccl_1_2/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0044PUNIG&psc=1
+                      - generic [ref=e498]: Segway Ninebot E2 Plus II/E2 Pro/E3 Pro Electric Scooter, 15.5–20 MPH, Long Range, Dual Elastomer Suspension (E3 Pro only), Foldable Adult Scooter, UL 2272 & 2271 Certified
+                    - link "4.7 de 5 estrellas, Hay 32 valoraciones" [ref=e501] [cursor=pointer]:
+                      - /url: /-/es/product-reviews/B0044PUNIG/ref=pd_sbs_d_sccl_1_2_cr/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0044PUNIG
+                      - generic [ref=e503]: 4.7 de 5 estrellas
+                      - text: "32"
+                    - link "1 oferta desde US$529.99" [ref=e505] [cursor=pointer]:
+                      - /url: /-/es/Segway-Ninebot-suspensi%C3%B3n-elast%C3%B3mero-certificado/dp/B0044PUNIG/ref=pd_sbs_d_sccl_1_2/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0044PUNIG&psc=1
+                      - generic [ref=e506]:
+                        - text: 1 oferta desde
+                        - generic [ref=e507]: US$529.99
+              - listitem [ref=e508]:
+                - generic [ref=e510]:
+                  - link [ref=e511] [cursor=pointer]:
+                    - /url: /-/es/el%C3%A9ctrico-Segway-velocidad-suspensi%C3%B3n-hidr%C3%A1ulica/dp/B0DSMQJX1X/ref=pd_sbs_d_sccl_1_3/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DSMQJX1X&psc=1
+                    - img [ref=e513]
+                  - generic [ref=e515]:
+                    - link "Scooter eléctrico Segway Ninebot Serie MAX para adultos, 22-28 MPH, hasta 50 millas de alcance, suspensión doble, certificado UL-2272 2271 (G2/G3)" [ref=e516] [cursor=pointer]:
+                      - /url: /-/es/el%C3%A9ctrico-Segway-velocidad-suspensi%C3%B3n-hidr%C3%A1ulica/dp/B0DSMQJX1X/ref=pd_sbs_d_sccl_1_3/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DSMQJX1X&psc=1
+                      - generic [ref=e518]: Scooter eléctrico Segway Ninebot Serie MAX para adultos, 22-28 MPH, hasta 50 millas de alcance, suspensión doble, certificado UL-2272 2271 (G2/G3)
+                    - link "4.3 de 5 estrellas, Hay 225 valoraciones" [ref=e521] [cursor=pointer]:
+                      - /url: /-/es/product-reviews/B0DSMQJX1X/ref=pd_sbs_d_sccl_1_3_cr/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DSMQJX1X
+                      - generic [ref=e523]: 4.3 de 5 estrellas
+                      - text: "225"
+                    - link "7 ofertas desde US$839.99" [ref=e525] [cursor=pointer]:
+                      - /url: /-/es/el%C3%A9ctrico-Segway-velocidad-suspensi%C3%B3n-hidr%C3%A1ulica/dp/B0DSMQJX1X/ref=pd_sbs_d_sccl_1_3/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DSMQJX1X&psc=1
+                      - generic [ref=e526]:
+                        - text: 7 ofertas desde
+                        - generic [ref=e527]: US$839.99
+              - listitem [ref=e528]:
+                - generic [ref=e530]:
+                  - link [ref=e531] [cursor=pointer]:
+                    - /url: /-/es/Segway-Ninebot-ajustable-el%C3%A9ctrico-compatible/dp/B09B7FN4HY/ref=pd_sbs_d_sccl_1_4/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B09B7FN4HY&psc=1
+                    - img [ref=e533]
+                  - generic [ref=e535]:
+                    - link "Segway Ninebot - Soporte para teléfono, ajustable para scooter eléctrico eMoped para manillar de bicicleta, se adapta a cualquier teléfono celular de 4 a 6.5 pulgadas, compatible con MAX G3, MAX G2," [ref=e536] [cursor=pointer]:
+                      - /url: /-/es/Segway-Ninebot-ajustable-el%C3%A9ctrico-compatible/dp/B09B7FN4HY/ref=pd_sbs_d_sccl_1_4/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B09B7FN4HY&psc=1
+                      - generic [ref=e538]: Segway Ninebot - Soporte para teléfono, ajustable para scooter eléctrico eMoped para manillar de bicicleta, se adapta a cualquier teléfono celular de 4 a 6.5 pulgadas, compatible con MAX G3, MAX G2,
+                    - link "4.5 de 5 estrellas, Hay 925 valoraciones" [ref=e541] [cursor=pointer]:
+                      - /url: /-/es/product-reviews/B09B7FN4HY/ref=pd_sbs_d_sccl_1_4_cr/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B09B7FN4HY
+                      - generic [ref=e543]: 4.5 de 5 estrellas
+                      - text: "925"
+                    - generic [ref=e548]: Opción Amazon
+                    - generic [ref=e549]:
+                      - link "US$24.47" [ref=e552] [cursor=pointer]:
+                        - /url: /-/es/Segway-Ninebot-ajustable-el%C3%A9ctrico-compatible/dp/B09B7FN4HY/ref=pd_sbs_d_sccl_1_4/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B09B7FN4HY&psc=1
+                        - generic [ref=e554]:
+                          - generic [ref=e555]: US$24.47
+                          - generic [ref=e556]:
+                            - text: US$
+                            - generic [ref=e557]: "24."
+                            - text: "47"
+                      - generic [ref=e559]: Recíbelo el domingo, 12 de abril
+                    - text: Envío GRATIS en pedidos mayores a US$35 enviados por Amazon
+              - listitem [ref=e560]:
+                - generic [ref=e562]:
+                  - link [ref=e563] [cursor=pointer]:
+                    - /url: /-/es/Segway-neum%C3%A1ticos-suspensi%C3%B3n-hidr%C3%A1ulica-certificado/dp/B0DZ1P8M85/ref=pd_sbs_d_sccl_1_5/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DZ1P8M85&psc=1
+                    - img [ref=e565]
+                  - generic [ref=e567]:
+                    - link "Segway Ninebot F3 Electric Scooter, Up to 20 MPH, 44-Mile Range, Self-Sealing Tubeless Tires, Front Hydraulic & Rear Elastomer Suspension, UL2271 2272 Certified" [ref=e568] [cursor=pointer]:
+                      - /url: /-/es/Segway-neum%C3%A1ticos-suspensi%C3%B3n-hidr%C3%A1ulica-certificado/dp/B0DZ1P8M85/ref=pd_sbs_d_sccl_1_5/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DZ1P8M85&psc=1
+                      - generic [ref=e570]: Segway Ninebot F3 Electric Scooter, Up to 20 MPH, 44-Mile Range, Self-Sealing Tubeless Tires, Front Hydraulic & Rear Elastomer Suspension, UL2271 2272 Certified
+                    - link "4.3 de 5 estrellas, Hay 81 valoraciones" [ref=e573] [cursor=pointer]:
+                      - /url: /-/es/product-reviews/B0DZ1P8M85/ref=pd_sbs_d_sccl_1_5_cr/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DZ1P8M85
+                      - generic [ref=e575]: 4.3 de 5 estrellas
+                      - text: "81"
+                    - link "2 ofertas desde US$599.99" [ref=e577] [cursor=pointer]:
+                      - /url: /-/es/Segway-neum%C3%A1ticos-suspensi%C3%B3n-hidr%C3%A1ulica-certificado/dp/B0DZ1P8M85/ref=pd_sbs_d_sccl_1_5/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DZ1P8M85&psc=1
+                      - generic [ref=e578]:
+                        - text: 2 ofertas desde
+                        - generic [ref=e579]: US$599.99
+              - listitem [ref=e580]:
+                - generic [ref=e582]:
+                  - link [ref=e583] [cursor=pointer]:
+                    - /url: /-/es/NAVEE-El%C3%A9ctrico-velocidad-suspensi%C3%B3n-amortiguador/dp/B0G1BLC71Y/ref=pd_sbs_d_sccl_1_6/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0G256KPHN&psc=1
+                    - img [ref=e585]
+                  - generic [ref=e587]:
+                    - link "NAVEE XT5 Pro Electric Scooter, 31 mph Top Speed, 46.6 Miles Max Range, 2200W Peak Motor, Dual Damping Arm Suspension & Disc Brake, Fast Charging Scooter for Adults Teens, 12\" Off-Road Tires, UL2272" [ref=e588] [cursor=pointer]:
+                      - /url: /-/es/NAVEE-El%C3%A9ctrico-velocidad-suspensi%C3%B3n-amortiguador/dp/B0G1BLC71Y/ref=pd_sbs_d_sccl_1_6/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0G256KPHN&psc=1
+                      - generic [ref=e590]: NAVEE XT5 Pro Electric Scooter, 31 mph Top Speed, 46.6 Miles Max Range, 2200W Peak Motor, Dual Damping Arm Suspension & Disc Brake, Fast Charging Scooter for Adults Teens, 12" Off-Road Tires, UL2272
+                    - link "4.2 de 5 estrellas, Hay 10 valoraciones" [ref=e593] [cursor=pointer]:
+                      - /url: /-/es/product-reviews/B0G256KPHN/ref=pd_sbs_d_sccl_1_6_cr/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0G256KPHN
+                      - generic [ref=e595]: 4.2 de 5 estrellas
+                      - text: "10"
+                    - link "1 oferta desde US$1,099.99" [ref=e597] [cursor=pointer]:
+                      - /url: /-/es/NAVEE-El%C3%A9ctrico-velocidad-suspensi%C3%B3n-amortiguador/dp/B0G1BLC71Y/ref=pd_sbs_d_sccl_1_6/141-9909044-7728045?pd_rd_w=rw3E5&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0G256KPHN&psc=1
+                      - generic [ref=e598]:
+                        - text: 1 oferta desde
+                        - generic [ref=e599]: US$1,099.99
+                  - button "3 características de sostenibilidad" [ref=e603] [cursor=pointer]:
+                    - generic [ref=e604]: 3 características de sostenibilidad
+      - generic [ref=e610]:
+        - separator [ref=e611]
+        - group [ref=e614]:
+          - heading "Artículos similares que pueden enviarse rápidamente" [level=2] [ref=e619]
+          - group [ref=e624]:
+            - list [ref=e625]:
+              - listitem [ref=e626]:
+                - generic [ref=e628]:
+                  - link [ref=e629] [cursor=pointer]:
+                    - /url: /-/es/el%C3%A9ctrico-Segway-velocidad-suspensi%C3%B3n-hidr%C3%A1ulica/dp/B0DSMQJX1X/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_1/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DSMQJX1X&psc=1
+                    - img [ref=e631]
+                  - generic [ref=e633]:
+                    - link "Scooter eléctrico Segway Ninebot Serie MAX para adultos, 22-28 MPH, hasta 50 millas de alcance, suspensión doble, certificado UL-2272 2271 (G2/G3)" [ref=e634] [cursor=pointer]:
+                      - /url: /-/es/el%C3%A9ctrico-Segway-velocidad-suspensi%C3%B3n-hidr%C3%A1ulica/dp/B0DSMQJX1X/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_1/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DSMQJX1X&psc=1
+                      - generic [ref=e636]: Scooter eléctrico Segway Ninebot Serie MAX para adultos, 22-28 MPH, hasta 50 millas de alcance, suspensión doble, certificado UL-2272 2271 (G2/G3)
+                    - link "4.3 de 5 estrellas, Hay 225 valoraciones" [ref=e639] [cursor=pointer]:
+                      - /url: /-/es/product-reviews/B0DSMQJX1X/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_1_cr/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DSMQJX1X
+                      - generic [ref=e641]: 4.3 de 5 estrellas
+                      - text: "225"
+                    - generic [ref=e646]: Opción Amazon
+                    - link "7 ofertas desde US$839.99" [ref=e648] [cursor=pointer]:
+                      - /url: /-/es/el%C3%A9ctrico-Segway-velocidad-suspensi%C3%B3n-hidr%C3%A1ulica/dp/B0DSMQJX1X/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_1/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DSMQJX1X&psc=1
+                      - generic [ref=e649]:
+                        - text: 7 ofertas desde
+                        - generic [ref=e650]: US$839.99
+              - listitem [ref=e651]:
+                - generic [ref=e653]:
+                  - link [ref=e654] [cursor=pointer]:
+                    - /url: /-/es/Segway-ZT3-Pro-todoterreno-certificaci%C3%B3n/dp/B0DDTFMPS6/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_2/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DDTFMPS6&psc=1
+                    - img [ref=e656]
+                  - generic [ref=e658]:
+                    - link "Segway ZT3 Pro - Patinete eléctrico, hasta 24.9 MPH, rango de 43.5 millas, suspensión doble, carga flash, motor pico de 1600 W, scooter todoterreno para adultos con certificación UL (UL2272/2271)" [ref=e659] [cursor=pointer]:
+                      - /url: /-/es/Segway-ZT3-Pro-todoterreno-certificaci%C3%B3n/dp/B0DDTFMPS6/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_2/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DDTFMPS6&psc=1
+                      - generic [ref=e661]: Segway ZT3 Pro - Patinete eléctrico, hasta 24.9 MPH, rango de 43.5 millas, suspensión doble, carga flash, motor pico de 1600 W, scooter todoterreno para adultos con certificación UL (UL2272/2271)
+                    - link "4.5 de 5 estrellas, Hay 263 valoraciones" [ref=e664] [cursor=pointer]:
+                      - /url: /-/es/product-reviews/B0DDTFMPS6/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_2_cr/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DDTFMPS6
+                      - generic [ref=e666]: 4.5 de 5 estrellas
+                      - text: "263"
+                    - link "1 oferta desde US$839.99" [ref=e668] [cursor=pointer]:
+                      - /url: /-/es/Segway-ZT3-Pro-todoterreno-certificaci%C3%B3n/dp/B0DDTFMPS6/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_2/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DDTFMPS6&psc=1
+                      - generic [ref=e669]:
+                        - text: 1 oferta desde
+                        - generic [ref=e670]: US$839.99
+              - listitem [ref=e671]:
+                - generic [ref=e673]:
+                  - link [ref=e674] [cursor=pointer]:
+                    - /url: /-/es/Segway-neum%C3%A1ticos-suspensi%C3%B3n-hidr%C3%A1ulica-certificado/dp/B0DZ1P8M85/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_3/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DZ1P8M85&psc=1
+                    - img [ref=e676]
+                  - generic [ref=e678]:
+                    - link "Segway Ninebot F3 Electric Scooter, Up to 20 MPH, 44-Mile Range, Self-Sealing Tubeless Tires, Front Hydraulic & Rear Elastomer Suspension, UL2271 2272 Certified" [ref=e679] [cursor=pointer]:
+                      - /url: /-/es/Segway-neum%C3%A1ticos-suspensi%C3%B3n-hidr%C3%A1ulica-certificado/dp/B0DZ1P8M85/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_3/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DZ1P8M85&psc=1
+                      - generic [ref=e681]: Segway Ninebot F3 Electric Scooter, Up to 20 MPH, 44-Mile Range, Self-Sealing Tubeless Tires, Front Hydraulic & Rear Elastomer Suspension, UL2271 2272 Certified
+                    - link "4.3 de 5 estrellas, Hay 81 valoraciones" [ref=e684] [cursor=pointer]:
+                      - /url: /-/es/product-reviews/B0DZ1P8M85/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_3_cr/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DZ1P8M85
+                      - generic [ref=e686]: 4.3 de 5 estrellas
+                      - text: "81"
+                    - link "2 ofertas desde US$599.99" [ref=e688] [cursor=pointer]:
+                      - /url: /-/es/Segway-neum%C3%A1ticos-suspensi%C3%B3n-hidr%C3%A1ulica-certificado/dp/B0DZ1P8M85/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_3/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0DZ1P8M85&psc=1
+                      - generic [ref=e689]:
+                        - text: 2 ofertas desde
+                        - generic [ref=e690]: US$599.99
+              - listitem [ref=e691]:
+                - generic [ref=e693]:
+                  - link [ref=e694] [cursor=pointer]:
+                    - /url: /-/es/Segway-Ninebot-suspensi%C3%B3n-amortiguadores-certificado/dp/B0F62SVY89/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_4/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0F62SVY89&psc=1
+                    - img [ref=e696]
+                  - generic [ref=e698]:
+                    - link "Segway Ninebot E2 Plus II/E2 Pro/E3 Pro Electric Scooter, 15.5–20 MPH, Long Range, Dual Elastomer Suspension (E3 Pro only), Foldable Adult Scooter, UL 2272 & 2271 Certified" [ref=e699] [cursor=pointer]:
+                      - /url: /-/es/Segway-Ninebot-suspensi%C3%B3n-amortiguadores-certificado/dp/B0F62SVY89/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_4/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0F62SVY89&psc=1
+                      - generic [ref=e701]: Segway Ninebot E2 Plus II/E2 Pro/E3 Pro Electric Scooter, 15.5–20 MPH, Long Range, Dual Elastomer Suspension (E3 Pro only), Foldable Adult Scooter, UL 2272 & 2271 Certified
+                    - link "3.7 de 5 estrellas, Hay 164 valoraciones" [ref=e704] [cursor=pointer]:
+                      - /url: /-/es/product-reviews/B0F62SVY89/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_4_cr/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0F62SVY89
+                      - generic [ref=e706]: 3.7 de 5 estrellas
+                      - text: "164"
+                    - link "7 ofertas desde US$232.09" [ref=e708] [cursor=pointer]:
+                      - /url: /-/es/Segway-Ninebot-suspensi%C3%B3n-amortiguadores-certificado/dp/B0F62SVY89/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_4/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0F62SVY89&psc=1
+                      - generic [ref=e709]:
+                        - text: 7 ofertas desde
+                        - generic [ref=e710]: US$232.09
+              - listitem [ref=e711]:
+                - generic [ref=e713]:
+                  - link [ref=e714] [cursor=pointer]:
+                    - /url: /-/es/Scolioen-el%C3%A9ctrico-extra%C3%ADble-velocidad-neum%C3%A1ticos/dp/B0FSSY8MWJ/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_5/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0FSSY8MWJ&psc=1
+                    - img [ref=e716]
+                  - generic [ref=e718]:
+                    - link "Scolioen Scooter eléctrico para adultos con batería extraíble, 20 Mph velocidad máxima E scooter para adultos, potente motor, 28 millas de largo alcance plegable escooter, neumáticos de 10 pulgadas" [ref=e719] [cursor=pointer]:
+                      - /url: /-/es/Scolioen-el%C3%A9ctrico-extra%C3%ADble-velocidad-neum%C3%A1ticos/dp/B0FSSY8MWJ/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_5/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0FSSY8MWJ&psc=1
+                      - generic [ref=e721]: Scolioen Scooter eléctrico para adultos con batería extraíble, 20 Mph velocidad máxima E scooter para adultos, potente motor, 28 millas de largo alcance plegable escooter, neumáticos de 10 pulgadas
+                    - link "5.0 de 5 estrellas, Hay 1 valoraciones" [ref=e724] [cursor=pointer]:
+                      - /url: /-/es/product-reviews/B0FSSY8MWJ/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_5_cr/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0FSSY8MWJ
+                      - generic [ref=e726]: 5.0 de 5 estrellas
+                      - text: "1"
+                    - link "1 oferta desde US$399.99" [ref=e728] [cursor=pointer]:
+                      - /url: /-/es/Scolioen-el%C3%A9ctrico-extra%C3%ADble-velocidad-neum%C3%A1ticos/dp/B0FSSY8MWJ/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_5/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0FSSY8MWJ&psc=1
+                      - generic [ref=e729]:
+                        - text: 1 oferta desde
+                        - generic [ref=e730]: US$399.99
+              - listitem [ref=e731]:
+                - generic [ref=e733]:
+                  - link [ref=e734] [cursor=pointer]:
+                    - /url: /-/es/Hoverfly-X3-el%C3%A9ctrico-neum%C3%A1tico-suspensi%C3%B3n/dp/B0D6RGLGZW/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_6/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0D6RGLGZW&psc=1
+                    - img [ref=e736]
+                  - generic [ref=e738]:
+                    - link "Hoverfly Electric Scooter for Adults, Anti-Flat 8.5\"/10\" Solid Tire, 10/18/25 Mile Range and 15.5/20Mph Speed Power by 250/500W Motor, Cruise Control Foldable Commuting Scooter for Adults" [ref=e739] [cursor=pointer]:
+                      - /url: /-/es/Hoverfly-X3-el%C3%A9ctrico-neum%C3%A1tico-suspensi%C3%B3n/dp/B0D6RGLGZW/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_6/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0D6RGLGZW&psc=1
+                      - generic [ref=e741]: Hoverfly Electric Scooter for Adults, Anti-Flat 8.5"/10" Solid Tire, 10/18/25 Mile Range and 15.5/20Mph Speed Power by 250/500W Motor, Cruise Control Foldable Commuting Scooter for Adults
+                    - link "4.3 de 5 estrellas, Hay 233 valoraciones" [ref=e744] [cursor=pointer]:
+                      - /url: /-/es/product-reviews/B0D6RGLGZW/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_6_cr/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0D6RGLGZW
+                      - generic [ref=e746]: 4.3 de 5 estrellas
+                      - text: "233"
+                    - link "1 oferta desde US$307.79" [ref=e748] [cursor=pointer]:
+                      - /url: /-/es/Hoverfly-X3-el%C3%A9ctrico-neum%C3%A1tico-suspensi%C3%B3n/dp/B0D6RGLGZW/ref=sims_dp_d_dex_ai_rank_model_1_d_v1_d_sccl_2_6/141-9909044-7728045?pd_rd_w=UFnYp&content-id=amzn1.sym.bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_p=bb4a0aac-c2b4-4b4b-a0c8-9aa89b28dce3&pf_rd_r=N0GVSPHY729WSFN6H2FN&pd_rd_wg=vkopD&pd_rd_r=0388a82d-4c36-4e2a-9314-b5b18429cdea&pd_rd_i=B0D6RGLGZW&psc=1
+                      - generic [ref=e749]:
+                        - text: 1 oferta desde
+                        - generic [ref=e750]: US$307.79
+      - generic [ref=e751]:
+        - generic [ref=e753]:
+          - separator [ref=e754]
+          - heading "De la marca" [level=2] [ref=e755]
+          - generic [ref=e760]:
+            - img "34 ES" [ref=e765]
+            - region "Carrusel de contenido destacado" [ref=e766]:
+              - list [ref=e771]:
+                - listitem
+                - listitem [ref=e772]:
+                  - img "Acerca de Segway" [ref=e776]
+                - listitem [ref=e777]:
+                  - img "Por qué Segway" [ref=e781]
+                - listitem [ref=e782]:
+                  - img "34 ES" [ref=e786]
+                - listitem [ref=e787]:
+                  - img "Por qué Segway" [ref=e791]
+                - listitem [ref=e792]:
+                  - img "Por qué Segway" [ref=e796]
+                - listitem [ref=e797]
+                - listitem [ref=e801]:
+                  - img "34 ES" [ref=e805]
+                - listitem [ref=e806]:
+                  - img "34 ES" [ref=e810]
+                - listitem [ref=e811]:
+                  - img "34 ES" [ref=e815]
+                - listitem [ref=e816]:
+                  - img "G2" [ref=e820]
+                - listitem [ref=e821]
+                - listitem [ref=e825]:
+                  - img "NS2" [ref=e829]
+                - listitem [ref=e830]:
+                  - img "E2 Plus" [ref=e834]
+                - listitem [ref=e835]:
+                  - img "GKT" [ref=e839]
+        - generic [ref=e840]:
+          - separator [ref=e841]
+          - generic [ref=e843]:
+            - heading "Información del producto" [level=1] [ref=e844]
+            - generic [ref=e848]:
+              - generic [ref=e849]:
+                - generic [ref=e851]:
+                  - button "Características y especificaciones" [ref=e854] [cursor=pointer]:
+                    - heading "Características y especificaciones" [level=5] [ref=e856]
+                  - button "Medidas" [ref=e859] [cursor=pointer]:
+                    - heading "Medidas" [level=5] [ref=e861]
+                  - button "Materiales y cuidado" [ref=e864] [cursor=pointer]:
+                    - heading "Materiales y cuidado" [level=5] [ref=e866]
+                - generic [ref=e869]:
+                  - heading "Comentarios" [level=3] [ref=e870]
+                  - generic [ref=e875]:
+                    - text: ¿Quieres
+                    - button "informarnos sobre un precio más bajo?" [ref=e877] [cursor=pointer]: informarnos sobre un precio más bajo?
+              - generic [ref=e881]:
+                - button "Detalles del producto" [ref=e884] [cursor=pointer]:
+                  - heading "Detalles del producto" [level=5] [ref=e886]
+                - button "Guía de usuario" [ref=e889] [cursor=pointer]:
+                  - heading "Guía de usuario" [level=5] [ref=e891]
+                - button "Detalles adicionales" [ref=e894] [cursor=pointer]:
+                  - heading "Detalles adicionales" [level=5] [ref=e896]
+        - generic [ref=e901]:
+          - separator [ref=e902]
+          - heading "Más información del producto" [level=2] [ref=e903]
+          - generic [ref=e906]:
+            - generic [ref=e917]:
+              - generic "Haz clic para reproducir el video, Segway GT3 Product Overview"
+              - button "Haz clic para reproducir el video" [ref=e920] [cursor=pointer]:
+                - text: 
+                - generic [ref=e921]: Haz clic para reproducir el video
+              - text:          
+            - img "GT3" [ref=e926]
+            - generic [ref=e929]:
+              - region "Carrusel de contenido destacado" [ref=e930]:
+                - list [ref=e935]:
+                  - listitem [ref=e936]:
+                    - img "Dual Suspension" [ref=e938]
+                  - listitem [ref=e939]:
+                    - img "Range" [ref=e941]
+                  - listitem [ref=e942]:
+                    - img "Brakes" [ref=e944]
+                  - listitem [ref=e945]:
+                    - img "Motor" [ref=e947]
+                  - listitem [ref=e948]:
+                    - img "SegRide" [ref=e950]
+              - tablist "tablist section" [ref=e951]:
+                - tab "Dual Superior Suspension" [selected] [ref=e952] [cursor=pointer]
+                - tab "Freedom of Longer Ride" [ref=e953] [cursor=pointer]
+                - tab "High-Performance Brakes" [ref=e954] [cursor=pointer]
+                - tab "Unstoppable 2400W Power" [ref=e955] [cursor=pointer]
+                - tab "SegRide Technology" [ref=e956] [cursor=pointer]
+            - generic [ref=e959]:
+              - region "Carrusel de contenido destacado" [ref=e960]:
+                - list [ref=e965]:
+                  - listitem [ref=e966]:
+                    - img "TFT Color Display" [ref=e968]
+                  - listitem [ref=e969]:
+                    - img "Tire" [ref=e971]
+                  - listitem [ref=e972]:
+                    - img "Airlock" [ref=e974]
+                  - listitem [ref=e975]:
+                    - img "Flash Charge" [ref=e977]
+                  - listitem [ref=e978]:
+                    - img "Auto Headlight" [ref=e980]
+              - tablist "tablist section" [ref=e981]:
+                - tab "Map Navigation" [selected] [ref=e982] [cursor=pointer]
+                - tab "11-inch UltraWwide Tires" [ref=e983] [cursor=pointer]
+                - tab "Segway AirLock" [ref=e984] [cursor=pointer]
+                - tab "Flash Charge" [ref=e985] [cursor=pointer]
+                - tab "Automatic Headlights" [ref=e986] [cursor=pointer]
+            - generic [ref=e989]:
+              - region "Carrusel de contenido destacado" [ref=e990]:
+                - list [ref=e995]:
+                  - listitem [ref=e996]:
+                    - img "Multi-Authority Certified" [ref=e998]
+                  - listitem [ref=e999]:
+                    - img "BMS2.0" [ref=e1001]
+                  - listitem [ref=e1002]:
+                    - img "Seen and Be Seen" [ref=e1004]
+                  - listitem [ref=e1005]:
+                    - img "Apple Findmy" [ref=e1007]
+                  - listitem [ref=e1008]:
+                    - img "IPX6 Waterproof" [ref=e1010]
+              - tablist "tablist section" [ref=e1011]:
+                - tab "Multi-Authority Certified" [selected] [ref=e1012] [cursor=pointer]
+                - tab "BMS 2.0" [ref=e1013] [cursor=pointer]
+                - tab "Seen and Be Seen" [ref=e1014] [cursor=pointer]
+                - tab "Work with Apple FindMy" [ref=e1015] [cursor=pointer]
+                - tab "IPX6 Rating" [ref=e1016] [cursor=pointer]
+            - img "KV" [ref=e1021]
+            - generic [ref=e1023]:
+              - heading "Technical Specifications" [level=3] [ref=e1024]
+              - generic [ref=e1025]:
+                - table [ref=e1027]:
+                  - rowgroup [ref=e1028]:
+                    - row "Item Dimensions L x W x H Approx. 54.1×26.8×54.2 in" [ref=e1029]:
+                      - cell "Item Dimensions L x W x H" [ref=e1030]
+                      - cell "Approx. 54.1×26.8×54.2 in" [ref=e1031]
+                    - row "Package Dimensions L x W x H Approx. 56.7x11x30.3 in" [ref=e1032]:
+                      - cell "Package Dimensions L x W x H" [ref=e1033]
+                      - cell "Approx. 56.7x11x30.3 in" [ref=e1034]
+                    - row "Net Weight / Gross Weight Approx. 87.1 lbs / 106 lbs" [ref=e1035]:
+                      - cell "Net Weight / Gross Weight" [ref=e1036]
+                      - cell "Approx. 87.1 lbs / 106 lbs" [ref=e1037]
+                    - row "Machine Operating Temperature 14 —104°F (-10—40°C)" [ref=e1038]:
+                      - cell "Machine Operating Temperature" [ref=e1039]
+                      - cell "14 —104°F (-10—40°C)" [ref=e1040]
+                    - 'row "Charging Duration 230 VAC/25℃: Approx. 5.5h,115 VAC/25℃: Approx. 6.5h" [ref=e1041]':
+                      - cell "Charging Duration" [ref=e1042]
+                      - 'cell "230 VAC/25℃: Approx. 5.5h,115 VAC/25℃: Approx. 6.5h" [ref=e1043]'
+                    - row "Nominal Voltage 46.8 V" [ref=e1044]:
+                      - cell "Nominal Voltage" [ref=e1045]
+                      - cell "46.8 V" [ref=e1046]
+                    - row "Max. Charging Voltage 54.6 V" [ref=e1047]:
+                      - cell "Max. Charging Voltage" [ref=e1048]
+                      - cell "54.6 V" [ref=e1049]
+                    - row "Nominal Energy 899 Wh" [ref=e1050]:
+                      - cell "Nominal Energy" [ref=e1051]
+                      - cell "899 Wh" [ref=e1052]
+                - table [ref=e1054]:
+                  - rowgroup [ref=e1055]:
+                    - row "Nominal Capacity 19.2 Ah" [ref=e1056]:
+                      - cell "Nominal Capacity" [ref=e1057]
+                      - cell "19.2 Ah" [ref=e1058]
+                    - row "Charging Ambient Temperature 32—113℉ (0—45℃)" [ref=e1059]:
+                      - cell "Charging Ambient Temperature" [ref=e1060]
+                      - cell "32—113℉ (0—45℃)" [ref=e1061]
+                    - row "Battery Management System Overcharge Protection, Overheat Protection, Overdischarge Protection, Short Circuit Protection, and Overcurrent Protection" [ref=e1062]:
+                      - cell "Battery Management System" [ref=e1063]
+                      - cell "Overcharge Protection, Overheat Protection, Overdischarge Protection, Short Circuit Protection, and Overcurrent Protection" [ref=e1064]
+                    - row "Motor Type Rear-drive Hub Motor" [ref=e1065]:
+                      - cell "Motor Type" [ref=e1066]
+                      - cell "Rear-drive Hub Motor" [ref=e1067]
+                    - row "Nominal Power / Max. Power 1200 W / 2400 W" [ref=e1068]:
+                      - cell "Nominal Power / Max. Power" [ref=e1069]
+                      - cell "1200 W / 2400 W" [ref=e1070]
+                    - row "Ranges of Speed Modes Approx. 45 miles at Eco Mode, Approx. 25 miles at Sport Mode, Approx. 25 miles at Race Mode" [ref=e1071]:
+                      - cell "Ranges of Speed Modes" [ref=e1072]
+                      - cell "Approx. 45 miles at Eco Mode, Approx. 25 miles at Sport Mode, Approx. 25 miles at Race Mode" [ref=e1073]
+                    - row "Traversable Terrain Asphalt/flat pavement; obstacles < 1.2 in (3 cm); gaps < 1.2 in (3 cm)" [ref=e1074]:
+                      - cell "Traversable Terrain" [ref=e1075]
+                      - cell "Asphalt/flat pavement; obstacles < 1.2 in (3 cm); gaps < 1.2 in (3 cm)" [ref=e1076]
+                    - row "Wheelbase 40.9 in" [ref=e1077]:
+                      - cell "Wheelbase" [ref=e1078]
+                      - cell "40.9 in" [ref=e1079]
+        - generic:
+          - navigation:
+            - navigation "Navigate within the product detail page":
+              - navigation "Back to top jump link":
+                - generic:
+                  - generic: Principal
+              - navigation "About this item widget jump link":
+                - generic:
+                  - generic: Acerca de este producto
+              - navigation "Similar widget jump link":
+                - generic:
+                  - generic: Similares
+              - navigation "Product information widget jump link":
+                - generic:
+                  - generic: Información del producto
+              - navigation "From the brand widget jump link":
+                - generic:
+                  - generic: De la marca
+              - navigation "Customer reviews widget jump link":
+                - generic:
+                  - generic: Opiniones
+            - navigation "Back to top Image jump link":
+              - img "Segway SuperScooter GT3, 31 MPH con autonomía de 45 millas, motor de pico de 2400W, suspensión hidráulica doble, neumáticos autosellados, patinete eléctrico de carga rápida para adultos, certificado"
+            - navigation "Back to top title jump link":
+              - generic: Segway SuperScooter GT3, 31 MPH w/ 45-Mile Long Range, 2400W Peak Motor, Dual Hydraulic Suspension, Self-Sealing Tires, Flash Charging Electric Scooter for Adults, UL 2272/2271 Certified, Gen3
+        - generic [ref=e1085]:
+          - heading "Videos de productos" [level=2] [ref=e1087]
+          - generic [ref=e1092]:
+            - region "Video Player" [ref=e1093]:
+              - generic [ref=e1095]:
+                - button "Play" [ref=e1096] [cursor=pointer]
+                - slider "Progress Bar" [ref=e1099] [cursor=pointer]: .
+                - generic [ref=e1100]: "-0:00"
+                - button "Mute" [ref=e1101] [cursor=pointer]
+            - generic [ref=e1104]:
+              - link [ref=e1105] [cursor=pointer]:
+                - /url: /-/es/shop/tc2004_
+              - generic [ref=e1106]:
+                - generic [ref=e1107]:
+                  - link "Tony" [ref=e1108] [cursor=pointer]:
+                    - /url: /-/es/shop/tc2004_
+                  - link "Haz clic para ir a la página de información de Amazon Influencer" [ref=e1110] [cursor=pointer]:
+                    - /url: /-/es/shop/info
+                    - text: Gana comisiones
+                - generic [ref=e1111]: GT3 Crazy Speeds
+            - button "Play" [ref=e1112] [cursor=pointer]
+      - generic [ref=e1186]:
+        - separator [ref=e1187]
+        - generic [ref=e1188]:
+          - heading "Seguridad y recursos de productos" [level=2] [ref=e1189]
+          - generic [ref=e1192]:
+            - heading "Documentos de seguridad" [level=3] [ref=e1193]
+            - generic [ref=e1197]:
+              - link "Certificate of Compliance (PDF)" [ref=e1198] [cursor=pointer]:
+                - /url: javascript:void(0)
+              - generic [ref=e1199]: "|"
+              - link "Warranty (PDF)" [ref=e1200] [cursor=pointer]:
+                - /url: javascript:void(0)
+              - generic [ref=e1201]: "|"
+              - link "User Manual (PDF)" [ref=e1202] [cursor=pointer]:
+                - /url: javascript:void(0)
+      - generic [ref=e1204]:
+        - separator [ref=e1205]
+        - heading "Contenido de la caja" [level=2] [ref=e1206]
+        - listitem [ref=e1208]: Segway GT3 SuperScooter, Manual del producto, Cargador de batería, Accesorios
+      - generic [ref=e1210]:
+        - separator [ref=e1211]
+        - generic [ref=e1212]:
+          - 'heading "Marca Destacada: Segway" [level=2] [ref=e1213]'
+          - generic [ref=e1214]:
+            - generic [ref=e1217]:
+              - generic [ref=e1218]: Altamente valorada
+              - generic [ref=e1219]: Más de 50K+ clientes calificaron los productos de esta marca como excelentes
+            - generic [ref=e1222]:
+              - generic [ref=e1223]: Tendencia
+              - generic [ref=e1224]: 10K+ pedidos de esta marca en los últimos 3 meses
+            - generic [ref=e1227]:
+              - generic [ref=e1228]: Bajas devoluciones
+              - generic [ref=e1229]: Clientes suelen quedarse con artículos de esta marca
+      - generic "Opiniones principales" [ref=e1232]:
+        - separator [ref=e1233]
+        - generic [ref=e1235]:
+          - generic [ref=e1236]:
+            - generic [ref=e1241]:
+              - heading "Opiniones de clientes" [level=2] [ref=e1243]
+              - generic [ref=e1245]:
+                - generic [ref=e1248]: 4.4 de 5 estrellas
+                - generic [ref=e1251]: 4.4 de 5
+              - generic [ref=e1252]: 74 calificaciones globales
+              - list [ref=e1256]:
+                - listitem [ref=e1257]:
+                  - link "El 75 por ciento de las opiniones tienen 5 estrellas" [ref=e1259] [cursor=pointer]:
+                    - /url: /-/es/product-reviews/B0DRXSQMJH/ref=acr_dp_hist_5?ie=UTF8&filterByStar=five_star&reviewerType=all_reviews#reviews-filter-bar
+                    - generic [ref=e1260]: 5 estrellas
+                    - progressbar [ref=e1262]
+                    - generic [ref=e1263]: 75%
+                - listitem [ref=e1264]:
+                  - link "El 10 por ciento de las opiniones tienen 4 estrellas" [ref=e1266] [cursor=pointer]:
+                    - /url: /-/es/product-reviews/B0DRXSQMJH/ref=acr_dp_hist_4?ie=UTF8&filterByStar=four_star&reviewerType=all_reviews#reviews-filter-bar
+                    - generic [ref=e1267]: 4 estrellas
+                    - progressbar [ref=e1269]
+                    - generic [ref=e1270]: 10%
+                - listitem [ref=e1271]:
+                  - link "El 5 por ciento de las opiniones tienen 3 estrellas" [ref=e1273] [cursor=pointer]:
+                    - /url: /-/es/product-reviews/B0DRXSQMJH/ref=acr_dp_hist_3?ie=UTF8&filterByStar=three_star&reviewerType=all_reviews#reviews-filter-bar
+                    - generic [ref=e1274]: 3 estrellas
+                    - progressbar [ref=e1276]
+                    - generic [ref=e1277]: 5%
+                - listitem [ref=e1278]:
+                  - generic "El 0 por ciento de las opiniones tienen 2 estrellas" [ref=e1280]:
+                    - generic [ref=e1281]: 2 estrellas
+                    - progressbar [ref=e1283]
+                    - generic [ref=e1284]: 0%
+                - listitem [ref=e1285]:
+                  - link "El 10 por ciento de las opiniones tienen 1 estrellas" [ref=e1287] [cursor=pointer]:
+                    - /url: /-/es/product-reviews/B0DRXSQMJH/ref=acr_dp_hist_1?ie=UTF8&filterByStar=one_star&reviewerType=all_reviews#reviews-filter-bar
+                    - generic [ref=e1288]: 1 estrella
+                    - progressbar [ref=e1290]
+                    - generic [ref=e1291]: 10%
+              - button "Cómo funcionan las opiniones y calificaciones de clientes" [ref=e1296] [cursor=pointer]: Cómo funcionan las opiniones y calificaciones de clientes
+            - separator [ref=e1298]
+            - separator [ref=e1299]
+          - generic [ref=e1303]:
+            - generic [ref=e1306]:
+              - group [ref=e1308]:
+                - generic [ref=e1309]:
+                  - heading "Opiniones con imágenes" [level=3] [ref=e1311]
+                  - link "Ver todas las fotos" [ref=e1314] [cursor=pointer]:
+                    - /url: javascript:void(0)
+                - group [ref=e1318]:
+                  - list [ref=e1319]:
+                    - listitem [ref=e1320]:
+                      - button "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1321] [cursor=pointer]:
+                        - img "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1322]
+                    - listitem [ref=e1324]:
+                      - button "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1325] [cursor=pointer]:
+                        - img "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1326]
+                    - listitem [ref=e1328]:
+                      - button "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1329] [cursor=pointer]:
+                        - img "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1330]
+                    - listitem [ref=e1332]:
+                      - button "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1333] [cursor=pointer]:
+                        - img "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1334]
+                    - listitem [ref=e1336]:
+                      - button "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1337] [cursor=pointer]:
+                        - img "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1338]
+                    - listitem [ref=e1340]:
+                      - button "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1341] [cursor=pointer]:
+                        - img "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1342]
+                    - listitem [ref=e1344]:
+                      - button "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1345] [cursor=pointer]:
+                        - img "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1346]
+                    - listitem [ref=e1348]:
+                      - button "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1349] [cursor=pointer]:
+                        - img "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1350]
+                    - listitem [ref=e1352]:
+                      - button "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1353] [cursor=pointer]:
+                        - img "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1354]
+                    - listitem [ref=e1356]:
+                      - button "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1357] [cursor=pointer]:
+                        - img "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1358]
+                    - listitem [ref=e1360]:
+                      - button "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1361] [cursor=pointer]:
+                        - img "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1362]
+                    - listitem [ref=e1364]:
+                      - button "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1365] [cursor=pointer]:
+                        - img "Imagen del cliente, haz clic para abrir la opinión del cliente" [ref=e1366]
+              - separator [ref=e1368]
+            - generic [ref=e1369]:
+              - generic [ref=e1372]:
+                - heading "Opiniones destacadas de los Estados Unidos" [level=3] [ref=e1374]
+                - link "Traducir todas las opiniones al Español" [ref=e1380] [cursor=pointer]:
+                  - /url: "#customerReviews"
+                - list [ref=e1383]:
+                  - listitem [ref=e1384]:
+                    - generic [ref=e1387]:
+                      - link "BoazKinsman" [ref=e1389] [cursor=pointer]:
+                        - /url: /-/es/gp/profile/amzn1.account.AE2GQA6AUIHUXCNXLJRYVJLFO5PQ
+                        - img [ref=e1392]
+                        - generic [ref=e1393]: BoazKinsman
+                      - heading "5.0 de 5 estrellas A Game-Changer for Daily Rides!" [level=5] [ref=e1395]:
+                        - link "5.0 de 5 estrellas A Game-Changer for Daily Rides!" [ref=e1396] [cursor=pointer]:
+                          - /url: /-/es/gp/customer-reviews/R299BI90OHIRIA/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8
+                          - generic [ref=e1398]: 5.0 de 5 estrellas
+                          - text: A Game-Changer for Daily Rides!
+                      - heading "Calificado en Estados Unidos el 17 de febrero de 2026" [level=6] [ref=e1399]
+                      - generic [ref=e1400]:
+                        - text: "Estilo: GT3"
+                        - img [ref=e1401]
+                        - 'link "Compra verificada: Más información sobre cómo funcionan las opiniones de clientes en Amazon" [ref=e1402] [cursor=pointer]':
+                          - /url: /-/es/gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?nodeId=G8UYX7LALQC8V9KA
+                          - text: Compra Verificada
+                      - generic [ref=e1405]:
+                        - generic [ref=e1407]:
+                          - text: 5.0 out of 5 stars - Thrilled with My Segway GT3 - A Game-Changer for Daily Rides!
+                          - text: I've been eyeing a high-performance electric scooter for months to upgrade my commute and weekend adventures, and the Segway SuperScooter GT3 absolutely delivered! Right out of the box, the build quality blew me away—it's solid, with that alloy steel frame feeling premium and durable, weighing in at 87 lbs but folding up nicely for storage. The 2400W peak motor gives it serious punch; I hit 31 mph effortlessly on flat roads, and the acceleration (0-30 mph in about 9.5 seconds) is smooth and exhilarating without feeling sketchy. Even on 30% inclines, it powers through like a champ.
+                          - text: The dual hydraulic suspension is a standout—front double shocks and rear trailing-arm setup soak up bumps and potholes on city streets, making rides comfortable even over rough pavement. Those 11-inch self-sealing tires are genius; I've already rolled over some debris without a hitch, thanks to the puncture-resistant layer. Range-wise, I'm getting close to the advertised 45 miles in mixed Eco and Sport modes (I'm about 280 lbs), and the flash charging is quick—full in under 6 hours, or a 1-hour top-up for extra miles when I'm in a rush.
+                          - text: "Smart features are icing on the cake: the 2.4-inch TFT display is bright and intuitive, showing speed, battery, and even navigation alerts. Bluetooth auto-unlock via the app is super convenient, and integration with Apple Find My gives me peace of mind against theft. It's UL 2272/2271 certified, so safety isn't an afterthought—brakes are responsive hydraulic discs, and the stability system (SegRide™ with TCS) keeps things steady at higher speeds or in turns."
+                          - text: Overall, I'm ecstatic with this purchase—it's fun, reliable, and turns heads everywhere. Worth every penny at $1,699.99! I'll update this review after a month of heavy use to report on long-term battery life and any wear, but so far, it's exceeding expectations.
+                          - text: "- Boaz"
+                        - button "Leer más sobre esta opinión" [ref=e1410] [cursor=pointer]: Leer más
+                      - list [ref=e1413]:
+                        - listitem [ref=e1414]:
+                          - button "Imagen del cliente" [ref=e1416] [cursor=pointer]:
+                            - img "Imagen del cliente" [ref=e1417]
+                        - listitem [ref=e1418]:
+                          - button "Imagen del cliente" [ref=e1420] [cursor=pointer]:
+                            - img "Imagen del cliente" [ref=e1421]
+                        - listitem [ref=e1422]:
+                          - button "Imagen del cliente" [ref=e1424] [cursor=pointer]:
+                            - img "Imagen del cliente" [ref=e1425]
+                        - listitem [ref=e1426]:
+                          - button "Imagen del cliente" [ref=e1428] [cursor=pointer]:
+                            - img "Imagen del cliente" [ref=e1429]
+                        - listitem [ref=e1430]:
+                          - button "Imagen del cliente" [ref=e1432] [cursor=pointer]:
+                            - img "Imagen del cliente" [ref=e1433]
+                        - listitem [ref=e1434]:
+                          - button "Imagen del cliente" [ref=e1436] [cursor=pointer]:
+                            - img "Imagen del cliente" [ref=e1437]
+                      - generic [ref=e1438]:
+                        - generic [ref=e1439]:
+                          - generic [ref=e1440]: A 2 personas les resultó útil
+                          - link "Marcar la opinión como útil" [ref=e1444] [cursor=pointer]:
+                            - /url: https://www.amazon.com/-/es/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0DRXSQMJH%2Fref%3Dcm_cr_dp_d_vote_lft%3Fie%3DUTF8%26csrfT%3DhCPxsBZ5Hbl1aWZuJ5SENYq8SvjutuHH%25252FAggV%25252BeLLgkjAAAAAGnO6RAAAAAB%26reviewId%3DR299BI90OHIRIA%23R299BI90OHIRIA&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&marketPlaceId=ATVPDKIKX0DER&language=es&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+                            - generic [ref=e1445]: Útil
+                        - generic [ref=e1447]:
+                          - img [ref=e1448]
+                          - link "Reportar opinión de BoazKinsman" [ref=e1450] [cursor=pointer]:
+                            - /url: /-/es/hz/reviews-render/report-review/ref=cm_cr_dp_d_report?csrfT=hCPxsBZ5Hbl1aWZuJ5SENYq8SvjutuHH%2FAggV%2BeLLgkjAAAAAGnO6RAAAAAB&reviewId=R299BI90OHIRIA
+                            - text: Reportar
+                        - link "Traducir opinión al idioma Español" [ref=e1453] [cursor=pointer]:
+                          - /url: "#customerReviews"
+                  - listitem [ref=e1454]:
+                    - generic [ref=e1457]:
+                      - link "Belinijj" [ref=e1459] [cursor=pointer]:
+                        - /url: /-/es/gp/profile/amzn1.account.AGTLPBWPR4IQ4U7WYPFSX6RTKK6A
+                        - img [ref=e1462]
+                        - generic [ref=e1463]: Belinijj
+                      - heading "5.0 de 5 estrellas The King of Skateboards! Impressive Speed and Stability" [level=5] [ref=e1465]:
+                        - link "5.0 de 5 estrellas The King of Skateboards! Impressive Speed and Stability" [ref=e1466] [cursor=pointer]:
+                          - /url: /-/es/gp/customer-reviews/R2OHQX3IEQ55RO/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8
+                          - generic [ref=e1468]: 5.0 de 5 estrellas
+                          - text: The King of Skateboards! Impressive Speed and Stability
+                      - heading "Calificado en Estados Unidos el 23 de octubre de 2025" [level=6] [ref=e1469]
+                      - generic [ref=e1470]:
+                        - text: "Estilo: GT3"
+                        - img [ref=e1471]
+                        - 'link "Compra verificada: Más información sobre cómo funcionan las opiniones de clientes en Amazon" [ref=e1472] [cursor=pointer]':
+                          - /url: /-/es/gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?nodeId=G8UYX7LALQC8V9KA
+                          - text: Compra Verificada
+                      - generic [ref=e1477]:
+                        - text: This Segway SuperScooter GT3 is a real beast! From the moment I got on, I knew it was a totally different experience. The speed of 31 MPH is mind-blowing and allows you to reach anywhere in the blink of an eye, transforming my daily journeys into pure fun.
+                        - text: What surprised me the most, in addition to the speed, is the stability and comfort it offers. The suspension is excellent, absorbing potholes and slopes with ease, making driving smooth even on uneven terrain. The brakes are powerful and very reliable, which gives you a great sense of safety at these speeds.
+                        - text: The build quality is premium, it feels robust and durable. The range is also very good, allowing me to take long trips without worrying about the battery. If you are looking for a high-performance, safe and exciting electric skateboard that really leaves you speechless, the Segway GT3 is the perfect choice! It is worth every penny.
+                      - generic [ref=e1478]:
+                        - generic [ref=e1479]:
+                          - generic [ref=e1480]: A 4 personas les resultó útil
+                          - link "Marcar la opinión como útil" [ref=e1484] [cursor=pointer]:
+                            - /url: https://www.amazon.com/-/es/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0DRXSQMJH%2Fref%3Dcm_cr_dp_d_vote_lft%3Fie%3DUTF8%26csrfT%3DhItqNzh1Q0mRzSnOCCPkbDzN3yj1B1jbnmIiLx6dehm%25252BAAAAAGnO6RAAAAAB%26reviewId%3DR2OHQX3IEQ55RO%23R2OHQX3IEQ55RO&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&marketPlaceId=ATVPDKIKX0DER&language=es&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+                            - generic [ref=e1485]: Útil
+                        - generic [ref=e1487]:
+                          - img [ref=e1488]
+                          - link "Reportar opinión de Belinijj" [ref=e1490] [cursor=pointer]:
+                            - /url: /-/es/hz/reviews-render/report-review/ref=cm_cr_dp_d_report?csrfT=hItqNzh1Q0mRzSnOCCPkbDzN3yj1B1jbnmIiLx6dehm%2BAAAAAGnO6RAAAAAB&reviewId=R2OHQX3IEQ55RO
+                            - text: Reportar
+                        - link "Traducir opinión al idioma Español" [ref=e1493] [cursor=pointer]:
+                          - /url: "#customerReviews"
+                  - listitem [ref=e1494]:
+                    - generic [ref=e1497]:
+                      - link "Andrea R." [ref=e1499] [cursor=pointer]:
+                        - /url: /-/es/gp/profile/amzn1.account.AEJ7ZNCIWZWTDS5MYD7QJAM3HJ4Q
+                        - img [ref=e1502]
+                        - generic [ref=e1503]: Andrea R.
+                      - heading "5.0 de 5 estrellas Segway GT3 – A Daily Dose of Electric Joy!" [level=5] [ref=e1505]:
+                        - link "5.0 de 5 estrellas Segway GT3 – A Daily Dose of Electric Joy!" [ref=e1506] [cursor=pointer]:
+                          - /url: /-/es/gp/customer-reviews/R2TZI8RW3LTE4B/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8
+                          - generic [ref=e1508]: 5.0 de 5 estrellas
+                          - text: Segway GT3 – A Daily Dose of Electric Joy!
+                      - heading "Calificado en Estados Unidos el 30 de abril de 2025" [level=6] [ref=e1509]
+                      - generic [ref=e1510]:
+                        - text: "Estilo: GT3"
+                        - img [ref=e1511]
+                        - 'link "Compra verificada: Más información sobre cómo funcionan las opiniones de clientes en Amazon" [ref=e1512] [cursor=pointer]':
+                          - /url: /-/es/gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?nodeId=G8UYX7LALQC8V9KA
+                          - text: Compra Verificada
+                      - generic [ref=e1515]:
+                        - generic [ref=e1517]:
+                          - text: I recently purchased the Segway GT3 electric super scooter, and let me tell you — it has absolutely blown me away.
+                          - text: I was expecting something nice, sure — but what I got exceeded every expectation.
+                          - text: This machine is not just a super scooter; it’s a precision-engineered, sleek beast of a commuter ride that delivers power, elegance, and an unexpectedly addictive thrill.
+                          - text: From the moment I unboxed it, the build quality screamed premium.
+                          - text: The frame is solid and confidence-inspiring, yet it glides across pavement effortlessly.
+                          - text: Acceleration is buttery smooth, but when you ask for power, you get it — especially uphill, where it just refuses to quit.
+                          - text: The battery performance is solid, though — and this is the only caveat I’ll mention — it’s not quite as long-lasting as advertised, especially if, like me, you mostly ride in RACE mode (the high-performance setting that prioritizes speed and torque over energy efficiency).
+                          - text: It’s also important to mention that I weigh about 230 pounds, and I ride daily in the hilly terrain of San Francisco, so… well, it’s understandable that the advertised range becomes more of a best-case scenario than an everyday reality.
+                          - text: So yes — the range might be a bit optimistic in situations like mine.
+                          - text: But everything else about the Segway GT3 is so good, I honestly don’t mind plugging it in more often.
+                          - text: It’s well worth it for the freedom, speed, and quality you get in return.
+                          - text: I LOVE the Segway GT3 and I ride it daily with zero regrets.
+                          - text: Five stars — and I’d still give it six if I could.
+                          - text: Cheers!
+                        - button "Leer más sobre esta opinión" [ref=e1520] [cursor=pointer]: Leer más
+                      - generic [ref=e1522]:
+                        - generic [ref=e1523]:
+                          - generic [ref=e1524]: A 15 personas les resultó útil
+                          - link "Marcar la opinión como útil" [ref=e1528] [cursor=pointer]:
+                            - /url: https://www.amazon.com/-/es/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0DRXSQMJH%2Fref%3Dcm_cr_dp_d_vote_lft%3Fie%3DUTF8%26csrfT%3DhMagySEi2ATsYRKdg2sOJOLddvmuysa4VaJhKYzdXhUqAAAAAGnO6RAAAAAB%26reviewId%3DR2TZI8RW3LTE4B%23R2TZI8RW3LTE4B&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&marketPlaceId=ATVPDKIKX0DER&language=es&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+                            - generic [ref=e1529]: Útil
+                        - generic [ref=e1531]:
+                          - img [ref=e1532]
+                          - link "Reportar opinión de Andrea R." [ref=e1534] [cursor=pointer]:
+                            - /url: /-/es/hz/reviews-render/report-review/ref=cm_cr_dp_d_report?csrfT=hMagySEi2ATsYRKdg2sOJOLddvmuysa4VaJhKYzdXhUqAAAAAGnO6RAAAAAB&reviewId=R2TZI8RW3LTE4B
+                            - text: Reportar
+                        - link "Traducir opinión al idioma Español" [ref=e1537] [cursor=pointer]:
+                          - /url: "#customerReviews"
+                  - listitem [ref=e1538]:
+                    - generic [ref=e1541]:
+                      - 'link "Random Shopper #1637" [ref=e1543] [cursor=pointer]':
+                        - /url: /-/es/gp/profile/amzn1.account.AH3MQ2EWC3AI6EH4KI22I2G3TTCQ
+                        - img [ref=e1546]
+                        - generic [ref=e1547]: "Random Shopper #1637"
+                      - heading "5.0 de 5 estrellas Beefy, stable and comfy. Not lightweight." [level=5] [ref=e1549]:
+                        - link "5.0 de 5 estrellas Beefy, stable and comfy. Not lightweight." [ref=e1550] [cursor=pointer]:
+                          - /url: /-/es/gp/customer-reviews/RIX2QYDA8E5TT/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8
+                          - generic [ref=e1552]: 5.0 de 5 estrellas
+                          - text: Beefy, stable and comfy. Not lightweight.
+                      - heading "Calificado en Estados Unidos el 11 de abril de 2025" [level=6] [ref=e1553]
+                      - generic [ref=e1554]:
+                        - text: "Estilo: GT3"
+                        - img [ref=e1555]
+                        - 'link "Compra verificada: Más información sobre cómo funcionan las opiniones de clientes en Amazon" [ref=e1556] [cursor=pointer]':
+                          - /url: /-/es/gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?nodeId=G8UYX7LALQC8V9KA
+                          - text: Compra Verificada
+                      - generic [ref=e1559]:
+                        - generic [ref=e1561]:
+                          - text: The GT3 is an absolutely excellent scooter for commuters and others who want a durable, stable and powerful ride around town.
+                          - text: This scooter is built like a tank. You won't want to carry it up and down many steps and you won't want to put in the trunk of a sedan. But if you want a ride that feels stable and makes you feel confident as a rider, this one is a good choice.
+                          - text: The deck is big and roomy, which makes me and my big feet happy. The cockpit is nicely laid out, with controls positioned comfortably and intuitively. The suspension makes navigating the rough streets I ride on safer and less jarring. The dual disk brakes are string and reliable. They are cable-actuated, so not as powerful or self-adjusting as hydraulics, but more than adequate for city riding and a lot easier and cheaper to maintain and repair.
+                          - text: I'm a city dweller, so range is more than adequate for me and charging time isn't an issue. Top speed is not an issue, because riding faster than 30 mph in short city blocks with lots of traffic is just not a good idea anyway. Acceleration is important and the GT3 has plenty to get me across the big intersections and to zip out of potentially hazardous traffic pockets.
+                          - text: So far, I just don't have any serious complaints. If your use case is like mine and you don't have to carry your scooter up and down stairs, this is one that's well worth considering.
+                        - button "Leer más sobre esta opinión" [ref=e1564] [cursor=pointer]: Leer más
+                      - generic [ref=e1566]:
+                        - generic [ref=e1567]:
+                          - generic [ref=e1568]: A 8 personas les resultó útil
+                          - link "Marcar la opinión como útil" [ref=e1572] [cursor=pointer]:
+                            - /url: https://www.amazon.com/-/es/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0DRXSQMJH%2Fref%3Dcm_cr_dp_d_vote_lft%3Fie%3DUTF8%26csrfT%3DhGPjnObLYBENZa0Byn1f71l4jveR3424dayIKfAtxzDdAAAAAGnO6RAAAAAB%26reviewId%3DRIX2QYDA8E5TT%23RIX2QYDA8E5TT&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&marketPlaceId=ATVPDKIKX0DER&language=es&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+                            - generic [ref=e1573]: Útil
+                        - generic [ref=e1575]:
+                          - img [ref=e1576]
+                          - 'link "Reportar opinión de Random Shopper #1637" [ref=e1578] [cursor=pointer]':
+                            - /url: /-/es/hz/reviews-render/report-review/ref=cm_cr_dp_d_report?csrfT=hGPjnObLYBENZa0Byn1f71l4jveR3424dayIKfAtxzDdAAAAAGnO6RAAAAAB&reviewId=RIX2QYDA8E5TT
+                            - text: Reportar
+                        - link "Traducir opinión al idioma Español" [ref=e1581] [cursor=pointer]:
+                          - /url: "#customerReviews"
+                - generic [ref=e1583]:
+                  - separator [ref=e1584]
+                  - link "Ver más opiniones" [ref=e1585] [cursor=pointer]:
+                    - /url: /-/es/product-reviews/B0DRXSQMJH/ref=cm_cr_dp_d_show_all_btm?ie=UTF8
+              - generic [ref=e1589]:
+                - generic [ref=e1590]:
+                  - heading "Opiniones más destacadas de otros países" [level=3] [ref=e1591]
+                  - link "Traducir todas las opiniones al Español" [ref=e1597] [cursor=pointer]:
+                    - /url: "#customerReviews"
+                - list [ref=e1600]:
+                  - listitem [ref=e1601]:
+                    - generic [ref=e1604]:
+                      - generic [ref=e1606]:
+                        - img [ref=e1609]
+                        - generic [ref=e1610]: Van Tastic
+                      - heading "5.0 de 5 estrellas Super Scooter Fun" [level=5] [ref=e1612]:
+                        - generic [ref=e1614]: 5.0 de 5 estrellas
+                        - generic [ref=e1615]: Super Scooter Fun
+                      - heading "Calificado en Canadá el 13 de agosto de 2025" [level=6] [ref=e1616]
+                      - generic [ref=e1617]:
+                        - text: "Estilo: GT3"
+                        - img [ref=e1618]
+                        - 'link "Compra verificada: Más información sobre cómo funcionan las opiniones de clientes en Amazon" [ref=e1619] [cursor=pointer]':
+                          - /url: /-/es/gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?nodeId=G8UYX7LALQC8V9KA
+                          - text: Compra Verificada
+                      - generic [ref=e1624]:
+                        - text: Scooter is very convenient for injury when youbcant walk far distances. Very helpful very well balanced and comfortable when riding.
+                        - text: Power really dropped off when you drain the battery to 25% or less. Donse t take very long to charge
+                        - text: Wish it had a built in camera
+                      - generic [ref=e1625]:
+                        - link "Reportar opinión de Van Tastic" [ref=e1629] [cursor=pointer]:
+                          - /url: /-/es/hz/reviews-render/report-review/ref=cm_cr_dp_d_report?csrfT=hGPVjg6xp8m6P8UcMB97OGli4HMcnMLpjeCSYtHeaqr5AAAAAGnO6RAAAAAB&reviewId=RUYUL7ETZ0RNY
+                          - text: Reportar
+                        - link "Traducir opinión al idioma Español" [ref=e1632] [cursor=pointer]:
+                          - /url: "#customerReviews"
+                  - listitem [ref=e1633]:
+                    - generic [ref=e1636]:
+                      - generic [ref=e1638]:
+                        - img [ref=e1641]
+                        - generic [ref=e1642]: jason
+                      - heading "5.0 de 5 estrellas Great" [level=5] [ref=e1644]:
+                        - generic [ref=e1646]: 5.0 de 5 estrellas
+                        - generic [ref=e1647]: Great
+                      - heading "Calificado en Canadá el 29 de junio de 2025" [level=6] [ref=e1648]
+                      - generic [ref=e1649]:
+                        - text: "Estilo: GT3"
+                        - img [ref=e1650]
+                        - 'link "Compra verificada: Más información sobre cómo funcionan las opiniones de clientes en Amazon" [ref=e1651] [cursor=pointer]':
+                          - /url: /-/es/gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?nodeId=G8UYX7LALQC8V9KA
+                          - text: Compra Verificada
+                      - generic [ref=e1656]: Works great, does what I wanted it to do.
+                      - list [ref=e1658]:
+                        - listitem [ref=e1659]:
+                          - button "Imagen del cliente" [ref=e1661] [cursor=pointer]:
+                            - img "Imagen del cliente" [ref=e1662]
+                        - listitem [ref=e1663]:
+                          - button "Imagen del cliente" [ref=e1665] [cursor=pointer]:
+                            - img "Imagen del cliente" [ref=e1666]
+                      - generic [ref=e1667]:
+                        - link "Reportar opinión de jason" [ref=e1671] [cursor=pointer]:
+                          - /url: /-/es/hz/reviews-render/report-review/ref=cm_cr_dp_d_report?csrfT=hOROwhvxCg10wApMLbQB1nBpsF8mEJ37kfgfP%2FS29YhiAAAAAGnO6RAAAAAB&reviewId=RWSCBF9M26KRN
+                          - text: Reportar
+                        - link "Traducir opinión al idioma Español" [ref=e1674] [cursor=pointer]:
+                          - /url: "#customerReviews"
+                - generic [ref=e1675]:
+                  - separator [ref=e1676]
+                  - link "Ver más opiniones" [ref=e1677] [cursor=pointer]:
+                    - /url: /-/es/product-reviews/B0DRXSQMJH/ref=cm_cr_dp_d_show_all_btm?ie=UTF8
+  - complementary "Productos que has visto recientemente y recomendaciones destacadas"
+  - generic [ref=e1682]:
+    - button "Inicio de Página" [ref=e1683] [cursor=pointer]:
+      - generic [ref=e1684]: Inicio de Página
+    - generic [ref=e1685]:
+      - generic [ref=e1686]:
+        - heading "Conócenos" [level=6] [ref=e1687]
+        - list [ref=e1688]:
+          - listitem [ref=e1689]:
+            - link "Trabaja en Amazon" [ref=e1690] [cursor=pointer]:
+              - /url: https://www.amazon.jobs
+          - listitem [ref=e1691]:
+            - link "Blog" [ref=e1692] [cursor=pointer]:
+              - /url: https://blog.aboutamazon.com/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=e1693]:
+            - link "Acerca de Amazon" [ref=e1694] [cursor=pointer]:
+              - /url: https://www.aboutamazon.com/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=e1695]:
+            - link "Relaciones con los Inversionistas" [ref=e1696] [cursor=pointer]:
+              - /url: https://www.amazon.com/-/es/ir
+          - listitem [ref=e1697]:
+            - link "Dispositivos Amazon" [ref=e1698] [cursor=pointer]:
+              - /url: /-/es/gp/browse.html?node=2102313011&ref_=footer_devices
+          - listitem [ref=e1699]:
+            - link "Amazon Science" [ref=e1700] [cursor=pointer]:
+              - /url: https://www.amazon.science
+      - generic [ref=e1702]:
+        - heading "Gana Dinero con Nosotros" [level=6] [ref=e1703]
+        - list [ref=e1704]:
+          - listitem [ref=e1705]:
+            - link "Vender productos en Amazon" [ref=e1706] [cursor=pointer]:
+              - /url: https://services.amazon.com/sell.html?ld=AZFSSOA&ref_=footer_soa
+          - listitem [ref=e1707]:
+            - link "Vende en Amazon Business" [ref=e1708] [cursor=pointer]:
+              - /url: https://services.amazon.com/amazon-business.html?ld=usb2bunifooter&ref_=footer_b2b
+          - listitem [ref=e1709]:
+            - link "Vender aplicaciones en Amazon" [ref=e1710] [cursor=pointer]:
+              - /url: https://developer.amazon.com
+          - listitem [ref=e1711]:
+            - link "Programa de Afiliados" [ref=e1712] [cursor=pointer]:
+              - /url: https://affiliate-program.amazon.com/
+          - listitem [ref=e1713]:
+            - link "Anuncia tus Productos" [ref=e1714] [cursor=pointer]:
+              - /url: https://advertising.amazon.com/?ref=ext_amzn_ftr
+          - listitem [ref=e1715]:
+            - link "Publica tu Libro en Kindle" [ref=e1716] [cursor=pointer]:
+              - /url: /-/es/gp/seller-account/mm-summary-page.html?ld=AZFooterSelfPublish&topic=200260520&ref_=footer_publishing
+          - listitem [ref=e1717]:
+            - link "Habilita un Amazon Hub" [ref=e1718] [cursor=pointer]:
+              - /url: https://go.thehub-amazon.com/amazon-hub-locker
+          - listitem [ref=e1719]:
+            - text: ›
+            - link "Ver más Gana Dinero con Nosotros" [ref=e1720] [cursor=pointer]:
+              - /url: /-/es/b/?node=18190131011&ld=AZUSSOA-seemore&ref_=footer_seemore
+      - generic [ref=e1722]:
+        - heading "Productos de Pago de Amazon" [level=6] [ref=e1723]
+        - list [ref=e1724]:
+          - listitem [ref=e1725]:
+            - link "Compra con Puntos" [ref=e1726] [cursor=pointer]:
+              - /url: /-/es/gp/browse.html?node=16218619011&ref_=footer_swp
+          - listitem [ref=e1727]:
+            - link "Recarga tu Saldo" [ref=e1728] [cursor=pointer]:
+              - /url: /-/es/dp/B0CHTVMXZJ?th=1?ref_=footer_reload_us
+          - listitem [ref=e1729]:
+            - link "Conversor de divisas de Amazon" [ref=e1730] [cursor=pointer]:
+              - /url: /-/es/gp/browse.html?node=388305011&ref_=footer_tfx
+      - generic [ref=e1732]:
+        - heading "Podemos Ayudarte" [level=6] [ref=e1733]
+        - list [ref=e1734]:
+          - listitem [ref=e1735]:
+            - link "Amazon y el COVID-19" [ref=e1736] [cursor=pointer]:
+              - /url: /-/es/gp/help/customer/display.html?nodeId=GDFU3JS5AL6SYHRD&ref_=footer_covid
+          - listitem [ref=e1737]:
+            - link "Tu Cuenta" [ref=e1738] [cursor=pointer]:
+              - /url: https://www.amazon.com/-/es/gp/css/homepage.html?ref_=footer_ya
+          - listitem [ref=e1739]:
+            - link "Tus Pedidos" [ref=e1740] [cursor=pointer]:
+              - /url: https://www.amazon.com/-/es/gp/css/order-history?ref_=footer_yo
+          - listitem [ref=e1741]:
+            - link "Tarifas de Envío y Políticas" [ref=e1742] [cursor=pointer]:
+              - /url: /-/es/gp/help/customer/display.html?nodeId=468520&ref_=footer_shiprates
+          - listitem [ref=e1743]:
+            - link "Devoluciones y Reemplazos" [ref=e1744] [cursor=pointer]:
+              - /url: /-/es/gp/css/returns/homepage.html?ref_=footer_hy_f_4
+          - listitem [ref=e1745]:
+            - link "Administrar Contenido y Dispositivos" [ref=e1746] [cursor=pointer]:
+              - /url: /-/es/gp/digital/fiona/manage?ref_=footer_myk
+          - listitem [ref=e1747]:
+            - link "Ayuda" [ref=e1748] [cursor=pointer]:
+              - /url: /-/es/gp/help/customer/display.html?nodeId=508510&ref_=footer_gw_m_b_he
+    - generic [ref=e1750]:
+      - link "Amazon US Home" [ref=e1753] [cursor=pointer]:
+        - /url: /-/es/?ref_=footer_logo
+      - generic [ref=e1756]:
+        - generic [ref=e1757]:
+          - link "Elige un idioma para hacer compras. La selección actual es Español." [ref=e1758] [cursor=pointer]:
+            - /url: /-/es/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=footer_lang
+            - generic [ref=e1760]: Español
+          - button "Ampliar para cambiar el idioma o país" [ref=e1761] [cursor=pointer]
+        - link "$ USD - dólar estadounidense" [ref=e1762] [cursor=pointer]:
+          - /url: /-/es/customer-preferences/edit?ie=UTF8&ref_=footer_cop&preferencesReturnUrl=%2F-%2Fes%2Fdp%2FB0DRXSQMJH
+          - generic [ref=e1763]: $
+          - generic [ref=e1764]: USD - dólar estadounidense
+        - button "Selecciona un país/una región para comprar. La selección actual esEstados Unidos." [ref=e1765] [cursor=pointer]:
+          - generic [ref=e1767]: Estados Unidos
+    - navigation "Más en Amazon" [ref=e1768]:
+      - generic "Más en Amazon" [ref=e1769]:
+        - list [ref=e1770]:
+          - listitem [ref=e1771]:
+            - link "Amazon Music Reproduce millones de canciones" [ref=e1772] [cursor=pointer]:
+              - /url: https://music.amazon.com?ref=dm_aff_amz_com
+              - heading "Amazon Music" [level=5] [ref=e1773]
+              - generic [ref=e1774]:
+                - text: Reproduce millones
+                - text: de canciones
+          - listitem [ref=e1775]
+          - listitem [ref=e1776]:
+            - link "Amazon Advertising Encontrar, atraer y captar clientes" [ref=e1777] [cursor=pointer]:
+              - /url: https://advertising.amazon.com/?ref=footer_advtsing_amzn_com
+              - heading "Amazon Advertising" [level=5] [ref=e1778]
+              - generic [ref=e1779]:
+                - text: Encontrar, atraer y
+                - text: captar clientes
+          - listitem [ref=e1780]
+          - listitem [ref=e1781]:
+            - link "6pm Descubre ofertas en marcas de moda" [ref=e1782] [cursor=pointer]:
+              - /url: https://www.6pm.com
+              - heading "6pm" [level=5] [ref=e1783]
+              - generic [ref=e1784]:
+                - text: Descubre ofertas
+                - text: en marcas de moda
+          - listitem [ref=e1785]
+          - listitem [ref=e1786]:
+            - link "AbeBooks Libros, arte & artículos de colección" [ref=e1787] [cursor=pointer]:
+              - /url: https://www.abebooks.com
+              - heading "AbeBooks" [level=5] [ref=e1788]
+              - generic [ref=e1789]:
+                - text: Libros, arte
+                - text: "& artículos de colección"
+          - listitem [ref=e1790]
+          - listitem [ref=e1791]:
+            - link "ACX Editorial de Audiolibros Hecho Fácil" [ref=e1792] [cursor=pointer]:
+              - /url: https://www.acx.com/
+              - heading "ACX" [level=5] [ref=e1793]
+              - generic [ref=e1794]:
+                - text: Editorial de Audiolibros
+                - text: Hecho Fácil
+          - listitem [ref=e1795]
+          - listitem [ref=e1796]:
+            - link "Venda en Amazon Comience una cuenta de venta" [ref=e1797] [cursor=pointer]:
+              - /url: https://sell.amazon.com/?ld=AZUSSOA-footer-aff&ref_=footer_sell
+              - heading "Venda en Amazon" [level=5] [ref=e1798]
+              - generic [ref=e1799]: Comience una cuenta de venta
+        - list [ref=e1800]:
+          - listitem [ref=e1801]:
+            - link "Veeqo Shipping Software Inventory Management" [ref=e1802] [cursor=pointer]:
+              - /url: https://www.veeqo.com/?utm_source=amazon&utm_medium=website&utm_campaign=footer
+              - heading "Veeqo" [level=5] [ref=e1803]
+              - generic [ref=e1804]:
+                - text: Shipping Software
+                - text: Inventory Management
+          - listitem [ref=e1805]
+          - listitem [ref=e1806]:
+            - link "Amazon Business Todo para tu negocio" [ref=e1807] [cursor=pointer]:
+              - /url: /-/es/business?ref_=footer_retail_b2b
+              - heading "Amazon Business" [level=5] [ref=e1808]
+              - generic [ref=e1809]:
+                - text: Todo para
+                - text: tu negocio
+          - listitem [ref=e1810]
+          - listitem [ref=e1811]:
+            - link "AmazonGlobal Pedidos de Envío Internacional" [ref=e1812] [cursor=pointer]:
+              - /url: /-/es/gp/browse.html?node=230659011&ref_=footer_amazonglobal
+              - heading "AmazonGlobal" [level=5] [ref=e1813]
+              - generic [ref=e1814]:
+                - text: Pedidos de Envío
+                - text: Internacional
+          - listitem [ref=e1815]
+          - listitem [ref=e1816]:
+            - link "Amazon Web Services Servicios de cómputo en nube escalable" [ref=e1817] [cursor=pointer]:
+              - /url: https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&sc_campaign=amazonfooter
+              - heading "Amazon Web Services" [level=5] [ref=e1818]
+              - generic [ref=e1819]:
+                - text: Servicios de cómputo
+                - text: en nube escalable
+          - listitem [ref=e1820]
+          - listitem [ref=e1821]:
+            - link "Audible Escucha Libros e Interpretaciones de Audio Originales" [ref=e1822] [cursor=pointer]:
+              - /url: https://www.audible.com
+              - heading "Audible" [level=5] [ref=e1823]
+              - generic [ref=e1824]:
+                - text: Escucha Libros e Interpretaciones
+                - text: de Audio Originales
+          - listitem [ref=e1825]
+          - listitem [ref=e1826]:
+            - link "Box Office Mojo Encuentra películas Datos de taquilla" [ref=e1827] [cursor=pointer]:
+              - /url: https://www.boxofficemojo.com/?ref_=amzn_nav_ftr
+              - heading "Box Office Mojo" [level=5] [ref=e1828]
+              - generic [ref=e1829]:
+                - text: Encuentra películas
+                - text: Datos de taquilla
+        - list [ref=e1830]:
+          - listitem [ref=e1831]:
+            - link "Goodreads Análisis de libros y recomendaciones" [ref=e1832] [cursor=pointer]:
+              - /url: https://www.goodreads.com
+              - heading "Goodreads" [level=5] [ref=e1833]
+              - generic [ref=e1834]:
+                - text: Análisis de libros
+                - text: y recomendaciones
+          - listitem [ref=e1835]
+          - listitem [ref=e1836]:
+            - link "IMDb Películas, TV y Celebridades" [ref=e1837] [cursor=pointer]:
+              - /url: https://www.imdb.com
+              - heading "IMDb" [level=5] [ref=e1838]
+              - generic [ref=e1839]:
+                - text: Películas, TV
+                - text: y Celebridades
+          - listitem [ref=e1840]
+          - listitem [ref=e1841]:
+            - link "IMDbPro Obtén información de entretenimiento que los profesionales necesitan" [ref=e1842] [cursor=pointer]:
+              - /url: https://pro.imdb.com?ref_=amzn_nav_ftr
+              - heading "IMDbPro" [level=5] [ref=e1843]
+              - generic [ref=e1844]:
+                - text: Obtén información de entretenimiento
+                - text: que los profesionales necesitan
+          - listitem [ref=e1845]
+          - listitem [ref=e1846]:
+            - link "Kindle Direct Publishing Publica tu libro en papel y digital de manera independiente" [ref=e1847] [cursor=pointer]:
+              - /url: https://kdp.amazon.com
+              - heading "Kindle Direct Publishing" [level=5] [ref=e1848]
+              - generic [ref=e1849]:
+                - text: Publica tu libro en papel y digital
+                - text: de manera independiente
+          - listitem [ref=e1850]
+          - listitem [ref=e1851]:
+            - link "Prime Video Direct Distribución de Video Sin Esfuerzo" [ref=e1852] [cursor=pointer]:
+              - /url: https://videodirect.amazon.com/home/landing
+              - heading "Prime Video Direct" [level=5] [ref=e1853]
+              - generic [ref=e1854]:
+                - text: Distribución de Video
+                - text: Sin Esfuerzo
+          - listitem [ref=e1855]
+          - listitem [ref=e1856]:
+            - link "Shopbop Diseñador Marcas de Moda" [ref=e1857] [cursor=pointer]:
+              - /url: https://www.shopbop.com
+              - heading "Shopbop" [level=5] [ref=e1858]
+              - generic [ref=e1859]:
+                - text: Diseñador
+                - text: Marcas de Moda
+        - list [ref=e1860]:
+          - listitem [ref=e1861]:
+            - link "Woot! Descuentos y travesuras" [ref=e1862] [cursor=pointer]:
+              - /url: https://www.woot.com/
+              - heading "Woot!" [level=5] [ref=e1863]
+              - generic [ref=e1864]:
+                - text: Descuentos y
+                - text: travesuras
+          - listitem [ref=e1865]
+          - listitem [ref=e1866]:
+            - link "Zappos Zapatos y ropa" [ref=e1867] [cursor=pointer]:
+              - /url: https://www.zappos.com
+              - heading "Zappos" [level=5] [ref=e1868]
+              - generic [ref=e1869]:
+                - text: Zapatos y
+                - text: ropa
+          - listitem [ref=e1870]
+          - listitem [ref=e1871]:
+            - link "Ring Casa Inteligente Sistemas de Seguridad" [ref=e1872] [cursor=pointer]:
+              - /url: https://ring.com
+              - heading "Ring" [level=5] [ref=e1873]
+              - generic [ref=e1874]:
+                - text: Casa Inteligente
+                - text: Sistemas de Seguridad
+          - listitem [ref=e1875]
+          - listitem [ref=e1876]:
+            - link "Wifi eero Video 4K en tiempo real en todas las habitaciones" [ref=e1877] [cursor=pointer]:
+              - /url: https://eero.com/
+              - heading "Wifi eero" [level=5] [ref=e1878]
+              - generic [ref=e1879]: Video 4K en tiempo real en todas las habitaciones
+          - listitem [ref=e1880]
+          - listitem [ref=e1881]:
+            - link "Blink Seguridad inteligente para todos los hogares" [ref=e1882] [cursor=pointer]:
+              - /url: https://blinkforhome.com/?ref=nav_footer
+              - heading "Blink" [level=5] [ref=e1883]
+              - generic [ref=e1884]:
+                - text: Seguridad inteligente
+                - text: para todos los hogares
+          - listitem [ref=e1885]
+          - listitem [ref=e1886]:
+            - link "Neighbors App Alertas de seguridad y delitos en tiempo real" [ref=e1887] [cursor=pointer]:
+              - /url: https://shop.ring.com/pages/neighbors-app
+              - heading "Neighbors App" [level=5] [ref=e1888]
+              - generic [ref=e1889]:
+                - text: Alertas de seguridad
+                - text: y delitos en tiempo real
+        - list [ref=e1890]:
+          - listitem [ref=e1891]
+          - listitem [ref=e1892]
+          - listitem [ref=e1893]
+          - listitem [ref=e1894]
+          - listitem [ref=e1895]:
+            - link "Suscríbete con Amazon a los servicios de suscripción de \"Discover & try\"" [ref=e1896] [cursor=pointer]:
+              - /url: /-/es/gp/browse.html?node=14498690011&ref_=amzn_nav_ftr_swa
+              - heading "Suscríbete con Amazon" [level=5] [ref=e1897]
+              - generic [ref=e1898]:
+                - text: a los servicios de suscripción
+                - text: de "Discover & try"
+          - listitem [ref=e1899]
+          - listitem [ref=e1900]:
+            - link "PillPack Pharmacy simplificado" [ref=e1901] [cursor=pointer]:
+              - /url: https://www.pillpack.com
+              - heading "PillPack" [level=5] [ref=e1902]
+              - generic [ref=e1903]: Pharmacy simplificado
+          - listitem [ref=e1904]
+          - listitem [ref=e1905]
+          - listitem [ref=e1906]
+          - listitem [ref=e1907]
+    - generic [ref=e1908]:
+      - list [ref=e1909]:
+        - listitem [ref=e1910]:
+          - link "Condiciones de uso" [ref=e1911] [cursor=pointer]:
+            - /url: /-/es/gp/help/customer/display.html?nodeId=508088&ref_=footer_cou
+        - listitem [ref=e1912]:
+          - link "Aviso de privacidad" [ref=e1913] [cursor=pointer]:
+            - /url: /-/es/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ&ref_=footer_privacy
+        - listitem [ref=e1914]:
+          - link "Aviso de Privacidad de Datos de Salud del Consumidor" [ref=e1915] [cursor=pointer]:
+            - /url: /-/es/gp/help/customer/display.html?ie=UTF8&nodeId=TnACMrGVghHocjL8KB&ref_=footer_consumer_health_data_privacy
+        - listitem [ref=e1916]:
+          - link "Tus opciones de privacidad de los anuncios" [ref=e1917] [cursor=pointer]:
+            - /url: /-/es/privacyprefs?ref_=footer_iba
+        - listitem [ref=e1918]
+      - generic [ref=e1920]: © 1996-2026 Amazon.com, Inc. o sus afiliados
