@@ -27,6 +27,7 @@ export function normalizeError(err) {
 
   // Error genérico nativo
   if (err instanceof Error) {
+    if (err.cause) console.error('ERR CAUSE:', err.cause);
     return internalError(err.message);
   }
 
