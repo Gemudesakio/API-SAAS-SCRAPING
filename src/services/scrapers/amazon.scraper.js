@@ -6,10 +6,11 @@ import {
   flaresolverrGet,
   isFlareSolverrEnabled,
 } from '../clients/flaresolverr.client.js';
-import { convertToCOP } from '../../utils/currency.js';
+import { getExchangeRates } from '../../utils/currency.js';
 
 const AMAZON_BASE_URL = 'https://www.amazon.com';
 const PROXY_URL = process.env.PROXY_URL || '';
+const proxyDispatcher = PROXY_URL ? new ProxyAgent(PROXY_URL) : null;
 
 function isValidAmazonUrl(rawUrl) {
   try {
@@ -181,8 +182,8 @@ async function fetchDirect(targetUrl) {
   };
 
   const fetchOptions = { headers, redirect: 'follow' };
-  if (PROXY_URL) {
-    fetchOptions.dispatcher = new ProxyAgent(PROXY_URL);
+  if (proxyDispatcher) {
+    fetchOptions.dispatcher = proxyDispatcher;
   }
 
   const response = await undiciFetch(targetUrl, fetchOptions);
@@ -269,9 +270,11 @@ export async function scrapeAmazon({
 
     const pageProducts = extractProductsFromHtml(result.html, maxItems - products.length);
 
+    const rates = await getExchangeRates();
+    const copRate = rates.COP;
     for (const p of pageProducts) {
       const usdAmount = parseFloat(p.priceRaw.replace(/[^0-9.]/g, '')) || 0;
-      if (usdAmount > 0) p.priceRaw = String(await convertToCOP(usdAmount));
+      if (usdAmount > 0) p.priceRaw = String(Math.round(usdAmount * copRate));
     }
 
     if (!pageProducts.length) {

@@ -5,7 +5,7 @@ import {
   flaresolverrGet,
   isFlareSolverrEnabled,
 } from '../clients/flaresolverr.client.js';
-import { convertToCOP } from '../../utils/currency.js';
+import { getExchangeRates } from '../../utils/currency.js';
 
 const EBAY_BASE_URL = 'https://www.ebay.com';
 
@@ -204,9 +204,11 @@ export async function scrapeEbay({
 
     const pageProducts = extractProductsFromHtml(result.html, maxItems - products.length);
 
+    const rates = await getExchangeRates();
+    const copRate = rates.COP;
     for (const p of pageProducts) {
       const usdAmount = parseFloat(p.priceRaw.replace(/[^0-9.]/g, '')) || 0;
-      if (usdAmount > 0) p.priceRaw = String(await convertToCOP(usdAmount));
+      if (usdAmount > 0) p.priceRaw = String(Math.round(usdAmount * copRate));
     }
 
     if (!pageProducts.length) {

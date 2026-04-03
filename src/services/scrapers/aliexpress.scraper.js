@@ -5,6 +5,7 @@ import { buildUserAgent, detectChallenge } from '../../utils/scraper.helpers.js'
 import { flaresolverrGet, isFlareSolverrEnabled } from '../clients/flaresolverr.client.js';
 
 const PROXY_URL = process.env.PROXY_URL || '';
+const proxyDispatcher = PROXY_URL ? new ProxyAgent(PROXY_URL) : null;
 
 function isValidAliExpressUrl(rawUrl) {
   try {
@@ -66,8 +67,8 @@ async function fetchDirect(targetUrl) {
   };
 
   const fetchOptions = { headers, redirect: 'follow' };
-  if (PROXY_URL) {
-    fetchOptions.dispatcher = new ProxyAgent(PROXY_URL);
+  if (proxyDispatcher) {
+    fetchOptions.dispatcher = proxyDispatcher;
   }
 
   const response = await undiciFetch(targetUrl, fetchOptions);

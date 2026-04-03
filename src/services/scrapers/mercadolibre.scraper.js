@@ -89,11 +89,11 @@ function resolveMercadoLibreTargetUrl({ query, url }) {
 async function loadMercadoLibreListingPage(page, targetUrl) {
   const response = await page.goto(targetUrl, {
     waitUntil: 'domcontentloaded',
-    timeout: 45000,
+    timeout: 25000,
   });
 
   try {
-    await page.waitForSelector('li.ui-search-layout__item', { timeout: 12000 });
+    await page.waitForSelector('li.ui-search-layout__item', { timeout: 8000 });
   } catch {
     const diagnostics = await collectPageDiagnostics(page, {
       site: 'mercadolibre',
@@ -317,7 +317,7 @@ export async function scrapeMercadoLibre({
       currentUrl = nextUrl;
       currentOffset = nextOffset;
 
-      await page.waitForTimeout(800);
+      await page.waitForTimeout(200);
     }
 
     return {
