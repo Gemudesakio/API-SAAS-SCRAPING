@@ -1,5 +1,5 @@
 import { load as loadHtml } from 'cheerio';
-import { ProxyAgent } from 'undici';
+import { fetch as undiciFetch, ProxyAgent } from 'undici';
 import { AppError } from '../../errors/app-error.js';
 import { buildUserAgent, detectChallenge } from '../../utils/scraper.helpers.js';
 import {
@@ -185,7 +185,7 @@ async function fetchDirect(targetUrl) {
     fetchOptions.dispatcher = new ProxyAgent(AMAZON_PROXY_URL);
   }
 
-  const response = await fetch(targetUrl, fetchOptions);
+  const response = await undiciFetch(targetUrl, fetchOptions);
 
   if (!response.ok) {
     return { html: '', status: response.status, finalUrl: targetUrl };
