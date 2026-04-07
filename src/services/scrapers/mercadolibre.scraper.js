@@ -1,5 +1,5 @@
 import { AppError } from '../../errors/app-error.js';
-import { buildUserAgent, detectChallenge } from '../../utils/scraper.helpers.js';
+import { buildUserAgent, detectChallenge, getPlaywrightProxyConfig } from '../../utils/scraper.helpers.js';
 import { collectPageDiagnostics } from '../../utils/scraper-diagnostics.js';
 import { getBrowser } from '../clients/browser-pool.js';
 
@@ -19,17 +19,6 @@ const BLOCKED_URL_PATTERNS = [
   '.woff',
 ];
 
-
-function getPlaywrightProxyConfig() {
-  const raw = (process.env.PROXY_URL || '').trim();
-  if (!raw) return null;
-
-  const parsed = new URL(raw);
-  const proxy = { server: `${parsed.protocol}//${parsed.host}` };
-  if (parsed.username) proxy.username = decodeURIComponent(parsed.username);
-  if (parsed.password) proxy.password = decodeURIComponent(parsed.password);
-  return proxy;
-}
 
 async function safeCloseContext(page, context) {
   try { await page?.close({ runBeforeUnload: false }); } catch { /* no-op */ }

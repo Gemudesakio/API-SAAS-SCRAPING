@@ -15,6 +15,8 @@ export const extractRequestSchema = z.object({
         .array(z.enum(['json', 'markdown']))
         .min(1)
         .default(['json']),
+      maxPages: z.coerce.number().int().min(1).max(5).default(1),
+      pageParam: z.string().trim().min(1).max(50).optional(),
     })
     .default({}),
 });

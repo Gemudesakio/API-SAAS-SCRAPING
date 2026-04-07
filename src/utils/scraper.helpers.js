@@ -45,6 +45,17 @@ export function buildUserAgent() {
   return 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36';
 }
 
+export function getPlaywrightProxyConfig() {
+  const raw = (process.env.PROXY_URL || '').trim();
+  if (!raw) return null;
+
+  const parsed = new URL(raw);
+  const proxy = { server: `${parsed.protocol}//${parsed.host}` };
+  if (parsed.username) proxy.username = decodeURIComponent(parsed.username);
+  if (parsed.password) proxy.password = decodeURIComponent(parsed.password);
+  return proxy;
+}
+
 export function detectChallenge(input = '') {
   let pageText = '';
   let pageTitle = '';

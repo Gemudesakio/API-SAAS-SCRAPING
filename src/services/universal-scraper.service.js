@@ -1,6 +1,7 @@
 import { fetch as undiciFetch, ProxyAgent } from 'undici';
+import { load as loadHtml } from 'cheerio';
 import { AppError } from '../errors/app-error.js';
-import { buildUserAgent, detectChallenge } from '../utils/scraper.helpers.js';
+import { buildUserAgent, detectChallenge, getPlaywrightProxyConfig } from '../utils/scraper.helpers.js';
 import { runWithScraperLimiter } from '../utils/scraper-concurrency.js';
 import { getBrowser } from './clients/browser-pool.js';
 import { flaresolverrGet, isFlareSolverrEnabled } from './clients/flaresolverr.client.js';
@@ -31,14 +32,14 @@ function isBlockedResponse(html, status) {
 
   const lower = html.slice(0, 8000).toLowerCase();
 
-  // Always check for challenges/captchas (even large pages can be anti-bot screens)
   if (detectChallenge({ pageText: lower, status })) return true;
 
-  // Cookie walls that block actual content
   if (html.length < 5000 && COOKIE_WALL_SIGNALS.some(s => lower.includes(s))) return true;
 
   return false;
 }
+
+// ─── Fetch Engines ──────────────────────────────────────────────
 
 async function fetchWithHttp(url, useProxy) {
   const options = { headers: FETCH_HEADERS, redirect: 'follow' };
@@ -90,11 +91,19 @@ async function dismissCookieModal(page) {
 
 async function fetchWithPlaywright(url, options = {}) {
   const browser = await getBrowser();
-  const context = await browser.newContext({
+
+  const contextOptions = {
     locale: 'es-CO',
     viewport: { width: 1366, height: 768 },
     userAgent: buildUserAgent(),
-  });
+  };
+
+  if (options.proxy) {
+    const proxyConfig = getPlaywrightProxyConfig();
+    if (proxyConfig) contextOptions.proxy = proxyConfig;
+  }
+
+  const context = await browser.newContext(contextOptions);
   const page = await context.newPage();
 
   await context.route('**/*', async (route) => {
@@ -109,13 +118,11 @@ async function fetchWithPlaywright(url, options = {}) {
       timeout: options.timeout || 25000,
     });
 
-    // Try to dismiss cookie consent modals that block content
     await dismissCookieModal(page);
 
     if (options.waitFor) {
       await page.waitForSelector(options.waitFor, { timeout: 8000 }).catch(() => {});
     } else {
-      // Wait for meaningful content to render (SPAs need this)
       await page.waitForFunction(
         () => document.body && document.body.innerText.length > 500,
         { timeout: 12000 }
@@ -124,7 +131,6 @@ async function fetchWithPlaywright(url, options = {}) {
 
     const html = await page.content();
 
-    // If content is too thin, try dismissing cookie modal again and wait more
     if (html.length < 3000) {
       const dismissed = await dismissCookieModal(page);
       if (dismissed) {
@@ -136,12 +142,13 @@ async function fetchWithPlaywright(url, options = {}) {
     }
 
     const finalHtml = await page.content();
+    const usedProxy = Boolean(options.proxy && contextOptions.proxy);
 
     return {
       html: finalHtml,
       status: response?.status() ?? null,
       finalUrl: page.url(),
-      engine: 'playwright',
+      engine: usedProxy ? 'playwright+proxy' : 'playwright',
     };
   } finally {
     try { await page?.close({ runBeforeUnload: false }); } catch { /* no-op */ }
@@ -164,7 +171,6 @@ async function fetchWithFlaresolverr(url) {
 async function fetchWithCascade(url, options = {}) {
   const { render = false, proxy = false, waitFor, timeout } = options;
 
-  // Engine 1: Direct fetch (skip if render explicitly requested)
   if (!render) {
     try {
       const result = await fetchWithHttp(url, proxy);
@@ -176,9 +182,8 @@ async function fetchWithCascade(url, options = {}) {
     }
   }
 
-  // Engine 2: Playwright (browser rendering)
   try {
-    const result = await fetchWithPlaywright(url, { waitFor, timeout });
+    const result = await fetchWithPlaywright(url, { waitFor, timeout, proxy });
     if (!isBlockedResponse(result.html, result.status)) {
       return result;
     }
@@ -186,9 +191,6 @@ async function fetchWithCascade(url, options = {}) {
     // Playwright failed — fall through to FlareSolverr
   }
 
-  // Engine 3: FlareSolverr (anti-bot last resort)
-  // Only check for hard challenges — skip cookie wall check since FlareSolverr
-  // pages legitimately mention cookies in footers/banners.
   if (isFlareSolverrEnabled()) {
     try {
       const result = await fetchWithFlaresolverr(url);
@@ -200,7 +202,7 @@ async function fetchWithCascade(url, options = {}) {
         if (!stillBlocked) return result;
       }
     } catch {
-      // FlareSolverr failed (connection error, timeout, etc.) — fall through
+      // FlareSolverr failed — fall through
     }
   }
 
@@ -212,46 +214,188 @@ async function fetchWithCascade(url, options = {}) {
   );
 }
 
+// ─── Pagination Helpers ─────────────────────────────────────────
+
+const NEXT_PAGE_SELECTORS = [
+  'a[rel="next"]',
+  'link[rel="next"]',
+  'a[title*="Siguiente" i]',
+  'a[title*="Next" i]',
+  'a[aria-label*="next" i]',
+  'a[aria-label*="siguiente" i]',
+  'li.andes-pagination__button--next a',
+  '.pagination a.next',
+  '.pagination li.next a',
+  'a.pagination__next',
+  '[data-testid*="next"] a',
+  '[data-testid*="pagination-next"]',
+  'a[class*="next-page" i]',
+  'a[class*="nextpage" i]',
+];
+
+function extractNextPageUrl(html, baseUrl) {
+  try {
+    const $ = loadHtml(html);
+    for (const selector of NEXT_PAGE_SELECTORS) {
+      const el = $(selector).first();
+      if (!el.length) continue;
+      const href = el.attr('href');
+      if (!href || href === '#') continue;
+      try {
+        return new URL(href, baseUrl).toString();
+      } catch { continue; }
+    }
+  } catch { /* malformed HTML */ }
+  return null;
+}
+
+function buildPageParamUrl(baseUrl, pageParam, pageNumber) {
+  const url = new URL(baseUrl);
+  url.searchParams.set(pageParam, String(pageNumber));
+  return url.toString();
+}
+
+function mergeJsonResults(results) {
+  if (results.length === 0) return null;
+  if (results.length === 1) return results[0];
+
+  if (results.every(r => Array.isArray(r))) {
+    const seen = new Set();
+    return results.flat().filter(item => {
+      const key = JSON.stringify(item);
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+  }
+
+  const first = results[0];
+  if (first && typeof first === 'object' && !Array.isArray(first)) {
+    const arrayKeys = Object.keys(first).filter(k => Array.isArray(first[k]));
+    if (arrayKeys.length === 1) {
+      const key = arrayKeys[0];
+      const seen = new Set();
+      const merged = { ...first };
+      merged[key] = results.flatMap(r => r[key] || []).filter(item => {
+        const k = JSON.stringify(item);
+        if (seen.has(k)) return false;
+        seen.add(k);
+        return true;
+      });
+      return merged;
+    }
+  }
+
+  return results;
+}
+
+// ─── Public API ─────────────────────────────────────────────────
+
 export async function universalScrape({ url, prompt, model, schema, options = {} }) {
   const start = Date.now();
   const formats = options.formats || (prompt ? ['json'] : ['markdown']);
   const wantsJson = formats.includes('json');
   const wantsMarkdown = formats.includes('markdown');
+  const maxPages = options.maxPages || 1;
+  const pageParam = options.pageParam || null;
 
-  // Fetch HTML via engine cascade (respects concurrency limiter)
-  const fetchResult = await runWithScraperLimiter(
-    () => fetchWithCascade(url, options),
-    'universal-scrape'
-  );
+  const allMarkdowns = [];
+  const allJsonResults = [];
+  const pagesMeta = [];
+  let totalTokensIn = 0;
+  let totalTokensOut = 0;
+  let llmModel = null;
+  let totalChunks = 0;
+  let firstTitle = '';
 
-  // Clean HTML → Markdown
-  const cleaned = htmlToMarkdown(fetchResult.html, fetchResult.finalUrl);
+  let currentUrl = url;
 
+  for (let page = 1; page <= maxPages; page++) {
+    let fetchResult;
+    try {
+      fetchResult = await runWithScraperLimiter(
+        () => fetchWithCascade(currentUrl, options),
+        'universal-scrape'
+      );
+    } catch (err) {
+      if (page === 1) throw err;
+      break;
+    }
+
+    const cleaned = htmlToMarkdown(fetchResult.html, fetchResult.finalUrl);
+
+    if (page === 1) firstTitle = cleaned.title;
+
+    if (cleaned.length < 200 && page > 1) break;
+
+    pagesMeta.push({
+      page,
+      url: fetchResult.finalUrl,
+      engine: fetchResult.engine,
+      statusCode: fetchResult.status,
+      contentLength: cleaned.length,
+    });
+
+    if (wantsMarkdown) allMarkdowns.push(cleaned.markdown);
+
+    if (wantsJson && prompt) {
+      const { data, tokensUsed } = await extractWithLLM(cleaned.markdown, prompt, schema, model);
+      allJsonResults.push(data);
+      totalTokensIn += tokensUsed.input;
+      totalTokensOut += tokensUsed.output;
+      llmModel = tokensUsed.model;
+      if (tokensUsed.chunks) totalChunks += tokensUsed.chunks;
+
+      const isEmpty = !data ||
+        (Array.isArray(data) && data.length === 0) ||
+        (typeof data === 'object' && !Array.isArray(data) &&
+          Object.values(data).every(v => !v || (Array.isArray(v) && v.length === 0)));
+      if (isEmpty && page > 1) break;
+    }
+
+    // Detect next page URL (only if more pages to scrape)
+    if (page < maxPages) {
+      const nextUrl = extractNextPageUrl(fetchResult.html, fetchResult.finalUrl);
+      if (nextUrl) {
+        currentUrl = nextUrl;
+      } else if (pageParam) {
+        currentUrl = buildPageParamUrl(url, pageParam, page + 1);
+      } else {
+        break;
+      }
+    }
+  }
+
+  const firstMeta = pagesMeta[0] || {};
   const result = {
     metadata: {
-      url: fetchResult.finalUrl,
-      title: cleaned.title,
-      statusCode: fetchResult.status,
-      engine: fetchResult.engine,
-      contentLength: cleaned.length,
+      url: firstMeta.url || url,
+      title: firstTitle,
+      statusCode: firstMeta.statusCode || null,
+      engine: firstMeta.engine || null,
+      contentLength: pagesMeta.reduce((s, p) => s + p.contentLength, 0),
       elapsed: Date.now() - start,
+      pagesScraped: pagesMeta.length,
     },
   };
 
-  if (wantsMarkdown) {
-    result.markdown = cleaned.markdown;
+  if (pagesMeta.length > 1) {
+    result.metadata.pages = pagesMeta;
   }
 
-  // LLM extraction (only if prompt provided and json format requested)
+  if (wantsMarkdown) {
+    result.markdown = allMarkdowns.length === 1
+      ? allMarkdowns[0]
+      : allMarkdowns.join('\n\n---\n\n');
+  }
+
   if (wantsJson && prompt) {
-    // resolveModel inside extractWithLLM throws specific errors per case
-    const { data, tokensUsed } = await extractWithLLM(cleaned.markdown, prompt, schema, model);
-    result.json = data;
-    result.metadata.tokensUsed = tokensUsed.input + tokensUsed.output;
-    result.metadata.llmModel = tokensUsed.model;
-    if (tokensUsed.chunks) {
-      result.metadata.chunks = tokensUsed.chunks;
-    }
+    result.json = allJsonResults.length <= 1
+      ? (allJsonResults[0] ?? null)
+      : mergeJsonResults(allJsonResults);
+    result.metadata.tokensUsed = totalTokensIn + totalTokensOut;
+    result.metadata.llmModel = llmModel;
+    if (totalChunks > 0) result.metadata.chunks = totalChunks;
   }
 
   result.metadata.elapsed = Date.now() - start;
