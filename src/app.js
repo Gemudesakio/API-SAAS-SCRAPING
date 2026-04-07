@@ -8,7 +8,12 @@ import errorHandler from './middlewares/error_handler.js';
 
 const app = express();
 
-app.use(compression());
+app.use(compression({
+  filter: (req, res) => {
+    if (res.getHeader('Content-Type')?.includes('text/event-stream')) return false;
+    return compression.filter(req, res);
+  },
+}));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());

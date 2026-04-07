@@ -86,6 +86,15 @@ export function detectChallenge(input = '') {
     'verifica que no eres un robot',
     'verifica que eres humano',
     'enable javascript and cookies to continue',
+    'unusual traffic',
+    'slide to verify',
+    'please verify',
+    'bot detection',
+    'automated access',
+    'trafico inusual',
+    'not a robot',
+    'press & hold',
+    'just a moment',
   ];
 
   return challengeSignals.some(

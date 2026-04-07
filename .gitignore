@@ -13,3 +13,6 @@ GUIA_INTEGRACION_N8N_MCP.md
 
 # Debug artifacts
 debug/
+
+# Playwright MCP artifacts
+.playwright-mcp/

@@ -10,10 +10,28 @@ import {
   scrapeEbayController,
   scrapeAliExpressController,
 } from '../controllers/scrape.controller.js';
+import { scrapeAllController } from '../controllers/scrape-all.controller.js';
+import { extractController, modelsController } from '../controllers/extract.controller.js';
 import validateBody from '../middlewares/validate_body.js';
 import { scrapeRequestSchema } from '../validators/scrape.validator.js';
+import { scrapeAllRequestSchema } from '../validators/scrape-all.validator.js';
+import { extractRequestSchema } from '../validators/extract.validator.js';
 
 const router = Router();
+
+router.get('/extract/models', modelsController);
+
+router.post(
+  '/extract',
+  validateBody(extractRequestSchema),
+  extractController
+);
+
+router.post(
+  '/all/search',
+  validateBody(scrapeAllRequestSchema),
+  scrapeAllController
+);
 
 router.post(
   '/mercadolibre/search',

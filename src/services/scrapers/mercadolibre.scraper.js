@@ -1,9 +1,23 @@
-import { chromium } from 'playwright';
 import { AppError } from '../../errors/app-error.js';
-import { attrOrEmpty, buildUserAgent, detectChallenge, textOrEmpty } from '../../utils/scraper.helpers.js';
+import { buildUserAgent, detectChallenge } from '../../utils/scraper.helpers.js';
 import { collectPageDiagnostics } from '../../utils/scraper-diagnostics.js';
+import { getBrowser } from '../clients/browser-pool.js';
 
 const ML_BASE_URL = 'https://listado.mercadolibre.com.co';
+
+const BLOCKED_RESOURCE_TYPES = new Set(['image', 'media', 'font', 'stylesheet']);
+
+const BLOCKED_URL_PATTERNS = [
+  'google-analytics.com',
+  'googletagmanager.com',
+  'facebook.net',
+  'doubleclick.net',
+  'hotjar.com',
+  'newrelic.com',
+  'sentry.io',
+  '.woff2',
+  '.woff',
+];
 
 
 function getPlaywrightProxyConfig() {
@@ -17,24 +31,9 @@ function getPlaywrightProxyConfig() {
   return proxy;
 }
 
-async function safeClosePlaywright(page, context, browser) {
-  try {
-    await page?.close({ runBeforeUnload: false });
-  } catch {
-    // no-op: el navegador puede haberse cerrado antes
-  }
-
-  try {
-    await context?.close();
-  } catch {
-    // no-op: evitar pisar el error principal
-  }
-
-  try {
-    await browser?.close();
-  } catch {
-    // no-op: evitar pisar el error principal
-  }
+async function safeCloseContext(page, context) {
+  try { await page?.close({ runBeforeUnload: false }); } catch { /* no-op */ }
+  try { await context?.close(); } catch { /* no-op */ }
 }
 
 
@@ -128,48 +127,36 @@ async function loadMercadoLibreListingPage(page, targetUrl) {
   return response;
 }
 
-// Función para extraer los productos de la página de resultados de Mercado Libre, recibe el objeto page de Playwright y un límite máximo de productos a extraer, devuelve un array de productos con su título, precio, URL, imagen y disponibilidad
 async function extractMercadoLibreProductsFromPage(page, limit) {
-  const cards = page.locator('li.ui-search-layout__item');
-  const total = Math.min(await cards.count(), limit);
-  const products = [];
+  return page.evaluate((maxItems) => {
+    const cards = document.querySelectorAll('li.ui-search-layout__item');
+    const results = [];
 
-  for (let i = 0; i < total; i += 1) {
-    const card = cards.nth(i);
+    for (let i = 0; i < cards.length && results.length < maxItems; i++) {
+      const card = cards[i];
+      const titleEl = card.querySelector('a.poly-component__title');
+      const title = titleEl?.textContent?.trim() || '';
+      const productUrl = titleEl?.href || '';
 
-    const titleLocator = card.locator('a.poly-component__title');
-    const title = await textOrEmpty(titleLocator);
-    const productUrl = await attrOrEmpty(titleLocator, ['href']);
+      const whole = card.querySelector('.andes-money-amount__fraction')?.textContent?.trim() || '';
+      const cents = card.querySelector('.andes-money-amount__cents')?.textContent?.trim() || '';
+      const priceRaw = whole && cents ? `${whole},${cents}` : whole;
 
-    const whole = await textOrEmpty(card.locator('.andes-money-amount__fraction'));
-    const cents = await textOrEmpty(card.locator('.andes-money-amount__cents'));
-    const priceRaw = whole && cents ? `${whole},${cents}` : whole;
+      const imgEl = card.querySelector('img');
+      const image = imgEl?.src || imgEl?.dataset?.src || imgEl?.dataset?.recomSrc
+        || imgEl?.dataset?.lazy || imgEl?.srcset || '';
 
-    const image = await attrOrEmpty(card.locator('img'), [
-      'src',
-      'data-src',
-      'data-recom-src',
-      'data-lazy',
-      'srcset',
-    ]);
-
-    if (title || productUrl) {
-      products.push({
-        title,
-        priceRaw,
-        url: productUrl,
-        image,
-        availabilityRaw: 'InStock',
-      });
+      if (title || productUrl) {
+        results.push({ title, priceRaw, url: productUrl, image, availabilityRaw: 'InStock' });
+      }
     }
-  }
 
-  return products;
+    return results;
+  }, limit);
 }
 
-//cuenta el número de productos listados en la página de resultados de Mercado Libre para controlar la paginación
 async function getMercadoLibrePageSize(page) {
-  return await page.locator('li.ui-search-layout__item').count();
+  return page.evaluate(() => document.querySelectorAll('li.ui-search-layout__item').length);
 }
 
 // Función para construir la URL de la siguiente página de resultados de Mercado Libre a partir de la URL actual y el offset de paginación, maneja diferentes formatos de URL que Mercado Libre puede usar para paginar los resultados
@@ -210,33 +197,24 @@ export async function scrapeMercadoLibre({
   const targetUrl = resolveMercadoLibreTargetUrl({ query, url });
   const proxyConfig = getPlaywrightProxyConfig();
 
-  const browser = await chromium.launch({
-    headless,
-    proxy: proxyConfig || undefined,
-    args: [
-      '--no-sandbox',
-      '--disable-setuid-sandbox',
-      '--disable-dev-shm-usage',
-    ],
-  });
+  const browser = await getBrowser({ headless });
 
-  const context = await browser.newContext({
+  const contextOptions = {
     locale: 'es-CO',
     viewport: { width: 1366, height: 768 },
     userAgent: buildUserAgent(),
-  });
+  };
+  if (proxyConfig) contextOptions.proxy = proxyConfig;
 
+  const context = await browser.newContext(contextOptions);
   const page = await context.newPage();
 
-  await page.route('**/*', async (route) => {
-    const request = route.request();
-    const resourceType = request.resourceType();
+  await context.route('**/*', async (route) => {
+    const resourceType = route.request().resourceType();
+    if (BLOCKED_RESOURCE_TYPES.has(resourceType)) return route.abort();
 
-    const blockedTypes = ['image', 'media', 'font'];
-
-    if (blockedTypes.includes(resourceType)) {
-      return route.abort();
-    }
+    const reqUrl = route.request().url();
+    if (BLOCKED_URL_PATTERNS.some(p => reqUrl.includes(p))) return route.abort();
 
     return route.continue();
   });
@@ -339,6 +317,6 @@ export async function scrapeMercadoLibre({
       },
     };
   } finally {
-    await safeClosePlaywright(page, context, browser);
+    await safeCloseContext(page, context);
   }
 }
