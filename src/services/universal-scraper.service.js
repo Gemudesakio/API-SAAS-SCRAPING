@@ -358,12 +358,16 @@ export async function universalScrape({ url, prompt, model, schema, options = {}
       if (cleaned.structuredData) {
         const itemCount = (cleaned.structuredData.match(/"title"|"name"|"nombre"/gi) || []).length;
         const contextLimit = itemCount > 5 ? 8_000 : 30_000;
-        const abbreviated = cleaned.fitMarkdown || cleaned.markdown;
+        const fit = cleaned.fitMarkdown || '';
+        const abbreviated = fit.length > cleaned.markdown.length * 0.4 ? fit : cleaned.markdown;
         markdownForLLM = abbreviated.length > contextLimit
           ? `${cleaned.structuredData}\n\n---\n\nPage context (abbreviated):\n${abbreviated.slice(0, contextLimit)}`
           : `${cleaned.structuredData}\n\n---\n\n${abbreviated}`;
       } else {
-        markdownForLLM = cleaned.fitMarkdown || cleaned.markdown;
+        const fit = cleaned.fitMarkdown || '';
+        markdownForLLM = fit.length > cleaned.markdown.length * 0.4
+          ? fit
+          : cleaned.markdown;
       }
       const { data, tokensUsed } = await extractWithLLM(markdownForLLM, prompt, schema, model);
       allJsonResults.push(data);

@@ -5,7 +5,7 @@ import { NodeHtmlMarkdown } from 'node-html-markdown';
 const nhm = new NodeHtmlMarkdown({
   maxConsecutiveNewlines: 2,
   bulletMarker: '-',
-  ignore: ['button', 'input', 'select', 'textarea', 'label'],
+  ignore: ['input', 'textarea'],
 });
 
 // ─── Structured Data Extraction ─────────────────────────────────
@@ -107,12 +107,6 @@ const STRIP_SELECTORS = [
   '.breadcrumb', '[aria-label="breadcrumb"]', 'ol.breadcrumb',
   '.sidebar', '.filters', '.facets', '.refinements',
   '.pagination', '.pager', '[aria-label="pagination"]',
-  // Hidden / decorative (NOT aria-hidden — used by MercadoLibre/Éxito on price elements)
-  '[hidden]',
-  '.sr-only', '.visually-hidden', '.screen-reader-text',
-  '[style*="display:none"]', '[style*="display: none"]',
-  // Interactive noise
-  'form', 'fieldset',
   // Media without textual content
   'picture', 'video', 'audio', 'canvas',
   // E-commerce boilerplate
@@ -199,7 +193,7 @@ function nodeDepth(node) {
 }
 
 function pruneByContentDensity(doc) {
-  const candidates = doc.querySelectorAll('div, section, aside, ul, ol, table, dl, details');
+  const candidates = doc.querySelectorAll('div, section, aside, table, dl, details');
   const removals = [];
 
   for (const node of candidates) {
@@ -208,7 +202,11 @@ function pruneByContentDensity(doc) {
     const text = (node.textContent || '').trim();
     const wordCount = text.split(/\s+/).filter(w => w.length > 0).length;
 
-    if (wordCount < 3) { removals.push(node); continue; }
+    if (wordCount < 3) {
+      if (/[\$€£¥₹]\s*[\d.,]+|\d[\d.,]+\d/.test(text)) continue;
+      removals.push(node);
+      continue;
+    }
 
     const htmlLen = node.innerHTML.length;
     const textLen = text.length;
@@ -253,7 +251,7 @@ function deduplicateMarkdownBlocks(md) {
   }).join('\n\n');
 }
 
-const NOISE_LINES_RE = /^(add to cart|agregar al carrito|comprar ahora|buy now|free shipping|envío gratis|envío gratuito|ver más|see more|show more|★[★☆]{0,4})$/i;
+const NOISE_LINES_RE = /^(add to cart|agregar al carrito|comprar ahora|buy now|ver más|see more|show more)$/i;
 
 function stripNoiseLines(md) {
   return md.split('\n').filter(line => !NOISE_LINES_RE.test(line.trim())).join('\n');
