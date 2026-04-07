@@ -107,8 +107,7 @@ const STRIP_SELECTORS = [
   '.breadcrumb', '[aria-label="breadcrumb"]', 'ol.breadcrumb',
   '.sidebar', '.filters', '.facets', '.refinements',
   '.pagination', '.pager', '[aria-label="pagination"]',
-  // Hidden / decorative
-  '[aria-hidden="true"]',
+  // Hidden / decorative (NOT aria-hidden — used by MercadoLibre/Éxito on price elements)
   '[hidden]',
   '.sr-only', '.visually-hidden', '.screen-reader-text',
   '[style*="display:none"]', '[style*="display: none"]',
