@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { isPublicUrl } from '../utils/url-validator.js';
 
 const booleanFromAny = z.preprocess((value) => {
   if (value === undefined) return true;
@@ -10,7 +11,7 @@ const booleanFromAny = z.preprocess((value) => {
 export const scrapeRequestSchema = z
   .object({
     query: z.string().trim().min(2, 'query debe tener al menos 2 caracteres').optional(),
-    url: z.string().url('Debe ser una URL válida').optional(),
+    url: z.string().url('Debe ser una URL válida').refine(isPublicUrl, 'URL must be a public HTTP/HTTPS address').optional(),
     maxItems: z.coerce.number().int().min(1).max(100).default(20),
     maxPages: z.coerce.number().int().min(1).max(10).default(3),
     headless: booleanFromAny.default(true),

@@ -1,8 +1,9 @@
 import { z } from 'zod';
+import { isPublicUrl } from '../utils/url-validator.js';
 
 export const extractRequestSchema = z.object({
-  url: z.string().url('url must be a valid URL'),
-  prompt: z.string().trim().min(5, 'prompt must be at least 5 characters').optional(),
+  url: z.string().url('url must be a valid URL').refine(isPublicUrl, 'URL must be a public HTTP/HTTPS address'),
+  prompt: z.string().trim().min(5, 'prompt must be at least 5 characters').max(5000, 'prompt must be under 5000 characters').optional(),
   model: z.string().trim().optional(),
   schema: z.record(z.string(), z.unknown()).optional(),
   options: z
@@ -17,6 +18,7 @@ export const extractRequestSchema = z.object({
         .default(['json']),
       maxPages: z.coerce.number().int().min(1).max(5).default(1),
       pageParam: z.string().trim().min(1).max(50).optional(),
+      waitForScript: z.boolean().default(false),
     })
     .default({}),
 });

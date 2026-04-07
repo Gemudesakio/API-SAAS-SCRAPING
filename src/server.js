@@ -10,6 +10,8 @@ const server = app.listen(PORT, '0.0.0.0', () => {
 
 async function gracefulShutdown(signal) {
   console.log(`${signal} received — closing browser pool and server`);
+  const forceExit = setTimeout(() => process.exit(1), 5000);
+  forceExit.unref();
   await closeBrowser();
   server.close(() => process.exit(0));
 }

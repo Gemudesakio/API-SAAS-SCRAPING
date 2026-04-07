@@ -33,6 +33,7 @@ function parseBooleanEnv(value, fallback) {
 function getConfig() {
   return {
     url: (process.env.FLARESOLVERR_URL || '').trim(),
+    proxyUrl: (process.env.PROXY_URL || '').trim(),
     requestTimeoutMs: parseIntEnv(process.env.FLARESOLVERR_REQUEST_TIMEOUT_MS, 130000, 1000, 600000),
     maxTimeoutMs: parseIntEnv(process.env.FLARESOLVERR_TIMEOUT_MS, 120000, 1000, 600000),
     waitInSeconds: parseIntEnv(process.env.FLARESOLVERR_WAIT_SECONDS, 3, 0, 60),
@@ -183,7 +184,7 @@ function isSessionError(error) {
   );
 }
 
-function buildGetPayload({ url, config, session }) {
+function buildGetPayload({ url, config, session, useProxy = false }) {
   const payload = {
     cmd: 'request.get',
     url,
@@ -197,17 +198,21 @@ function buildGetPayload({ url, config, session }) {
     payload.session_ttl_minutes = config.sessionTtlMinutes;
   }
 
+  if (useProxy && config.proxyUrl) {
+    payload.proxy = { url: config.proxyUrl };
+  }
+
   return payload;
 }
 
-export async function flaresolverrGet(url) {
+export async function flaresolverrGet(url, useProxy = false) {
   const config = getConfig();
 
   let session = await ensureSession(config);
 
   try {
     return await postFlareSolverr(
-      buildGetPayload({ url, config, session })
+      buildGetPayload({ url, config, session, useProxy })
     );
   } catch (error) {
     if (!session || !isSessionError(error)) {
@@ -217,7 +222,7 @@ export async function flaresolverrGet(url) {
     session = await ensureSession(config, { forceRefresh: true });
 
     return postFlareSolverr(
-      buildGetPayload({ url, config, session })
+      buildGetPayload({ url, config, session, useProxy })
     );
   }
 }

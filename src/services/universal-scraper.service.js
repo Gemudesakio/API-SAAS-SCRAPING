@@ -1,4 +1,4 @@
-import { fetch as undiciFetch, ProxyAgent } from 'undici';
+import { fetch as undiciFetch } from 'undici';
 import { load as loadHtml } from 'cheerio';
 import { AppError } from '../errors/app-error.js';
 import { buildUserAgent, detectChallenge, getPlaywrightProxyConfig } from '../utils/scraper.helpers.js';
@@ -7,9 +7,6 @@ import { getBrowser } from './clients/browser-pool.js';
 import { flaresolverrGet, isFlareSolverrEnabled } from './clients/flaresolverr.client.js';
 import { htmlToMarkdown } from './clients/html-cleaner.js';
 import { extractWithLLM } from './clients/llm.client.js';
-
-const PROXY_URL = (process.env.PROXY_URL || '').trim();
-const proxyDispatcher = PROXY_URL ? new ProxyAgent(PROXY_URL) : null;
 
 const FETCH_HEADERS = {
   'User-Agent': buildUserAgent(),
@@ -41,20 +38,19 @@ function isBlockedResponse(html, status) {
 
 // ─── Fetch Engines ──────────────────────────────────────────────
 
-async function fetchWithHttp(url, useProxy) {
-  const options = { headers: FETCH_HEADERS, redirect: 'follow' };
-  if (useProxy && proxyDispatcher) {
-    options.dispatcher = proxyDispatcher;
-  }
-
-  const response = await undiciFetch(url, options);
+async function fetchWithHttp(url) {
+  const response = await undiciFetch(url, {
+    headers: FETCH_HEADERS,
+    redirect: 'follow',
+    signal: AbortSignal.timeout(15000),
+  });
   const html = await response.text();
 
   return {
     html,
     status: response.status,
     finalUrl: response.url || url,
-    engine: useProxy ? 'fetch+proxy' : 'fetch',
+    engine: 'fetch',
   };
 }
 
@@ -91,6 +87,9 @@ async function dismissCookieModal(page) {
 
 async function fetchWithPlaywright(url, options = {}) {
   const browser = await getBrowser();
+  const totalTimeout = options.timeout || 25000;
+  const deadline = Date.now() + totalTimeout;
+  const remaining = () => Math.max(deadline - Date.now(), 1000);
 
   const contextOptions = {
     locale: 'es-CO',
@@ -115,28 +114,38 @@ async function fetchWithPlaywright(url, options = {}) {
   try {
     const response = await page.goto(url, {
       waitUntil: 'domcontentloaded',
-      timeout: options.timeout || 25000,
+      timeout: Math.max(totalTimeout - 2000, 5000),
     });
 
     await dismissCookieModal(page);
 
     if (options.waitFor) {
-      await page.waitForSelector(options.waitFor, { timeout: 8000 }).catch(() => {});
+      await page.waitForSelector(options.waitFor, { timeout: Math.min(8000, remaining()) }).catch(() => {});
     } else {
       await page.waitForFunction(
-        () => document.body && document.body.innerText.length > 500,
-        { timeout: 12000 }
+        () => document.body && document.body.innerText.length > 2000,
+        { timeout: Math.min(12000, remaining()) }
+      ).catch(() => {});
+    }
+
+    if (options.waitForScript && remaining() > 1500) {
+      await page.waitForFunction(
+        () => {
+          const html = document.documentElement.outerHTML;
+          return /("itemList"|__NEXT_DATA__|"@context")/.test(html);
+        },
+        { timeout: Math.min(5000, remaining()) }
       ).catch(() => {});
     }
 
     const html = await page.content();
 
-    if (html.length < 3000) {
+    if (html.length < 3000 && remaining() > 3000) {
       const dismissed = await dismissCookieModal(page);
       if (dismissed) {
         await page.waitForFunction(
           () => document.body && document.body.innerText.length > 500,
-          { timeout: 8000 }
+          { timeout: Math.min(8000, remaining()) }
         ).catch(() => {});
       }
     }
@@ -156,8 +165,8 @@ async function fetchWithPlaywright(url, options = {}) {
   }
 }
 
-async function fetchWithFlaresolverr(url) {
-  const flareData = await flaresolverrGet(url);
+async function fetchWithFlaresolverr(url, useProxy = false) {
+  const flareData = await flaresolverrGet(url, useProxy);
   const solution = flareData?.solution || {};
 
   return {
@@ -173,7 +182,7 @@ async function fetchWithCascade(url, options = {}) {
 
   if (!render) {
     try {
-      const result = await fetchWithHttp(url, proxy);
+      const result = await fetchWithHttp(url);  // never use proxy on basic fetch
       if (!isBlockedResponse(result.html, result.status)) {
         return result;
       }
@@ -193,7 +202,7 @@ async function fetchWithCascade(url, options = {}) {
 
   if (isFlareSolverrEnabled()) {
     try {
-      const result = await fetchWithFlaresolverr(url);
+      const result = await fetchWithFlaresolverr(url, proxy);
       if (result.html) {
         const stillBlocked = detectChallenge({
           pageText: result.html.slice(0, 8000).toLowerCase(),
@@ -232,6 +241,12 @@ const NEXT_PAGE_SELECTORS = [
   'a[class*="next-page" i]',
   'a[class*="nextpage" i]',
 ];
+
+function isSameOrigin(href, baseUrl) {
+  try {
+    return new URL(href).origin === new URL(baseUrl).origin;
+  } catch { return false; }
+}
 
 function extractNextPageUrl(html, baseUrl) {
   try {
@@ -339,7 +354,18 @@ export async function universalScrape({ url, prompt, model, schema, options = {}
     if (wantsMarkdown) allMarkdowns.push(cleaned.markdown);
 
     if (wantsJson && prompt) {
-      const { data, tokensUsed } = await extractWithLLM(cleaned.markdown, prompt, schema, model);
+      let markdownForLLM;
+      if (cleaned.structuredData) {
+        const itemCount = (cleaned.structuredData.match(/"title"|"name"|"nombre"/gi) || []).length;
+        const contextLimit = itemCount > 5 ? 8_000 : 30_000;
+        const abbreviated = cleaned.fitMarkdown || cleaned.markdown;
+        markdownForLLM = abbreviated.length > contextLimit
+          ? `${cleaned.structuredData}\n\n---\n\nPage context (abbreviated):\n${abbreviated.slice(0, contextLimit)}`
+          : `${cleaned.structuredData}\n\n---\n\n${abbreviated}`;
+      } else {
+        markdownForLLM = cleaned.fitMarkdown || cleaned.markdown;
+      }
+      const { data, tokensUsed } = await extractWithLLM(markdownForLLM, prompt, schema, model);
       allJsonResults.push(data);
       totalTokensIn += tokensUsed.input;
       totalTokensOut += tokensUsed.output;
@@ -356,7 +382,7 @@ export async function universalScrape({ url, prompt, model, schema, options = {}
     // Detect next page URL (only if more pages to scrape)
     if (page < maxPages) {
       const nextUrl = extractNextPageUrl(fetchResult.html, fetchResult.finalUrl);
-      if (nextUrl) {
+      if (nextUrl && isSameOrigin(nextUrl, url)) {
         currentUrl = nextUrl;
       } else if (pageParam) {
         currentUrl = buildPageParamUrl(url, pageParam, page + 1);
