@@ -108,7 +108,7 @@ async function fetchWithPlaywright(url, options = {}) {
 
   await context.route('**/*', async (route) => {
     const type = route.request().resourceType();
-    if (['image', 'media', 'font', 'stylesheet'].includes(type)) return route.abort();
+    if (['image', 'media', 'font'].includes(type)) return route.abort();
     return route.continue();
   });
 
