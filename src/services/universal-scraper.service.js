@@ -86,6 +86,24 @@ async function dismissCookieModal(page) {
   return false;
 }
 
+async function dismissLoginModal(page) {
+  try {
+    const modal = page.locator('[role="dialog"]').first();
+    if (!await modal.isVisible({ timeout: 1000 })) return false;
+
+    const closeBtn = page.locator('[aria-label="Close"], [aria-label="Cerrar"]').first();
+    if (await closeBtn.isVisible({ timeout: 500 })) {
+      await closeBtn.click({ timeout: 2000 });
+      await page.waitForTimeout(500);
+      return true;
+    }
+
+    await page.keyboard.press('Escape');
+    await page.waitForTimeout(500);
+    return true;
+  } catch { return false; }
+}
+
 async function fetchWithPlaywright(url, options = {}) {
   const browser = await getBrowser();
   const totalTimeout = options.timeout || 25000;
@@ -119,6 +137,7 @@ async function fetchWithPlaywright(url, options = {}) {
     });
 
     await dismissCookieModal(page);
+    await dismissLoginModal(page);
 
     // Wait for custom selector or content elements (cheap DOM count, not innerText)
     if (options.waitFor) {
