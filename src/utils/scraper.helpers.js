@@ -79,38 +79,55 @@ export function detectChallenge(input = '') {
     .replace(/[\u0300-\u036f]/g, '');
 
   const challengeSignals = [
+    // URL-based (checked when finalUrl is passed)
     '/gz/account-verification',
     'account-verification',
-    'captcha',
-    'cloudflare',
-    'challenge',
-    'security check',
-    'verificacion de seguridad',
+
+    // Cloudflare-specific
+    'checking your browser',
+    'cloudflare ray id',
+    'cf-browser-verification',
+    'cf-challenge',
+    'just a moment',
+    'turnstile',
+
+    // CAPTCHA widgets (specific, not bare "captcha")
+    'solve this captcha',
+    'complete the captcha',
+    'captcha-delivery',
+    'g-recaptcha',
+    'h-captcha',
+    'hcaptcha-box',
+    'recaptcha/api',
+
+    // Bot detection phrases
     'are you human',
     'verify you are human',
-    'recaptcha',
-    'hcaptcha',
+    'are you a robot',
+    'not a robot',
+    'robot or human',
+    'human verification',
+    'bot detection',
+    'automated access',
+    'security check',
     'access denied',
+    'unusual traffic',
+    'slide to verify',
+    'press & hold',
+    'press and hold',
+
+    // Spanish
+    'verificacion de seguridad',
     'actividad inusual',
     'actividad sospechosa',
     'verifica tu identidad',
     'verifica que no eres un robot',
     'verifica que eres humano',
-    'enable javascript and cookies to continue',
-    'unusual traffic',
-    'slide to verify',
-    'please verify',
-    'bot detection',
-    'automated access',
     'trafico inusual',
-    'not a robot',
-    'press & hold',
-    'press and hold',
-    'just a moment',
-    'robot or human',
-    'are you a robot',
-    'human verification',
     'presiona y manten',
+
+    // JS/cookie walls
+    'enable javascript and cookies to continue',
   ];
 
   return challengeSignals.some(

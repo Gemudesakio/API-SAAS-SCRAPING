@@ -24,13 +24,13 @@ const COOKIE_WALL_SIGNALS = [
   'gdpr', 'consentimiento',
 ];
 
-function isBlockedResponse(html, status) {
+function isBlockedResponse(html, status, finalUrl = '') {
   if (!html || html.length < 150) return true;
   if ([403, 429, 503].includes(status)) return true;
 
   const lower = html.slice(0, 8000).toLowerCase();
 
-  if (detectChallenge({ pageText: lower, status })) return true;
+  if (detectChallenge({ pageText: lower, status, url: finalUrl })) return true;
 
   if (html.length < 5000 && COOKIE_WALL_SIGNALS.some(s => lower.includes(s))) return true;
 
@@ -129,6 +129,21 @@ async function fetchWithPlaywright(url, options = {}) {
       ).catch(() => {});
     }
 
+    // SPA content detection: wait for product cards or meaningful content
+    if (remaining() > 3000) {
+      const contentLength = await page.evaluate(() => document.body?.innerText?.length || 0).catch(() => 0);
+      if (contentLength < 3000) {
+        await page.waitForFunction(
+          () => {
+            const text = document.body?.innerText || '';
+            return text.length > 3000
+              || document.querySelectorAll('[class*="product"], [class*="card"], [data-testid*="product"]').length > 2;
+          },
+          { timeout: Math.min(8000, remaining()) }
+        ).catch(() => {});
+      }
+    }
+
     if (options.waitForScript && remaining() > 1500) {
       await page.waitForFunction(
         () => {
@@ -194,11 +209,11 @@ async function fetchWithCachedEngine(url, cached, options) {
     case 'fetch': {
       if (options.render) return null;
       const result = await fetchWithHttp(url);
-      return isBlockedResponse(result.html, result.status) ? null : result;
+      return isBlockedResponse(result.html, result.status, result.finalUrl) ? null : result;
     }
     case 'playwright': {
       const result = await fetchWithPlaywright(url, { waitFor, timeout, proxy: useProxy });
-      return isBlockedResponse(result.html, result.status) ? null : result;
+      return isBlockedResponse(result.html, result.status, result.finalUrl) ? null : result;
     }
     case 'flaresolverr': {
       if (!isFlareSolverrEnabled()) return null;
@@ -235,7 +250,7 @@ async function fetchWithCascade(url, options = {}) {
   if (!render) {
     try {
       httpResult = await fetchWithHttp(url);
-      if (!isBlockedResponse(httpResult.html, httpResult.status)) {
+      if (!isBlockedResponse(httpResult.html, httpResult.status, httpResult.finalUrl)) {
         setCachedEngine(url, 'fetch', false);
         return httpResult;
       }
@@ -248,6 +263,7 @@ async function fetchWithCascade(url, options = {}) {
   const isJsChallenge = httpResult && detectChallenge({
     pageText: (httpResult.html || '').slice(0, 8000).toLowerCase(),
     status: httpResult.status,
+    url: httpResult.finalUrl,
   });
 
   if (isJsChallenge && isFlareSolverrEnabled()) {
@@ -265,7 +281,7 @@ async function fetchWithCascade(url, options = {}) {
   // Playwright
   try {
     const result = await fetchWithPlaywright(url, { waitFor, timeout, proxy });
-    if (!isBlockedResponse(result.html, result.status)) {
+    if (!isBlockedResponse(result.html, result.status, result.finalUrl)) {
       setCachedEngine(url, 'playwright', proxy);
       return result;
     }
