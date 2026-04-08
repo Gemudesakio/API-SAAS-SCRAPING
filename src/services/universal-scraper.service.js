@@ -176,6 +176,27 @@ async function fetchWithPlaywright(url, options = {}) {
       ).catch(() => {});
     }
 
+    // Auto-scroll for infinite scroll pages (Facebook, etc.)
+    if (options.scroll > 0 && remaining() > 3000) {
+      const scrollCount = Math.min(options.scroll, 10);
+      let prevHeight = 0;
+
+      for (let i = 0; i < scrollCount; i++) {
+        if (remaining() < 3000) break;
+
+        await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+        const delay = 2000 + Math.floor(Math.random() * 2000);
+        await page.waitForTimeout(delay);
+
+        const newHeight = await page.evaluate(() => document.body.scrollHeight);
+        if (newHeight === prevHeight) break;
+        prevHeight = newHeight;
+      }
+
+      await page.evaluate(() => window.scrollTo(0, 0));
+      await page.waitForTimeout(500);
+    }
+
     const html = await page.content();
 
     if (html.length < 3000 && remaining() > 3000) {
@@ -251,7 +272,7 @@ async function fetchWithCachedEngine(url, cached, options) {
 }
 
 async function fetchWithCascade(url, options = {}) {
-  const { render = false, proxy = false, waitFor, timeout } = options;
+  const { render = false, proxy = false, waitFor, timeout, waitForScript, scroll } = options;
 
   // ─── Check domain cache ─────────────────────────────
   const cached = getCachedEngine(url);
@@ -305,7 +326,7 @@ async function fetchWithCascade(url, options = {}) {
 
   // Playwright
   try {
-    const result = await fetchWithPlaywright(url, { waitFor, timeout, proxy });
+    const result = await fetchWithPlaywright(url, { waitFor, timeout, proxy, waitForScript, scroll });
     if (!isBlockedResponse(result.html, result.status, result.finalUrl)) {
       setCachedEngine(url, 'playwright', proxy);
       return result;

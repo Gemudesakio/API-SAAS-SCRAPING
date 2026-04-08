@@ -19,6 +19,7 @@ export const extractRequestSchema = z.object({
       maxPages: z.coerce.number().int().min(1).max(5).default(1),
       pageParam: z.string().trim().min(1).max(50).optional(),
       waitForScript: z.boolean().default(false),
+      scroll: z.coerce.number().int().min(0).max(10).default(0),
     })
     .default({}),
 });
