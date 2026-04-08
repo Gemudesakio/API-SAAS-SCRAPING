@@ -11,6 +11,8 @@ import errorHandler from './middlewares/error_handler.js';
 
 const app = express();
 
+app.set('trust proxy', 1);
+
 app.use(helmet());
 app.use(compression({
   filter: (req, res) => {
