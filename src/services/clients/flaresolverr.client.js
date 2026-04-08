@@ -34,12 +34,12 @@ function getConfig() {
   return {
     url: (process.env.FLARESOLVERR_URL || '').trim(),
     proxyUrl: (process.env.PROXY_URL || '').trim(),
-    requestTimeoutMs: parseIntEnv(process.env.FLARESOLVERR_REQUEST_TIMEOUT_MS, 130000, 1000, 600000),
-    maxTimeoutMs: parseIntEnv(process.env.FLARESOLVERR_TIMEOUT_MS, 120000, 1000, 600000),
-    waitInSeconds: parseIntEnv(process.env.FLARESOLVERR_WAIT_SECONDS, 3, 0, 60),
+    requestTimeoutMs: parseIntEnv(process.env.FLARESOLVERR_REQUEST_TIMEOUT_MS, 75000, 1000, 600000),
+    maxTimeoutMs: parseIntEnv(process.env.FLARESOLVERR_TIMEOUT_MS, 60000, 1000, 600000),
+    waitInSeconds: parseIntEnv(process.env.FLARESOLVERR_WAIT_SECONDS, 1, 0, 60),
     disableMedia: parseBooleanEnv(process.env.FLARESOLVERR_DISABLE_MEDIA, true),
     useSession: parseBooleanEnv(process.env.FLARESOLVERR_USE_SESSION, true),
-    sessionTtlMinutes: parseIntEnv(process.env.FLARESOLVERR_SESSION_TTL_MINUTES, 15, 1, 240),
+    sessionTtlMinutes: parseIntEnv(process.env.FLARESOLVERR_SESSION_TTL_MINUTES, 7, 1, 240),
   };
 }
 

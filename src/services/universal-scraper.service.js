@@ -7,6 +7,7 @@ import { getBrowser } from './clients/browser-pool.js';
 import { flaresolverrGet, isFlareSolverrEnabled } from './clients/flaresolverr.client.js';
 import { htmlToMarkdown } from './clients/html-cleaner.js';
 import { extractWithLLM } from './clients/llm.client.js';
+import { getCachedEngine, setCachedEngine, invalidateCachedEngine } from '../utils/domain-engine-cache.js';
 
 const FETCH_HEADERS = {
   'User-Agent': buildUserAgent(),
@@ -24,8 +25,8 @@ const COOKIE_WALL_SIGNALS = [
 ];
 
 function isBlockedResponse(html, status) {
-  if (!html || html.length < 500) return true;
-  if ([401, 403, 404, 429, 503].includes(status)) return true;
+  if (!html || html.length < 150) return true;
+  if ([403, 429, 503].includes(status)) return true;
 
   const lower = html.slice(0, 8000).toLowerCase();
 
@@ -177,41 +178,111 @@ async function fetchWithFlaresolverr(url, useProxy = false) {
   };
 }
 
+function isFlaresolverrResult(result) {
+  if (!result?.html) return false;
+  return !detectChallenge({
+    pageText: result.html.slice(0, 8000).toLowerCase(),
+    status: result.status,
+  });
+}
+
+async function fetchWithCachedEngine(url, cached, options) {
+  const { proxy, waitFor, timeout } = options;
+  const useProxy = cached.needsProxy || proxy;
+
+  switch (cached.engine) {
+    case 'fetch': {
+      if (options.render) return null;
+      const result = await fetchWithHttp(url);
+      return isBlockedResponse(result.html, result.status) ? null : result;
+    }
+    case 'playwright': {
+      const result = await fetchWithPlaywright(url, { waitFor, timeout, proxy: useProxy });
+      return isBlockedResponse(result.html, result.status) ? null : result;
+    }
+    case 'flaresolverr': {
+      if (!isFlareSolverrEnabled()) return null;
+      const result = await fetchWithFlaresolverr(url, useProxy);
+      return isFlaresolverrResult(result) ? result : null;
+    }
+    default:
+      return null;
+  }
+}
+
 async function fetchWithCascade(url, options = {}) {
   const { render = false, proxy = false, waitFor, timeout } = options;
 
-  if (!render) {
+  // ─── Check domain cache ─────────────────────────────
+  const cached = getCachedEngine(url);
+
+  if (cached) {
     try {
-      const result = await fetchWithHttp(url);  // never use proxy on basic fetch
-      if (!isBlockedResponse(result.html, result.status)) {
+      const result = await fetchWithCachedEngine(url, cached, options);
+      if (result) {
+        setCachedEngine(url, cached.engine, cached.needsProxy);
+        result.engineCached = true;
         return result;
       }
+    } catch { /* cached engine failed */ }
+
+    invalidateCachedEngine(url);
+  }
+
+  // ─── Full cascade (first visit or cache invalidated) ─
+  let httpResult = null;
+
+  if (!render) {
+    try {
+      httpResult = await fetchWithHttp(url);
+      if (!isBlockedResponse(httpResult.html, httpResult.status)) {
+        setCachedEngine(url, 'fetch', false);
+        return httpResult;
+      }
     } catch {
-      // fetch failed — fall through to Playwright
+      // fetch failed — fall through
     }
   }
 
+  // If HTTP fetch detected a JS challenge (Cloudflare), skip Playwright → go to FlareSolverr
+  const isJsChallenge = httpResult && detectChallenge({
+    pageText: (httpResult.html || '').slice(0, 8000).toLowerCase(),
+    status: httpResult.status,
+  });
+
+  if (isJsChallenge && isFlareSolverrEnabled()) {
+    try {
+      const result = await fetchWithFlaresolverr(url, proxy);
+      if (isFlaresolverrResult(result)) {
+        setCachedEngine(url, 'flaresolverr', proxy);
+        return result;
+      }
+    } catch {
+      // FlareSolverr failed — fall through to Playwright as last resort
+    }
+  }
+
+  // Playwright
   try {
     const result = await fetchWithPlaywright(url, { waitFor, timeout, proxy });
     if (!isBlockedResponse(result.html, result.status)) {
+      setCachedEngine(url, 'playwright', proxy);
       return result;
     }
   } catch {
     // Playwright failed — fall through to FlareSolverr
   }
 
-  if (isFlareSolverrEnabled()) {
+  // FlareSolverr as final fallback (only if not already tried above)
+  if (!isJsChallenge && isFlareSolverrEnabled()) {
     try {
       const result = await fetchWithFlaresolverr(url, proxy);
-      if (result.html) {
-        const stillBlocked = detectChallenge({
-          pageText: result.html.slice(0, 8000).toLowerCase(),
-          status: result.status,
-        });
-        if (!stillBlocked) return result;
+      if (isFlaresolverrResult(result)) {
+        setCachedEngine(url, 'flaresolverr', proxy);
+        return result;
       }
     } catch {
-      // FlareSolverr failed — fall through
+      // FlareSolverr failed
     }
   }
 
@@ -347,6 +418,7 @@ export async function universalScrape({ url, prompt, model, schema, options = {}
       page,
       url: fetchResult.finalUrl,
       engine: fetchResult.engine,
+      engineCached: fetchResult.engineCached || false,
       statusCode: fetchResult.status,
       contentLength: cleaned.length,
     });
@@ -403,6 +475,7 @@ export async function universalScrape({ url, prompt, model, schema, options = {}
       title: firstTitle,
       statusCode: firstMeta.statusCode || null,
       engine: firstMeta.engine || null,
+      engineCached: firstMeta.engineCached || false,
       contentLength: pagesMeta.reduce((s, p) => s + p.contentLength, 0),
       elapsed: Date.now() - start,
       pagesScraped: pagesMeta.length,
