@@ -30,6 +30,10 @@ const apiLimiter = rateLimit({
   message: { ok: false, error: 'Too many requests', code: 'RATE_LIMIT' },
 });
 
+app.get('/api/health', (req, res) => {
+  res.json({ ok: true, service: 'api-scraping', timestamp: new Date().toISOString() });
+});
+
 app.use('/api/', apiLimiter);
 app.use('/api/', apiKeyAuth);
 
