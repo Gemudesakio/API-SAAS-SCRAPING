@@ -105,7 +105,12 @@ export function detectChallenge(input = '') {
     'trafico inusual',
     'not a robot',
     'press & hold',
+    'press and hold',
     'just a moment',
+    'robot or human',
+    'are you a robot',
+    'human verification',
+    'presiona y manten',
   ];
 
   return challengeSignals.some(

@@ -377,7 +377,7 @@ function mergeJsonResults(results) {
 
 // ─── Public API ─────────────────────────────────────────────────
 
-export async function universalScrape({ url, prompt, model, schema, options = {} }) {
+export async function universalScrape({ url, prompt, model, schema, options = {} }, onProgress) {
   const start = Date.now();
   const formats = options.formats || (prompt ? ['json'] : ['markdown']);
   const wantsJson = formats.includes('json');
@@ -397,6 +397,8 @@ export async function universalScrape({ url, prompt, model, schema, options = {}
   let currentUrl = url;
 
   for (let page = 1; page <= maxPages; page++) {
+    onProgress?.({ phase: 'scraping', page, url: currentUrl });
+
     let fetchResult;
     try {
       fetchResult = await runWithScraperLimiter(
@@ -407,6 +409,8 @@ export async function universalScrape({ url, prompt, model, schema, options = {}
       if (page === 1) throw err;
       break;
     }
+
+    onProgress?.({ phase: 'scraped', page, engine: fetchResult.engine, url: fetchResult.finalUrl });
 
     const cleaned = htmlToMarkdown(fetchResult.html, fetchResult.finalUrl);
 
@@ -441,6 +445,7 @@ export async function universalScrape({ url, prompt, model, schema, options = {}
           ? fit
           : cleaned.markdown;
       }
+      onProgress?.({ phase: 'extracting', page });
       const { data, tokensUsed } = await extractWithLLM(markdownForLLM, prompt, schema, model);
       allJsonResults.push(data);
       totalTokensIn += tokensUsed.input;
@@ -460,8 +465,10 @@ export async function universalScrape({ url, prompt, model, schema, options = {}
       const nextUrl = extractNextPageUrl(fetchResult.html, fetchResult.finalUrl);
       if (nextUrl && isSameOrigin(nextUrl, url)) {
         currentUrl = nextUrl;
+        onProgress?.({ phase: 'pagination', page: page + 1, url: currentUrl });
       } else if (pageParam) {
         currentUrl = buildPageParamUrl(url, pageParam, page + 1);
+        onProgress?.({ phase: 'pagination', page: page + 1, url: currentUrl });
       } else {
         break;
       }
