@@ -120,28 +120,36 @@ async function fetchWithPlaywright(url, options = {}) {
 
     await dismissCookieModal(page);
 
+    // Wait for custom selector or content elements (cheap DOM count, not innerText)
     if (options.waitFor) {
       await page.waitForSelector(options.waitFor, { timeout: Math.min(8000, remaining()) }).catch(() => {});
     } else {
       await page.waitForFunction(
-        () => document.body && document.body.innerText.length > 2000,
-        { timeout: Math.min(12000, remaining()) }
+        () => {
+          if (!document.body) return false;
+          return document.body.querySelectorAll('p, li, td, h1, h2, h3, article, section, main').length > 20;
+        },
+        { timeout: Math.min(10000, remaining()) }
       ).catch(() => {});
     }
 
-    // SPA content detection: wait for product cards or meaningful content
+    // SPA content detection: wait for product/price indicators
     if (remaining() > 3000) {
-      const contentLength = await page.evaluate(() => document.body?.innerText?.length || 0).catch(() => 0);
-      if (contentLength < 3000) {
-        await page.waitForFunction(
-          () => {
-            const text = document.body?.innerText || '';
-            return text.length > 3000
-              || document.querySelectorAll('[class*="product"], [class*="card"], [data-testid*="product"]').length > 2;
-          },
-          { timeout: Math.min(8000, remaining()) }
-        ).catch(() => {});
-      }
+      await page.waitForFunction(
+        () => {
+          const text = document.body?.innerText || '';
+          if (text.length > 5000) return true;
+          const indicators = [
+            '[data-product]', '[data-price]',
+            '[class*="price"]', '[class*="precio"]',
+            '.product__item', '.plp-mastercard',
+            '[class*="product-card"]', '[class*="product-item"]',
+            '[class*="product"] [class*="price"]',
+          ];
+          return indicators.some(s => document.querySelectorAll(s).length > 2);
+        },
+        { timeout: Math.min(8000, remaining()) }
+      ).catch(() => {});
     }
 
     if (options.waitForScript && remaining() > 1500) {
@@ -154,13 +162,30 @@ async function fetchWithPlaywright(url, options = {}) {
       ).catch(() => {});
     }
 
+    // Wait for prices to render before capturing content
+    if (remaining() > 2000) {
+      await page.waitForFunction(
+        () => {
+          const priceEls = document.querySelectorAll(
+            '[class*="price"], [data-price], [class*="precio"]'
+          );
+          if (priceEls.length === 0) return true;
+          return [...priceEls].some(el => /\d/.test(el.textContent));
+        },
+        { timeout: Math.min(5000, remaining()) }
+      ).catch(() => {});
+    }
+
     const html = await page.content();
 
     if (html.length < 3000 && remaining() > 3000) {
       const dismissed = await dismissCookieModal(page);
       if (dismissed) {
         await page.waitForFunction(
-          () => document.body && document.body.innerText.length > 500,
+          () => {
+            if (!document.body) return false;
+            return document.body.querySelectorAll('p, li, td, h1, h2, h3').length > 5;
+          },
           { timeout: Math.min(8000, remaining()) }
         ).catch(() => {});
       }
