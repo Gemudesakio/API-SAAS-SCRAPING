@@ -29,10 +29,18 @@ let launchPromise = null;
 let requestCount = 0;
 
 async function launchBrowser(launchOptions = {}) {
-  return chromium.launch({
-    headless: launchOptions.headless ?? true,
-    args: OPTIMIZED_ARGS,
-  });
+  try {
+    return await chromium.launch({
+      channel: 'chrome',
+      headless: launchOptions.headless ?? true,
+      args: [...OPTIMIZED_ARGS, '--disable-blink-features=AutomationControlled'],
+    });
+  } catch {
+    return chromium.launch({
+      headless: launchOptions.headless ?? true,
+      args: [...OPTIMIZED_ARGS, '--disable-blink-features=AutomationControlled'],
+    });
+  }
 }
 
 export async function getBrowser(launchOptions = {}) {
