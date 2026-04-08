@@ -88,19 +88,21 @@ async function dismissCookieModal(page) {
 
 async function dismissLoginModal(page) {
   try {
-    const modal = page.locator('[role="dialog"]').first();
-    if (!await modal.isVisible({ timeout: 1000 })) return false;
-
-    const closeBtn = page.locator('[aria-label="Close"], [aria-label="Cerrar"]').first();
-    if (await closeBtn.isVisible({ timeout: 500 })) {
-      await closeBtn.click({ timeout: 2000 });
-      await page.waitForTimeout(500);
+    const removed = await page.evaluate(() => {
+      const dialogs = document.querySelectorAll('[role="dialog"]');
+      if (dialogs.length === 0) return false;
+      dialogs.forEach(d => d.remove());
+      // Also remove overlay/backdrop
+      document.querySelectorAll('[data-visualcompletion="css-img"]').forEach(el => {
+        if (el.style?.position === 'fixed' || getComputedStyle(el).position === 'fixed') el.remove();
+      });
+      // Re-enable scrolling on body
+      document.body.style.overflow = 'auto';
+      document.documentElement.style.overflow = 'auto';
       return true;
-    }
-
-    await page.keyboard.press('Escape');
-    await page.waitForTimeout(500);
-    return true;
+    });
+    if (removed) await page.waitForTimeout(500);
+    return removed;
   } catch { return false; }
 }
 
