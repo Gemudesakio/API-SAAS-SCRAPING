@@ -219,6 +219,7 @@ function pruneByContentDensity(doc) {
     const linkDensity = textLen > 0 ? linkTextLen / textLen : 0;
 
     if (linkDensity > 0.7 && textDensity < 0.25) {
+      if (/[\$€£¥₹]\s*[\d.,]+|\d[\d.,]+\d/.test(text)) continue;
       removals.push(node);
     }
   }
