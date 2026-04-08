@@ -9,6 +9,7 @@ import {
   scrapeAmazonController,
   scrapeEbayController,
   scrapeAliExpressController,
+  scrapeFacebookController,
 } from '../controllers/scrape.controller.js';
 import { scrapeAllController } from '../controllers/scrape-all.controller.js';
 import { extractController, modelsController } from '../controllers/extract.controller.js';
@@ -16,6 +17,7 @@ import validateBody from '../middlewares/validate_body.js';
 import { scrapeRequestSchema } from '../validators/scrape.validator.js';
 import { scrapeAllRequestSchema } from '../validators/scrape-all.validator.js';
 import { extractRequestSchema } from '../validators/extract.validator.js';
+import { facebookRequestSchema } from '../validators/facebook.validator.js';
 
 const router = Router();
 
@@ -85,6 +87,12 @@ router.post(
   '/aliexpress/search',
   validateBody(scrapeRequestSchema),
   scrapeAliExpressController
+);
+
+router.post(
+  '/facebook/posts',
+  validateBody(facebookRequestSchema),
+  scrapeFacebookController
 );
 
 export default router;

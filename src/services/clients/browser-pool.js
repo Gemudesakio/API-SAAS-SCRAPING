@@ -1,4 +1,7 @@
 import { chromium } from 'playwright';
+import { readFileSync, writeFileSync, mkdirSync } from 'fs';
+
+const AUTH_STATE_PATH = process.env.AUTH_STATE_PATH || '/app/data/fb-state.json';
 
 const MAX_REQUESTS_BEFORE_RECYCLE = Number(process.env.BROWSER_POOL_RECYCLE_AFTER) || 100;
 
@@ -84,6 +87,24 @@ export async function closeBrowser() {
   if (instance?.isConnected()) {
     await instance.close().catch(() => {});
   }
+}
+
+export function getAuthStorageState() {
+  try {
+    return JSON.parse(readFileSync(AUTH_STATE_PATH, 'utf-8'));
+  } catch {
+    const b64 = process.env.FB_STORAGE_STATE;
+    if (b64) return JSON.parse(Buffer.from(b64, 'base64').toString());
+    return null;
+  }
+}
+
+export function saveAuthStorageState(state) {
+  try {
+    const dir = AUTH_STATE_PATH.substring(0, AUTH_STATE_PATH.lastIndexOf('/'));
+    mkdirSync(dir, { recursive: true });
+    writeFileSync(AUTH_STATE_PATH, JSON.stringify(state));
+  } catch { /* ignore if read-only filesystem */ }
 }
 
 export { OPTIMIZED_ARGS };

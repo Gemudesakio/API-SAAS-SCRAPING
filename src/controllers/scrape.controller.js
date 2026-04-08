@@ -9,6 +9,7 @@ import {
   runAmazonSearch,
   runEbaySearch,
   runAliExpressSearch,
+  runFacebookScrape,
 } from '../services/scrape.service.js';
 
 export const scrapeMercadoLibreController = asyncHandler(async (req, res) => {
@@ -53,5 +54,10 @@ export const scrapeEbayController = asyncHandler(async (req, res) => {
 
 export const scrapeAliExpressController = asyncHandler(async (req, res) => {
   const payload = await runAliExpressSearch(req.validatedBody);
+  return res.status(200).json(payload);
+});
+
+export const scrapeFacebookController = asyncHandler(async (req, res) => {
+  const payload = await runFacebookScrape(req.validatedBody);
   return res.status(200).json(payload);
 });

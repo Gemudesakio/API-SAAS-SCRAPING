@@ -16,3 +16,6 @@ debug/
 
 # Playwright MCP artifacts
 .playwright-mcp/
+
+# Facebook session cookies (sensitive)
+fb-state.json

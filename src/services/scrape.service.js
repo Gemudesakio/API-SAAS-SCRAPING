@@ -7,6 +7,7 @@ import { scrapeHomecenter } from './scrapers/homecenter.scraper.js';
 import { scrapeAmazon } from './scrapers/amazon.scraper.js';
 import { scrapeEbay } from './scrapers/ebay.scraper.js';
 import { scrapeAliExpress } from './scrapers/aliexpress.scraper.js';
+import { scrapeFacebook } from './scrapers/facebook.scraper.js';
 import { normalizeProducts } from './normalizers/product.normalizer.js';
 import { getScraperLimiterStats, runWithScraperLimiter } from '../utils/scraper-concurrency.js';
 
@@ -67,4 +68,17 @@ export async function runEbaySearch(input) {
 export async function runAliExpressSearch(input) {
   const raw = await runWithScraperLimiter(() => scrapeAliExpress(input), 'aliexpress');
   return buildResponse(raw, 'aliexpress');
+}
+
+export async function runFacebookScrape(input) {
+  const raw = await runWithScraperLimiter(() => scrapeFacebook(input), 'facebook');
+  return {
+    ok: true,
+    site: 'facebook',
+    ...raw,
+    meta: {
+      ...raw.meta,
+      limiter: getScraperLimiterStats(),
+    },
+  };
 }

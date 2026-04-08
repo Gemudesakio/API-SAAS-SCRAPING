@@ -3,7 +3,7 @@ import { load as loadHtml } from 'cheerio';
 import { AppError } from '../errors/app-error.js';
 import { buildUserAgent, detectChallenge, getPlaywrightProxyConfig } from '../utils/scraper.helpers.js';
 import { runWithScraperLimiter } from '../utils/scraper-concurrency.js';
-import { getBrowser } from './clients/browser-pool.js';
+import { getBrowser, getAuthStorageState, saveAuthStorageState } from './clients/browser-pool.js';
 import { flaresolverrGet, isFlareSolverrEnabled } from './clients/flaresolverr.client.js';
 import { htmlToMarkdown } from './clients/html-cleaner.js';
 import { extractWithLLM } from './clients/llm.client.js';
@@ -122,6 +122,10 @@ async function fetchWithPlaywright(url, options = {}) {
     const proxyConfig = getPlaywrightProxyConfig();
     if (proxyConfig) contextOptions.proxy = proxyConfig;
   }
+
+  const needsAuth = /facebook\.com|instagram\.com/.test(url);
+  const authState = needsAuth ? getAuthStorageState() : null;
+  if (authState) contextOptions.storageState = authState;
 
   const context = await browser.newContext(contextOptions);
   const page = await context.newPage();
@@ -243,6 +247,9 @@ async function fetchWithPlaywright(url, options = {}) {
       engine: usedProxy ? 'playwright+proxy' : 'playwright',
     };
   } finally {
+    if (needsAuth && authState) {
+      try { saveAuthStorageState(await context.storageState()); } catch { /* no-op */ }
+    }
     try { await page?.close({ runBeforeUnload: false }); } catch { /* no-op */ }
     try { await context?.close(); } catch { /* no-op */ }
   }
