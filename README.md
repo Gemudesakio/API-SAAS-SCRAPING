@@ -1,239 +1,269 @@
 # API SaaS Scraping
 
-API Node.js + Express para scraping robusto (Mercado Libre con Playwright y Decathlon con FlareSolverr), con salida normalizada para integracion con n8n.
+REST API for scraping product data from multiple e-commerce stores, Facebook pages, and any website using AI-powered extraction. Built with Node.js + Express, consumed by n8n automation workflows.
 
 ## Stack
 
-- Node.js (ESM)
-- Express
-- Playwright (Chromium, usado en Mercado Libre)
-- FlareSolverr (usado en Decathlon)
-- Cheerio
-- Docker (imagen oficial Playwright)
+- **Runtime**: Node.js 20, ESM modules
+- **Framework**: Express 5
+- **Scraping**: Playwright (Chrome new headless), FlareSolverr (Cloudflare bypass), Cheerio
+- **HTML processing**: JSDOM, Readability, node-html-markdown
+- **LLM extraction**: Gemini, OpenAI, Groq, DeepSeek, Cerebras
+- **Validation**: Zod
+- **Security**: Helmet, express-rate-limit, API key auth
+- **Docs**: Swagger UI (OpenAPI 3.0)
+- **Deploy**: Docker (`mcr.microsoft.com/playwright:v1.58.2-noble`) on EasyPanel
 
-## Estructura principal
+## Endpoints
 
-```text
+### Scraping — Stores (9 endpoints)
+
+All use the same request schema: `{ query, url, maxItems, maxPages, headless }`
+
+| Endpoint | Store | Engine |
+|----------|-------|--------|
+| `POST /api/scrape/mercadolibre/search` | MercadoLibre | Playwright + proxy |
+| `POST /api/scrape/decathlon/search` | Decathlon | FlareSolverr |
+| `POST /api/scrape/pepeganga/search` | PepeGanga | HTTP (Impresee API) |
+| `POST /api/scrape/falabella/search` | Falabella | HTTP (__NEXT_DATA__) |
+| `POST /api/scrape/exito/search` | Éxito | HTTP (VTEX API) |
+| `POST /api/scrape/homecenter/search` | Homecenter | HTTP / FlareSolverr |
+| `POST /api/scrape/amazon/search` | Amazon | Playwright + proxy |
+| `POST /api/scrape/ebay/search` | eBay | HTTP |
+| `POST /api/scrape/aliexpress/search` | AliExpress | HTTP |
+
+### Scraping — Facebook
+
+| Endpoint | Description |
+|----------|-------------|
+| `POST /api/scrape/facebook/posts` | Extract posts from a public Facebook page. Requires `FB_STORAGE_STATE` cookies. |
+
+### Extract — Universal (SSE)
+
+| Endpoint | Description |
+|----------|-------------|
+| `POST /api/scrape/extract` | Scrape any URL + extract data with LLM. Returns SSE stream. |
+| `GET /api/scrape/extract/models` | List available LLM models |
+
+### Multi-site Search (SSE)
+
+| Endpoint | Description |
+|----------|-------------|
+| `POST /api/scrape/all/search` | Search all 9 stores simultaneously. Returns SSE stream. |
+
+### Health
+
+| Endpoint | Description |
+|----------|-------------|
+| `GET /api/health` | Service health check |
+
+## Project Structure
+
+```
 src/
-  app.js
-  server.js
-  routes/
-  controllers/
-  services/
-    scrapers/
-    normalizers/
-  middlewares/
-  validators/
-  docs/
+├── app.js                          # Express app (middleware, routes)
+├── server.js                       # Entry point (port, graceful shutdown)
+├── routes/
+│   ├── scrape.routes.js            # All scraping endpoints
+│   ├── health.routes.js            # Health check
+│   └── docs.routes.js              # Swagger UI
+├── controllers/
+│   ├── scrape.controller.js        # Store + Facebook controllers
+│   ├── scrape-all.controller.js    # Multi-site SSE controller
+│   └── extract.controller.js       # Universal extractor SSE controller
+├── services/
+│   ├── scrapers/
+│   │   ├── mercadolibre.scraper.js # Playwright-based
+│   │   ├── decathlon.scraper.js    # FlareSolverr-based
+│   │   ├── pepeganga.scraper.js    # Impresee Search API
+│   │   ├── falabella.scraper.js    # __NEXT_DATA__ parser
+│   │   ├── exito.scraper.js        # VTEX Catalog API
+│   │   ├── homecenter.scraper.js   # FlareSolverr / __NEXT_DATA__
+│   │   ├── amazon.scraper.js       # Playwright + proxy
+│   │   ├── ebay.scraper.js         # HTTP
+│   │   ├── aliexpress.scraper.js   # HTTP
+│   │   └── facebook.scraper.js     # Playwright + cookies + scroll
+│   ├── normalizers/
+│   │   └── product.normalizer.js   # Standardized product output
+│   ├── clients/
+│   │   ├── browser-pool.js         # Singleton Playwright browser + auth context
+│   │   ├── flaresolverr.client.js  # FlareSolverr HTTP client
+│   │   ├── html-cleaner.js         # HTML → markdown pipeline
+│   │   └── llm.client.js           # Multi-provider LLM client
+│   ├── universal-scraper.service.js # Cascade engine (fetch → Playwright → FlareSolverr)
+│   ├── scrape.service.js           # Store scraping orchestrator
+│   └── scrape-all.service.js       # Multi-site parallel orchestrator
+├── middlewares/
+│   ├── api-key.js                  # x-api-key auth
+│   ├── error_handler.js            # Global error handler
+│   ├── validate_body.js            # Zod validation
+│   └── async_handler.js            # Async error wrapper
+├── validators/
+│   ├── scrape.validator.js         # Store search schema
+│   ├── extract.validator.js        # Universal extract schema
+│   ├── facebook.validator.js       # Facebook schema
+│   └── scrape-all.validator.js     # Multi-site schema
+├── errors/                         # AppError, error codes, HTTP helpers
+├── constants/
+│   └── providers.js                # Store name mapping
+├── utils/
+│   ├── scraper-concurrency.js      # Queue limiter (configurable concurrency)
+│   ├── scraper-diagnostics.js      # Screenshot + HTML dump for debugging
+│   ├── scraper.helpers.js          # User agent, challenge detection, proxy config
+│   ├── domain-engine-cache.js      # TTL cache for domain → engine mapping
+│   └── url-validator.js            # SSRF protection (blocks private IPs)
+├── docs/
+│   └── openapi.js                  # OpenAPI 3.0 spec (14 endpoints)
+└── scripts/
+    └── fb-login.js                 # Facebook cookie setup (manual login)
 ```
 
-## Variables de entorno
+## Environment Variables
 
-| Variable | Requerida | Default | Descripcion |
-|---|---|---|---|
-| `PORT` | No | `8080` | Puerto interno de la API |
-| `NODE_ENV` | No | `development` | Entorno de ejecucion |
-| `SCRAPER_MAX_CONCURRENCY` | No | `2` | Maximo de scrapers Playwright ejecutandose al mismo tiempo |
-| `SCRAPER_MAX_QUEUE` | No | `12` | Maximo de requests esperando turno cuando la concurrencia esta ocupada |
-| `SCRAPER_QUEUE_TIMEOUT_MS` | No | `15000` | Tiempo maximo en cola antes de responder `429` |
-| `SCRAPER_DEBUG` | No | `false` | Si es `true`, guarda screenshot de fallos de selector en `/tmp/scraper-debug` |
-| `SCRAPER_DEBUG_SAVE_HTML` | No | `false` | Si es `true` y `SCRAPER_DEBUG=true`, guarda HTML completo en archivo |
-| `SCRAPER_DEBUG_DIR` | No | `/tmp/scraper-debug` | Directorio donde se guardan artefactos de diagnóstico |
-| `ML_PROXY_ENABLED` | No | `false` | Habilita proxy saliente solo para el scraper de Mercado Libre (Playwright) |
-| `ML_PROXY_SERVER` | No | - | Servidor proxy para Mercado Libre. Ej: `http://gw.dataimpulse.com:823` |
-| `ML_PROXY_USERNAME` | No | - | Usuario del proxy para Mercado Libre |
-| `ML_PROXY_PASSWORD` | No | - | Password del proxy para Mercado Libre |
-| `ML_PROXY_BYPASS` | No | - | Hosts a excluir del proxy en Playwright. Ej: `localhost,127.0.0.1` |
-| `FLARESOLVERR_URL` | No | - | URL interna del servicio FlareSolverr. Ej: `http://proyectos-saas_flaresolverr:80/v1` |
-| `FLARESOLVERR_TIMEOUT_MS` | No | `120000` | `maxTimeout` enviado a FlareSolverr por request |
-| `FLARESOLVERR_WAIT_SECONDS` | No | `3` | Espera post-challenge antes de devolver HTML |
-| `FLARESOLVERR_REQUEST_TIMEOUT_MS` | No | `130000` | Timeout HTTP cliente API -> FlareSolverr |
-| `FLARESOLVERR_DISABLE_MEDIA` | No | `true` | Si es `true`, evita cargar imagen/CSS/fonts en FlareSolverr para reducir latencia |
-| `FLARESOLVERR_USE_SESSION` | No | `true` | Reutiliza sesión/cookies en FlareSolverr entre requests para evitar resolver challenge en cada llamada |
-| `FLARESOLVERR_SESSION_TTL_MINUTES` | No | `15` | Tiempo de vida de sesión reutilizada antes de rotarla |
+### Server
 
-## Ejecucion local
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `PORT` | `8080` | Server port |
+| `NODE_ENV` | `development` | Environment |
+| `API_KEY` | - | API key for authentication (optional, if unset auth is disabled) |
+| `RATE_LIMIT_RPM` | `30` | Rate limit (requests per minute) |
+
+### Scraper Concurrency
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `SCRAPER_MAX_CONCURRENCY` | `2` | Max parallel Playwright instances |
+| `SCRAPER_MAX_QUEUE` | `12` | Max requests waiting in queue |
+| `SCRAPER_QUEUE_TIMEOUT_MS` | `15000` | Queue wait timeout before 429 |
+| `BROWSER_POOL_RECYCLE_AFTER` | `100` | Recycle browser after N requests |
+
+### Proxy (residential)
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `PROXY_URL` | - | Residential proxy URL. E.g. `http://user:pass@gw.dataimpulse.com:12002` |
+
+### FlareSolverr
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `FLARESOLVERR_URL` | - | FlareSolverr endpoint. E.g. `http://proyectos-saas_flaresolverr:80/v1` |
+| `FLARESOLVERR_TIMEOUT_MS` | `60000` | Max challenge resolution time |
+| `FLARESOLVERR_REQUEST_TIMEOUT_MS` | `75000` | HTTP client timeout |
+| `FLARESOLVERR_WAIT_SECONDS` | `1` | Post-challenge wait |
+| `FLARESOLVERR_DISABLE_MEDIA` | `true` | Skip images/CSS/fonts |
+| `FLARESOLVERR_USE_SESSION` | `true` | Reuse cookies across requests |
+| `FLARESOLVERR_SESSION_TTL_MINUTES` | `7` | Session lifetime |
+
+### LLM (for /extract endpoint)
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `GEMINI_API_KEY` | - | Google Gemini API key (free tier available) |
+| `OPENAI_API_KEY` | - | OpenAI API key |
+| `GROQ_API_KEY` | - | Groq API key (free tier available) |
+| `DEEPSEEK_API_KEY` | - | DeepSeek API key |
+| `CEREBRAS_API_KEY` | - | Cerebras API key (free tier available) |
+| `LLM_DEFAULT_MODEL` | auto-select | Default LLM model |
+| `LLM_MAX_TOKENS` | `16384` | Max output tokens |
+| `LLM_TIMEOUT_MS` | `60000` | LLM request timeout |
+
+### Facebook
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `FB_STORAGE_STATE` | - | Base64-encoded browser cookies from `scripts/fb-login.js` |
+| `AUTH_STATE_PATH` | `/app/data/fb-state.json` | Path for cookie file persistence |
+
+### Domain Cache
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `DOMAIN_CACHE_TTL_MINUTES` | `30` | Cache TTL for domain → engine mapping |
+
+### Debug
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `SCRAPER_DEBUG` | `false` | Enable screenshot/HTML dump on failures |
+| `SCRAPER_DEBUG_SAVE_HTML` | `false` | Save full HTML alongside screenshots |
+| `SCRAPER_DEBUG_DIR` | `/tmp/scraper-debug` | Debug artifacts directory |
+
+## Quick Start
 
 ```bash
 npm install
 npm run dev
 ```
 
-Healthcheck local:
-
+Test health:
 ```bash
 curl http://localhost:8080/api/health
 ```
 
-## Documentacion Swagger
-
-- UI: `GET /api/docs`
-- OpenAPI JSON: `GET /api/docs/openapi.json`
-
-Ejemplo local:
-
+Search products:
 ```bash
-http://localhost:8080/api/docs
+curl -X POST http://localhost:8080/api/scrape/falabella/search \
+  -H "Content-Type: application/json" \
+  -d '{"query":"laptop","maxItems":5}'
 ```
 
-## Endpoints principales
-
-- `GET /api/health`
-- `POST /api/scrape/mercadolibre/search`
-- `POST /api/scrape/decathlon/search`
-
-Body base para scraping:
-
-```json
-{
-  "query": "segway",
-  "maxItems": 20,
-  "maxPages": 3,
-  "headless": true
-}
+Extract data from any URL:
+```bash
+curl -N -X POST http://localhost:8080/api/scrape/extract \
+  -H "Content-Type: application/json" \
+  -d '{"url":"https://en.wikipedia.org/wiki/Node.js","prompt":"Extract: creator, year. JSON object."}'
 ```
 
-Tambien puedes usar `url` en lugar de `query`.
+Facebook posts:
+```bash
+# First, setup cookies (one-time):
+node scripts/fb-login.js
+
+# Then scrape:
+curl -X POST http://localhost:8080/api/scrape/facebook/posts \
+  -H "Content-Type: application/json" \
+  -d '{"url":"https://www.facebook.com/PageName","maxItems":15}'
+```
+
+## Swagger Docs
+
+- **UI**: `GET /api/docs`
+- **JSON**: `GET /api/docs/openapi.json`
 
 ## Docker
 
-Build:
-
 ```bash
-docker build -t api-saas-scraping:local .
+docker build -t api-saas-scraping .
+docker run --rm -p 8080:8080 api-saas-scraping
 ```
 
-Run:
+## Deploy (EasyPanel)
 
-```bash
-docker run --rm -p 8080:8080 --name api-saas-scraping api-saas-scraping:local
+1. Push repo to Git (Dockerfile in root).
+2. EasyPanel: New Service → App Service → Git source → Dockerfile build.
+3. Set environment variables (see tables above).
+4. Internal port: `8080`.
+5. Add volume mount `/app/data` for Facebook cookie persistence.
+6. Configure domain and SSL.
+7. Deploy.
+
+## SSE Endpoints
+
+`/api/scrape/extract` and `/api/scrape/all/search` return Server-Sent Events.
+
+These are POST endpoints — use `fetch` + `ReadableStream`, not `EventSource`:
+
+```javascript
+const res = await fetch('/api/scrape/extract', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ url: '...', prompt: '...' }),
+});
+const reader = res.body.getReader();
+const decoder = new TextDecoder();
+// Parse SSE: event: <name>\ndata: <json>\n\n
 ```
 
-Prueba:
-
-```bash
-curl http://localhost:8080/api/health
-```
-
-## Despliegue en EasyPanel (App Service)
-
-1. Sube el repo a Git (con `Dockerfile` en raiz).
-2. En EasyPanel: `New Service` -> `App Service`.
-3. Fuente: Git repository.
-4. Build method: **Dockerfile**.
-5. Variables de entorno:
-   - `NODE_ENV=production`
-   - `PORT=8080`
-   - `SCRAPER_MAX_CONCURRENCY=2`
-   - `SCRAPER_MAX_QUEUE=12`
-   - `SCRAPER_QUEUE_TIMEOUT_MS=15000`
-   - `SCRAPER_DEBUG=false`
-   - `SCRAPER_DEBUG_SAVE_HTML=false`
-   - `SCRAPER_DEBUG_DIR=/tmp/scraper-debug`
-   - `ML_PROXY_ENABLED=true`
-   - `ML_PROXY_SERVER=http://gw.dataimpulse.com:823`
-   - `ML_PROXY_USERNAME=TU_USUARIO_PROXY`
-   - `ML_PROXY_PASSWORD=TU_PASSWORD_PROXY`
-   - `ML_PROXY_BYPASS=localhost,127.0.0.1`
-   - `FLARESOLVERR_URL=http://proyectos-saas_flaresolverr:80/v1`
-   - `FLARESOLVERR_USE_SESSION=true`
-   - `FLARESOLVERR_DISABLE_MEDIA=true`
-6. Internal Port: `8080`.
-7. Configura dominio y SSL en el servicio.
-8. Despliega.
-
-## Validacion post-deploy
-
-Health:
-
-```bash
-curl -i https://TU_DOMINIO/api/health
-```
-
-Verifica salida del proxy desde la VPS:
-
-```bash
-curl -x "http://TU_USUARIO_PROXY:TU_PASSWORD_PROXY@gw.dataimpulse.com:823" \
-  -s https://api.ipify.org?format=json
-```
-
-Mercado Libre:
-
-```bash
-curl -X POST https://TU_DOMINIO/api/scrape/mercadolibre/search \
-  -H "Content-Type: application/json" \
-  -d '{"query":"segway","maxItems":2,"headless":true}'
-```
-
-Decathlon:
-
-```bash
-curl -X POST https://TU_DOMINIO/api/scrape/decathlon/search \
-  -H "Content-Type: application/json" \
-  -d '{"query":"segway","maxItems":2,"headless":true}'
-```
-
-Si Mercado Libre responde `200`, valida en `meta` que el proxy quedó activo:
-
-```json
-"meta": {
-  "engine": "playwright",
-  "proxy": {
-    "enabled": true,
-    "server": "http://gw.dataimpulse.com:823"
-  }
-}
-```
-
-## Operacion y logs
-
-- Revisa logs de build en EasyPanel para errores de `npm ci`.
-- Revisa logs runtime para:
-  - `BOT_CHALLENGE`
-  - `SCRAPER_QUEUE_FULL`
-  - `SCRAPER_QUEUE_TIMEOUT`
-  - errores de Playwright
-  - reinicios del contenedor
-  - errores `5xx`
-
-## Diagnostico anti-bot (temporal)
-
-Para investigar bloqueos en producción:
-
-1. Activa variables en EasyPanel:
-   - `SCRAPER_DEBUG=true`
-   - `SCRAPER_DEBUG_SAVE_HTML=true`
-2. Haz deploy.
-3. Ejecuta request fallida.
-4. Revisa en la respuesta `details`:
-   - `pageUrl`
-   - `pageTitle`
-   - `bodyPreview`
-   - `screenshotPath`
-   - `htmlPath` (si habilitaste guardado de html)
-5. Cuando termines diagnóstico, vuelve a:
-   - `SCRAPER_DEBUG=false`
-   - `SCRAPER_DEBUG_SAVE_HTML=false`
-
-## Rollback operativo
-
-### Opcion A: rollback por commit (recomendado)
-
-1. Identifica el ultimo commit estable.
-2. Re-deploy del servicio apuntando a ese commit/tag.
-3. Verifica `GET /api/health`.
-4. Ejecuta un smoke test de ambos endpoints de scraping.
-
-### Opcion B: rollback por imagen Docker (si manejas registry)
-
-1. Selecciona la ultima imagen estable.
-2. Re-despliega el servicio con esa imagen.
-3. Repite pruebas de health y scraping.
-
-## Checklist de release
-
-- Build Docker exitoso.
-- Healthcheck en `200`.
-- Scraping Mercado Libre y Decathlon en `200`.
-- Swagger accesible.
-- Sin reinicios anormales en logs.
+Heartbeat (`: heartbeat\n\n`) every 15s keeps connection alive behind Traefik.
